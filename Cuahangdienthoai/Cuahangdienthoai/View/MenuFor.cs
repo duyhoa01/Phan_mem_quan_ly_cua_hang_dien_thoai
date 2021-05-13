@@ -112,5 +112,20 @@ namespace Cuahangdienthoai.View
         {
             this.AddForm(new QuanlykhoForm());
         }
+
+        private void btKinhDoanh_Click(object sender, EventArgs e)
+        {
+            this.AddForm(new BaoCaoKinhDoanhForm());
+        }
+
+        private void btNhanVien_Click(object sender, EventArgs e)
+        {
+            this.AddForm(new QuanLyNhanVienForm());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.AddForm(new QuanLyTaiKhoanForm());
+        }
     }
 }

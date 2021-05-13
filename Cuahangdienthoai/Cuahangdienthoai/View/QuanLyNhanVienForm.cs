@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Cuahangdienthoai.View
 {
-    public partial class QuanLySanPham : Form
+    public partial class QuanLyNhanVienForm : Form
     {
-        public QuanLySanPham()
+        public QuanLyNhanVienForm()
         {
             InitializeComponent();
         }
-
     }
 }

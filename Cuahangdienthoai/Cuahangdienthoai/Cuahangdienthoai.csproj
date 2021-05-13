@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\BaoCaoKinhDoanhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BaoCaoKinhDoanhForm.Designer.cs">
+      <DependentUpon>BaoCaoKinhDoanhForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ForgotUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +102,29 @@
     <Compile Include="View\QuanLyKhuyenMaiForm.Designer.cs">
       <DependentUpon>QuanLyKhuyenMaiForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\QuanLySanPham.cs">
+    <Compile Include="View\QuanLyNhanVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\QuanLySanPham.Designer.cs">
-      <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    <Compile Include="View\QuanLyNhanVienForm.Designer.cs">
+      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuanLySanPhamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QuanLySanPhamForm.Designer.cs">
+      <DependentUpon>QuanLySanPhamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuanLyTaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QuanLyTaiKhoanForm.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TonKhoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TonKhoForm.Designer.cs">
+      <DependentUpon>TonKhoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ThemDonHangForm.cs">
       <SubType>Form</SubType>
@@ -108,6 +132,9 @@
     <Compile Include="View\ThemDonHangForm.Designer.cs">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\BaoCaoKinhDoanhForm.resx">
+      <DependentUpon>BaoCaoKinhDoanhForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,11 +166,20 @@
     <EmbeddedResource Include="View\QuanLyKhuyenMaiForm.resx">
       <DependentUpon>QuanLyKhuyenMaiForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\QuanLySanPham.resx">
-      <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    <EmbeddedResource Include="View\QuanLyNhanVienForm.resx">
+      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLySanPhamForm.resx">
+      <DependentUpon>QuanLySanPhamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyTaiKhoanForm.resx">
+      <DependentUpon>QuanLyTaiKhoanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ThemDonHangForm.resx">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TonKhoForm.resx">
+      <DependentUpon>TonKhoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

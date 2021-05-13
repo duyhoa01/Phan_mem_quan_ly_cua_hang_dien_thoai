@@ -40,6 +40,7 @@ namespace Cuahangdienthoai.View
         {
             panelTonKho.BackColor = Color.FromArgb(237, 237, 237);
             panelTonkhoOn.BackColor = Color.FromArgb(48, 128, 185);
+            this.AddForm(new TonKhoForm());
             setcot1();
         }
         private void AddForm(Form newForm)

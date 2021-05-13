@@ -1,6 +1,6 @@
 ﻿namespace Cuahangdienthoai.View
 {
-    partial class NhapKhoForm
+    partial class QuanLyTaiKhoanForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(544, 269);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(442, 218);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 29);
+            this.label1.Size = new System.Drawing.Size(239, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nhập kho";
+            this.label1.Text = "quản Lý tài khoản";
             // 
-            // NhapKhoForm
+            // QuanLyTaiKhoanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 760);
+            this.ClientSize = new System.Drawing.Size(1300, 830);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NhapKhoForm";
-            this.Text = "NhapKhoForm";
+            this.Name = "QuanLyTaiKhoanForm";
+            this.Text = "QuanLyTaiKhoanForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

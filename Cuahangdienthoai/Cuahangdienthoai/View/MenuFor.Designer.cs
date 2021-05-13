@@ -101,6 +101,7 @@
             this.button1.Text = "quản lý tài khoản";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btNhanVien
             // 
@@ -117,6 +118,7 @@
             this.btNhanVien.Text = "Quản lý nhân viên";
             this.btNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btNhanVien.UseVisualStyleBackColor = true;
+            this.btNhanVien.Click += new System.EventHandler(this.btNhanVien_Click);
             // 
             // btKinhDoanh
             // 
@@ -133,6 +135,7 @@
             this.btKinhDoanh.Text = "Báo cáo kinh doanh";
             this.btKinhDoanh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btKinhDoanh.UseVisualStyleBackColor = true;
+            this.btKinhDoanh.Click += new System.EventHandler(this.btKinhDoanh_Click);
             // 
             // btThuChi
             // 

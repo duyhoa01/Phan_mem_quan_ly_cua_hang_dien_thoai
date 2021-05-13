@@ -24,7 +24,7 @@ namespace Cuahangdienthoai.View
             panel8.BackColor = Color.FromArgb(48, 128, 185);
             setcot2();
             setcot3();
-            this.AddForm(new QuanLySanPham());
+            this.AddForm(new QuanLySanPhamForm());
         }
         private void setcot2()
         {
