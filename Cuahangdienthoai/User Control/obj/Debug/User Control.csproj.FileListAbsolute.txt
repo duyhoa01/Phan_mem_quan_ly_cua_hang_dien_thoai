@@ -6,3 +6,4 @@ C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_tho
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.dll
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.pdb
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.DienThoai.resources
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.Properties.Resources.resources

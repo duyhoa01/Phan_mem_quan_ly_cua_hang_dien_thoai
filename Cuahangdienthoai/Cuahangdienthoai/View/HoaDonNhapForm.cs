@@ -23,11 +23,6 @@ namespace Cuahangdienthoai.View
             monthCalendar1.Location = new Point(278, 216);
             pnNhaCungCap.Location = new Point(0, 458);
             tbNgayNhap.Text = monthCalendar1.TodayDate.ToString("dd/MM/yyyy");
-            dienThoai1.LinkAnh = @"D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\bin\Debug\Resources\iPhone 7 32GB.jpg";
-            dienThoai1.TenDT = "iphone";
-            dienThoai1.MaSP = "12";
-            dienThoai1.Gia = "10000";
-            dienThoai1.SL = 100;
         }
         private void button5_Click(object sender, EventArgs e)
         {

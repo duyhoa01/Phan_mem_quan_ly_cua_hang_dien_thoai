@@ -90,8 +90,31 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.thuDong1 = new Cuahangdienthoai.ThuDong();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.btTimKiêm = new System.Windows.Forms.Button();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.tbTimKiem = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.dienThoai1 = new User_Control.DienThoai();
+            this.dienThoai2 = new User_Control.DienThoai();
+            this.dienThoai3 = new User_Control.DienThoai();
+            this.dienThoai4 = new User_Control.DienThoai();
+            this.dienThoai5 = new User_Control.DienThoai();
+            this.dienThoai6 = new User_Control.DienThoai();
+            this.thuDong1 = new Cuahangdienthoai.ThuDong();
+            this.dienThoai7 = new User_Control.DienThoai();
+            this.dienThoai8 = new User_Control.DienThoai();
+            this.dienThoai9 = new User_Control.DienThoai();
+            this.dienThoai10 = new User_Control.DienThoai();
+            this.dienThoai11 = new User_Control.DienThoai();
+            this.dienThoai12 = new User_Control.DienThoai();
+            this.dienThoai13 = new User_Control.DienThoai();
             this.panel8.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -109,6 +132,10 @@
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
@@ -690,12 +717,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.dienThoai1);
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.panel23);
+            this.panel2.Controls.Add(this.panel22);
+            this.panel2.Controls.Add(this.panel21);
+            this.panel2.Controls.Add(this.panel18);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(534, 34);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 611);
+            this.panel2.Size = new System.Drawing.Size(584, 611);
             this.panel2.TabIndex = 22;
             // 
             // panel1
@@ -882,33 +913,324 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Hóa Đơn Nhập";
             // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.button15);
+            this.panel18.Controls.Add(this.btTimKiêm);
+            this.panel18.Controls.Add(this.panel20);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(3, 0);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(581, 65);
+            this.panel18.TabIndex = 19;
+            // 
+            // btTimKiêm
+            // 
+            this.btTimKiêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btTimKiêm.FlatAppearance.BorderSize = 0;
+            this.btTimKiêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiêm.ForeColor = System.Drawing.Color.White;
+            this.btTimKiêm.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiêm.Image")));
+            this.btTimKiêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTimKiêm.Location = new System.Drawing.Point(185, 18);
+            this.btTimKiêm.Margin = new System.Windows.Forms.Padding(2);
+            this.btTimKiêm.Name = "btTimKiêm";
+            this.btTimKiêm.Size = new System.Drawing.Size(89, 32);
+            this.btTimKiêm.TabIndex = 14;
+            this.btTimKiêm.Text = "Tìm kiếm";
+            this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btTimKiêm.UseVisualStyleBackColor = false;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.White;
+            this.panel20.Controls.Add(this.tbTimKiem);
+            this.panel20.Controls.Add(this.button12);
+            this.panel20.Location = new System.Drawing.Point(20, 20);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(150, 31);
+            this.panel20.TabIndex = 13;
+            // 
+            // tbTimKiem
+            // 
+            this.tbTimKiem.BackColor = System.Drawing.Color.White;
+            this.tbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTimKiem.Location = new System.Drawing.Point(4, 11);
+            this.tbTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTimKiem.Name = "tbTimKiem";
+            this.tbTimKiem.Size = new System.Drawing.Size(146, 16);
+            this.tbTimKiem.TabIndex = 2;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(0, 29);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(150, 2);
+            this.button12.TabIndex = 1;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
+            this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.Location = new System.Drawing.Point(392, 19);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(169, 32);
+            this.button15.TabIndex = 15;
+            this.button15.Text = "Thêm Sản Phẩm Mới";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // panel21
+            // 
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel21.Location = new System.Drawing.Point(3, 65);
+            this.panel21.Margin = new System.Windows.Forms.Padding(2);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(15, 546);
+            this.panel21.TabIndex = 20;
+            // 
+            // panel22
+            // 
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel22.Location = new System.Drawing.Point(569, 65);
+            this.panel22.Margin = new System.Windows.Forms.Padding(2);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(15, 546);
+            this.panel22.TabIndex = 21;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.label12);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel23.Location = new System.Drawing.Point(18, 577);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(551, 34);
+            this.panel23.TabIndex = 22;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai1);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai2);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai3);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai4);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai5);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai6);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai7);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai8);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai9);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai10);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai11);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai12);
+            this.flowLayoutPanel1.Controls.Add(this.dienThoai13);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 65);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(551, 512);
+            this.flowLayoutPanel1.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label12.Location = new System.Drawing.Point(35, 13);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 17);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Số lượng : 1000";
+            // 
+            // dienThoai1
+            // 
+            this.dienThoai1.BackColor = System.Drawing.Color.White;
+            this.dienThoai1.Gia = "Giá";
+            this.dienThoai1.Location = new System.Drawing.Point(3, 3);
+            this.dienThoai1.MaSP = "Mã";
+            this.dienThoai1.Name = "dienThoai1";
+            this.dienThoai1.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai1.SL = 10000;
+            this.dienThoai1.TabIndex = 0;
+            this.dienThoai1.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai2
+            // 
+            this.dienThoai2.BackColor = System.Drawing.Color.White;
+            this.dienThoai2.Gia = "Giá";
+            this.dienThoai2.Location = new System.Drawing.Point(181, 3);
+            this.dienThoai2.MaSP = "Mã";
+            this.dienThoai2.Name = "dienThoai2";
+            this.dienThoai2.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai2.SL = 10000;
+            this.dienThoai2.TabIndex = 1;
+            this.dienThoai2.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai3
+            // 
+            this.dienThoai3.AllowDrop = true;
+            this.dienThoai3.AutoScroll = true;
+            this.dienThoai3.BackColor = System.Drawing.Color.White;
+            this.dienThoai3.Gia = "Giá";
+            this.dienThoai3.Location = new System.Drawing.Point(359, 3);
+            this.dienThoai3.MaSP = "Mã";
+            this.dienThoai3.Name = "dienThoai3";
+            this.dienThoai3.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai3.SL = 10000;
+            this.dienThoai3.TabIndex = 2;
+            this.dienThoai3.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai4
+            // 
+            this.dienThoai4.BackColor = System.Drawing.Color.White;
+            this.dienThoai4.Gia = "Giá";
+            this.dienThoai4.Location = new System.Drawing.Point(3, 285);
+            this.dienThoai4.MaSP = "Mã";
+            this.dienThoai4.Name = "dienThoai4";
+            this.dienThoai4.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai4.SL = 10000;
+            this.dienThoai4.TabIndex = 3;
+            this.dienThoai4.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai5
+            // 
+            this.dienThoai5.BackColor = System.Drawing.Color.White;
+            this.dienThoai5.Gia = "Giá";
+            this.dienThoai5.Location = new System.Drawing.Point(181, 285);
+            this.dienThoai5.MaSP = "Mã";
+            this.dienThoai5.Name = "dienThoai5";
+            this.dienThoai5.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai5.SL = 10000;
+            this.dienThoai5.TabIndex = 4;
+            this.dienThoai5.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai6
+            // 
+            this.dienThoai6.BackColor = System.Drawing.Color.White;
+            this.dienThoai6.Gia = "Giá";
+            this.dienThoai6.Location = new System.Drawing.Point(359, 285);
+            this.dienThoai6.MaSP = "Mã";
+            this.dienThoai6.Name = "dienThoai6";
+            this.dienThoai6.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai6.SL = 10000;
+            this.dienThoai6.TabIndex = 5;
+            this.dienThoai6.TenDT = "Tên Điện Thoại";
+            // 
             // thuDong1
             // 
             this.thuDong1.BackColor = System.Drawing.Color.Gray;
             this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
             this.thuDong1.Location = new System.Drawing.Point(0, 0);
             this.thuDong1.Name = "thuDong1";
-            this.thuDong1.Size = new System.Drawing.Size(1167, 34);
+            this.thuDong1.Size = new System.Drawing.Size(1118, 34);
             this.thuDong1.TabIndex = 0;
             // 
-            // dienThoai1
+            // dienThoai7
             // 
-            this.dienThoai1.BackColor = System.Drawing.Color.White;
-            this.dienThoai1.Gia = "Giá";
-            this.dienThoai1.Location = new System.Drawing.Point(185, 179);
-            this.dienThoai1.MaSP = "Mã";
-            this.dienThoai1.Name = "dienThoai1";
-            this.dienThoai1.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai1.SL = 10000;
-            this.dienThoai1.TabIndex = 19;
-            this.dienThoai1.TenDT = "Tên Điện Thoại";
+            this.dienThoai7.BackColor = System.Drawing.Color.White;
+            this.dienThoai7.Gia = "Giá";
+            this.dienThoai7.Location = new System.Drawing.Point(3, 567);
+            this.dienThoai7.MaSP = "Mã";
+            this.dienThoai7.Name = "dienThoai7";
+            this.dienThoai7.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai7.SL = 10000;
+            this.dienThoai7.TabIndex = 6;
+            this.dienThoai7.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai8
+            // 
+            this.dienThoai8.BackColor = System.Drawing.Color.White;
+            this.dienThoai8.Gia = "Giá";
+            this.dienThoai8.Location = new System.Drawing.Point(181, 567);
+            this.dienThoai8.MaSP = "Mã";
+            this.dienThoai8.Name = "dienThoai8";
+            this.dienThoai8.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai8.SL = 10000;
+            this.dienThoai8.TabIndex = 7;
+            this.dienThoai8.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai9
+            // 
+            this.dienThoai9.BackColor = System.Drawing.Color.White;
+            this.dienThoai9.Gia = "Giá";
+            this.dienThoai9.Location = new System.Drawing.Point(359, 567);
+            this.dienThoai9.MaSP = "Mã";
+            this.dienThoai9.Name = "dienThoai9";
+            this.dienThoai9.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai9.SL = 10000;
+            this.dienThoai9.TabIndex = 8;
+            this.dienThoai9.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai10
+            // 
+            this.dienThoai10.BackColor = System.Drawing.Color.White;
+            this.dienThoai10.Gia = "Giá";
+            this.dienThoai10.Location = new System.Drawing.Point(3, 849);
+            this.dienThoai10.MaSP = "Mã";
+            this.dienThoai10.Name = "dienThoai10";
+            this.dienThoai10.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai10.SL = 10000;
+            this.dienThoai10.TabIndex = 9;
+            this.dienThoai10.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai11
+            // 
+            this.dienThoai11.BackColor = System.Drawing.Color.White;
+            this.dienThoai11.Gia = "Giá";
+            this.dienThoai11.Location = new System.Drawing.Point(181, 849);
+            this.dienThoai11.MaSP = "Mã";
+            this.dienThoai11.Name = "dienThoai11";
+            this.dienThoai11.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai11.SL = 10000;
+            this.dienThoai11.TabIndex = 10;
+            this.dienThoai11.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai12
+            // 
+            this.dienThoai12.BackColor = System.Drawing.Color.White;
+            this.dienThoai12.Gia = "Giá";
+            this.dienThoai12.Location = new System.Drawing.Point(359, 849);
+            this.dienThoai12.MaSP = "Mã";
+            this.dienThoai12.Name = "dienThoai12";
+            this.dienThoai12.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai12.SL = 10000;
+            this.dienThoai12.TabIndex = 11;
+            this.dienThoai12.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai13
+            // 
+            this.dienThoai13.BackColor = System.Drawing.Color.White;
+            this.dienThoai13.Gia = "Giá";
+            this.dienThoai13.Location = new System.Drawing.Point(3, 1131);
+            this.dienThoai13.MaSP = "Mã";
+            this.dienThoai13.Name = "dienThoai13";
+            this.dienThoai13.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai13.SL = 10000;
+            this.dienThoai13.TabIndex = 12;
+            this.dienThoai13.TenDT = "Tên Điện Thoại";
             // 
             // HoaDonNhapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1167, 645);
+            this.ClientSize = new System.Drawing.Size(1118, 645);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.thuDong1);
@@ -947,6 +1269,12 @@
             this.panel11.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1015,6 +1343,29 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Button btTimKiêm;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.TextBox tbTimKiem;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private User_Control.DienThoai dienThoai1;
+        private User_Control.DienThoai dienThoai2;
+        private User_Control.DienThoai dienThoai3;
+        private User_Control.DienThoai dienThoai4;
+        private User_Control.DienThoai dienThoai5;
+        private User_Control.DienThoai dienThoai6;
+        private System.Windows.Forms.Label label12;
+        private User_Control.DienThoai dienThoai7;
+        private User_Control.DienThoai dienThoai8;
+        private User_Control.DienThoai dienThoai9;
+        private User_Control.DienThoai dienThoai10;
+        private User_Control.DienThoai dienThoai11;
+        private User_Control.DienThoai dienThoai12;
+        private User_Control.DienThoai dienThoai13;
     }
 }
