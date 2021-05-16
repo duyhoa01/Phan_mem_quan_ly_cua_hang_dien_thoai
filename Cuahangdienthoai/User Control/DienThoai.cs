@@ -16,7 +16,7 @@ namespace User_Control
         {
             InitializeComponent();
         }
-        public string MaSP { get => (lbMaSP.Text); set => lbMaSP.Text = value + "anh"; }
+        public string MaSP { get => (lbMaSP.Text); set => lbMaSP.Text = value; }
         public string Gia { get => lbGia.Text; set => lbGia.Text = value; }
         public string TenDT { get => tbTenDT.Text; set => tbTenDT.Text = value; }
         public string LinkAnh { set => pictureBox1.Image = new Bitmap(value); }

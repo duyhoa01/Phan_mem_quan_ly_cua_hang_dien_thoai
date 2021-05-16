@@ -44,9 +44,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="User Control">
-      <HintPath>..\User Control\bin\Debug\User Control.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="View\BaoCaoKinhDoanhForm.cs">
@@ -211,6 +208,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="User Control\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\User Control\User Control.csproj">
+      <Project>{9AB287A2-3974-418F-9A9A-F5D33D095FD9}</Project>
+      <Name>User Control</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

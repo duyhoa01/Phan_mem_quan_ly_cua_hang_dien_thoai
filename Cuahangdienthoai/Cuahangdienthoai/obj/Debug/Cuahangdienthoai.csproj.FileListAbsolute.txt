@@ -63,3 +63,4 @@ C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_tho
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.dll
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csproj.CopyComplete
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csprojAssemblyReference.cache
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.pdb
