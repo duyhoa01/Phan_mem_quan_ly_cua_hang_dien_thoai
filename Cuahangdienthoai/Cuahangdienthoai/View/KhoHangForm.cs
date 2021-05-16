@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cuahangdienthoai.View
 {
-    public partial class TonKhoForm : Form
+    public partial class KhoHangForm : Form
     {
-        public TonKhoForm()
+        public KhoHangForm()
         {
             InitializeComponent();
         }

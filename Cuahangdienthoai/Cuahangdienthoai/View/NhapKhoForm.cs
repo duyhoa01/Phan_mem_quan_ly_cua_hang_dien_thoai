@@ -16,5 +16,11 @@ namespace Cuahangdienthoai.View
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form f = new HoaDonNhapForm();
+            f.Show();
+        }
     }
 }
