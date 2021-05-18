@@ -82,62 +82,62 @@ namespace Cuahangdienthoai.View
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                pictureBox5.Height = pictureBox5.Height - 15;
-                pictureBox5.Width = pictureBox5.Width - 15;
-                pictureBox5.Top += 7;
-                pictureBox5.Left += 7;
-                Thread.Sleep(50);
-                Application.DoEvents();
-            }
-            pictureBox5.Image = Image.FromFile("C:/Users/DELL/OneDrive/Máy tính/PBL3/Cuahangdienthoai/Cuahangdienthoai/ICON/samsung-galaxy-s21.jpg");
-            for (int i = 0; i < 10; i++)
-            {
-                pictureBox5.Height = pictureBox5.Height + 15;
-                pictureBox5.Width = pictureBox5.Width + 15;
-                pictureBox5.Top -= 7;
-                pictureBox5.Left -= 7;
-                Thread.Sleep(50);
-                Application.DoEvents();
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    pictureBox5.Height = pictureBox5.Height - 15;
+            //    pictureBox5.Width = pictureBox5.Width - 15;
+            //    pictureBox5.Top += 7;
+            //    pictureBox5.Left += 7;
+            //    Thread.Sleep(50);
+            //    Application.DoEvents();
+            //}
+            //pictureBox5.Image = Image.FromFile("C:/Users/DELL/OneDrive/Máy tính/PBL3/Cuahangdienthoai/Cuahangdienthoai/ICON/samsung-galaxy-s21.jpg");
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    pictureBox5.Height = pictureBox5.Height + 15;
+            //    pictureBox5.Width = pictureBox5.Width + 15;
+            //    pictureBox5.Top -= 7;
+            //    pictureBox5.Left -= 7;
+            //    Thread.Sleep(50);
+            //    Application.DoEvents();
+            //}
         //    Thread t = new Thread(() => { HieuUng(); });
         //    t.Start();
         }
-        public void HieuUng()
-        {
-            try
-            {
-                if (pictureBox5.InvokeRequired)
-                {
-                    pictureBox5.Invoke(new Action(HieuUng));
-                    return;
-                }
-                for(int i = 0; i < 10; i++)
-                {
-                    pictureBox5.Height = pictureBox5.Height - 15;
-                    pictureBox5.Width = pictureBox5.Width - 15;
-                    pictureBox5.Top += 7;
-                    pictureBox5.Left += 7;
-                    Thread.Sleep(50);
-                    //Application.DoEvents();
-                }
-                pictureBox5.Image = Image.FromFile("C:/Users/DELL/OneDrive/Máy tính/PBL3/Cuahangdienthoai/Cuahangdienthoai/ICON/samsung-galaxy-s21.jpg");
-                for (int i = 0; i < 10; i++)
-                {
-                    pictureBox5.Height = pictureBox5.Height + 15;
-                    pictureBox5.Width = pictureBox5.Width + 15;
-                    pictureBox5.Top -= 7;
-                    pictureBox5.Left -= 7;
-                    Thread.Sleep(50);
-                    //Application.DoEvents();
-                }
-            }
-            catch (Exception e)
-            {
+        //public void HieuUng()
+        //{
+        //    try
+        //    {
+        //        if (pictureBox5.InvokeRequired)
+        //        {
+        //            pictureBox5.Invoke(new Action(HieuUng));
+        //            return;
+        //        }
+        //        for(int i = 0; i < 10; i++)
+        //        {
+        //            pictureBox5.Height = pictureBox5.Height - 15;
+        //            pictureBox5.Width = pictureBox5.Width - 15;
+        //            pictureBox5.Top += 7;
+        //            pictureBox5.Left += 7;
+        //            Thread.Sleep(50);
+        //            //Application.DoEvents();
+        //        }
+        //        pictureBox5.Image = Image.FromFile("C:/Users/DELL/OneDrive/Máy tính/PBL3/Cuahangdienthoai/Cuahangdienthoai/ICON/samsung-galaxy-s21.jpg");
+        //        for (int i = 0; i < 10; i++)
+        //        {
+        //            pictureBox5.Height = pictureBox5.Height + 15;
+        //            pictureBox5.Width = pictureBox5.Width + 15;
+        //            pictureBox5.Top -= 7;
+        //            pictureBox5.Left -= 7;
+        //            Thread.Sleep(50);
+        //            //Application.DoEvents();
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
 
-            }
-        }
+        //    }
+        //}
 
         private void panel12_Paint(object sender, PaintEventArgs e)
         {
