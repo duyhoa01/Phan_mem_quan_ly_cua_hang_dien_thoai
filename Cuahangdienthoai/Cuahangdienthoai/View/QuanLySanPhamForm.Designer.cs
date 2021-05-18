@@ -35,9 +35,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,20 +47,19 @@
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewsanpham = new System.Windows.Forms.DataGridView();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewsanpham)).BeginInit();
             this.SuspendLayout();
@@ -131,14 +131,19 @@
             this.panel5.Size = new System.Drawing.Size(1220, 100);
             this.panel5.TabIndex = 5;
             // 
-            // panel13
+            // button5
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 35);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(148, 4);
-            this.panel13.TabIndex = 18;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(592, 20);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 40);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Sắp xếp";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // panel12
             // 
@@ -158,6 +163,15 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(140, 24);
             this.comboBox1.TabIndex = 16;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 35);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(148, 4);
+            this.panel13.TabIndex = 18;
             // 
             // button4
             // 
@@ -263,27 +277,52 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.panel11);
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(40, 190);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1220, 530);
+            this.panel7.Size = new System.Drawing.Size(1220, 570);
             this.panel7.TabIndex = 6;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(1200, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(20, 570);
+            this.panel9.TabIndex = 1;
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(20, 570);
+            this.panel8.TabIndex = 0;
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel10.Controls.Add(this.pictureBox1);
-            this.panel10.Controls.Add(this.label1);
-            this.panel10.Controls.Add(this.dataGridViewsanpham);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(20, 0);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(20, 538);
             this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(1, 60, 1, 10);
-            this.panel10.Size = new System.Drawing.Size(1180, 530);
+            this.panel10.Size = new System.Drawing.Size(1180, 32);
             this.panel10.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel11.Controls.Add(this.pictureBox1);
+            this.panel11.Controls.Add(this.label1);
+            this.panel11.Controls.Add(this.dataGridViewsanpham);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(20, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Padding = new System.Windows.Forms.Padding(1, 60, 1, 10);
+            this.panel11.Size = new System.Drawing.Size(1180, 538);
+            this.panel11.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -316,53 +355,14 @@
             this.dataGridViewsanpham.Name = "dataGridViewsanpham";
             this.dataGridViewsanpham.RowHeadersWidth = 51;
             this.dataGridViewsanpham.RowTemplate.Height = 24;
-            this.dataGridViewsanpham.Size = new System.Drawing.Size(1178, 460);
+            this.dataGridViewsanpham.Size = new System.Drawing.Size(1178, 468);
             this.dataGridViewsanpham.TabIndex = 0;
             // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(1200, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(20, 530);
-            this.panel9.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(20, 530);
-            this.panel8.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(592, 20);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 40);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Sắp xếp";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // panel11
-            // 
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(40, 716);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1220, 44);
-            this.panel11.TabIndex = 7;
-            // 
-            // QuanLySanPham
+            // QuanLySanPhamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 760);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -370,7 +370,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "QuanLySanPham";
+            this.Name = "QuanLySanPhamForm";
             this.Text = "SanPham";
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -378,8 +378,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewsanpham)).EndInit();
             this.ResumeLayout(false);
@@ -400,10 +400,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewsanpham;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -413,5 +409,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewsanpham;
+        private System.Windows.Forms.Panel panel10;
     }
 }
