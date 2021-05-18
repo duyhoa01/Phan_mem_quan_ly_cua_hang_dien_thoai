@@ -15,6 +15,7 @@ namespace User_Control
         public DienThoai()
         {
             InitializeComponent();
+            this.Focus();
         }
         public string MaSP { get => (lbMaSP.Text); set => lbMaSP.Text = value; }
         public string Gia { get => lbGia.Text; set => lbGia.Text = value; }

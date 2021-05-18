@@ -15,12 +15,22 @@ namespace Cuahangdienthoai.View
         public NhapKhoForm()
         {
             InitializeComponent();
+            lich1.BackColor = this.TransparencyKey;
+            lich2.BackColor = this.TransparencyKey;
+            lich1.BringToFront();
+            lich2.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form f = new HoaDonNhapForm();
             f.Show();
+        }
+        private void ChonThoiGian(object sender, EventArgs e)
+        {
+            Button bt = sender as Button;
+            bt.BackColor = Color.FromArgb(255, 128, 0);
+            bt.ForeColor = Color.White;
         }
     }
 }

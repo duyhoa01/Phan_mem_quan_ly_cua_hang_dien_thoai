@@ -101,7 +101,7 @@
             this.Controls.Add(this.picMaximize);
             this.Controls.Add(this.picClose);
             this.Name = "ThuDong";
-            this.Size = new System.Drawing.Size(153, 34);
+            this.Size = new System.Drawing.Size(153, 29);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ThuDong_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.picRestore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();

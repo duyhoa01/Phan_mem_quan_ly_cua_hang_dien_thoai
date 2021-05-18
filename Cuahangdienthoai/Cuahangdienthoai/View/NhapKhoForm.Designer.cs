@@ -34,16 +34,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewsanpham = new System.Windows.Forms.DataGridView();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -57,6 +53,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lich1 = new User_Control.Lich();
+            this.lich2 = new User_Control.Lich();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,8 +68,6 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.panel10);
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(30, 154);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
@@ -86,11 +82,11 @@
             this.panel10.Controls.Add(this.label1);
             this.panel10.Controls.Add(this.dataGridViewsanpham);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(15, 0);
+            this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(1, 49, 1, 8);
-            this.panel10.Size = new System.Drawing.Size(885, 427);
+            this.panel10.Size = new System.Drawing.Size(915, 427);
             this.panel10.TabIndex = 2;
             // 
             // pictureBox1
@@ -107,12 +103,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(38, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nhập kho";
             // 
@@ -127,27 +123,8 @@
             this.dataGridViewsanpham.Name = "dataGridViewsanpham";
             this.dataGridViewsanpham.RowHeadersWidth = 51;
             this.dataGridViewsanpham.RowTemplate.Height = 24;
-            this.dataGridViewsanpham.Size = new System.Drawing.Size(883, 370);
+            this.dataGridViewsanpham.Size = new System.Drawing.Size(913, 370);
             this.dataGridViewsanpham.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(900, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(15, 427);
-            this.panel9.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(15, 427);
-            this.panel8.TabIndex = 0;
             // 
             // panel11
             // 
@@ -191,8 +168,6 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.dateTimePicker2);
-            this.panel5.Controls.Add(this.dateTimePicker1);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.button5);
@@ -211,7 +186,7 @@
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.button4.Location = new System.Drawing.Point(835, 16);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
@@ -227,7 +202,7 @@
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.button3.Location = new System.Drawing.Point(754, 16);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
@@ -237,34 +212,12 @@
             this.button3.Text = "Tháng";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(554, 23);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker2.TabIndex = 24;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Yellow;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(379, 23);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 23;
-            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label5.Location = new System.Drawing.Point(494, 26);
+            this.label5.Location = new System.Drawing.Point(485, 4);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
@@ -277,7 +230,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(325, 25);
+            this.label4.Location = new System.Drawing.Point(325, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 15);
@@ -290,7 +243,7 @@
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.button5.Location = new System.Drawing.Point(672, 16);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
@@ -306,13 +259,14 @@
             this.btTimKiêm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btTimKiêm.FlatAppearance.BorderSize = 0;
             this.btTimKiêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiêm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimKiêm.ForeColor = System.Drawing.Color.White;
             this.btTimKiêm.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiêm.Image")));
             this.btTimKiêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btTimKiêm.Location = new System.Drawing.Point(188, 16);
             this.btTimKiêm.Margin = new System.Windows.Forms.Padding(2);
             this.btTimKiêm.Name = "btTimKiêm";
-            this.btTimKiêm.Size = new System.Drawing.Size(89, 32);
+            this.btTimKiêm.Size = new System.Drawing.Size(96, 32);
             this.btTimKiêm.TabIndex = 12;
             this.btTimKiêm.Text = "Tìm kiếm";
             this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -399,7 +353,7 @@
             this.button1.Location = new System.Drawing.Point(805, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 32);
+            this.button1.Size = new System.Drawing.Size(92, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Xuất Exel";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -433,6 +387,24 @@
             this.panel2.Size = new System.Drawing.Size(30, 617);
             this.panel2.TabIndex = 15;
             // 
+            // lich1
+            // 
+            this.lich1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lich1.BackColor = System.Drawing.Color.Gold;
+            this.lich1.Location = new System.Drawing.Point(358, 92);
+            this.lich1.Name = "lich1";
+            this.lich1.Size = new System.Drawing.Size(110, 28);
+            this.lich1.TabIndex = 29;
+            // 
+            // lich2
+            // 
+            this.lich2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lich2.BackColor = System.Drawing.Color.Gold;
+            this.lich2.Location = new System.Drawing.Point(518, 92);
+            this.lich2.Name = "lich2";
+            this.lich2.Size = new System.Drawing.Size(110, 28);
+            this.lich2.TabIndex = 5;
+            // 
             // NhapKhoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +418,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.lich1);
+            this.Controls.Add(this.lich2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NhapKhoForm";
@@ -471,14 +445,10 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.DataGridView dataGridViewsanpham;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
@@ -496,5 +466,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private User_Control.Lich lich1;
+        private User_Control.Lich lich2;
     }
 }
