@@ -59,6 +59,12 @@
     <Compile Include="View\ForgotUser.Designer.cs">
       <DependentUpon>ForgotUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HoaDonNhapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HoaDonNhapForm.Designer.cs">
+      <DependentUpon>HoaDonNhapForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,11 +127,11 @@
     <Compile Include="View\QuanLyTaiKhoanForm.Designer.cs">
       <DependentUpon>QuanLyTaiKhoanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TonKhoForm.cs">
+    <Compile Include="View\KhoHangForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TonKhoForm.Designer.cs">
-      <DependentUpon>TonKhoForm.cs</DependentUpon>
+    <Compile Include="View\KhoHangForm.Designer.cs">
+      <DependentUpon>KhoHangForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ThemDonHangForm.cs">
       <SubType>Form</SubType>
@@ -135,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="View\BaoCaoKinhDoanhForm.resx">
       <DependentUpon>BaoCaoKinhDoanhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HoaDonNhapForm.resx">
+      <DependentUpon>HoaDonNhapForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -179,8 +188,8 @@
     <EmbeddedResource Include="View\ThemDonHangForm.resx">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TonKhoForm.resx">
-      <DependentUpon>TonKhoForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\KhoHangForm.resx">
+      <DependentUpon>KhoHangForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -200,6 +209,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ICON\samsung-galaxy-s21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AnhDT\" />
+    <Folder Include="User Control\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\User Control\User Control.csproj">
+      <Project>{9AB287A2-3974-418F-9A9A-F5D33D095FD9}</Project>
+      <Name>User Control</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
