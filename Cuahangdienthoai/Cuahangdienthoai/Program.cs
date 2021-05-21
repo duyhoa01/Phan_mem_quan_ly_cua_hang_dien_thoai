@@ -17,7 +17,7 @@ namespace Cuahangdienthoai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 form1 = new Form1();
+            HoaDonBanChiTietForm form1 = new HoaDonBanChiTietForm();
             Application.Run(form1);
         }
     }
