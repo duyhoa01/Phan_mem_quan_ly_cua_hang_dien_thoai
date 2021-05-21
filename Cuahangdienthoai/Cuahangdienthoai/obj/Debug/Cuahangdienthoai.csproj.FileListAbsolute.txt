@@ -91,3 +91,4 @@ C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cua
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.exe
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.pdb
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.HoaDonBanChiTietForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.HoaDonNhapChiTiet.resources
