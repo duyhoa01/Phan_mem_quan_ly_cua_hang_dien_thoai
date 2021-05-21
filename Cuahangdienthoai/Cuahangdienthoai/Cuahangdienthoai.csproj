@@ -59,6 +59,12 @@
     <Compile Include="View\ForgotUser.Designer.cs">
       <DependentUpon>ForgotUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HoaDonBanChiTietForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HoaDonBanChiTietForm.Designer.cs">
+      <DependentUpon>HoaDonBanChiTietForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HoaDonNhapForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="View\BaoCaoKinhDoanhForm.resx">
       <DependentUpon>BaoCaoKinhDoanhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HoaDonBanChiTietForm.resx">
+      <DependentUpon>HoaDonBanChiTietForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HoaDonNhapForm.resx">
       <DependentUpon>HoaDonNhapForm.cs</DependentUpon>
