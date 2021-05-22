@@ -28,12 +28,12 @@ namespace Cuahangdienthoai.View
             if (rdbKHMoi.Checked == false)
             {
                 pnKHCu.Show();
-                pnThongTinKH.Enabled = true;
+                pnThongTinKH.Enabled = false;
             }
             else
             {
                 pnKHCu.Hide();
-                pnThongTinKH.Enabled = false;
+                pnThongTinKH.Enabled = true;
             }
         }
     }
