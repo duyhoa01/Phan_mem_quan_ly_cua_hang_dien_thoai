@@ -22,5 +22,19 @@ namespace User_Control
         public string TenDT { get => tbTenDT.Text; set => tbTenDT.Text = value; }
         public string LinkAnh { set => pictureBox1.Image = new Bitmap(value); }
         public int SL { get => Convert.ToInt32(lbSL.Text); set => lbSL.Text = value.ToString(); }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+            tbTenDT.BackColor = Color.White;
+            panel1.BackColor = Color.White;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.BackColor = Color.FromArgb(208, 239, 242);
+            tbTenDT.BackColor = Color.FromArgb(208, 239, 242);
+            panel1.BackColor = Color.FromArgb(208, 239, 242);
+        }
     }
 }

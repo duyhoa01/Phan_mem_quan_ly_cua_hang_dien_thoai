@@ -49,11 +49,14 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(172, 201);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // pictureBox1
             // 
@@ -65,6 +68,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // panel2
             // 
@@ -73,9 +78,12 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(172, 24);
             this.panel2.TabIndex = 1;
+            this.panel2.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // tbTenDT
             // 
+            this.tbTenDT.BackColor = System.Drawing.Color.White;
             this.tbTenDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTenDT.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbTenDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,6 +93,8 @@
             this.tbTenDT.TabIndex = 2;
             this.tbTenDT.Text = "Tên Điện Thoại";
             this.tbTenDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbTenDT.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.tbTenDT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // panel3
             // 
@@ -94,6 +104,8 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(110, 25);
             this.panel3.TabIndex = 2;
+            this.panel3.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // lbMaSP
             // 
@@ -107,6 +119,8 @@
             this.lbMaSP.TabIndex = 5;
             this.lbMaSP.Text = "Mã";
             this.lbMaSP.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lbMaSP.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbMaSP.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // label1
             // 
@@ -118,6 +132,8 @@
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Mã SP:";
+            this.label1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // panel4
             // 
@@ -128,6 +144,8 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(157, 25);
             this.panel4.TabIndex = 6;
+            this.panel4.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // label5
             // 
@@ -139,6 +157,8 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "|  SL";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label5.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // lbSL
             // 
@@ -151,6 +171,8 @@
             this.lbSL.TabIndex = 5;
             this.lbSL.Text = "10000";
             this.lbSL.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lbSL.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbSL.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // lbGia
             // 
@@ -162,6 +184,8 @@
             this.lbGia.Size = new System.Drawing.Size(29, 16);
             this.lbGia.TabIndex = 4;
             this.lbGia.Text = "Giá";
+            this.lbGia.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbGia.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // DienThoai
             // 
