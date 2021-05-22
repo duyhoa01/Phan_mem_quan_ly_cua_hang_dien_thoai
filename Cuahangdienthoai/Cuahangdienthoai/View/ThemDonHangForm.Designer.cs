@@ -91,6 +91,8 @@
             this.pnThanhToan = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -117,8 +119,6 @@
             this.rdbKHMoi = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -141,13 +141,13 @@
             this.pnThanhToan.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnKHCu.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -342,9 +342,9 @@
             this.flowLayoutPanel1.Controls.Add(this.dienThoai12);
             this.flowLayoutPanel1.Controls.Add(this.dienThoai13);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 65);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 65);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(554, 536);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(564, 536);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
             // dienThoai9
@@ -422,9 +422,9 @@
             this.panel23.BackColor = System.Drawing.Color.Gainsboro;
             this.panel23.Controls.Add(this.label12);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel23.Location = new System.Drawing.Point(15, 601);
+            this.panel23.Location = new System.Drawing.Point(10, 601);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(554, 31);
+            this.panel23.Size = new System.Drawing.Size(564, 31);
             this.panel23.TabIndex = 23;
             // 
             // label12
@@ -444,10 +444,10 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(569, 65);
+            this.panel2.Location = new System.Drawing.Point(574, 65);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(15, 567);
+            this.panel2.Size = new System.Drawing.Size(10, 567);
             this.panel2.TabIndex = 22;
             // 
             // panel21
@@ -456,7 +456,7 @@
             this.panel21.Location = new System.Drawing.Point(0, 65);
             this.panel21.Margin = new System.Windows.Forms.Padding(2);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(15, 567);
+            this.panel21.Size = new System.Drawing.Size(10, 567);
             this.panel21.TabIndex = 21;
             // 
             // panel18
@@ -920,6 +920,31 @@
             this.panel17.Size = new System.Drawing.Size(532, 273);
             this.panel17.TabIndex = 0;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Red;
+            this.groupBox2.Location = new System.Drawing.Point(0, 350);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(515, 145);
+            this.groupBox2.TabIndex = 49;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Khuyến Mãi Áp Dụng";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.AntiqueWhite;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(509, 124);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1235,31 +1260,6 @@
             this.thuDong1.Size = new System.Drawing.Size(1134, 34);
             this.thuDong1.TabIndex = 28;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Red;
-            this.groupBox2.Location = new System.Drawing.Point(0, 350);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(515, 145);
-            this.groupBox2.TabIndex = 49;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Khuyến Mãi Áp Dụng";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.AntiqueWhite;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(509, 124);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // ThemDonHangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1308,6 +1308,8 @@
             this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1315,8 +1317,6 @@
             this.pnKHCu.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
