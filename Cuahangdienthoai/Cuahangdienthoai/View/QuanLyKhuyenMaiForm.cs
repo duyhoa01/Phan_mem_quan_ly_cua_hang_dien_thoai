@@ -16,5 +16,11 @@ namespace Cuahangdienthoai.View
         {
             InitializeComponent();
         }
+
+        private void btThemKM_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Add(new User_Control.KhuyenMaii());
+            lbSoLuong.Text = (Convert.ToInt32(lbSoLuong.Text) + 1).ToString();
+        }
     }
 }
