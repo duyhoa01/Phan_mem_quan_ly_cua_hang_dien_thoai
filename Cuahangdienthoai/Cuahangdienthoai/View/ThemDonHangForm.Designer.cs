@@ -45,11 +45,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pnSanPham = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dienThoai9 = new User_Control.DienThoai();
-            this.dienThoai10 = new User_Control.DienThoai();
-            this.dienThoai11 = new User_Control.DienThoai();
-            this.dienThoai12 = new User_Control.DienThoai();
-            this.dienThoai13 = new User_Control.DienThoai();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,7 +56,6 @@
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
             this.tbNVBan = new System.Windows.Forms.TextBox();
-            this.lich1 = new User_Control.Lich();
             this.pnThongTinKH = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -118,6 +112,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.rdbKHMoi = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.dienThoai9 = new User_Control.DienThoai();
+            this.dienThoai10 = new User_Control.DienThoai();
+            this.dienThoai11 = new User_Control.DienThoai();
+            this.dienThoai12 = new User_Control.DienThoai();
+            this.dienThoai13 = new User_Control.DienThoai();
+            this.lich1 = new User_Control.Lich();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel14.SuspendLayout();
@@ -205,7 +205,7 @@
             this.panel14.Controls.Add(this.button10);
             this.panel14.Controls.Add(this.btHuyDon);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(0, 661);
+            this.panel14.Location = new System.Drawing.Point(0, 6706);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(515, 77);
             this.panel14.TabIndex = 39;
@@ -301,7 +301,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label5.Location = new System.Drawing.Point(19, 19);
+            this.label5.Location = new System.Drawing.Point(19, 6064);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 25;
@@ -347,79 +347,9 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(564, 536);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
-            // dienThoai9
-            // 
-            this.dienThoai9.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai9.BackColor = System.Drawing.Color.White;
-            this.dienThoai9.Gia = "Giá";
-            this.dienThoai9.Location = new System.Drawing.Point(4, 4);
-            this.dienThoai9.Margin = new System.Windows.Forms.Padding(4);
-            this.dienThoai9.MaSP = "Mã";
-            this.dienThoai9.Name = "dienThoai9";
-            this.dienThoai9.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai9.SL = 10000;
-            this.dienThoai9.TabIndex = 8;
-            this.dienThoai9.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai10
-            // 
-            this.dienThoai10.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai10.BackColor = System.Drawing.Color.White;
-            this.dienThoai10.Gia = "Giá";
-            this.dienThoai10.Location = new System.Drawing.Point(184, 4);
-            this.dienThoai10.Margin = new System.Windows.Forms.Padding(4);
-            this.dienThoai10.MaSP = "Mã";
-            this.dienThoai10.Name = "dienThoai10";
-            this.dienThoai10.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai10.SL = 10000;
-            this.dienThoai10.TabIndex = 9;
-            this.dienThoai10.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai11
-            // 
-            this.dienThoai11.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai11.BackColor = System.Drawing.Color.White;
-            this.dienThoai11.Gia = "Giá";
-            this.dienThoai11.Location = new System.Drawing.Point(364, 4);
-            this.dienThoai11.Margin = new System.Windows.Forms.Padding(4);
-            this.dienThoai11.MaSP = "Mã";
-            this.dienThoai11.Name = "dienThoai11";
-            this.dienThoai11.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai11.SL = 10000;
-            this.dienThoai11.TabIndex = 10;
-            this.dienThoai11.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai12
-            // 
-            this.dienThoai12.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai12.BackColor = System.Drawing.Color.White;
-            this.dienThoai12.Gia = "Giá";
-            this.dienThoai12.Location = new System.Drawing.Point(4, 288);
-            this.dienThoai12.Margin = new System.Windows.Forms.Padding(4);
-            this.dienThoai12.MaSP = "Mã";
-            this.dienThoai12.Name = "dienThoai12";
-            this.dienThoai12.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai12.SL = 10000;
-            this.dienThoai12.TabIndex = 11;
-            this.dienThoai12.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai13
-            // 
-            this.dienThoai13.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai13.BackColor = System.Drawing.Color.White;
-            this.dienThoai13.Gia = "Giá";
-            this.dienThoai13.Location = new System.Drawing.Point(184, 288);
-            this.dienThoai13.Margin = new System.Windows.Forms.Padding(4);
-            this.dienThoai13.MaSP = "Mã";
-            this.dienThoai13.Name = "dienThoai13";
-            this.dienThoai13.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai13.SL = 10000;
-            this.dienThoai13.TabIndex = 12;
-            this.dienThoai13.TenDT = "Tên Điện Thoại";
-            // 
             // panel23
             // 
-            this.panel23.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.panel23.Controls.Add(this.label12);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel23.Location = new System.Drawing.Point(10, 601);
@@ -431,7 +361,7 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Gainsboro;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label12.Location = new System.Drawing.Point(16, 9);
@@ -481,12 +411,12 @@
             this.btThemSP.ForeColor = System.Drawing.Color.White;
             this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
             this.btThemSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThemSP.Location = new System.Drawing.Point(395, 19);
+            this.btThemSP.Location = new System.Drawing.Point(451, 19);
             this.btThemSP.Margin = new System.Windows.Forms.Padding(2);
             this.btThemSP.Name = "btThemSP";
-            this.btThemSP.Size = new System.Drawing.Size(169, 32);
+            this.btThemSP.Size = new System.Drawing.Size(113, 32);
             this.btThemSP.TabIndex = 15;
-            this.btThemSP.Text = "Thêm Sản Phẩm Mới";
+            this.btThemSP.Text = "Thêm Mới";
             this.btThemSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThemSP.UseVisualStyleBackColor = false;
             // 
@@ -557,16 +487,6 @@
             this.tbNVBan.Size = new System.Drawing.Size(376, 19);
             this.tbNVBan.TabIndex = 2;
             // 
-            // lich1
-            // 
-            this.lich1.BackColor = System.Drawing.Color.Gold;
-            this.lich1.Enabled = false;
-            this.lich1.Location = new System.Drawing.Point(123, 60);
-            this.lich1.Margin = new System.Windows.Forms.Padding(4);
-            this.lich1.Name = "lich1";
-            this.lich1.Size = new System.Drawing.Size(110, 28);
-            this.lich1.TabIndex = 42;
-            // 
             // pnThongTinKH
             // 
             this.pnThongTinKH.Controls.Add(this.panel10);
@@ -577,7 +497,7 @@
             this.pnThongTinKH.Controls.Add(this.label13);
             this.pnThongTinKH.Controls.Add(this.panel9);
             this.pnThongTinKH.Controls.Add(this.label11);
-            this.pnThongTinKH.Location = new System.Drawing.Point(0, 155);
+            this.pnThongTinKH.Location = new System.Drawing.Point(0, 6200);
             this.pnThongTinKH.Name = "pnThongTinKH";
             this.pnThongTinKH.Size = new System.Drawing.Size(515, 190);
             this.pnThongTinKH.TabIndex = 19;
@@ -790,7 +710,7 @@
             this.panel25.Controls.Add(this.tbNVBan);
             this.panel25.Controls.Add(this.button3);
             this.panel25.Enabled = false;
-            this.panel25.Location = new System.Drawing.Point(123, 11);
+            this.panel25.Location = new System.Drawing.Point(123, 6056);
             this.panel25.Margin = new System.Windows.Forms.Padding(2);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(376, 26);
@@ -925,7 +845,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Red;
-            this.groupBox2.Location = new System.Drawing.Point(0, 350);
+            this.groupBox2.Location = new System.Drawing.Point(0, 6395);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(515, 145);
             this.groupBox2.TabIndex = 49;
@@ -966,7 +886,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(18, 500);
+            this.groupBox1.Location = new System.Drawing.Point(18, 6545);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(481, 161);
             this.groupBox1.TabIndex = 48;
@@ -1136,7 +1056,7 @@
             // 
             this.pnKHCu.Controls.Add(this.btKtraKH);
             this.pnKHCu.Controls.Add(this.panel7);
-            this.pnKHCu.Location = new System.Drawing.Point(248, 100);
+            this.pnKHCu.Location = new System.Drawing.Point(248, 6145);
             this.pnKHCu.Name = "pnKHCu";
             this.pnKHCu.Size = new System.Drawing.Size(251, 45);
             this.pnKHCu.TabIndex = 47;
@@ -1205,7 +1125,7 @@
             this.rdbKHCu.BackColor = System.Drawing.Color.White;
             this.rdbKHCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbKHCu.ForeColor = System.Drawing.Color.Red;
-            this.rdbKHCu.Location = new System.Drawing.Point(185, 122);
+            this.rdbKHCu.Location = new System.Drawing.Point(185, 6167);
             this.rdbKHCu.Name = "rdbKHCu";
             this.rdbKHCu.Size = new System.Drawing.Size(42, 20);
             this.rdbKHCu.TabIndex = 45;
@@ -1217,7 +1137,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label3.Location = new System.Drawing.Point(19, 124);
+            this.label3.Location = new System.Drawing.Point(19, 6169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 44;
@@ -1230,7 +1150,7 @@
             this.rdbKHMoi.Checked = true;
             this.rdbKHMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbKHMoi.ForeColor = System.Drawing.Color.Green;
-            this.rdbKHMoi.Location = new System.Drawing.Point(125, 122);
+            this.rdbKHMoi.Location = new System.Drawing.Point(125, 6167);
             this.rdbKHMoi.Name = "rdbKHMoi";
             this.rdbKHMoi.Size = new System.Drawing.Size(48, 20);
             this.rdbKHMoi.TabIndex = 43;
@@ -1244,11 +1164,91 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label6.Location = new System.Drawing.Point(19, 72);
+            this.label6.Location = new System.Drawing.Point(19, 6117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 33;
             this.label6.Text = "Ngày Nhập";
+            // 
+            // dienThoai9
+            // 
+            this.dienThoai9.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.dienThoai9.BackColor = System.Drawing.Color.White;
+            this.dienThoai9.Gia = "Giá";
+            this.dienThoai9.Location = new System.Drawing.Point(4, 4);
+            this.dienThoai9.Margin = new System.Windows.Forms.Padding(4);
+            this.dienThoai9.MaSP = "Mã";
+            this.dienThoai9.Name = "dienThoai9";
+            this.dienThoai9.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai9.SL = 10000;
+            this.dienThoai9.TabIndex = 8;
+            this.dienThoai9.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai10
+            // 
+            this.dienThoai10.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.dienThoai10.BackColor = System.Drawing.Color.White;
+            this.dienThoai10.Gia = "Giá";
+            this.dienThoai10.Location = new System.Drawing.Point(184, 4);
+            this.dienThoai10.Margin = new System.Windows.Forms.Padding(4);
+            this.dienThoai10.MaSP = "Mã";
+            this.dienThoai10.Name = "dienThoai10";
+            this.dienThoai10.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai10.SL = 10000;
+            this.dienThoai10.TabIndex = 9;
+            this.dienThoai10.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai11
+            // 
+            this.dienThoai11.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.dienThoai11.BackColor = System.Drawing.Color.White;
+            this.dienThoai11.Gia = "Giá";
+            this.dienThoai11.Location = new System.Drawing.Point(364, 4);
+            this.dienThoai11.Margin = new System.Windows.Forms.Padding(4);
+            this.dienThoai11.MaSP = "Mã";
+            this.dienThoai11.Name = "dienThoai11";
+            this.dienThoai11.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai11.SL = 10000;
+            this.dienThoai11.TabIndex = 10;
+            this.dienThoai11.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai12
+            // 
+            this.dienThoai12.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.dienThoai12.BackColor = System.Drawing.Color.White;
+            this.dienThoai12.Gia = "Giá";
+            this.dienThoai12.Location = new System.Drawing.Point(4, 288);
+            this.dienThoai12.Margin = new System.Windows.Forms.Padding(4);
+            this.dienThoai12.MaSP = "Mã";
+            this.dienThoai12.Name = "dienThoai12";
+            this.dienThoai12.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai12.SL = 10000;
+            this.dienThoai12.TabIndex = 11;
+            this.dienThoai12.TenDT = "Tên Điện Thoại";
+            // 
+            // dienThoai13
+            // 
+            this.dienThoai13.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.dienThoai13.BackColor = System.Drawing.Color.White;
+            this.dienThoai13.Gia = "Giá";
+            this.dienThoai13.Location = new System.Drawing.Point(184, 288);
+            this.dienThoai13.Margin = new System.Windows.Forms.Padding(4);
+            this.dienThoai13.MaSP = "Mã";
+            this.dienThoai13.Name = "dienThoai13";
+            this.dienThoai13.Size = new System.Drawing.Size(172, 276);
+            this.dienThoai13.SL = 10000;
+            this.dienThoai13.TabIndex = 12;
+            this.dienThoai13.TenDT = "Tên Điện Thoại";
+            // 
+            // lich1
+            // 
+            this.lich1.BackColor = System.Drawing.Color.Gold;
+            this.lich1.Enabled = false;
+            this.lich1.Location = new System.Drawing.Point(123, 6105);
+            this.lich1.Margin = new System.Windows.Forms.Padding(4);
+            this.lich1.Name = "lich1";
+            this.lich1.Size = new System.Drawing.Size(110, 28);
+            this.lich1.TabIndex = 42;
             // 
             // thuDong1
             // 

@@ -50,10 +50,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbTTHD = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnHangMua.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -296,7 +296,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label7);
@@ -307,27 +307,16 @@
             this.panel1.Size = new System.Drawing.Size(970, 38);
             this.panel1.TabIndex = 52;
             // 
-            // label3
+            // label10
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(8, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tổng Tiền Nhập:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Green;
-            this.label7.Location = new System.Drawing.Point(375, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Tổng Số Lượng SP:";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Green;
+            this.label10.Location = new System.Drawing.Point(545, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 20);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "10000";
             // 
             // label9
             // 
@@ -340,16 +329,27 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "10000";
             // 
-            // label10
+            // label7
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Green;
-            this.label10.Location = new System.Drawing.Point(545, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 20);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "10000";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Green;
+            this.label7.Location = new System.Drawing.Point(375, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Tổng Số Lượng SP:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(8, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tổng Tiền Nhập:";
             // 
             // HoaDonNhapChiTiet
             // 

@@ -31,11 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhuyenMaii));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lich2 = new User_Control.Lich();
+            this.lich1 = new User_Control.Lich();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tbGiaGiaMax = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tbPtGiamGia = new System.Windows.Forms.TextBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button3 = new System.Windows.Forms.Button();
             this.pbDelete = new System.Windows.Forms.PictureBox();
             this.pbSave = new System.Windows.Forms.PictureBox();
@@ -52,20 +56,17 @@
             this.tbKhuyenMai = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lich2 = new User_Control.Lich();
-            this.lich1 = new User_Control.Lich();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,6 +103,42 @@
             this.panel10.Size = new System.Drawing.Size(614, 238);
             this.panel10.TabIndex = 4;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(43, 197);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 71;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(43, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 70;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lich2
+            // 
+            this.lich2.BackColor = System.Drawing.Color.White;
+            this.lich2.Location = new System.Drawing.Point(362, 49);
+            this.lich2.Name = "lich2";
+            this.lich2.Size = new System.Drawing.Size(110, 28);
+            this.lich2.TabIndex = 69;
+            this.lich2.SizeChanged += new System.EventHandler(this.lich1_SizeChanged);
+            // 
+            // lich1
+            // 
+            this.lich1.BackColor = System.Drawing.Color.White;
+            this.lich1.Location = new System.Drawing.Point(129, 49);
+            this.lich1.Name = "lich1";
+            this.lich1.Size = new System.Drawing.Size(110, 28);
+            this.lich1.TabIndex = 68;
+            this.lich1.SizeChanged += new System.EventHandler(this.lich1_SizeChanged);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -124,7 +161,7 @@
             this.tbGiaGiaMax.Name = "tbGiaGiaMax";
             this.tbGiaGiaMax.Size = new System.Drawing.Size(176, 22);
             this.tbGiaGiaMax.TabIndex = 2;
-            this.tbGiaGiaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbGiaGiaMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbGiaGiaMax.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button4
@@ -143,7 +180,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.tbPtGiamGia);
+            this.panel4.Controls.Add(this.numericUpDown1);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Location = new System.Drawing.Point(171, 143);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
@@ -151,19 +188,17 @@
             this.panel4.Size = new System.Drawing.Size(176, 30);
             this.panel4.TabIndex = 66;
             // 
-            // tbPtGiamGia
+            // numericUpDown1
             // 
-            this.tbPtGiamGia.BackColor = System.Drawing.Color.White;
-            this.tbPtGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPtGiamGia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbPtGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPtGiamGia.Location = new System.Drawing.Point(0, 6);
-            this.tbPtGiamGia.Margin = new System.Windows.Forms.Padding(2);
-            this.tbPtGiamGia.Name = "tbPtGiamGia";
-            this.tbPtGiamGia.Size = new System.Drawing.Size(176, 22);
-            this.tbPtGiamGia.TabIndex = 2;
-            this.tbPtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbPtGiamGia.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(0, 10);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(176, 18);
+            this.numericUpDown1.TabIndex = 2;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button3
             // 
@@ -188,6 +223,7 @@
             this.pbDelete.Size = new System.Drawing.Size(33, 35);
             this.pbDelete.TabIndex = 65;
             this.pbDelete.TabStop = false;
+            this.pbDelete.Click += new System.EventHandler(this.pbDelete_Click);
             // 
             // pbSave
             // 
@@ -223,7 +259,7 @@
             this.tbGiaMin.Name = "tbGiaMin";
             this.tbGiaMin.Size = new System.Drawing.Size(176, 22);
             this.tbGiaMin.TabIndex = 2;
-            this.tbGiaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbGiaMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbGiaMin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
@@ -246,9 +282,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label2.Location = new System.Drawing.Point(72, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 60;
-            this.label2.Text = "% Giảm giá:";
+            this.label2.Text = "Pt giảm giá:";
             // 
             // label3
             // 
@@ -355,42 +391,6 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "Khuyến Mãi:";
             // 
-            // lich2
-            // 
-            this.lich2.BackColor = System.Drawing.Color.White;
-            this.lich2.Location = new System.Drawing.Point(362, 49);
-            this.lich2.Name = "lich2";
-            this.lich2.Size = new System.Drawing.Size(110, 28);
-            this.lich2.TabIndex = 69;
-            this.lich2.SizeChanged += new System.EventHandler(this.lich1_SizeChanged);
-            // 
-            // lich1
-            // 
-            this.lich1.BackColor = System.Drawing.Color.White;
-            this.lich1.Location = new System.Drawing.Point(129, 49);
-            this.lich1.Name = "lich1";
-            this.lich1.Size = new System.Drawing.Size(110, 28);
-            this.lich1.TabIndex = 68;
-            this.lich1.SizeChanged += new System.EventHandler(this.lich1_SizeChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(43, 149);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 70;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(43, 197);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 71;
-            this.pictureBox2.TabStop = false;
-            // 
             // KhuyenMaii
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,18 +402,18 @@
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,7 +426,6 @@
         private System.Windows.Forms.TextBox tbGiaGiaMax;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox tbPtGiamGia;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pbDelete;
         private System.Windows.Forms.PictureBox pbSave;
@@ -447,5 +446,6 @@
         private Lich lich1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

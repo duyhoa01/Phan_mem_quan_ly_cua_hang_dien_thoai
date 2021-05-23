@@ -12,6 +12,8 @@ namespace User_Control
 {
     public partial class Lich : UserControl
     {
+        public delegate void ValueChanged(object sender, EventArgs e);
+        public event ValueChanged valueChanged;
         public bool ShowCalendar = false;
         public Lich()
         {
@@ -30,6 +32,7 @@ namespace User_Control
             tbNgay.Text = monthCalendar1.SelectionStart.ToString("dd/MM/yyyy");
             monthCalendar1.Hide();
             this.Size = new Size(panel10.Width, panel10.Height);
+            valueChanged?.Invoke(this, EventArgs.Empty);
         }
         private void XuLy()
         {
@@ -60,6 +63,11 @@ namespace User_Control
                 tbNgay.BackColor = value;
                 button16.BackColor = value;
             }
+        }
+        public DateTime SetDateTime(string date)
+        {
+            String[] time = date.Split('/');
+            return new DateTime(Convert.ToInt32(time[2]), Convert.ToInt32(time[1]), Convert.ToInt32(time[0]));
         }
     }
 }

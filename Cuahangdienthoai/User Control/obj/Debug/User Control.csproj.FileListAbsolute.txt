@@ -20,4 +20,3 @@ C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cua
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.dll
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.pdb
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.KhuyenMaii.resources
-C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csprojAssemblyReference.cache

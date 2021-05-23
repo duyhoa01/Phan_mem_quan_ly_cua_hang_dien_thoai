@@ -128,7 +128,7 @@
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.panel11.Controls.Add(this.label3);
             this.panel11.Controls.Add(this.label2);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -153,7 +153,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label2.Location = new System.Drawing.Point(73, 6);
