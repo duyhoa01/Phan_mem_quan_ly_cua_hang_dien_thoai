@@ -49,6 +49,12 @@
     <Compile Include="DienThoai.Designer.cs">
       <DependentUpon>DienThoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhuyenMaii.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhuyenMaii.Designer.cs">
+      <DependentUpon>KhuyenMaii.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lich.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="DienThoai.resx">
       <DependentUpon>DienThoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhuyenMaii.resx">
+      <DependentUpon>KhuyenMaii.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lich.resx">
       <DependentUpon>Lich.cs</DependentUpon>

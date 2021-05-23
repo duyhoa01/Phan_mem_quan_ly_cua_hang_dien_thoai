@@ -64,3 +64,31 @@ C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_tho
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csproj.CopyComplete
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csprojAssemblyReference.cache
 C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.pdb
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\Cuahangdienthoai.exe.config
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\Cuahangdienthoai.exe
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\Cuahangdienthoai.pdb
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.dll
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.pdb
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csprojAssemblyReference.cache
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.BaoCaoKinhDoanhForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.HoaDonNhapForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.Form1.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.Properties.Resources.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.MenuFor.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.NhapKhoForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanlybanhangFrom.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanLyDonHangForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanlykhoForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanLyKhuyenMaiForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanLyNhanVienForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanLySanPhamForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanLyTaiKhoanForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThemDonHangForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.KhoHangForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csproj.GenerateResource.cache
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csproj.CoreCompileInputs.cache
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csproj.CopyComplete
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.exe
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.pdb
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.HoaDonBanChiTietForm.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.HoaDonNhapChiTiet.resources
