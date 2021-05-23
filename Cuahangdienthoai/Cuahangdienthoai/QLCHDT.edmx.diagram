@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78f5bc22bbb445138ed7eee608f76943" Name="Diagram1">
+        <EntityTypeShape EntityType="PBL3Model.Account" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.DienThoai" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.GiamGia" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.HoaDonBanHang" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.HoaDonChiTiet" Width="1.5" PointX="8.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.HoaDonNhap" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.HoaDonNhapChiTiet" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.KhachHang" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.KhuyenMai" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.NhaCungCap" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.NhanVien" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.NhomQuyen" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.NhomQuyenChiTiet" Width="1.5" PointX="5.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.PhanQuyenLienKet" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.sysdiagram" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="PBL3Model.FK_Account_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_PhanQuyenLienKet_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonChiTiet_DienThoai" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonNhapChiTiet_DienThoai" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_GiamGia_HoaDonBanHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_GiamGia_KhuyenMai" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonChiTiet_HoaDonBanHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonNhap_NhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonNhap_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonNhapChiTiet_HoaDonNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_NhomQuyenChiTiet_NhomQuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK_PhanQuyenLienKet_NhomQuyen" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

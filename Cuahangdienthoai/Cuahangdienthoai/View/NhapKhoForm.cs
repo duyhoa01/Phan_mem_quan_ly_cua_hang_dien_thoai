@@ -20,6 +20,8 @@ namespace Cuahangdienthoai.View
             lich1.BringToFront();
             lich2.BringToFront();
             lich1.valueChanged += Lich1_valueChanged;
+            //PBL3Entities db = new PBL3Entities();
+            //dataGridViewsanpham.DataSource = db.Accounts.ToList();
         }
 
         private void Lich1_valueChanged(object sender, EventArgs e)
