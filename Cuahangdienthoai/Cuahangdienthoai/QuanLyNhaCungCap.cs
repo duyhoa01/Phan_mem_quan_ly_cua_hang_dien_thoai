@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Cuahangdienthoai.View
+namespace Cuahangdienthoai
 {
-    public partial class QuanLyKhuyenMaiForm : Form
+    public partial class QuanLyNhaCungCap : Form
     {
-        public QuanLyKhuyenMaiForm()
+        public QuanLyNhaCungCap()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

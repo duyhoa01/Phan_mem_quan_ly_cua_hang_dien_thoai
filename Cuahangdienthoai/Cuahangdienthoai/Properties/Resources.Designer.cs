@@ -69,5 +69,45 @@ namespace Cuahangdienthoai.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_delete__icon_in_trendy_style_isolated_background_png_image_4859209 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-delete--icon-in-trendy-style-isolated-background-png-image_4859209", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_save_icon_design__essential_icon_vector_design_png_image_877651 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-save-icon-design--essential-icon-vector-design-png-image_877651", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_save_icon_image_1338385 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-save-icon-image_1338385", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_save_icon_image_13383851 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-save-icon-image_13383851", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

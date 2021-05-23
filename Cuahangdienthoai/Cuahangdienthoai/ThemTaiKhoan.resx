@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pngtree-delete--icon-in-trendy-style-isolated-background-png-image_4859209" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-delete--icon-in-trendy-style-isolated-background-png-image_4859209.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_service_repair_phone_mobile_wrench_screw_driver_4014703" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ICON\iconfinder_service_repair_phone_mobile_wrench_screw_driver_4014703.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-save-icon-design--essential-icon-vector-design-png-image_877651" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-save-icon-design--essential-icon-vector-design-png-image_877651.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-save-icon-image_1338385" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-save-icon-image_1338385.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-save-icon-image_13383851" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-save-icon-image_13383851.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

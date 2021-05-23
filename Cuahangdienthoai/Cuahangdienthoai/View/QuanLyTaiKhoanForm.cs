@@ -16,5 +16,7 @@ namespace Cuahangdienthoai.View
         {
             InitializeComponent();
         }
+
+       
     }
 }

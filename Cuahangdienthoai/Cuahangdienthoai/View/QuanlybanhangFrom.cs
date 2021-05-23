@@ -70,5 +70,10 @@ namespace Cuahangdienthoai.View
             setcot1();
             this.AddForm(new QuanLyKhuyenMaiForm());
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

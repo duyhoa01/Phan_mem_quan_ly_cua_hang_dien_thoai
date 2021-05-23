@@ -22,5 +22,10 @@ namespace Cuahangdienthoai.View
             ThemDonHangForm themDonHangForm = new ThemDonHangForm();
             themDonHangForm.Show();
         }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

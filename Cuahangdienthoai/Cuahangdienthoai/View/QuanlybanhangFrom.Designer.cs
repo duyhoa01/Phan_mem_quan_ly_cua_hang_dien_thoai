@@ -30,6 +30,9 @@
         {
             this.btSanPham = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btKhuyenMai = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,13 +41,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btKhuyenMai = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // btSanPham
@@ -80,6 +80,41 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.panel1.Size = new System.Drawing.Size(1300, 70);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Location = new System.Drawing.Point(409, 24);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(190, 5);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel7.Controls.Add(this.btKhuyenMai);
+            this.panel7.Location = new System.Drawing.Point(409, 30);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(190, 40);
+            this.panel7.TabIndex = 3;
+            // 
+            // btKhuyenMai
+            // 
+            this.btKhuyenMai.BackColor = System.Drawing.SystemColors.Control;
+            this.btKhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btKhuyenMai.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btKhuyenMai.ForeColor = System.Drawing.Color.Black;
+            this.btKhuyenMai.Location = new System.Drawing.Point(3, 3);
+            this.btKhuyenMai.Name = "btKhuyenMai";
+            this.btKhuyenMai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btKhuyenMai.Size = new System.Drawing.Size(184, 34);
+            this.btKhuyenMai.TabIndex = 2;
+            this.btKhuyenMai.Text = "Quản lý Khuyến mãi";
+            this.btKhuyenMai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btKhuyenMai.UseVisualStyleBackColor = false;
+            this.btKhuyenMai.Click += new System.EventHandler(this.btKhuyenMai_Click);
             // 
             // panel9
             // 
@@ -157,40 +192,6 @@
             this.panelMain.Size = new System.Drawing.Size(1300, 760);
             this.panelMain.TabIndex = 2;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Location = new System.Drawing.Point(409, 24);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(190, 5);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel7.Controls.Add(this.btKhuyenMai);
-            this.panel7.Location = new System.Drawing.Point(409, 30);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(190, 40);
-            this.panel7.TabIndex = 3;
-            // 
-            // btKhuyenMai
-            // 
-            this.btKhuyenMai.BackColor = System.Drawing.SystemColors.Control;
-            this.btKhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btKhuyenMai.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btKhuyenMai.ForeColor = System.Drawing.Color.Black;
-            this.btKhuyenMai.Location = new System.Drawing.Point(3, 3);
-            this.btKhuyenMai.Name = "btKhuyenMai";
-            this.btKhuyenMai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btKhuyenMai.Size = new System.Drawing.Size(184, 34);
-            this.btKhuyenMai.TabIndex = 2;
-            this.btKhuyenMai.Text = "Quản lý Khuyến mãi";
-            this.btKhuyenMai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btKhuyenMai.UseVisualStyleBackColor = false;
-            this.btKhuyenMai.Click += new System.EventHandler(this.btKhuyenMai_Click);
-            // 
             // QuanlybanhangFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,9 +203,9 @@
             this.Name = "QuanlybanhangFrom";
             this.Text = "Depot";
             this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
