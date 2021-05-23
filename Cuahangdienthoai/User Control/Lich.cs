@@ -12,7 +12,7 @@ namespace User_Control
 {
     public partial class Lich : UserControl
     {
-        bool ShowCalendar = false;
+        public bool ShowCalendar = false;
         public Lich()
         {
             InitializeComponent();
@@ -27,10 +27,9 @@ namespace User_Control
         }
         private void HideLich()
         {
-            this.Width = panel10.Width;
-            this.Height -= 162;
             tbNgay.Text = monthCalendar1.SelectionStart.ToString("dd/MM/yyyy");
             monthCalendar1.Hide();
+            this.Size = new Size(panel10.Width, panel10.Height);
         }
         private void XuLy()
         {
