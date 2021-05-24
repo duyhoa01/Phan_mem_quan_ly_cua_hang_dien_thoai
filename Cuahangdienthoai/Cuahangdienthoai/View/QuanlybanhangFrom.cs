@@ -12,62 +12,75 @@ namespace Cuahangdienthoai.View
 {
     public partial class QuanlybanhangFrom : Form
     {
+        QuanLySanPhamForm fsanpham = new QuanLySanPhamForm();
+        QuanLyDonHangForm fdonhang = new QuanLyDonHangForm();
+        QuanLyKhuyenMaiForm fkhuyenmai = new QuanLyKhuyenMaiForm();
         public QuanlybanhangFrom()
         {
             InitializeComponent();
+            SetGUI();
+            button1_Click(fsanpham, EventArgs.Empty);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panel4.BackColor = Color.FromArgb(237, 237, 237);
+            panel4.BackColor = Color.White;
             panel8.BackColor = Color.FromArgb(48, 128, 185);
             setcot2();
             setcot3();
-            this.AddForm(new QuanLySanPhamForm());
+            fkhuyenmai.Hide();
+            fdonhang.Hide();
+            fsanpham.Show();
         }
         private void setcot2()
         {
             panel6.BackColor = Color.FromArgb(48, 128, 185);
-            panel9.BackColor = Color.FromArgb(237, 237, 237);
+            panel9.BackColor = Color.White;
 
         }
         private void setcot1()
         {
             panel4.BackColor = Color.FromArgb(48, 128, 185);
-            panel8.BackColor = Color.FromArgb(237, 237, 237);
+            panel8.BackColor = Color.White;
         }
         private void setcot3()
         {
             panel7.BackColor = Color.FromArgb(48, 128, 185);
-            panel3.BackColor = Color.FromArgb(237, 237, 237);
+            panel3.BackColor = Color.White;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            panel6.BackColor = Color.FromArgb(237, 237, 237);
+            panel6.BackColor = Color.White;
             panel9.BackColor = Color.FromArgb(48, 128, 185);
             setcot1();
             setcot3();
-            this.AddForm(new QuanLyDonHangForm());
+            fsanpham.Hide();
+            fkhuyenmai.Hide();
+            fdonhang.Show();
         }
-        private void AddForm(Form newForm)
+        private void SetGUI()
         {
-            if (this.panelMain.Controls.Count > 0)
-                this.panelMain.Controls.RemoveAt(0);
-            newForm.TopLevel = false;
-            newForm.Dock = DockStyle.Fill;
-            this.panelMain.Controls.Add(newForm);
-            this.panelMain.Tag = newForm;
-            newForm.Show();
+            fsanpham.TopLevel = false;
+            fsanpham.Dock = DockStyle.Fill;
+            fdonhang.TopLevel = false;
+            fdonhang.Dock = DockStyle.Fill;
+            fkhuyenmai.TopLevel = false;
+            fkhuyenmai.Dock = DockStyle.Fill;
+            this.panelMain.Controls.Add(fsanpham);
+            this.panelMain.Controls.Add(fdonhang);
+            this.panelMain.Controls.Add(fkhuyenmai);
         }
 
         private void btKhuyenMai_Click(object sender, EventArgs e)
         {
-            panel7.BackColor = Color.FromArgb(237, 237, 237);
+            panel7.BackColor = Color.White;
             panel3.BackColor = Color.FromArgb(48, 128, 185);
             setcot2();
             setcot1();
-            this.AddForm(new QuanLyKhuyenMaiForm());
+            fdonhang.Hide();
+            fsanpham.Hide();
+            fkhuyenmai.Show();
         }
     }
 }

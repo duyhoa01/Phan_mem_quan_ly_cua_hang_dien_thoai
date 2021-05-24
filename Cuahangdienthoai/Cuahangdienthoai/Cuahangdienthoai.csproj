@@ -62,9 +62,12 @@
     <Compile Include="Account.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="BUS\DienThoaiBUS.cs" />
+    <Compile Include="DAL\DienThoaiDAL.cs" />
     <Compile Include="DienThoai.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\DienThoaiViewFormSP.cs" />
     <Compile Include="GiamGia.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
@@ -141,9 +144,6 @@
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
     <Compile Include="USP_GetKhachHangList_Result.cs">
-      <DependentUpon>QLCHDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="USP_GetPhoneList_Result.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
     <Compile Include="USP_GetPhone_Result.cs">
@@ -253,6 +253,18 @@
     <Compile Include="View\ThemDonHangForm.Designer.cs">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ThemSuaDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThemSuaDienThoai.Designer.cs">
+      <DependentUpon>ThemSuaDienThoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThongTinDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThongTinDienThoai.Designer.cs">
+      <DependentUpon>ThongTinDienThoai.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\BaoCaoKinhDoanhForm.resx">
       <DependentUpon>BaoCaoKinhDoanhForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +323,12 @@
     <EmbeddedResource Include="View\KhoHangForm.resx">
       <DependentUpon>KhoHangForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ThemSuaDienThoai.resx">
+      <DependentUpon>ThemSuaDienThoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThongTinDienThoai.resx">
+      <DependentUpon>ThongTinDienThoai.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -340,9 +358,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AnhDT\" />
-    <Folder Include="BUS\" />
-    <Folder Include="DAL\" />
-    <Folder Include="User Control\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\User Control\User Control.csproj">

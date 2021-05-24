@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btThongKe = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -166,6 +167,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.btThongKe);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.label5);
@@ -180,6 +182,25 @@
             this.panel5.Size = new System.Drawing.Size(915, 81);
             this.panel5.TabIndex = 19;
             // 
+            // btThongKe
+            // 
+            this.btThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btThongKe.BackColor = System.Drawing.Color.Indigo;
+            this.btThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btThongKe.FlatAppearance.BorderSize = 0;
+            this.btThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThongKe.ForeColor = System.Drawing.Color.White;
+            this.btThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btThongKe.Image")));
+            this.btThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThongKe.Location = new System.Drawing.Point(577, 23);
+            this.btThongKe.Margin = new System.Windows.Forms.Padding(2);
+            this.btThongKe.Name = "btThongKe";
+            this.btThongKe.Size = new System.Drawing.Size(89, 32);
+            this.btThongKe.TabIndex = 31;
+            this.btThongKe.Text = "Thống kê";
+            this.btThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btThongKe.UseVisualStyleBackColor = false;
+            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -188,7 +209,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button4.Location = new System.Drawing.Point(835, 16);
+            this.button4.Location = new System.Drawing.Point(842, 22);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(62, 32);
@@ -204,7 +225,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button3.Location = new System.Drawing.Point(754, 16);
+            this.button3.Location = new System.Drawing.Point(761, 22);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(62, 32);
@@ -217,7 +238,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label5.Location = new System.Drawing.Point(485, 4);
+            this.label5.Location = new System.Drawing.Point(436, 4);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
@@ -230,7 +251,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(325, 2);
+            this.label4.Location = new System.Drawing.Point(301, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 15);
@@ -245,7 +266,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button5.Location = new System.Drawing.Point(672, 16);
+            this.button5.Location = new System.Drawing.Point(679, 22);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(62, 32);
@@ -263,7 +284,7 @@
             this.btTimKiêm.ForeColor = System.Drawing.Color.White;
             this.btTimKiêm.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiêm.Image")));
             this.btTimKiêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiêm.Location = new System.Drawing.Point(188, 16);
+            this.btTimKiêm.Location = new System.Drawing.Point(183, 23);
             this.btTimKiêm.Margin = new System.Windows.Forms.Padding(2);
             this.btTimKiêm.Name = "btTimKiêm";
             this.btTimKiêm.Size = new System.Drawing.Size(96, 32);
@@ -277,7 +298,7 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.tbTimKiem);
             this.panel6.Controls.Add(this.button6);
-            this.panel6.Location = new System.Drawing.Point(22, 19);
+            this.panel6.Location = new System.Drawing.Point(17, 26);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(150, 31);
@@ -391,7 +412,7 @@
             // 
             this.lich1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lich1.BackColor = System.Drawing.Color.Gold;
-            this.lich1.Location = new System.Drawing.Point(358, 92);
+            this.lich1.Location = new System.Drawing.Point(331, 98);
             this.lich1.Name = "lich1";
             this.lich1.Size = new System.Drawing.Size(110, 28);
             this.lich1.TabIndex = 29;
@@ -400,7 +421,7 @@
             // 
             this.lich2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lich2.BackColor = System.Drawing.Color.Gold;
-            this.lich2.Location = new System.Drawing.Point(518, 92);
+            this.lich2.Location = new System.Drawing.Point(466, 98);
             this.lich2.Name = "lich2";
             this.lich2.Size = new System.Drawing.Size(110, 28);
             this.lich2.TabIndex = 5;
@@ -468,5 +489,6 @@
         private System.Windows.Forms.Button button3;
         private User_Control.Lich lich1;
         private User_Control.Lich lich2;
+        private System.Windows.Forms.Button btThongKe;
     }
 }
