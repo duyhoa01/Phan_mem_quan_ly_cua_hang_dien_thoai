@@ -69,10 +69,7 @@ C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cua
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\Cuahangdienthoai.pdb
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.dll
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.pdb
-<<<<<<< HEAD
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.dll.config
-=======
->>>>>>> origin/master
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csprojAssemblyReference.cache
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.BaoCaoKinhDoanhForm.resources
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.HoaDonNhapForm.resources
@@ -100,6 +97,5 @@ C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cua
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\EntityFramework.xml
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\User Control.dll.config
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThongTinDienThoai.resources
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThemSuaDienThoai.resources

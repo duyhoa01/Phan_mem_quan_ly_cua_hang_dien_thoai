@@ -152,7 +152,7 @@
             this.btSapXep.TabIndex = 18;
             this.btSapXep.Text = "Sắp xếp";
             this.btSapXep.UseVisualStyleBackColor = false;
-            this.btSapXep.Click += new System.EventHandler(this.btSapXep_Click);
+            this.btSapXep.Click += new System.EventHandler(this.btTimKiêm_Click);
             // 
             // panel12
             // 
@@ -168,12 +168,21 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 8);
+            this.comboBox1.Items.AddRange(new object[] {
+            "None",
+            "Tên từ A->Z",
+            "Tên từ Z->A",
+            "Giá tăng dần",
+            "Giá giảm dần",
+            "Đánh giá cao"});
+            this.comboBox1.Location = new System.Drawing.Point(0, 5);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 21);
+            this.comboBox1.Size = new System.Drawing.Size(132, 24);
             this.comboBox1.TabIndex = 16;
             // 
             // panel13
@@ -302,11 +311,11 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.panel10);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(30, 154);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(915, 431);
+            this.panel7.Size = new System.Drawing.Size(915, 428);
             this.panel7.TabIndex = 6;
             // 
             // panel10
@@ -320,7 +329,7 @@
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(1, 49, 1, 8);
-            this.panel10.Size = new System.Drawing.Size(915, 431);
+            this.panel10.Size = new System.Drawing.Size(915, 428);
             this.panel10.TabIndex = 2;
             // 
             // pictureBox1
@@ -349,7 +358,7 @@
             // dataGridViewsanpham
             // 
             this.dataGridViewsanpham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewsanpham.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewsanpham.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewsanpham.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewsanpham.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewsanpham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -357,11 +366,12 @@
             this.dataGridViewsanpham.Location = new System.Drawing.Point(1, 49);
             this.dataGridViewsanpham.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewsanpham.Name = "dataGridViewsanpham";
+            this.dataGridViewsanpham.ReadOnly = true;
             this.dataGridViewsanpham.RowHeadersVisible = false;
             this.dataGridViewsanpham.RowHeadersWidth = 51;
             this.dataGridViewsanpham.RowTemplate.Height = 24;
             this.dataGridViewsanpham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewsanpham.Size = new System.Drawing.Size(913, 374);
+            this.dataGridViewsanpham.Size = new System.Drawing.Size(913, 371);
             this.dataGridViewsanpham.TabIndex = 0;
             this.dataGridViewsanpham.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewsanpham_CellMouseDoubleClick);
             // 
@@ -404,8 +414,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(975, 618);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);

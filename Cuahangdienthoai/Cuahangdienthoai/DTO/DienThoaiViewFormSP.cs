@@ -15,6 +15,7 @@ namespace Cuahangdienthoai.DTO
         public int SoLuong { get; set; }
         public float GiaNhap { get; set; }
         public float GiaBan { get; set; }
+        public float PtGiamGia { get; set; }
         public float DiemDanhGia { get; set; }
         public int LuotDanhGia { get; set; }
     }

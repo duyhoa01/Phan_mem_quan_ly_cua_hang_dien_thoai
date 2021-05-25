@@ -33,10 +33,10 @@ namespace Cuahangdienthoai.BUS
         {
             return DienThoaiDAL.Instance.XoaDT(DienThoaiDAL.Instance.TimDTByMaDT(MaDT));
         }
-        public List<DienThoaiViewFormSP> GetListDT(string TimKiem)
+        public List<DienThoaiViewFormSP> GetListDT(string TimKiem, string SapXep)
         {
             List<DienThoaiViewFormSP> listDT = new List<DienThoaiViewFormSP>();
-            foreach (DienThoai item in DienThoaiDAL.Instance.GetListDT(TimKiem))
+            foreach (DienThoai item in DienThoaiDAL.Instance.GetListDT(TimKiem, SapXep))
             {
                 string path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName;
                 path += @"\AnhDT\" + item.Anh;
@@ -50,11 +50,16 @@ namespace Cuahangdienthoai.BUS
                     GiaNhap = (float)Convert.ToDouble(item.GiaNhapDT),
                     GiaBan = (float)Convert.ToDouble(item.GiaBanDT),
                     DiemDanhGia = (float)Convert.ToDouble(item.DiemDanhGia),
-                    LuotDanhGia = Convert.ToInt32(item.LuotDanhGia)
-                });
-               
+                    LuotDanhGia = Convert.ToInt32(item.LuotDanhGia),
+                    PtGiamGia = (float)Convert.ToDouble(item.C_GiamGia)
+                }) ;       
             }
             return listDT;
+        }
+        public void SuaDT(int MaDT, string TenDT, float PtGiamGia, float DiemDanhGia
+            , int LuotDanhGia, string ThongSoKyThuat, string Anh)
+        {
+            DienThoaiDAL.Instance.SuaDT(MaDT, TenDT, PtGiamGia, DiemDanhGia, LuotDanhGia, ThongSoKyThuat, Anh);
         }
     }
 }

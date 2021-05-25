@@ -24,12 +24,12 @@ namespace Cuahangdienthoai.View
         private void SetGUI()
         {
             DienThoai dt = DienThoaiBUS.Instance.TimDTByMaDT(maDT);
-            lbTenDT.Text = dt.TenDienThoai;
+            tbTenDT.Text = dt.TenDienThoai;
             lbMaDT.Text = dt.MaDT.ToString();
             lbSL.Text = dt.SLHienTai.ToString();
-            lbPtGiamGia.Text = dt.C_GiamGia.ToString() + "%";
-            lbDonGia.Text = dt.GiaBanDT.ToString();
-            lbDiemDanhGia.Text = dt.DiemDanhGia.ToString();
+            lbPtGiamGia.Text = ((float)Convert.ToDouble(dt.C_GiamGia)).ToString() + "%";
+            lbDonGia.Text = ((float)Convert.ToDouble(dt.GiaBanDT)).ToString();
+            lbDiemDanhGia.Text = ((float)Convert.ToDouble(dt.DiemDanhGia)).ToString();
             lbLuotDanhGia.Text = dt.LuotDanhGia.ToString();
             richTextBox1.Text = dt.ThongSoKyThuat;
             pictureBox1.Tag = dt.Anh;

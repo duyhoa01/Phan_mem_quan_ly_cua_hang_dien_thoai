@@ -16,16 +16,19 @@ namespace Cuahangdienthoai.View
         public QuanLySanPhamForm()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             ShowListPhone();
         }
         public void ShowListPhone()
         {
-            dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListDT(tbTimKiem.Text);
+            dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListDT(tbTimKiem.Text, comboBox1.Text);
+            lbSoLuong.Text = dataGridViewsanpham.Rows.Count.ToString();
         }
         private void btThem_Click(object sender, EventArgs e)
         {
-            ThemSuaDienThoai f = new ThemSuaDienThoai();
-            f.Show();
+            ThemSuaDienThoai f = new ThemSuaDienThoai(null);
+            f.ShowDialog();
+            ShowListPhone();
         }
 
         private void btTimKiêm_Click(object sender, EventArgs e)
@@ -53,19 +56,15 @@ namespace Cuahangdienthoai.View
                     MessageBox.Show("Điện thoại mã " + MaDT + " không thể xóa được vì liên quan đến dữ liệu mua bán");
                 }
             }
+            ShowListPhone();
         }
 
         private void btSua_Click(object sender, EventArgs e)
         {
             string MaDT = dataGridViewsanpham.SelectedRows[0].Cells["MaDT"].Value.ToString();
-            //ThemSuaDienThoai f = new ThemSuaDienThoai(Convert.ToInt32(MaDT));
-            //f.Show();
-        }
-
-        private void btSapXep_Click(object sender, EventArgs e)
-        {
-            PBL3Entities db = new PBL3Entities();
-            dataGridViewsanpham.DataSource = db.HoaDonBanHangs.Select(p => p).ToList();
+            ThemSuaDienThoai f = new ThemSuaDienThoai(Convert.ToInt32(MaDT));
+            f.ShowDialog();
+            ShowListPhone();
         }
     }
 }

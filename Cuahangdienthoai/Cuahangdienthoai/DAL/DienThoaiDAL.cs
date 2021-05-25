@@ -23,7 +23,7 @@ namespace Cuahangdienthoai.DAL
             , int LuotDanhGia, string ThongSoKyThuat, string Anh)
         {
             using (PBL3Entities db = new PBL3Entities())
-            { 
+            {
                 DienThoai dt = new DienThoai {
                     TenDienThoai = TenDT,
                     GiaNhapDT = GiaNhap,
@@ -31,6 +31,7 @@ namespace Cuahangdienthoai.DAL
                     C_GiamGia = PtGiamGia,
                     DiemDanhGia = DiemDanhGia,
                     LuotDanhGia = LuotDanhGia,
+                    SLBanRaTrongNam = 0,
                     ThongSoKyThuat = ThongSoKyThuat,
                     SLHienTai = 0,
                     Anh = Anh,
@@ -71,14 +72,45 @@ namespace Cuahangdienthoai.DAL
                 }
             }
         }
-        public List<DienThoai> GetListDT(string TimKiem)
+        public List<DienThoai> GetListDT(string TimKiem, string SapXep)
         {
-            List<DienThoai> listDT = new List<DienThoai>();
             using (PBL3Entities db = new PBL3Entities())
             {
-                //TimKiem = "N'%" + TimKiem + "%'";
-                var list = db.USP_GetPhoneList("Xiaomi");
-                return listDT;
+                switch (SapXep)
+                {
+                    case "Tên từ A->Z":
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
+                            .OrderBy(p => p.TenDienThoai).ToList();
+                    case "Tên từ Z->A":
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
+                            .OrderByDescending(p => p.TenDienThoai).ToList();
+                    case "Giá tăng dần":
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
+                            .OrderBy(p => p.GiaBanDT).ToList();
+                    case "Giá giảm dần":
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
+                            .OrderByDescending(p => p.GiaBanDT).ToList();
+                    case "Đánh giá cao":
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
+                            .OrderByDescending(p => p.DiemDanhGia).ToList();
+                    default:
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p).ToList();
+                }
+            }
+        }
+        public void SuaDT(int MaDT, string TenDT, float PtGiamGia, float DiemDanhGia
+            , int LuotDanhGia, string ThongSoKyThuat, string Anh)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                DienThoai dt = db.DienThoais.Find(MaDT);
+                dt.TenDienThoai = TenDT;
+                dt.C_GiamGia = PtGiamGia;
+                dt.DiemDanhGia = DiemDanhGia;
+                dt.LuotDanhGia = LuotDanhGia;
+                dt.ThongSoKyThuat = ThongSoKyThuat;
+                dt.Anh = Anh;
+                db.SaveChanges();
             }
         }
     }
