@@ -30,7 +30,6 @@ namespace Cuahangdienthoai
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<DienThoai> DienThoais { get; set; }
         public virtual DbSet<GiamGia> GiamGias { get; set; }
-        public virtual DbSet<HoaDonBanHang> HoaDonBanHangs { get; set; }
         public virtual DbSet<HoaDonChiTiet> HoaDonChiTiets { get; set; }
         public virtual DbSet<HoaDonNhap> HoaDonNhaps { get; set; }
         public virtual DbSet<HoaDonNhapChiTiet> HoaDonNhapChiTiets { get; set; }
@@ -42,6 +41,7 @@ namespace Cuahangdienthoai
         public virtual DbSet<NhomQuyenChiTiet> NhomQuyenChiTiets { get; set; }
         public virtual DbSet<PhanQuyenLienKet> PhanQuyenLienKets { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<HoaDonBanHang> HoaDonBanHangs { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -219,9 +219,13 @@ namespace Cuahangdienthoai
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<USP_GetPhone_Result>("USP_GetPhone", tenDienThoaiParameter);
         }
     
-        public virtual ObjectResult<USP_GetPhoneList_Result> USP_GetPhoneList()
+        public virtual int USP_GetPhoneList(string timKiem)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<USP_GetPhoneList_Result>("USP_GetPhoneList");
+            var timKiemParameter = timKiem != null ?
+                new ObjectParameter("TimKiem", timKiem) :
+                new ObjectParameter("TimKiem", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("USP_GetPhoneList", timKiemParameter);
         }
     
         public virtual int USP_GetPhuKienList(string maDT)

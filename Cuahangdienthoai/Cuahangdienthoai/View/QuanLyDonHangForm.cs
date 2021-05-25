@@ -15,6 +15,14 @@ namespace Cuahangdienthoai.View
         public QuanLyDonHangForm()
         {
             InitializeComponent();
+            SetGUI();
+        }
+        private void SetGUI()
+        {
+            lich1.BackColor = this.TransparencyKey;
+            lich2.BackColor = this.TransparencyKey;
+            lich1.BringToFront();
+            lich2.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)

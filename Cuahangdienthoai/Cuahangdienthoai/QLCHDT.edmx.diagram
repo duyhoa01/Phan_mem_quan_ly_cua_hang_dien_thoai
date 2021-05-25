@@ -8,7 +8,6 @@
         <EntityTypeShape EntityType="PBL3Model.Account" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.DienThoai" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.GiamGia" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3Model.HoaDonBanHang" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.HoaDonChiTiet" Width="1.5" PointX="8.25" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.HoaDonNhap" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.HoaDonNhapChiTiet" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
@@ -24,16 +23,17 @@
         <AssociationConnector Association="PBL3Model.FK_PhanQuyenLienKet_Account" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_HoaDonChiTiet_DienThoai" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_HoaDonNhapChiTiet_DienThoai" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3Model.FK_GiamGia_HoaDonBanHang" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_GiamGia_KhuyenMai" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3Model.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3Model.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3Model.FK_HoaDonChiTiet_HoaDonBanHang" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_HoaDonNhap_NhaCungCap" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_HoaDonNhap_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_HoaDonNhapChiTiet_HoaDonNhap" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_NhomQuyenChiTiet_NhomQuyen" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK_PhanQuyenLienKet_NhomQuyen" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PBL3Model.HoaDonBanHang" Width="1.5" PointX="3" PointY="2.5" />
+        <AssociationConnector Association="PBL3Model.FK_GiamGia_HoaDonBanHang" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" />
+        <AssociationConnector Association="PBL3Model.FK_HoaDonChiTiet_HoaDonBanHang" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PBL3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PBL3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="ID" />
@@ -388,7 +388,9 @@
         <Function Name="USP_GetPhone" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TenDienThoai" Type="nvarchar" Mode="In" />
         </Function>
-        <Function Name="USP_GetPhoneList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="USP_GetPhoneList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TimKiem" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="USP_GetPhuKienList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaDT" Type="nvarchar" Mode="In" />
         </Function>
@@ -497,8 +499,7 @@
             <End Role="PhanQuyenLienKet" EntitySet="PhanQuyenLienKet" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PBL3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -541,23 +542,8 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="maHoaDon" Type="Int32" />
           <Property Name="maKhuyenMai" Type="Int32" />
-          <NavigationProperty Name="HoaDonBanHang" Relationship="Self.FK_GiamGia_HoaDonBanHang" FromRole="GiamGia" ToRole="HoaDonBanHang" />
           <NavigationProperty Name="KhuyenMai" Relationship="Self.FK_GiamGia_KhuyenMai" FromRole="GiamGia" ToRole="KhuyenMai" />
-        </EntityType>
-        <EntityType Name="HoaDonBanHang">
-          <Key>
-            <PropertyRef Name="MaHoaDon" />
-          </Key>
-          <Property Name="MaHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaNhanVien" Type="Int32" Nullable="false" />
-          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
-          <Property Name="NgayBan" Type="DateTime" Precision="3" />
-          <Property Name="TongTien" Type="Double" />
-          <Property Name="TongLoiNhuan" Type="Double" />
-          <NavigationProperty Name="GiamGias" Relationship="Self.FK_GiamGia_HoaDonBanHang" FromRole="HoaDonBanHang" ToRole="GiamGia" />
-          <NavigationProperty Name="KhachHang" Relationship="Self.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" FromRole="HoaDonBanHang" ToRole="KhachHang" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" FromRole="HoaDonBanHang" ToRole="NhanVien" />
-          <NavigationProperty Name="HoaDonChiTiets" Relationship="Self.FK_HoaDonChiTiet_HoaDonBanHang" FromRole="HoaDonBanHang" ToRole="HoaDonChiTiet" />
+          <NavigationProperty Name="HoaDonBanHang" Relationship="PBL3Model.FK_GiamGia_HoaDonBanHang" FromRole="GiamGia" ToRole="HoaDonBanHang" />
         </EntityType>
         <EntityType Name="HoaDonChiTiet">
           <Key>
@@ -572,7 +558,7 @@
           <Property Name="LoiNhuan" Type="Double" />
           <Property Name="ThanhTien" Type="Double" />
           <NavigationProperty Name="DienThoai" Relationship="Self.FK_HoaDonChiTiet_DienThoai" FromRole="HoaDonChiTiet" ToRole="DienThoai" />
-          <NavigationProperty Name="HoaDonBanHang" Relationship="Self.FK_HoaDonChiTiet_HoaDonBanHang" FromRole="HoaDonChiTiet" ToRole="HoaDonBanHang" />
+          <NavigationProperty Name="HoaDonBanHang" Relationship="PBL3Model.FK_HoaDonChiTiet_HoaDonBanHang" FromRole="HoaDonChiTiet" ToRole="HoaDonBanHang" />
         </EntityType>
         <EntityType Name="HoaDonNhap">
           <Key>
@@ -609,7 +595,7 @@
           <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CMND" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HoaDonBanHangs" Relationship="Self.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" FromRole="KhachHang" ToRole="HoaDonBanHang" />
+          <NavigationProperty Name="HoaDonBanHangs" Relationship="PBL3Model.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" FromRole="KhachHang" ToRole="HoaDonBanHang" />
         </EntityType>
         <EntityType Name="KhuyenMai">
           <Key>
@@ -648,8 +634,8 @@
           <Property Name="NgaySinh" Type="DateTime" Precision="3" />
           <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Accounts" Relationship="Self.FK_Account_NhanVien" FromRole="NhanVien" ToRole="Account" />
-          <NavigationProperty Name="HoaDonBanHangs" Relationship="Self.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" FromRole="NhanVien" ToRole="HoaDonBanHang" />
           <NavigationProperty Name="HoaDonNhaps" Relationship="Self.FK_HoaDonNhap_NhanVien" FromRole="NhanVien" ToRole="HoaDonNhap" />
+          <NavigationProperty Name="HoaDonBanHangs" Relationship="PBL3Model.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" FromRole="NhanVien" ToRole="HoaDonBanHang" />
         </EntityType>
         <EntityType Name="NhomQuyen">
           <Key>
@@ -740,18 +726,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_GiamGia_HoaDonBanHang">
-          <End Role="HoaDonBanHang" Type="Self.HoaDonBanHang" Multiplicity="0..1" />
-          <End Role="GiamGia" Type="Self.GiamGia" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HoaDonBanHang">
-              <PropertyRef Name="MaHoaDon" />
-            </Principal>
-            <Dependent Role="GiamGia">
-              <PropertyRef Name="maHoaDon" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_GiamGia_KhuyenMai">
           <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="0..1" />
           <End Role="GiamGia" Type="Self.GiamGia" Multiplicity="*" />
@@ -761,42 +735,6 @@
             </Principal>
             <Dependent Role="GiamGia">
               <PropertyRef Name="maKhuyenMai" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-          <End Role="HoaDonBanHang" Type="Self.HoaDonBanHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KhachHang">
-              <PropertyRef Name="MaKhachHang" />
-            </Principal>
-            <Dependent Role="HoaDonBanHang">
-              <PropertyRef Name="MaKhachHang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="HoaDonBanHang" Type="Self.HoaDonBanHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="HoaDonBanHang">
-              <PropertyRef Name="MaNhanVien" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HoaDonChiTiet_HoaDonBanHang">
-          <End Role="HoaDonBanHang" Type="Self.HoaDonBanHang" Multiplicity="1" />
-          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HoaDonBanHang">
-              <PropertyRef Name="MaHoaDon" />
-            </Principal>
-            <Dependent Role="HoaDonChiTiet">
-              <PropertyRef Name="MaHoaDon" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -864,7 +802,6 @@
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="DienThoais" EntityType="Self.DienThoai" />
           <EntitySet Name="GiamGias" EntityType="Self.GiamGia" />
-          <EntitySet Name="HoaDonBanHangs" EntityType="Self.HoaDonBanHang" />
           <EntitySet Name="HoaDonChiTiets" EntityType="Self.HoaDonChiTiet" />
           <EntitySet Name="HoaDonNhaps" EntityType="Self.HoaDonNhap" />
           <EntitySet Name="HoaDonNhapChiTiets" EntityType="Self.HoaDonNhapChiTiet" />
@@ -892,25 +829,9 @@
             <End Role="DienThoai" EntitySet="DienThoais" />
             <End Role="HoaDonNhapChiTiet" EntitySet="HoaDonNhapChiTiets" />
           </AssociationSet>
-          <AssociationSet Name="FK_GiamGia_HoaDonBanHang" Association="Self.FK_GiamGia_HoaDonBanHang">
-            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
-            <End Role="GiamGia" EntitySet="GiamGias" />
-          </AssociationSet>
           <AssociationSet Name="FK_GiamGia_KhuyenMai" Association="Self.FK_GiamGia_KhuyenMai">
             <End Role="KhuyenMai" EntitySet="KhuyenMais" />
             <End Role="GiamGia" EntitySet="GiamGias" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" Association="Self.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang">
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" Association="Self.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HoaDonChiTiet_HoaDonBanHang" Association="Self.FK_HoaDonChiTiet_HoaDonBanHang">
-            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
-            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
           </AssociationSet>
           <AssociationSet Name="FK_HoaDonNhap_NhaCungCap" Association="Self.FK_HoaDonNhap_NhaCungCap">
             <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
@@ -963,30 +884,32 @@
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
           <FunctionImport Name="USP_FindPhone" ReturnType="Collection(PBL3Model.USP_FindPhone_Result)">
-            <Parameter Name="TenDienThoai" Mode="In" Type="String" />
+          <Parameter Name="TenDienThoai" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_GetAccLogin" ReturnType="Collection(PBL3Model.USP_GetAccLogin_Result)">
             <Parameter Name="userName" Mode="In" Type="String" />
             <Parameter Name="passWord" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_GetAccountByUseName" ReturnType="Collection(PBL3Model.USP_GetAccountByUseName_Result)">
-            <Parameter Name="userName" Mode="In" Type="String" />
+          <Parameter Name="userName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_GetBillInfoList" ReturnType="Collection(PBL3Model.USP_GetBillInfoList_Result)">
-            <Parameter Name="MaHD" Mode="In" Type="Int32" />
+          <Parameter Name="MaHD" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USP_GetKhachHangByID" ReturnType="Collection(PBL3Model.USP_GetKhachHangByID_Result)">
-            <Parameter Name="MaKhachHang" Mode="In" Type="String" />
+          <Parameter Name="MaKhachHang" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_GetKhachHangList" ReturnType="Collection(PBL3Model.USP_GetKhachHangList_Result)" />
           <FunctionImport Name="USP_GetMaBillMoi" ReturnType="Collection(Int32)" />
           <FunctionImport Name="USP_GetMaKhachHangMoi" ReturnType="Collection(Int32)" />
           <FunctionImport Name="USP_GetPhone" ReturnType="Collection(PBL3Model.USP_GetPhone_Result)">
-            <Parameter Name="TenDienThoai" Mode="In" Type="String" />
+          <Parameter Name="TenDienThoai" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="USP_GetPhoneList" ReturnType="Collection(PBL3Model.USP_GetPhoneList_Result)" />
+          <FunctionImport Name="USP_GetPhoneList" >
+          <Parameter Name="TimKiem" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="USP_GetPhuKienList">
-            <Parameter Name="MaDT" Mode="In" Type="String" />
+          <Parameter Name="MaDT" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_LoaiTaiKhoan">
             <Parameter Name="userName" Mode="In" Type="String" />
@@ -1018,8 +941,25 @@
             <Parameter Name="MatKhauMoi" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="USP_UpdateHDBH">
-            <Parameter Name="MaHoaDon" Mode="In" Type="Int32" />
+          <Parameter Name="MaHoaDon" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="HoaDonBanHangs" EntityType="PBL3Model.HoaDonBanHang" />
+          <AssociationSet Name="FK_GiamGia_HoaDonBanHang" Association="PBL3Model.FK_GiamGia_HoaDonBanHang">
+            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
+            <End Role="GiamGia" EntitySet="GiamGias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" Association="PBL3Model.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang">
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" Association="PBL3Model.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDonChiTiet_HoaDonBanHang" Association="PBL3Model.FK_HoaDonChiTiet_HoaDonBanHang">
+            <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -1100,19 +1040,69 @@
           <Property Type="Int32" Name="LuotDanhGia" Nullable="true" />
           <Property Type="String" Name="Anh" Nullable="true" MaxLength="Max" />
         </ComplexType>
-        <ComplexType Name="USP_GetPhoneList_Result">
-          <Property Type="Int32" Name="MaDT" Nullable="false" />
-          <Property Type="String" Name="TenDienThoai" Nullable="true" MaxLength="50" />
-          <Property Type="Double" Name="GiaNhapDT" Nullable="true" />
-          <Property Type="Double" Name="GiaBanDT" Nullable="true" />
-          <Property Type="Int32" Name="SLHienTai" Nullable="true" />
-          <Property Type="Int32" Name="SLBanRaTrongNam" Nullable="true" />
-          <Property Type="Double" Name="C_GiamGia" Nullable="true" />
-          <Property Type="String" Name="ThongSoKyThuat" Nullable="true" />
-          <Property Type="Double" Name="DiemDanhGia" Nullable="true" />
-          <Property Type="Int32" Name="LuotDanhGia" Nullable="true" />
-          <Property Type="String" Name="Anh" Nullable="true" MaxLength="Max" />
-        </ComplexType>
+        <EntityType Name="HoaDonBanHang">
+          <Key>
+            <PropertyRef Name="MaHoaDon" />
+          </Key>
+          <Property Name="MaHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVien" Type="Int32" Nullable="false" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <Property Name="NgayBan" Type="DateTime" Precision="3" />
+          <Property Name="TongTien" Type="Double" />
+          <Property Name="TongLoiNhuan" Type="Double" />
+          <NavigationProperty Name="GiamGias" Relationship="PBL3Model.FK_GiamGia_HoaDonBanHang" FromRole="HoaDonBanHang" ToRole="GiamGia" />
+          <NavigationProperty Name="KhachHang" Relationship="PBL3Model.FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang" FromRole="HoaDonBanHang" ToRole="KhachHang" />
+          <NavigationProperty Name="NhanVien" Relationship="PBL3Model.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" FromRole="HoaDonBanHang" ToRole="NhanVien" />
+          <NavigationProperty Name="HoaDonChiTiets" Relationship="PBL3Model.FK_HoaDonChiTiet_HoaDonBanHang" FromRole="HoaDonBanHang" ToRole="HoaDonChiTiet" />
+        </EntityType>
+        <Association Name="FK_GiamGia_HoaDonBanHang">
+          <End Type="PBL3Model.HoaDonBanHang" Role="HoaDonBanHang" Multiplicity="0..1" />
+          <End Type="PBL3Model.GiamGia" Role="GiamGia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonBanHang">
+              <PropertyRef Name="MaHoaDon" />
+            </Principal>
+            <Dependent Role="GiamGia">
+              <PropertyRef Name="maHoaDon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDonBanHang_MaKhachHang_KhachHang_MaKhachHang">
+          <End Type="PBL3Model.KhachHang" Role="KhachHang" Multiplicity="1" />
+          <End Type="PBL3Model.HoaDonBanHang" Role="HoaDonBanHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Principal>
+            <Dependent Role="HoaDonBanHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien">
+          <End Type="PBL3Model.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="PBL3Model.HoaDonBanHang" Role="HoaDonBanHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="HoaDonBanHang">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDonChiTiet_HoaDonBanHang">
+          <End Type="PBL3Model.HoaDonBanHang" Role="HoaDonBanHang" Multiplicity="1" />
+          <End Type="PBL3Model.HoaDonChiTiet" Role="HoaDonChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonBanHang">
+              <PropertyRef Name="MaHoaDon" />
+            </Principal>
+            <Dependent Role="HoaDonChiTiet">
+              <PropertyRef Name="MaHoaDon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1155,18 +1145,6 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="maHoaDon" ColumnName="maHoaDon" />
                 <ScalarProperty Name="maKhuyenMai" ColumnName="maKhuyenMai" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HoaDonBanHangs">
-            <EntityTypeMapping TypeName="PBL3Model.HoaDonBanHang">
-              <MappingFragment StoreEntitySet="HoaDonBanHang">
-                <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
-                <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
-                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
-                <ScalarProperty Name="TongLoiNhuan" ColumnName="TongLoiNhuan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1419,21 +1397,6 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="USP_GetPhoneList" FunctionName="PBL3Model.Store.USP_GetPhoneList">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="PBL3Model.USP_GetPhoneList_Result">
-                <ScalarProperty Name="MaDT" ColumnName="MaDT" />
-                <ScalarProperty Name="TenDienThoai" ColumnName="TenDienThoai" />
-                <ScalarProperty Name="GiaNhapDT" ColumnName="GiaNhapDT" />
-                <ScalarProperty Name="GiaBanDT" ColumnName="GiaBanDT" />
-                <ScalarProperty Name="SLHienTai" ColumnName="SLHienTai" />
-                <ScalarProperty Name="SLBanRaTrongNam" ColumnName="SLBanRaTrongNam" />
-                <ScalarProperty Name="C_GiamGia" ColumnName="%GiamGia" />
-                <ScalarProperty Name="ThongSoKyThuat" ColumnName="ThongSoKyThuat" />
-                <ScalarProperty Name="DiemDanhGia" ColumnName="DiemDanhGia" />
-                <ScalarProperty Name="LuotDanhGia" ColumnName="LuotDanhGia" />
-                <ScalarProperty Name="Anh" ColumnName="Anh" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="USP_GetPhuKienList" FunctionName="PBL3Model.Store.USP_GetPhuKienList" />
           <FunctionImportMapping FunctionImportName="USP_LoaiTaiKhoan" FunctionName="PBL3Model.Store.USP_LoaiTaiKhoan" />
@@ -1443,6 +1406,18 @@
           <FunctionImportMapping FunctionImportName="USP_ThemBillInfo" FunctionName="PBL3Model.Store.USP_ThemBillInfo" />
           <FunctionImportMapping FunctionImportName="USP_UpdateAccount" FunctionName="PBL3Model.Store.USP_UpdateAccount" />
           <FunctionImportMapping FunctionImportName="USP_UpdateHDBH" FunctionName="PBL3Model.Store.USP_UpdateHDBH" />
+          <EntitySetMapping Name="HoaDonBanHangs">
+            <EntityTypeMapping TypeName="PBL3Model.HoaDonBanHang">
+              <MappingFragment StoreEntitySet="HoaDonBanHang">
+                <ScalarProperty Name="TongLoiNhuan" ColumnName="TongLoiNhuan" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
