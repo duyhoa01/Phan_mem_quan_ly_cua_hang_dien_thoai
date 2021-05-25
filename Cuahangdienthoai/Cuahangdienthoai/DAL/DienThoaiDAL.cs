@@ -76,7 +76,8 @@ namespace Cuahangdienthoai.DAL
             List<DienThoai> listDT = new List<DienThoai>();
             using (PBL3Entities db = new PBL3Entities())
             {
-                //var list = db.uspgetph
+                //TimKiem = "N'%" + TimKiem + "%'";
+                var list = db.USP_GetPhoneList("Xiaomi");
                 return listDT;
             }
         }

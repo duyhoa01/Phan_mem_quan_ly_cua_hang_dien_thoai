@@ -16,9 +16,9 @@ namespace Cuahangdienthoai.View
         public QuanLySanPhamForm()
         {
             InitializeComponent();
-            SetGUI();
+            ShowListPhone();
         }
-        public void SetGUI()
+        public void ShowListPhone()
         {
             dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListDT(tbTimKiem.Text);
         }
@@ -30,7 +30,7 @@ namespace Cuahangdienthoai.View
 
         private void btTimKiêm_Click(object sender, EventArgs e)
         {
-            SetGUI();
+            ShowListPhone();
         }
 
         private void dataGridViewsanpham_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
