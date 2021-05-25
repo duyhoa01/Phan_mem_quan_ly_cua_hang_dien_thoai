@@ -19,6 +19,14 @@ namespace Cuahangdienthoai.View
             lich2.BackColor = this.TransparencyKey;
             lich1.BringToFront();
             lich2.BringToFront();
+            lich1.valueChanged += Lich1_valueChanged;
+            //PBL3Entities db = new PBL3Entities();
+            //dataGridViewsanpham.DataSource = db.Accounts.ToList();
+        }
+
+        private void Lich1_valueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(lich1.GetDateTime().ToString());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -31,6 +39,11 @@ namespace Cuahangdienthoai.View
             Button bt = sender as Button;
             bt.BackColor = Color.FromArgb(255, 128, 0);
             bt.ForeColor = Color.White;
+        }
+        private void ShowTime(object sender, EventArgs e)
+        {
+            //User_Control.Lich lich = sender as User_Control.Lich;
+            MessageBox.Show(lich1.GetDateTime().ToString());
         }
     }
 }

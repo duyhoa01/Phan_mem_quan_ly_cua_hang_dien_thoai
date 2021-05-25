@@ -40,6 +40,7 @@
             this.pnThanhToan = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.lich1 = new User_Control.Lich();
             this.pnNhaCungCap = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.tbSDTNCCMoi = new System.Windows.Forms.TextBox();
@@ -82,6 +83,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnSanPham = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dienThoai9 = new User_Control.DienThoai();
+            this.dienThoai10 = new User_Control.DienThoai();
+            this.dienThoai11 = new User_Control.DienThoai();
+            this.dienThoai12 = new User_Control.DienThoai();
+            this.dienThoai13 = new User_Control.DienThoai();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -92,13 +98,7 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
-            this.dienThoai9 = new User_Control.DienThoai();
-            this.dienThoai10 = new User_Control.DienThoai();
-            this.dienThoai11 = new User_Control.DienThoai();
-            this.dienThoai12 = new User_Control.DienThoai();
-            this.dienThoai13 = new User_Control.DienThoai();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
-            this.lich1 = new User_Control.Lich();
             this.pnThongTin.SuspendLayout();
             this.pnHangNhap.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -260,6 +260,14 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(532, 273);
             this.panel17.TabIndex = 0;
+            // 
+            // lich1
+            // 
+            this.lich1.BackColor = System.Drawing.Color.Gold;
+            this.lich1.Location = new System.Drawing.Point(123, 110);
+            this.lich1.Name = "lich1";
+            this.lich1.Size = new System.Drawing.Size(110, 28);
+            this.lich1.TabIndex = 42;
             // 
             // pnNhaCungCap
             // 
@@ -773,133 +781,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(554, 536);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel23.Controls.Add(this.label12);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel23.Location = new System.Drawing.Point(15, 601);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(554, 31);
-            this.panel23.TabIndex = 23;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Gainsboro;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label12.Location = new System.Drawing.Point(16, 9);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 17);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Số lượng : 1000";
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(569, 65);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(15, 567);
-            this.panel2.TabIndex = 22;
-            // 
-            // panel21
-            // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel21.Location = new System.Drawing.Point(0, 65);
-            this.panel21.Margin = new System.Windows.Forms.Padding(2);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(15, 567);
-            this.panel21.TabIndex = 21;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.btThemSP);
-            this.panel18.Controls.Add(this.btTimKiem);
-            this.panel18.Controls.Add(this.panel20);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel18.Location = new System.Drawing.Point(0, 0);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(584, 65);
-            this.panel18.TabIndex = 20;
-            // 
-            // btThemSP
-            // 
-            this.btThemSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btThemSP.FlatAppearance.BorderSize = 0;
-            this.btThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThemSP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemSP.ForeColor = System.Drawing.Color.White;
-            this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
-            this.btThemSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThemSP.Location = new System.Drawing.Point(395, 19);
-            this.btThemSP.Margin = new System.Windows.Forms.Padding(2);
-            this.btThemSP.Name = "btThemSP";
-            this.btThemSP.Size = new System.Drawing.Size(169, 32);
-            this.btThemSP.TabIndex = 15;
-            this.btThemSP.Text = "Thêm Sản Phẩm Mới";
-            this.btThemSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btThemSP.UseVisualStyleBackColor = false;
-            // 
-            // btTimKiem
-            // 
-            this.btTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btTimKiem.FlatAppearance.BorderSize = 0;
-            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
-            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.Location = new System.Drawing.Point(185, 18);
-            this.btTimKiem.Margin = new System.Windows.Forms.Padding(2);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(100, 32);
-            this.btTimKiem.TabIndex = 14;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.White;
-            this.panel20.Controls.Add(this.tbTimKiem);
-            this.panel20.Controls.Add(this.button12);
-            this.panel20.Location = new System.Drawing.Point(20, 20);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(150, 31);
-            this.panel20.TabIndex = 13;
-            // 
-            // tbTimKiem
-            // 
-            this.tbTimKiem.BackColor = System.Drawing.Color.White;
-            this.tbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTimKiem.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTimKiem.Location = new System.Drawing.Point(0, 10);
-            this.tbTimKiem.Margin = new System.Windows.Forms.Padding(2);
-            this.tbTimKiem.Name = "tbTimKiem";
-            this.tbTimKiem.Size = new System.Drawing.Size(150, 19);
-            this.tbTimKiem.TabIndex = 2;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(0, 29);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(150, 2);
-            this.button12.TabIndex = 1;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
             // dienThoai9
             // 
             this.dienThoai9.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
@@ -965,6 +846,133 @@
             this.dienThoai13.TabIndex = 12;
             this.dienThoai13.TenDT = "Tên Điện Thoại";
             // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.panel23.Controls.Add(this.label12);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel23.Location = new System.Drawing.Point(15, 601);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(554, 31);
+            this.panel23.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label12.Location = new System.Drawing.Point(16, 9);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 17);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Số lượng : 1000";
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(569, 65);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(15, 567);
+            this.panel2.TabIndex = 22;
+            // 
+            // panel21
+            // 
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel21.Location = new System.Drawing.Point(0, 65);
+            this.panel21.Margin = new System.Windows.Forms.Padding(2);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(15, 567);
+            this.panel21.TabIndex = 21;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.btThemSP);
+            this.panel18.Controls.Add(this.btTimKiem);
+            this.panel18.Controls.Add(this.panel20);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(584, 65);
+            this.panel18.TabIndex = 20;
+            // 
+            // btThemSP
+            // 
+            this.btThemSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btThemSP.FlatAppearance.BorderSize = 0;
+            this.btThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThemSP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemSP.ForeColor = System.Drawing.Color.White;
+            this.btThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btThemSP.Image")));
+            this.btThemSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThemSP.Location = new System.Drawing.Point(452, 19);
+            this.btThemSP.Margin = new System.Windows.Forms.Padding(2);
+            this.btThemSP.Name = "btThemSP";
+            this.btThemSP.Size = new System.Drawing.Size(112, 32);
+            this.btThemSP.TabIndex = 15;
+            this.btThemSP.Text = "Thêm Mới";
+            this.btThemSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btThemSP.UseVisualStyleBackColor = false;
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btTimKiem.FlatAppearance.BorderSize = 0;
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
+            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTimKiem.Location = new System.Drawing.Point(185, 18);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(100, 32);
+            this.btTimKiem.TabIndex = 14;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.White;
+            this.panel20.Controls.Add(this.tbTimKiem);
+            this.panel20.Controls.Add(this.button12);
+            this.panel20.Location = new System.Drawing.Point(20, 20);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(150, 31);
+            this.panel20.TabIndex = 13;
+            // 
+            // tbTimKiem
+            // 
+            this.tbTimKiem.BackColor = System.Drawing.Color.White;
+            this.tbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTimKiem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTimKiem.Location = new System.Drawing.Point(0, 10);
+            this.tbTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTimKiem.Name = "tbTimKiem";
+            this.tbTimKiem.Size = new System.Drawing.Size(150, 19);
+            this.tbTimKiem.TabIndex = 2;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(0, 29);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(150, 2);
+            this.button12.TabIndex = 1;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
             // thuDong1
             // 
             this.thuDong1.BackColor = System.Drawing.Color.Silver;
@@ -973,14 +981,6 @@
             this.thuDong1.Name = "thuDong1";
             this.thuDong1.Size = new System.Drawing.Size(1134, 34);
             this.thuDong1.TabIndex = 25;
-            // 
-            // lich1
-            // 
-            this.lich1.BackColor = System.Drawing.Color.Gold;
-            this.lich1.Location = new System.Drawing.Point(123, 110);
-            this.lich1.Name = "lich1";
-            this.lich1.Size = new System.Drawing.Size(110, 28);
-            this.lich1.TabIndex = 42;
             // 
             // HoaDonNhapForm
             // 
