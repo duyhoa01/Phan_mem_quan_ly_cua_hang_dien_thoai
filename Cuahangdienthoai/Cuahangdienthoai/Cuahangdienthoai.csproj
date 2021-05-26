@@ -47,22 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="QuanLyNhaCungCap.cs">
+    <Compile Include="View\QuanLyNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyNhaCungCap.Designer.cs">
+    <Compile Include="View\QuanLyNhaCungCap.Designer.cs">
       <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="suataikhoan.cs">
+    <Compile Include="View\suataikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="suataikhoan.Designer.cs">
+    <Compile Include="View\suataikhoan.Designer.cs">
       <DependentUpon>suataikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemTaiKhoan.cs">
+    <Compile Include="View\ThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemTaiKhoan.Designer.cs">
+    <Compile Include="View\ThemTaiKhoan.Designer.cs">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\BaoCaoKinhDoanhForm.cs">
@@ -151,13 +151,13 @@
     <Compile Include="View\ThemDonHangForm.Designer.cs">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanLyNhaCungCap.resx">
+    <EmbeddedResource Include="View\QuanLyNhaCungCap.resx">
       <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="suataikhoan.resx">
+    <EmbeddedResource Include="View\suataikhoan.resx">
       <DependentUpon>suataikhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemTaiKhoan.resx">
+    <EmbeddedResource Include="View\ThemTaiKhoan.resx">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BaoCaoKinhDoanhForm.resx">
