@@ -80,7 +80,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel10.Controls.Add(this.pictureBox2);
             this.panel10.Controls.Add(this.pictureBox1);
             this.panel10.Controls.Add(this.lich2);
@@ -123,7 +123,7 @@
             // 
             // lich2
             // 
-            this.lich2.BackColor = System.Drawing.Color.White;
+            this.lich2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lich2.Location = new System.Drawing.Point(362, 49);
             this.lich2.Name = "lich2";
             this.lich2.Size = new System.Drawing.Size(110, 28);
@@ -141,7 +141,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel5.Controls.Add(this.tbGiaGiaMax);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Location = new System.Drawing.Point(171, 191);
@@ -152,7 +152,7 @@
             // 
             // tbGiaGiaMax
             // 
-            this.tbGiaGiaMax.BackColor = System.Drawing.Color.White;
+            this.tbGiaGiaMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbGiaGiaMax.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbGiaGiaMax.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tbGiaGiaMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,7 +179,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.numericUpDown1);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Location = new System.Drawing.Point(171, 143);
@@ -190,6 +190,7 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,7 +216,7 @@
             // 
             // pbDelete
             // 
-            this.pbDelete.BackColor = System.Drawing.Color.White;
+            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pbDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbDelete.Image = ((System.Drawing.Image)(resources.GetObject("pbDelete.Image")));
             this.pbDelete.Location = new System.Drawing.Point(572, 102);
@@ -239,7 +240,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.tbGiaMin);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Location = new System.Drawing.Point(171, 95);
@@ -250,7 +251,7 @@
             // 
             // tbGiaMin
             // 
-            this.tbGiaMin.BackColor = System.Drawing.Color.White;
+            this.tbGiaMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbGiaMin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbGiaMin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tbGiaMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,7 +344,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.tbKhuyenMai);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(123, 9);
@@ -354,7 +355,7 @@
             // 
             // tbKhuyenMai
             // 
-            this.tbKhuyenMai.BackColor = System.Drawing.Color.White;
+            this.tbKhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbKhuyenMai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbKhuyenMai.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tbKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -395,7 +396,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.panel1);
             this.Name = "KhuyenMaii";
             this.Size = new System.Drawing.Size(640, 264);

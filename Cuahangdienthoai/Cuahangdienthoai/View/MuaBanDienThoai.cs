@@ -11,13 +11,16 @@ using Cuahangdienthoai.BUS;
 
 namespace Cuahangdienthoai.View
 {
-    public partial class ThongTinDienThoai : Form
+    public partial class MuaBanDienThoai : Form
     {
-        private int maDT;
-        public ThongTinDienThoai(int MaDT)
+        public int maDT;
+        public int SoLuong = 0;
+        public delegate void ThemGioHang(int MaDT, int SoLuong);
+        public ThemGioHang Them { get; set; }
+        public MuaBanDienThoai(int MaDT)
         {
             InitializeComponent();
-            maDT = MaDT;
+            this.maDT = MaDT;
             SetGUI();
         }
         private void SetGUI()
@@ -27,13 +30,26 @@ namespace Cuahangdienthoai.View
             tbMaDT.Text = dt.MaDT.ToString();
             tbSoLuong.Text = dt.SLHienTai.ToString();
             tbPtGiamGia.Text = ((float)Convert.ToDouble(dt.C_GiamGia)).ToString() + "%";
-            tbDonGia.Text = ((float)Convert.ToDouble(dt.GiaBanDT)).ToString();
-            tbDiemDanhGia.Text = ((float)Convert.ToDouble(dt.DiemDanhGia)).ToString() + " / 5";
-            tbLuotDanhGia.Text = dt.LuotDanhGia.ToString();
+            tbGiaBan.Text = ((float)Convert.ToDouble(dt.GiaBanDT)).ToString();
+            tbGiaNhap.Text = ((float)Convert.ToDouble(dt.GiaNhapDT)).ToString();
             richTextBox1.Text = dt.ThongSoKyThuat;
             pictureBox1.Tag = dt.Anh;
             string path = MenuFor.path + dt.Anh;
             pictureBox1.Image = new Bitmap(path);
+        }
+
+        private void btOk_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(tbSoLuong.Text) < Convert.ToInt32(nudSL.Value))
+            {
+                MessageBox.Show("Số máy hiện tại không đủ đáp ứng!");
+            }
+            else
+            {
+                this.SoLuong = Convert.ToInt32(nudSL.Value);
+                Them(maDT, SoLuong);
+                this.Close();
+            }
         }
     }
 }

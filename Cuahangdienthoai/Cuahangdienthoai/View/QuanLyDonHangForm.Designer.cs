@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyDonHangForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,9 +51,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.dataGridViewDonHang = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewsanpham = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,8 +64,8 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewsanpham)).BeginInit();
             this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,6 +164,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(915, 81);
             this.panel5.TabIndex = 5;
+            this.panel5.Click += new System.EventHandler(this.button2_Click);
             // 
             // btThongKe
             // 
@@ -180,6 +184,7 @@
             this.btThongKe.Text = "Thống kê";
             this.btThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThongKe.UseVisualStyleBackColor = false;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
             // 
             // button4
             // 
@@ -272,6 +277,7 @@
             this.btTimKiêm.Text = "Tìm kiếm";
             this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiêm.UseVisualStyleBackColor = false;
+            this.btTimKiêm.Click += new System.EventHandler(this.btThongKe_Click);
             // 
             // panel6
             // 
@@ -311,26 +317,56 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.panel10);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(30, 154);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(915, 431);
+            this.panel7.Size = new System.Drawing.Size(915, 428);
             this.panel7.TabIndex = 6;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel10.Controls.Add(this.dataGridViewDonHang);
             this.panel10.Controls.Add(this.pictureBox1);
             this.panel10.Controls.Add(this.label1);
-            this.panel10.Controls.Add(this.dataGridViewsanpham);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(1, 49, 1, 8);
-            this.panel10.Size = new System.Drawing.Size(915, 431);
+            this.panel10.Size = new System.Drawing.Size(915, 428);
             this.panel10.TabIndex = 2;
+            // 
+            // dataGridViewDonHang
+            // 
+            this.dataGridViewDonHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewDonHang.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewDonHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDonHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewDonHang.Location = new System.Drawing.Point(1, 49);
+            this.dataGridViewDonHang.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewDonHang.Name = "dataGridViewDonHang";
+            this.dataGridViewDonHang.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDonHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewDonHang.RowHeadersVisible = false;
+            this.dataGridViewDonHang.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDonHang.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewDonHang.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Purple;
+            this.dataGridViewDonHang.RowTemplate.Height = 24;
+            this.dataGridViewDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDonHang.Size = new System.Drawing.Size(913, 371);
+            this.dataGridViewDonHang.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -354,20 +390,6 @@
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Đơn hàng";
-            // 
-            // dataGridViewsanpham
-            // 
-            this.dataGridViewsanpham.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewsanpham.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewsanpham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewsanpham.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewsanpham.Location = new System.Drawing.Point(1, 49);
-            this.dataGridViewsanpham.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewsanpham.Name = "dataGridViewsanpham";
-            this.dataGridViewsanpham.RowHeadersWidth = 51;
-            this.dataGridViewsanpham.RowTemplate.Height = 24;
-            this.dataGridViewsanpham.Size = new System.Drawing.Size(913, 374);
-            this.dataGridViewsanpham.TabIndex = 0;
             // 
             // panel11
             // 
@@ -430,8 +452,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(975, 618);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -451,8 +473,8 @@
             this.panel7.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewsanpham)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.ResumeLayout(false);
@@ -474,7 +496,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewsanpham;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
@@ -488,5 +509,6 @@
         private System.Windows.Forms.Button button5;
         private User_Control.Lich lich2;
         private User_Control.Lich lich1;
+        private System.Windows.Forms.DataGridView dataGridViewDonHang;
     }
 }

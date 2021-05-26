@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cuahangdienthoai.BUS;
 
 namespace Cuahangdienthoai.View
 {
@@ -16,6 +17,11 @@ namespace Cuahangdienthoai.View
         {
             InitializeComponent();
             SetGUI();
+            ShowListDonHang();           
+        }
+        private void ShowListDonHang()
+        {
+            dataGridViewDonHang.DataSource = DonHangBUS.Instance.GetListDonHang(tbTimKiem.Text, lich1.GetDateTime(), lich2.GetDateTime());
         }
         private void SetGUI()
         {
@@ -29,6 +35,11 @@ namespace Cuahangdienthoai.View
         {
             ThemDonHangForm themDonHangForm = new ThemDonHangForm();
             themDonHangForm.Show();
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            ShowListDonHang();
         }
     }
 }

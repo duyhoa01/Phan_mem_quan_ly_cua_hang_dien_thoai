@@ -35,8 +35,7 @@ namespace Cuahangdienthoai.View
                 numericUpDown1.Value = Convert.ToDecimal(dt.C_GiamGia);
                 pictureBox1.Tag = dt.Anh;
                 richTextBox1.Text = dt.ThongSoKyThuat;
-                string path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName;
-                path += @"\AnhDT\" + dt.Anh;
+                string path = MenuFor.path + dt.Anh;
                 pictureBox1.Image = new Bitmap(path);
                 tbMaDT.Enabled = false;
                 tbGiaNhap.Enabled = false;
@@ -52,8 +51,7 @@ namespace Cuahangdienthoai.View
         private void btChonAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog f = new OpenFileDialog();
-            string path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName;
-            path = Directory.GetParent(path).FullName + @"\AnhDT";
+            string path = MenuFor.path;
             f.InitialDirectory = path;
             f.Filter = "ALL|*.*|JPG Files|*.jpg|PNG Files|*.png";
             DialogResult r = f.ShowDialog();

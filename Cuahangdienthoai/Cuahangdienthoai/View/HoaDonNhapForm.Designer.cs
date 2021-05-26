@@ -83,11 +83,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnSanPham = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dienThoai9 = new User_Control.DienThoai();
-            this.dienThoai10 = new User_Control.DienThoai();
-            this.dienThoai11 = new User_Control.DienThoai();
-            this.dienThoai12 = new User_Control.DienThoai();
-            this.dienThoai13 = new User_Control.DienThoai();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -118,7 +113,6 @@
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnSanPham.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -770,81 +764,11 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.dienThoai9);
-            this.flowLayoutPanel1.Controls.Add(this.dienThoai10);
-            this.flowLayoutPanel1.Controls.Add(this.dienThoai11);
-            this.flowLayoutPanel1.Controls.Add(this.dienThoai12);
-            this.flowLayoutPanel1.Controls.Add(this.dienThoai13);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 65);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(554, 536);
             this.flowLayoutPanel1.TabIndex = 24;
-            // 
-            // dienThoai9
-            // 
-            this.dienThoai9.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai9.BackColor = System.Drawing.Color.White;
-            this.dienThoai9.Gia = "Giá";
-            this.dienThoai9.Location = new System.Drawing.Point(3, 3);
-            this.dienThoai9.MaSP = "Mã";
-            this.dienThoai9.Name = "dienThoai9";
-            this.dienThoai9.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai9.SL = 10000;
-            this.dienThoai9.TabIndex = 8;
-            this.dienThoai9.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai10
-            // 
-            this.dienThoai10.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai10.BackColor = System.Drawing.Color.White;
-            this.dienThoai10.Gia = "Giá";
-            this.dienThoai10.Location = new System.Drawing.Point(181, 3);
-            this.dienThoai10.MaSP = "Mã";
-            this.dienThoai10.Name = "dienThoai10";
-            this.dienThoai10.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai10.SL = 10000;
-            this.dienThoai10.TabIndex = 9;
-            this.dienThoai10.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai11
-            // 
-            this.dienThoai11.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai11.BackColor = System.Drawing.Color.White;
-            this.dienThoai11.Gia = "Giá";
-            this.dienThoai11.Location = new System.Drawing.Point(359, 3);
-            this.dienThoai11.MaSP = "Mã";
-            this.dienThoai11.Name = "dienThoai11";
-            this.dienThoai11.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai11.SL = 10000;
-            this.dienThoai11.TabIndex = 10;
-            this.dienThoai11.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai12
-            // 
-            this.dienThoai12.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai12.BackColor = System.Drawing.Color.White;
-            this.dienThoai12.Gia = "Giá";
-            this.dienThoai12.Location = new System.Drawing.Point(3, 285);
-            this.dienThoai12.MaSP = "Mã";
-            this.dienThoai12.Name = "dienThoai12";
-            this.dienThoai12.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai12.SL = 10000;
-            this.dienThoai12.TabIndex = 11;
-            this.dienThoai12.TenDT = "Tên Điện Thoại";
-            // 
-            // dienThoai13
-            // 
-            this.dienThoai13.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.dienThoai13.BackColor = System.Drawing.Color.White;
-            this.dienThoai13.Gia = "Giá";
-            this.dienThoai13.Location = new System.Drawing.Point(181, 285);
-            this.dienThoai13.MaSP = "Mã";
-            this.dienThoai13.Name = "dienThoai13";
-            this.dienThoai13.Size = new System.Drawing.Size(172, 276);
-            this.dienThoai13.SL = 10000;
-            this.dienThoai13.TabIndex = 12;
-            this.dienThoai13.TenDT = "Tên Điện Thoại";
             // 
             // panel23
             // 
@@ -1026,7 +950,6 @@
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnSanPham.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel18.ResumeLayout(false);
@@ -1054,11 +977,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel pnThanhToan;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private User_Control.DienThoai dienThoai9;
-        private User_Control.DienThoai dienThoai10;
-        private User_Control.DienThoai dienThoai11;
-        private User_Control.DienThoai dienThoai12;
-        private User_Control.DienThoai dienThoai13;
         private System.Windows.Forms.Panel pnHangNhap;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;

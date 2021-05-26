@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cuahangdienthoai.DAL;
 using Cuahangdienthoai.DTO;
 using System.Windows.Forms;
+using Cuahangdienthoai.View;
 
 namespace Cuahangdienthoai.BUS
 {
@@ -38,20 +38,20 @@ namespace Cuahangdienthoai.BUS
             List<DienThoaiViewFormSP> listDT = new List<DienThoaiViewFormSP>();
             foreach (DienThoai item in DienThoaiDAL.Instance.GetListDT(TimKiem, SapXep))
             {
-                string path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName;
-                path += @"\AnhDT\" + item.Anh;
+                string path = MenuFor.path + item.Anh;
                 Image AnhGoc = new Bitmap(path);
                 listDT.Add(new DienThoaiViewFormSP
                 {
-                    Anh = new Bitmap(AnhGoc, 180, 200),
+                    Anh = new Bitmap(AnhGoc, 180, 180),
                     MaDT = item.MaDT,
                     TenDT = item.TenDienThoai,
                     SoLuong = Convert.ToInt32(item.SLHienTai),
-                    GiaNhap = (float)Convert.ToDouble(item.GiaNhapDT),
-                    GiaBan = (float)Convert.ToDouble(item.GiaBanDT),
-                    DiemDanhGia = (float)Convert.ToDouble(item.DiemDanhGia),
-                    LuotDanhGia = Convert.ToInt32(item.LuotDanhGia),
-                    PtGiamGia = (float)Convert.ToDouble(item.C_GiamGia)
+                    GiaNhap = String.Format("{0:0,0} đ", item.GiaBanDT),
+                    GiaBan = String.Format("{0:0,0} đ", item.GiaBanDT),
+                    DiemDanhGia = ((float)Convert.ToDouble(item.DiemDanhGia)).ToString() + " / 5\n\n" 
+                                    + item.LuotDanhGia.ToString() + " đánh giá",
+                    PtGiamGia = ((float)Convert.ToDouble(item.C_GiamGia)).ToString() + "%",
+                    LinkAnh = item.Anh
                 }) ;       
             }
             return listDT;
@@ -60,6 +60,22 @@ namespace Cuahangdienthoai.BUS
             , int LuotDanhGia, string ThongSoKyThuat, string Anh)
         {
             DienThoaiDAL.Instance.SuaDT(MaDT, TenDT, PtGiamGia, DiemDanhGia, LuotDanhGia, ThongSoKyThuat, Anh);
+        }
+        public DienThoaiViewFormBan DTGioHang(int MaDT, int SoLuong)
+        {
+            DienThoai dt = DienThoaiDAL.Instance.TimDTByMaDT(MaDT);
+            string path = MenuFor.path + dt.Anh;
+            Image AnhGoc = new Bitmap(path);
+            return new DienThoaiViewFormBan
+            {
+                Anh = new Bitmap(AnhGoc, 100, 100),
+                MaDT = dt.MaDT,
+                TenDT = dt.TenDienThoai,
+                DonGia = String.Format("{0:0,0} đ", dt.GiaBanDT),
+                GiaSauGiam = String.Format("{0:0,0} đ", (dt.GiaBanDT*(100-dt.C_GiamGia)/100)),
+                SoLuong = SoLuong,
+                Tong = String.Format("{0:0,0} đ", (dt.GiaBanDT * (100 - dt.C_GiamGia) / 100 * SoLuong)),
+            };
         }
     }
 }

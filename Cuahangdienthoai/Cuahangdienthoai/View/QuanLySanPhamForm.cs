@@ -18,6 +18,20 @@ namespace Cuahangdienthoai.View
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
             ShowListPhone();
+            SetGUI();
+        }
+        private void SetGUI()
+        {
+            dataGridViewsanpham.Columns[0].Width = 180;
+            dataGridViewsanpham.Columns[0].HeaderText = "";
+            dataGridViewsanpham.Columns[1].HeaderText = "Mã Điện Thoại";
+            dataGridViewsanpham.Columns[2].HeaderText = "Tên Điện Thoại";
+            dataGridViewsanpham.Columns[3].HeaderText = "Số Lượng";
+            dataGridViewsanpham.Columns[4].HeaderText = "Giá Nhập";
+            dataGridViewsanpham.Columns[5].HeaderText = "Giá Bán";
+            dataGridViewsanpham.Columns[6].HeaderText = "% Giảm Giá";
+            dataGridViewsanpham.Columns[7].HeaderText = "Điểm Đánh Giá";
+            dataGridViewsanpham.Columns[8].Visible = false;
         }
         public void ShowListPhone()
         {
@@ -65,6 +79,11 @@ namespace Cuahangdienthoai.View
             ThemSuaDienThoai f = new ThemSuaDienThoai(Convert.ToInt32(MaDT));
             f.ShowDialog();
             ShowListPhone();
+        }
+
+        private void dataGridViewsanpham_DataSourceChanged(object sender, EventArgs e)
+        {
+            dataGridViewsanpham.Columns[0].Width = 180;
         }
     }
 }

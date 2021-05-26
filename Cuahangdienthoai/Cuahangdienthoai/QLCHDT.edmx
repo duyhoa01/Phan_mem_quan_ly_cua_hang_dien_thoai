@@ -104,7 +104,7 @@
           <Property Name="tenkhuyenmai" Type="nvarchar" MaxLength="100" />
           <Property Name="ngaybatdau" Type="date" />
           <Property Name="ngayketthuc" Type="date" />
-          <Property Name="phantram" Type="decimal" Precision="3" Scale="2" />
+          <Property Name="phantram" Type="decimal" Precision="5" Scale="2" />
           <Property Name="tientoithieu" Type="float" />
           <Property Name="khuyenmaitoida" Type="float" />
         </EntityType>
@@ -605,7 +605,7 @@
           <Property Name="tenkhuyenmai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ngaybatdau" Type="DateTime" Precision="0" />
           <Property Name="ngayketthuc" Type="DateTime" Precision="0" />
-          <Property Name="phantram" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="phantram" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="tientoithieu" Type="Double" />
           <Property Name="khuyenmaitoida" Type="Double" />
           <NavigationProperty Name="GiamGias" Relationship="Self.FK_GiamGia_KhuyenMai" FromRole="KhuyenMai" ToRole="GiamGia" />

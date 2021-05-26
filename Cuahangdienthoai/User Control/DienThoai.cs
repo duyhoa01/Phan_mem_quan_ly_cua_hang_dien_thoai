@@ -12,12 +12,14 @@ namespace User_Control
 {
     public partial class DienThoai : UserControl
     {
+        public delegate void XemThongTin(object sender, EventArgs e);
+        public event XemThongTin xemThongTin;
         public DienThoai()
         {
             InitializeComponent();
             this.Focus();
         }
-        public string MaSP { get => (lbMaSP.Text); set => lbMaSP.Text = value; }
+        public int MaSP { get => Convert.ToInt32(lbMaSP.Text); set => lbMaSP.Text = value.ToString(); }
         public string Gia { get => lbGia.Text; set => lbGia.Text = value; }
         public string TenDT { get => tbTenDT.Text; set => tbTenDT.Text = value; }
         public string LinkAnh { set => pictureBox1.Image = new Bitmap(value); }
@@ -35,6 +37,10 @@ namespace User_Control
             this.BackColor = Color.FromArgb(208, 239, 242);
             tbTenDT.BackColor = Color.FromArgb(208, 239, 242);
             panel1.BackColor = Color.FromArgb(208, 239, 242);
+        }
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            this.xemThongTin(this, EventArgs.Empty);
         }
     }
 }

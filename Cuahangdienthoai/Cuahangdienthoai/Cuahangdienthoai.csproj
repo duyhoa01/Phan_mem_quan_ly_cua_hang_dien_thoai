@@ -63,10 +63,15 @@
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
     <Compile Include="BUS\DienThoaiBUS.cs" />
+    <Compile Include="BUS\DonHangBUS.cs" />
+    <Compile Include="BUS\KhuyenMaiBUS.cs" />
     <Compile Include="DAL\DienThoaiDAL.cs" />
+    <Compile Include="DAL\DonHangDAL.cs" />
+    <Compile Include="DAL\KhuyenMaiDAL.cs" />
     <Compile Include="DienThoai.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\DienThoaiViewFormBan.cs" />
     <Compile Include="DTO\DienThoaiViewFormSP.cs" />
     <Compile Include="GiamGia.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
@@ -193,6 +198,12 @@
     <Compile Include="View\MenuFor.Designer.cs">
       <DependentUpon>MenuFor.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\MuaBanDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MuaBanDienThoai.Designer.cs">
+      <DependentUpon>MuaBanDienThoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\NhapKhoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +303,9 @@
     </Compile>
     <EmbeddedResource Include="View\MenuFor.resx">
       <DependentUpon>MenuFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MuaBanDienThoai.resx">
+      <DependentUpon>MuaBanDienThoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NhapKhoForm.resx">
       <DependentUpon>NhapKhoForm.cs</DependentUpon>

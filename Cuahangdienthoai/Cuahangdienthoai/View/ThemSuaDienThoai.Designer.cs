@@ -218,7 +218,7 @@ namespace Cuahangdienthoai.View
             this.btChonAnh.ForeColor = System.Drawing.Color.Black;
             this.btChonAnh.Image = ((System.Drawing.Image)(resources.GetObject("btChonAnh.Image")));
             this.btChonAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btChonAnh.Location = new System.Drawing.Point(262, 337);
+            this.btChonAnh.Location = new System.Drawing.Point(274, 337);
             this.btChonAnh.Name = "btChonAnh";
             this.btChonAnh.Size = new System.Drawing.Size(97, 35);
             this.btChonAnh.TabIndex = 28;
@@ -229,9 +229,9 @@ namespace Cuahangdienthoai.View
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(41, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 337);
+            this.pictureBox1.Size = new System.Drawing.Size(340, 340);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -367,6 +367,7 @@ namespace Cuahangdienthoai.View
             this.tbDiemDanhGia.Name = "tbDiemDanhGia";
             this.tbDiemDanhGia.Size = new System.Drawing.Size(65, 15);
             this.tbDiemDanhGia.TabIndex = 19;
+            this.tbDiemDanhGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel9
             // 
@@ -427,6 +428,7 @@ namespace Cuahangdienthoai.View
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(71, 18);
             this.numericUpDown1.TabIndex = 19;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel15
             // 
@@ -514,7 +516,9 @@ namespace Cuahangdienthoai.View
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.thuDong1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "ThemSuaDienThoai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ThemSuaDienThoai";
             this.groupBox1.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
