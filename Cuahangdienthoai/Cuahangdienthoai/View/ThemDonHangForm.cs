@@ -15,6 +15,26 @@ namespace Cuahangdienthoai.View
         public ThemDonHangForm()
         {
             InitializeComponent();
+            tbCMND_Check.AppendText("CMND");
+        }
+
+        private void btKtraKH_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rdbKHMoi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbKHMoi.Checked == false)
+            {
+                pnKHCu.Show();
+                pnThongTinKH.Enabled = false;
+            }
+            else
+            {
+                pnKHCu.Hide();
+                pnThongTinKH.Enabled = true;
+            }
         }
     }
 }

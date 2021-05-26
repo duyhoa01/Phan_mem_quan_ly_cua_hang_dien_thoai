@@ -1,0 +1,47 @@
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.dll
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.pdb
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\Cuahangdienthoai.ThuDong.resources
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.GenerateResource.cache
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CoreCompileInputs.cache
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.dll
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.pdb
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.DienThoai.resources
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.Properties.Resources.resources
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.Lich.resources
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csprojAssemblyReference.cache
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.dll
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.pdb
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.DienThoai.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.Lich.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.Properties.Resources.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\Cuahangdienthoai.ThuDong.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.GenerateResource.cache
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CoreCompileInputs.cache
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.dll
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.pdb
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.KhuyenMaii.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.dll.config
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.dll
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.xml
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csprojAssemblyReference.cache
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CopyComplete
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.dll.config
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.dll
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\User Control.pdb
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.dll
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.xml
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csprojAssemblyReference.cache
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.DienThoai.resources
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.KhuyenMaii.resources
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.Lich.resources
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User_Control.Properties.Resources.resources
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\Cuahangdienthoai.ThuDong.resources
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.GenerateResource.cache
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CoreCompileInputs.cache
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CopyComplete
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.dll
+C:\Users\hieuq\OneDrive\Máy tính\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.pdb

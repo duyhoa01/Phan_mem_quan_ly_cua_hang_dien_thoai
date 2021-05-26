@@ -73,6 +73,16 @@ namespace Cuahangdienthoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap samsung_galaxy_s21 {
+            get {
+                object obj = ResourceManager.GetObject("samsung_galaxy_s21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_delete__icon_in_trendy_style_isolated_background_png_image_4859209 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-delete--icon-in-trendy-style-isolated-background-png-image_4859209", resourceCulture);
