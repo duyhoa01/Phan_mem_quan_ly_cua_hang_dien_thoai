@@ -68,5 +68,14 @@ namespace Cuahangdienthoai.DAL
                 km.ngayketthuc = DateTime.Now.AddDays(-1);
             }
         }
+        public List<KhuyenMai> GetListKMApDung(float TongTien)
+        {
+            DateTime today = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                return db.KhuyenMais.Where(p => (p.ngayketthuc >= today)
+                                            && (p.tientoithieu <= TongTien)).Select(p => p).ToList();
+            }
+        }
     }
 }

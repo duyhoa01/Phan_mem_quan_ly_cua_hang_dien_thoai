@@ -17,11 +17,13 @@ namespace Cuahangdienthoai.View
         public int SoLuong = 0;
         public delegate void ThemGioHang(int MaDT, int SoLuong);
         public ThemGioHang Them { get; set; }
-        public MuaBanDienThoai(int MaDT)
+        public MuaBanDienThoai(int MaDT, int SoLuong)
         {
             InitializeComponent();
             this.maDT = MaDT;
+            this.SoLuong = SoLuong;
             SetGUI();
+            nudSL.Value = SoLuong;
         }
         private void SetGUI()
         {
@@ -50,6 +52,16 @@ namespace Cuahangdienthoai.View
                 Them(maDT, SoLuong);
                 this.Close();
             }
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            nudSL.Value = 0;
+            btOk_Click(btOk, EventArgs.Empty);
+        }
+        public void ShowBtXoa()
+        {
+            btXoa.Show();
         }
     }
 }

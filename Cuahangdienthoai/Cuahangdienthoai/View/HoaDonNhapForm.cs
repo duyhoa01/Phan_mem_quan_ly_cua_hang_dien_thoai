@@ -42,7 +42,17 @@ namespace Cuahangdienthoai.View
         private void DienThoai_DoubleClick(object sender, EventArgs e)
         {
             User_Control.DienThoai dt = sender as User_Control.DienThoai;
-            MuaBanDienThoai f = new MuaBanDienThoai(dt.MaSP);
+            foreach (DienThoaiViewFormBan item in listGioHang)
+            {
+                if(item.MaDT == dt.MaSP)
+                {
+                    MuaBanDienThoai form = new MuaBanDienThoai(dt.MaSP, item.SoLuong);
+                    form.Them += ThemVaoGioHang;
+                    form.ShowDialog();
+                    return;
+                }
+            }
+            MuaBanDienThoai f = new MuaBanDienThoai(dt.MaSP, 1);
             f.Them += ThemVaoGioHang;
             f.ShowDialog();
         }

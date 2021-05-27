@@ -59,6 +59,7 @@ namespace Cuahangdienthoai.View
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.btXoa = new System.Windows.Forms.Button();
             this.nudSL = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.btOk = new System.Windows.Forms.Button();
@@ -240,7 +241,7 @@ namespace Cuahangdienthoai.View
             // 
             // thuDong1
             // 
-            this.thuDong1.BackColor = System.Drawing.Color.Silver;
+            this.thuDong1.BackColor = System.Drawing.Color.Gray;
             this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
             this.thuDong1.Location = new System.Drawing.Point(0, 0);
             this.thuDong1.Name = "thuDong1";
@@ -386,6 +387,7 @@ namespace Cuahangdienthoai.View
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Bisque;
+            this.panel15.Controls.Add(this.btXoa);
             this.panel15.Controls.Add(this.nudSL);
             this.panel15.Controls.Add(this.label1);
             this.panel15.Controls.Add(this.btOk);
@@ -393,6 +395,27 @@ namespace Cuahangdienthoai.View
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(477, 56);
             this.panel15.TabIndex = 113;
+            // 
+            // btXoa
+            // 
+            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btXoa.BackColor = System.Drawing.Color.Red;
+            this.btXoa.FlatAppearance.BorderSize = 0;
+            this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.ForeColor = System.Drawing.Color.White;
+            this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(24, 15);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(101, 32);
+            this.btXoa.TabIndex = 44;
+            this.btXoa.Text = "Bỏ Mua";
+            this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Visible = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // nudSL
             // 
@@ -457,7 +480,9 @@ namespace Cuahangdienthoai.View
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel16);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "MuaBanDienThoai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MuaBanDienThoai";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -517,5 +542,6 @@ namespace Cuahangdienthoai.View
         private System.Windows.Forms.TextBox tbPtGiamGia;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btXoa;
     }
 }

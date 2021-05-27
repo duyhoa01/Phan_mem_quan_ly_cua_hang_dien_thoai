@@ -68,7 +68,8 @@ namespace Cuahangdienthoai.View
                 km.NgayBatDau = Convert.ToDateTime(item.ngaybatdau);
                 km.NgayKetThuc = Convert.ToDateTime(item.ngayketthuc);
                 km.TienToiThieu = (float)Convert.ToDouble(item.tientoithieu);
-                km.GiamGiaMax = (float)Convert.ToDouble(item.tientoithieu);
+                km.GiamGiaMax = (float)Convert.ToDouble(item.khuyenmaitoida);
+                km.PtGiamGia = (float)Convert.ToDouble(item.phantram);
                 km.Tag = item.makhuyenmai;
                 km.AnSave();
                 flowLayoutPanel1.Controls.Add(km);

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cuahangdienthoai.DAL;
+using Cuahangdienthoai.DTO;
 
 namespace Cuahangdienthoai.BUS
 {
@@ -35,6 +36,27 @@ namespace Cuahangdienthoai.BUS
         public void AnKM(int MaKM)
         {
             KhuyenMaiDAL.Instance.AnKM(MaKM);
+        }
+        public List<KhuyenMaiApDung> GetListKMApDung(float TongTien)
+        {
+            List<KhuyenMaiApDung> list = new List<KhuyenMaiApDung>();
+            foreach (KhuyenMai item in KhuyenMaiDAL.Instance.GetListKMApDung(TongTien))
+            {
+                list.Add(new KhuyenMaiApDung
+                {
+                    TenKM = item.tenkhuyenmai,
+                    TienToiThieu = String.Format("{0:0,0} đ", item.tientoithieu),
+                    PtGiamGia = String.Format("{0:0.##}", item.phantram) + " %",
+                    GiamGiaMax = String.Format("{0:0,0} đ", item.khuyenmaitoida),
+                    TienApDung = String.Format("{0:0,0} đ", (item.khuyenmaitoida >= (TongTien * ((float)Convert.ToDouble(item.phantram)) / 100))
+                                                                ? (TongTien * ((float)Convert.ToDouble(item.phantram)) / 100) : item.khuyenmaitoida),
+                });
+            }
+            return list;
+        }
+        public List<KhuyenMai> GetListKMThanhToan(float TongTien)
+        {
+            return KhuyenMaiDAL.Instance.GetListKMApDung(TongTien);
         }
     }
 }

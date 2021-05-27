@@ -165,6 +165,7 @@
             // 
             // btReload
             // 
+            this.btReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.btReload.FlatAppearance.BorderSize = 0;
             this.btReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

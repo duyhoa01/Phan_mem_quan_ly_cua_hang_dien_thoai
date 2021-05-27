@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="DTO\DienThoaiViewFormBan.cs" />
     <Compile Include="DTO\DienThoaiViewFormSP.cs" />
+    <Compile Include="DTO\KhuyenMaiApDung.cs" />
     <Compile Include="GiamGia.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>

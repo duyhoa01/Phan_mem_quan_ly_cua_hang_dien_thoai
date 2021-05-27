@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Cuahangdienthoai.DAL;
 using Cuahangdienthoai.DTO;
-using System.Windows.Forms;
 using Cuahangdienthoai.View;
 
 namespace Cuahangdienthoai.BUS
@@ -46,11 +45,11 @@ namespace Cuahangdienthoai.BUS
                     MaDT = item.MaDT,
                     TenDT = item.TenDienThoai,
                     SoLuong = Convert.ToInt32(item.SLHienTai),
-                    GiaNhap = String.Format("{0:0,0} đ", item.GiaBanDT),
+                    GiaNhap = String.Format("{0:0,0} đ", item.GiaNhapDT),
                     GiaBan = String.Format("{0:0,0} đ", item.GiaBanDT),
-                    DiemDanhGia = ((float)Convert.ToDouble(item.DiemDanhGia)).ToString() + " / 5\n\n" 
+                    DiemDanhGia = ((float)Convert.ToDouble(item.DiemDanhGia)).ToString() + " / 5\n\n"
                                     + item.LuotDanhGia.ToString() + " đánh giá",
-                    PtGiamGia = ((float)Convert.ToDouble(item.C_GiamGia)).ToString() + "%",
+                    PtGiamGia = String.Format("{0:0.##}", item.C_GiamGia) + " %",
                     LinkAnh = item.Anh
                 }) ;       
             }
@@ -72,9 +71,12 @@ namespace Cuahangdienthoai.BUS
                 MaDT = dt.MaDT,
                 TenDT = dt.TenDienThoai,
                 DonGia = String.Format("{0:0,0} đ", dt.GiaBanDT),
+                PtGiamGia = String.Format("{0:0.##}", dt.C_GiamGia) + "%",
                 GiaSauGiam = String.Format("{0:0,0} đ", (dt.GiaBanDT*(100-dt.C_GiamGia)/100)),
                 SoLuong = SoLuong,
-                Tong = String.Format("{0:0,0} đ", (dt.GiaBanDT * (100 - dt.C_GiamGia) / 100 * SoLuong)),
+                TongTien = String.Format("{0:0,0} đ", (dt.GiaBanDT * SoLuong)),
+                Giam = String.Format("{0:0,0} đ", (dt.GiaBanDT * dt.C_GiamGia / 100 * SoLuong)),
+                ThanhTien = String.Format("{0:0,0} đ", (dt.GiaBanDT * (100 - dt.C_GiamGia) / 100 * SoLuong)),
             };
         }
     }

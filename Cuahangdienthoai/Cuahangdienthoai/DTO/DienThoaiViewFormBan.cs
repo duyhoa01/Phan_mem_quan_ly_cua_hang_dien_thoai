@@ -13,8 +13,11 @@ namespace Cuahangdienthoai.DTO
         public int MaDT { get; set; }
         public string TenDT { get; set; }
         public string DonGia { get; set; }
+        public string PtGiamGia { get; set; }
         public string GiaSauGiam { get; set; }
         public int SoLuong { get; set; }
-        public string Tong { get; set; }
+        public string TongTien { get; set; }
+        public string Giam { get; set; }
+        public string ThanhTien { get; set; }
     }
 }
