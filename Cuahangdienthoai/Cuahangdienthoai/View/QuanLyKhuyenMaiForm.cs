@@ -22,6 +22,7 @@ namespace Cuahangdienthoai.View
         private void btThemKM_Click(object sender, EventArgs e)
         {
             User_Control.KhuyenMaii km = new User_Control.KhuyenMaii();
+            km.KMMoi = true;
             km.xoaKM += this.XoaKhuyenMai;
             km.luuKM += LuuKhuyenMai;
             flowLayoutPanel1.Controls.Add(km);
@@ -50,6 +51,7 @@ namespace Cuahangdienthoai.View
             {
                 lbSoLuong.Text = (Convert.ToInt32(lbSoLuong.Text) + 1).ToString();
                 KhuyenMaiBUS.Instance.ThemKM(km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax);
+                LoadListKM();
             }
             else
             {
@@ -58,6 +60,7 @@ namespace Cuahangdienthoai.View
         }
         private void LoadListKM()
         {
+            flowLayoutPanel1.Controls.Clear();
             int Soluong = 0;
             foreach (KhuyenMai item in KhuyenMaiBUS.Instance.GetListKM())
             {
@@ -80,7 +83,6 @@ namespace Cuahangdienthoai.View
 
         private void btReload_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
             LoadListKM();
         }
     }

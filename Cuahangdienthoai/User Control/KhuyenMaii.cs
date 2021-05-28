@@ -15,16 +15,13 @@ namespace User_Control
         public delegate void DeletgetKM(object sender, EventArgs e);
         public event DeletgetKM xoaKM;
         public event DeletgetKM luuKM;
-        private bool KMMoi = true;
+        public bool KMMoi { get; set; }
         public KhuyenMaii()
         {
             InitializeComponent();
-            lich1.SetBackColor = Color.FromArgb(192, 255, 192);
-            lich2.SetBackColor = Color.FromArgb(192, 255, 192);
         }
         private void pbSave_Click(object sender, EventArgs e)
         {
-            if (KMMoi) SetKMCu();
             KMMoi = false;
             pbSave.Hide();
             panel1.Focus();
@@ -56,26 +53,32 @@ namespace User_Control
         {
             pbSave.Hide();
             KMMoi = false;
-            SetKMCu();
         }
-        private void SetKMCu()
+        private void SetKMMoi()
         {
-            this.BackColor = Color.White;
-            panel10.BackColor = Color.White;
-            panel2.BackColor = Color.White;
-            panel3.BackColor = Color.White;
-            panel4.BackColor = Color.White;
-            panel5.BackColor = Color.White;
-            tbGiaGiaMax.BackColor = Color.White;
-            tbGiaMin.BackColor = Color.White;
-            tbKhuyenMai.BackColor = Color.White;
-            lich1.SetBackColor = Color.White;
-            lich2.SetBackColor = Color.White;
-            pbDelete.BackColor = Color.White;
-            pbSave.BackColor = Color.White;
-            numericUpDown1.BackColor = Color.White;
-            pictureBox1.BackColor = Color.White;
-            pictureBox2.BackColor = Color.White;
+            this.BackColor = Color.FromArgb(192, 255, 192);
+            panel10.BackColor = Color.FromArgb(192, 255, 192);
+            panel2.BackColor = Color.FromArgb(192, 255, 192);
+            panel3.BackColor = Color.FromArgb(192, 255, 192);
+            panel4.BackColor = Color.FromArgb(192, 255, 192);
+            panel5.BackColor = Color.FromArgb(192, 255, 192);
+            tbGiaGiaMax.BackColor = Color.FromArgb(192, 255, 192);
+            tbGiaMin.BackColor = Color.FromArgb(192, 255, 192);
+            tbKhuyenMai.BackColor = Color.FromArgb(192, 255, 192);
+            lich1.SetBackColor = Color.FromArgb(192, 255, 192);
+            lich2.SetBackColor = Color.FromArgb(192, 255, 192);
+            pbDelete.BackColor = Color.FromArgb(192, 255, 192);
+            pbSave.BackColor = Color.FromArgb(192, 255, 192);
+            numericUpDown1.BackColor = Color.FromArgb(192, 255, 192);
+            pictureBox1.BackColor = Color.FromArgb(192, 255, 192);
+            pictureBox2.BackColor = Color.FromArgb(192, 255, 192);
+            lich1.SetBackColor = Color.FromArgb(192, 255, 192);
+            lich2.SetBackColor = Color.FromArgb(192, 255, 192);
+        }
+
+        private void KhuyenMaii_Load(object sender, EventArgs e)
+        {
+            if (KMMoi) SetKMMoi();
         }
     }
 }

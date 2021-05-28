@@ -16,7 +16,7 @@ namespace Cuahangdienthoai.View
     {
         private List<DienThoaiViewFormBan> listGioHang = new List<DienThoaiViewFormBan>();
         private double TongTien = 0;
-        private double TongGiamSP =0;
+        private double TongGiamSP = 0;
         private double TongGiamKM = 0;
         private double ThanhTien = 0;
         private double TongLoiNhuan;
@@ -41,7 +41,7 @@ namespace Cuahangdienthoai.View
                 dt.MaSP = item.MaDT;
                 dt.TenDT = item.TenDT;
                 dt.SL = item.SoLuong;
-                dt.Gia = item.GiaBan;
+                dt.Gia = String.Format("{0:0,0 đ}", item.GiaGoc);
                 dt.LinkAnh = path + item.LinkAnh;
                 dt.xemThongTin += DienThoai_DoubleClick;
                 flowLayoutPanel1.Controls.Add(dt);
@@ -97,44 +97,34 @@ namespace Cuahangdienthoai.View
         {
             bool Thaydoi = false;
             DienThoaiViewFormBan dt = DienThoaiBUS.Instance.DTGioHang(MaDT, SoLuong);
-            if(listGioHang.Count == 0 && (SoLuong > 0))
+            bool ChuaCo = true;
+            int index = 0;
+            foreach (DienThoaiViewFormBan item in listGioHang)
+            {
+                index++;
+                if (dt.MaDT == item.MaDT)
+                {
+                    ChuaCo = false;
+                    TinhTien(dt.MaDT, (SoLuong - item.SoLuong));
+                    listGioHang.RemoveAt(index - 1);
+                    listGioHang.Insert(index - 1, dt);
+                    if (SoLuong == 0)
+                    {
+                        listGioHang.Remove(dt);
+                    }
+                    Thaydoi = true;
+                    break;
+                }
+            }
+            if (ChuaCo && (SoLuong > 0))
             {
                 listGioHang.Add(dt);
-                TinhTien(MaDT, SoLuong);
+                TinhTien(dt.MaDT, SoLuong);
                 Thaydoi = true;
             }
-            else
+            if (Thaydoi)
             {
-                bool ChuaCo = true;
-                int index = 0;
-                foreach (DienThoaiViewFormBan item in listGioHang)
-                {
-                    index++;
-                    if (dt.MaDT == item.MaDT)
-                    {
-                        ChuaCo = false;
-                        TinhTien(dt.MaDT, (SoLuong - item.SoLuong));
-                        listGioHang.RemoveAt(index-1);
-                        listGioHang.Insert(index-1, dt);
-                        if (SoLuong == 0)
-                        {
-                            listGioHang.Remove(dt);
-                        }
-                        Thaydoi = true;
-                        break;
-                    }
-                }
-                if(ChuaCo && (SoLuong > 0))
-                {
-                    listGioHang.Add(dt);
-                    TinhTien(dt.MaDT, SoLuong);
-                    Thaydoi = true;
-                }
-            }
-            if(Thaydoi)
-            { 
-                List<DienThoaiViewFormBan> l = new List<DienThoaiViewFormBan>();
-                l.AddRange(listGioHang);
+                var l = new BindingList<DienThoaiViewFormBan>(listGioHang);
                 dataGridViewGioHang.DataSource = l;
             }
         }
@@ -154,17 +144,10 @@ namespace Cuahangdienthoai.View
         private void dataGridViewGioHang_DataSourceChanged(object sender, EventArgs e)
         {
             this.TongGiamKM = 0;
-            dataGridViewKhuyenMai.DataSource = KhuyenMaiBUS.Instance.GetListKMApDung((float)this.TongTien);
-            foreach (KhuyenMai item in KhuyenMaiBUS.Instance.GetListKMThanhToan((float)TongTien))
+            dataGridViewKhuyenMai.DataSource = KhuyenMaiBUS.Instance.GetListKMApDung(this.TongTien);
+            foreach (DataGridViewRow item in dataGridViewKhuyenMai.Rows)
             {
-                if (item.khuyenmaitoida >= (TongTien * ((float)(item.phantram)) / 100))
-                {
-                    TongGiamKM += (TongTien * ((float)(item.phantram)) / 100);
-                }
-                else
-                {
-                    TongGiamKM += (float)(item.khuyenmaitoida);
-                }
+                TongGiamKM += (float)item.Cells[5].Value;
             }
             tbTongGiamKM.Text = String.Format("{0:0,0}", TongGiamKM);
             ThanhTien = TongTien - TongGiamKM - TongGiamSP;
@@ -199,22 +182,61 @@ namespace Cuahangdienthoai.View
             dataGridViewGioHang.Columns[7].HeaderText = "Tổng";
             dataGridViewGioHang.Columns[8].HeaderText = "Giảm";
             dataGridViewGioHang.Columns[9].HeaderText = "Thành Tiền";
+            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[4].DefaultCellStyle.Format = "0.## '%'";
+            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[7].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[8].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[9].DefaultCellStyle.Format = "0,0 đ";
             //
-            dataGridViewKhuyenMai.Columns[0].HeaderText = "Tên Khuyến Mãi";
-            dataGridViewKhuyenMai.Columns[1].HeaderText = "Hóa Đơn Từ";
-            dataGridViewKhuyenMai.Columns[2].HeaderText = "% Giảm Giá";
-            dataGridViewKhuyenMai.Columns[3].HeaderText = "Giảm Tối Đa";
-            dataGridViewKhuyenMai.Columns[4].HeaderText = "Được Giảm";
+            dataGridViewKhuyenMai.Columns[1].HeaderText = "Tên KM";
+            dataGridViewKhuyenMai.Columns[2].HeaderText = "Hóa Đơn Từ";
+            dataGridViewKhuyenMai.Columns[3].HeaderText = "% Giảm Giá";
+            dataGridViewKhuyenMai.Columns[4].HeaderText = "Tối Đa";
+            dataGridViewKhuyenMai.Columns[5].HeaderText = "Được Giảm";
+            dataGridViewKhuyenMai.Columns[2].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewKhuyenMai.Columns[3].DefaultCellStyle.Format = "0.##'%'";
+            dataGridViewKhuyenMai.Columns[4].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewKhuyenMai.Columns[5].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewKhuyenMai.Columns[0].Visible = false;
+            dataGridViewKhuyenMai.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 9, FontStyle.Bold);
+            dataGridViewKhuyenMai.DefaultCellStyle.ForeColor = Color.Black;
         }
 
         private void btHuyDon_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private void TaoHoaDon()
+        {
+            DonHangBUS.Instance.ThemDonHang(1, 17, DateTime.Now, ThanhTien, TongLoiNhuan);
+        }
+        private void ThemKHMoi()
+        {
+
+        }
+        private void ThemKhuyenMaiApDungHD(int MaHD)
+        {
+            foreach (DataGridViewRow item in dataGridViewKhuyenMai.Rows)
+            {
+                KhuyenMaiBUS.Instance.ThemKhuyenMaiApDungHD(MaHD, Convert.ToInt32(item.Cells["MaKM"].Value));
+            }
+        }
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            
+            if(rdbKHMoi.Checked == true)
+            {
+                ThemKHMoi();
+            }
+            TaoHoaDon();
+            int MaHD = DonHangBUS.Instance.GetLastHD();
+            ThemKhuyenMaiApDungHD(MaHD);
+            foreach (DienThoaiViewFormBan item in listGioHang)
+            {
+                DonHangBUS.Instance.ThemHoaDonChiTiet(MaHD, item.MaDT, item.SoLuong);
+            }
+            this.Close();
         }
     }
 }

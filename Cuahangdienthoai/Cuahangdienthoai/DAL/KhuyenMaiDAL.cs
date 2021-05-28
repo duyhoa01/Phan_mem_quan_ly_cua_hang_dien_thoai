@@ -66,15 +66,36 @@ namespace Cuahangdienthoai.DAL
             {
                 KhuyenMai km = db.KhuyenMais.Find(MaKM);
                 km.ngayketthuc = DateTime.Now.AddDays(-1);
+                db.SaveChanges();
             }
         }
-        public List<KhuyenMai> GetListKMApDung(float TongTien)
+        public List<KhuyenMai> GetListKMApDung(double TongTien)
         {
             DateTime today = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
             using (PBL3Entities db = new PBL3Entities())
             {
                 return db.KhuyenMais.Where(p => (p.ngayketthuc >= today)
                                             && (p.tientoithieu <= TongTien)).Select(p => p).ToList();
+            }
+        }
+        public void ThemKhuyenMaiApDungHD(int MaHD, int MaKM)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.GiamGias.Add(new GiamGia
+                {
+                    maHoaDon = MaHD,
+                    maKhuyenMai = MaKM
+                });
+                db.SaveChanges();
+            }
+        }
+        public void XoaKhuyenMaiApDungHD(int MaHD)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.GiamGias.RemoveRange(db.GiamGias.Where(p => p.maHoaDon == MaHD).Select(p => p).ToList());
+                db.SaveChanges();
             }
         }
     }

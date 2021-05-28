@@ -13,9 +13,9 @@ namespace Cuahangdienthoai.DTO
         public int MaDT { get; set; }
         public string TenDT { get; set; }
         public int SoLuong { get; set; }
-        public string GiaNhap { get; set; }
-        public string GiaBan { get; set; }
-        public string PtGiamGia { get; set; }
+        public float GiaGoc { get; set; }
+        public float PtGiamGia { get; set; }
+        public float GiamCon { get; set; }
         public string DiemDanhGia { get; set; }
         public string LinkAnh { get; set; }
     }

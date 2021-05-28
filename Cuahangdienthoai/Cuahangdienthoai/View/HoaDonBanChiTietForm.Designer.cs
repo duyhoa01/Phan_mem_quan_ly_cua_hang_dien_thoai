@@ -90,7 +90,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 552);
+            this.panel1.Size = new System.Drawing.Size(970, 623);
             this.panel1.TabIndex = 1;
             // 
             // pnHangMua
@@ -102,7 +102,7 @@
             this.pnHangMua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnHangMua.Location = new System.Drawing.Point(0, 0);
             this.pnHangMua.Name = "pnHangMua";
-            this.pnHangMua.Size = new System.Drawing.Size(970, 397);
+            this.pnHangMua.Size = new System.Drawing.Size(970, 468);
             this.pnHangMua.TabIndex = 50;
             // 
             // panel11
@@ -116,7 +116,7 @@
             this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(2, 32, 2, 2);
-            this.panel11.Size = new System.Drawing.Size(950, 257);
+            this.panel11.Size = new System.Drawing.Size(950, 328);
             this.panel11.TabIndex = 7;
             // 
             // pictureBox1
@@ -155,7 +155,7 @@
             this.dataGridViewDanhmucsanpham.RowHeadersWidth = 51;
             this.dataGridViewDanhmucsanpham.RowTemplate.Height = 24;
             this.dataGridViewDanhmucsanpham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDanhmucsanpham.Size = new System.Drawing.Size(946, 223);
+            this.dataGridViewDanhmucsanpham.Size = new System.Drawing.Size(946, 294);
             this.dataGridViewDanhmucsanpham.TabIndex = 0;
             // 
             // panel2
@@ -163,7 +163,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(960, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 257);
+            this.panel2.Size = new System.Drawing.Size(10, 328);
             this.panel2.TabIndex = 8;
             // 
             // panel5
@@ -171,7 +171,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 140);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 257);
+            this.panel5.Size = new System.Drawing.Size(10, 328);
             this.panel5.TabIndex = 1;
             // 
             // panel3
@@ -365,7 +365,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(0, 397);
+            this.groupBox1.Location = new System.Drawing.Point(0, 468);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(970, 155);
             this.groupBox1.TabIndex = 49;
@@ -408,7 +408,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(124, 17);
             this.textBox5.TabIndex = 15;
-            this.textBox5.Text = "90000";
+            this.textBox5.Text = "0";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox4
@@ -419,7 +419,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(124, 17);
             this.textBox4.TabIndex = 14;
-            this.textBox4.Text = "10000";
+            this.textBox4.Text = "0";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox3
@@ -430,7 +430,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(124, 17);
             this.textBox3.TabIndex = 13;
-            this.textBox3.Text = "10000";
+            this.textBox3.Text = "0";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbTongTien
@@ -441,7 +441,7 @@
             this.tbTongTien.Name = "tbTongTien";
             this.tbTongTien.Size = new System.Drawing.Size(124, 17);
             this.tbTongTien.TabIndex = 12;
-            this.tbTongTien.Text = "100000";
+            this.tbTongTien.Text = "0";
             this.tbTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel26
@@ -541,7 +541,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 581);
+            this.ClientSize = new System.Drawing.Size(970, 652);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.thuDong1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

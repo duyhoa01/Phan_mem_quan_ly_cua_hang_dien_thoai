@@ -37,26 +37,39 @@ namespace Cuahangdienthoai.BUS
         {
             KhuyenMaiDAL.Instance.AnKM(MaKM);
         }
-        public List<KhuyenMaiApDung> GetListKMApDung(float TongTien)
+        public List<KMApDung> GetListKMApDung(double TongTien)
         {
-            List<KhuyenMaiApDung> list = new List<KhuyenMaiApDung>();
+            List<KMApDung> list = new List<KMApDung>();
             foreach (KhuyenMai item in KhuyenMaiDAL.Instance.GetListKMApDung(TongTien))
             {
-                list.Add(new KhuyenMaiApDung
+                float apdung;
+                if((TongTien * (double)item.phantram / 100) >= item.khuyenmaitoida)
                 {
-                    TenKM = item.tenkhuyenmai,
-                    TienToiThieu = String.Format("{0:0,0} đ", item.tientoithieu),
-                    PtGiamGia = String.Format("{0:0.##}", item.phantram) + " %",
-                    GiamGiaMax = String.Format("{0:0,0} đ", item.khuyenmaitoida),
-                    TienApDung = String.Format("{0:0,0} đ", (item.khuyenmaitoida >= (TongTien * ((float)Convert.ToDouble(item.phantram)) / 100))
-                                                                ? (TongTien * ((float)Convert.ToDouble(item.phantram)) / 100) : item.khuyenmaitoida),
+                    apdung = (float)item.khuyenmaitoida;
+                }
+                else
+                {
+                    apdung = (float)(TongTien * (double)item.phantram / 100);
+                }
+                list.Add(new KMApDung
+                {
+                    MaKM = item.makhuyenmai,
+                    TenKhuyenMai = item.tenkhuyenmai,
+                    TienToiThieu = (float)item.tientoithieu,
+                    PtGiamGia = (float)item.phantram,
+                    GiamToiDa = (float)item.khuyenmaitoida,
+                    ApDung = apdung
                 });
             }
             return list;
         }
-        public List<KhuyenMai> GetListKMThanhToan(float TongTien)
+        public void ThemKhuyenMaiApDungHD(int MaHD, int MaKM)
         {
-            return KhuyenMaiDAL.Instance.GetListKMApDung(TongTien);
+            KhuyenMaiDAL.Instance.ThemKhuyenMaiApDungHD(MaHD, MaKM);
+        }
+        public void XoaKhuyenMaiApDungHD(int MaHD)
+        {
+            KhuyenMaiDAL.Instance.XoaKhuyenMaiApDungHD(MaHD);
         }
     }
 }

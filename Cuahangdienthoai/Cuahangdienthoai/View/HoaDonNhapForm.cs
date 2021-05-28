@@ -66,7 +66,7 @@ namespace Cuahangdienthoai.View
                 dt.MaSP = item.MaDT;
                 dt.TenDT = item.TenDT;
                 dt.SL = item.SoLuong;
-                dt.Gia = item.GiaBan;
+                dt.Gia = String.Format("{0:0,0 đ}", item.GiaGoc);
                 dt.LinkAnh = path + item.LinkAnh;
                 dt.xemThongTin += DienThoai_DoubleClick;
                 flowLayoutPanel1.Controls.Add(dt);

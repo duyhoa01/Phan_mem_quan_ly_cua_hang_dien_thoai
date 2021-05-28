@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cuahangdienthoai.DTO;
 
 namespace Cuahangdienthoai.DAL
 {
@@ -30,13 +31,67 @@ namespace Cuahangdienthoai.DAL
                                         .Select(p => new
                                         {
                                             p.MaHoaDon,
-                                            p.NgayBan,
-                                            p.KhachHang.TenKhachHang,
+                                            p.NgayBan.Value,
                                             p.NhanVien.TenNhanVien,
+                                            p.KhachHang.TenKhachHang,
                                             p.TongTien,
                                             p.TongLoiNhuan
-                                        }
-                                            ).ToList();
+                                        }).OrderByDescending(p => p.MaHoaDon).ToList();
+            }
+        }
+        public void ThemDonHang(int MaNV, int MaKH, DateTime NgayBan, double TongTien, double TongLoiNhuan)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.HoaDonBanHangs.Add(new HoaDonBanHang
+                {
+                    MaNhanVien = MaNV,
+                    MaKhachHang = MaKH,
+                    TongTien = TongTien,
+                    NgayBan = NgayBan,
+                    TongLoiNhuan = TongLoiNhuan
+                });
+                db.SaveChanges();
+            }
+        }
+        public int GetLastHD()
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                return Convert.ToInt32(db.USP_GetMaBillMoi().FirstOrDefault());
+            }
+        }
+        public void ThemHoaDonChiTiet(int MaHD, int MaDT, int SoLuong, float DonGia, float GiamGia, float LoiNhuan, float ThanhTien)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.HoaDonChiTiets.Add(new HoaDonChiTiet
+                {
+                    MaHoaDon = MaHD,
+                    MaDT = MaDT,
+                    DonGia = DonGia,
+                    SoLuong = SoLuong,
+                    GiamGia = GiamGia,
+                    LoiNhuan = LoiNhuan,
+                    ThanhTien = ThanhTien,
+                });
+                db.SaveChanges();
+            }
+        }
+        public void XoaHoaDonChiTiet(int MaHD)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.HoaDonChiTiets.RemoveRange(db.HoaDonChiTiets.Where(p => p.MaHoaDon == MaHD).Select(p => p).ToList());
+                db.SaveChanges();
+            }
+        }
+        public void XoaDonHang(int MaHD)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.HoaDonBanHangs.Remove(db.HoaDonBanHangs.Find(MaHD));
+                db.SaveChanges();
             }
         }
     }

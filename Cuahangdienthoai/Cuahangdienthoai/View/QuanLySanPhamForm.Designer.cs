@@ -442,6 +442,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLySanPhamForm";
             this.Text = "SanPham";
+            this.VisibleChanged += new System.EventHandler(this.QuanLySanPhamForm_VisibleChanged);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel12.ResumeLayout(false);

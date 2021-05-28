@@ -27,9 +27,12 @@ namespace Cuahangdienthoai.View
             dataGridViewsanpham.Columns[1].HeaderText = "Mã Điện Thoại";
             dataGridViewsanpham.Columns[2].HeaderText = "Tên Điện Thoại";
             dataGridViewsanpham.Columns[3].HeaderText = "Số Lượng";
-            dataGridViewsanpham.Columns[4].HeaderText = "Giá Nhập";
-            dataGridViewsanpham.Columns[5].HeaderText = "Giá Bán";
-            dataGridViewsanpham.Columns[6].HeaderText = "% Giảm Giá";
+            dataGridViewsanpham.Columns[4].HeaderText = "Giá Gốc";
+            dataGridViewsanpham.Columns[4].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewsanpham.Columns[5].HeaderText = "% Giảm Giá";
+            dataGridViewsanpham.Columns[5].DefaultCellStyle.Format = "0.## '%'";
+            dataGridViewsanpham.Columns[6].HeaderText = "Giảm Còn";
+            dataGridViewsanpham.Columns[6].DefaultCellStyle.Format = "0,0 đ";
             dataGridViewsanpham.Columns[7].HeaderText = "Điểm Đánh Giá";
             dataGridViewsanpham.Columns[8].Visible = false;
         }
@@ -81,9 +84,12 @@ namespace Cuahangdienthoai.View
             ShowListPhone();
         }
 
-        private void dataGridViewsanpham_DataSourceChanged(object sender, EventArgs e)
+        private void QuanLySanPhamForm_VisibleChanged(object sender, EventArgs e)
         {
-            dataGridViewsanpham.Columns[0].Width = 180;
+            if (this.Visible)
+            {
+                ShowListPhone();
+            }
         }
     }
 }
