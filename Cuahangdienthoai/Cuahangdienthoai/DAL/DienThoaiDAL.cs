@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Cuahangdienthoai.DAL
 {
@@ -24,7 +23,8 @@ namespace Cuahangdienthoai.DAL
         {
             using (PBL3Entities db = new PBL3Entities())
             {
-                DienThoai dt = new DienThoai {
+                DienThoai dt = new DienThoai 
+                {
                     TenDienThoai = TenDT,
                     GiaNhapDT = GiaNhap,
                     GiaBanDT = GiaBan,
@@ -56,7 +56,6 @@ namespace Cuahangdienthoai.DAL
                 try
                 {
                     db.Configuration.ValidateOnSaveEnabled = false;
-
                     db.DienThoais.Attach(dt);
                     db.Entry(dt).State = EntityState.Deleted;
                     db.SaveChanges();
@@ -72,38 +71,96 @@ namespace Cuahangdienthoai.DAL
                 }
             }
         }
-        public List<DienThoai> GetListDT(string TimKiem, string SapXep)
+        public List<DienThoai> GetListDT(string TimKiem, string SapXep, string PhanKhuc)
         {
             using (PBL3Entities db = new PBL3Entities())
             {
+                double GiaMin;
+                double GiaMax;
+                switch (PhanKhuc)
+                {
+                    case "Dưới 2 triệu":
+                        {
+                            GiaMin = 0;
+                            GiaMax = 1999999;
+                            break;
+                        }
+                    case "Từ 2 - 4 triệu":
+                        {
+                            GiaMin = 2000000;
+                            GiaMax = 4000000;
+                            break;
+                        }
+                    case "Từ 4 - 7 triệu":
+                        {
+                            GiaMin = 4000000;
+                            GiaMax = 7000000;
+                            break;
+                        }
+                    case "Từ 7 - 13 triệu":
+                        {
+                            GiaMin = 7000000;
+                            GiaMax = 13000000;
+                            break;
+                        }
+                    case "Từ 13 - 20 triệu":
+                        {
+                            GiaMin = 13000000;
+                            GiaMax = 20000000;
+                            break;
+                        }
+                    case "Trên 20 triệu":
+                        {
+                            GiaMin = 20000001;
+                            GiaMax = float.MaxValue;
+                            break;
+                        }
+                    default:
+                        GiaMin = 0;
+                        GiaMax = float.MaxValue;
+                        break;
+                }
                 switch (SapXep)
                 {
                     case "Tên từ A->Z":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
-                            .OrderBy(p => p.TenDienThoai).ToList();
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                                                    && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
+                                            .OrderBy(p => p.TenDienThoai).ToList();
                     case "Tên từ Z->A":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
-                            .OrderByDescending(p => p.TenDienThoai).ToList();
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                                                    && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
+                                            .OrderByDescending(p => p.TenDienThoai).ToList();
                     case "Giá tăng dần":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
-                            .OrderBy(p => p.GiaBanDT).ToList();
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                                                    && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
+                                            .OrderBy(p => p.GiaBanDT).ToList();
                     case "Giá giảm dần":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
-                            .OrderByDescending(p => p.GiaBanDT).ToList();
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                                                    && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
+                                            .OrderByDescending(p => p.GiaBanDT).ToList();
                     case "Đánh giá cao":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p)
-                            .OrderByDescending(p => p.DiemDanhGia).ToList();
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                                                    && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
+                                            .OrderByDescending(p => p.DiemDanhGia).ToList();
                     default:
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem)).Select(p => p).ToList();
+                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                                                    && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p).ToList();
                 }
             }
         }
-        public void SuaDT(int MaDT, string TenDT, float PtGiamGia, float DiemDanhGia
-            , int LuotDanhGia, string ThongSoKyThuat, string Anh)
+        public bool SuaDT(int MaDT, string TenDT, float PtGiamGia, float DiemDanhGia
+            , int LuotDanhGia, string ThongSoKyThuat, string Anh, float GiaBan, float GiaNhap)
         {
             using (PBL3Entities db = new PBL3Entities())
             {
                 DienThoai dt = db.DienThoais.Find(MaDT);
+                if((dt.GiaBanDT != GiaBan) || (dt.GiaNhapDT != GiaNhap))
+                {
+                    if (db.HoaDonChiTiets.FirstOrDefault(p => p.MaDT == MaDT) == null) return false;
+                    if (db.HoaDonNhapChiTiets.FirstOrDefault(p => p.MaDT == MaDT) == null) return false;
+                }
+                dt.GiaNhapDT = GiaNhap;
+                dt.GiaBanDT = GiaBan;
                 dt.TenDienThoai = TenDT;
                 dt.C_GiamGia = PtGiamGia;
                 dt.DiemDanhGia = DiemDanhGia;
@@ -111,6 +168,7 @@ namespace Cuahangdienthoai.DAL
                 dt.ThongSoKyThuat = ThongSoKyThuat;
                 dt.Anh = Anh;
                 db.SaveChanges();
+                return true;
             }
         }
     }

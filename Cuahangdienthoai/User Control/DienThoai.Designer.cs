@@ -40,6 +40,7 @@
             this.lbSL = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbGia = new System.Windows.Forms.Label();
+            this.lbGia2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -105,9 +106,9 @@
             // 
             this.panel3.Controls.Add(this.lbMaSP);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(32, 224);
+            this.panel3.Location = new System.Drawing.Point(0, 225);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(108, 25);
+            this.panel3.Size = new System.Drawing.Size(172, 21);
             this.panel3.TabIndex = 2;
             this.panel3.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.panel3.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
@@ -116,14 +117,13 @@
             // lbMaSP
             // 
             this.lbMaSP.AutoSize = true;
-            this.lbMaSP.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lbMaSP.Location = new System.Drawing.Point(81, 0);
+            this.lbMaSP.Location = new System.Drawing.Point(47, 0);
             this.lbMaSP.Name = "lbMaSP";
-            this.lbMaSP.Size = new System.Drawing.Size(27, 16);
+            this.lbMaSP.Size = new System.Drawing.Size(50, 16);
             this.lbMaSP.TabIndex = 5;
-            this.lbMaSP.Text = "Mã";
+            this.lbMaSP.Text = "111111";
             this.lbMaSP.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lbMaSP.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.lbMaSP.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
@@ -145,9 +145,8 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.lbSL);
-            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.lbGia);
+            this.panel4.Controls.Add(this.lbGia2);
             this.panel4.Location = new System.Drawing.Point(0, 251);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(172, 25);
@@ -160,7 +159,7 @@
             // 
             this.lbSL.AutoSize = true;
             this.lbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSL.Location = new System.Drawing.Point(132, 3);
+            this.lbSL.Location = new System.Drawing.Point(131, 224);
             this.lbSL.Name = "lbSL";
             this.lbSL.Size = new System.Drawing.Size(36, 16);
             this.lbSL.TabIndex = 5;
@@ -174,7 +173,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(98, 3);
+            this.label5.Location = new System.Drawing.Point(95, 224);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 16);
             this.label5.TabIndex = 6;
@@ -187,16 +186,27 @@
             // lbGia
             // 
             this.lbGia.AutoSize = true;
-            this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGia.ForeColor = System.Drawing.Color.Red;
-            this.lbGia.Location = new System.Drawing.Point(9, 3);
+            this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGia.ForeColor = System.Drawing.Color.Black;
+            this.lbGia.Location = new System.Drawing.Point(0, 3);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(29, 16);
+            this.lbGia.Size = new System.Drawing.Size(78, 16);
             this.lbGia.TabIndex = 4;
-            this.lbGia.Text = "Giá";
+            this.lbGia.Text = "10,000,000đ";
             this.lbGia.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.lbGia.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.lbGia.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            // 
+            // lbGia2
+            // 
+            this.lbGia2.AutoSize = true;
+            this.lbGia2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGia2.ForeColor = System.Drawing.Color.Red;
+            this.lbGia2.Location = new System.Drawing.Point(74, 3);
+            this.lbGia2.Name = "lbGia2";
+            this.lbGia2.Size = new System.Drawing.Size(97, 16);
+            this.lbGia2.TabIndex = 5;
+            this.lbGia2.Text = "120,000,000đ";
             // 
             // DienThoai
             // 
@@ -204,6 +214,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lbSL);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -219,6 +231,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -235,5 +248,6 @@
         private System.Windows.Forms.Label lbSL;
         private System.Windows.Forms.Label lbGia;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbGia2;
     }
 }

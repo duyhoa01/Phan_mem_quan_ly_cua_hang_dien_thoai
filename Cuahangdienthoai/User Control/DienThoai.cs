@@ -21,6 +21,7 @@ namespace User_Control
         }
         public int MaSP { get => Convert.ToInt32(lbMaSP.Text); set => lbMaSP.Text = value.ToString(); }
         public string Gia { get => lbGia.Text; set => lbGia.Text = value; }
+        public string Gia2 { get => lbGia2.Text; set => lbGia2.Text = value; }
         public string TenDT { get => tbTenDT.Text; set => tbTenDT.Text = value; }
         public string LinkAnh { set => pictureBox1.Image = new Bitmap(value); }
         public int SL { get => Convert.ToInt32(lbSL.Text); set => lbSL.Text = value.ToString(); }
@@ -41,6 +42,11 @@ namespace User_Control
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             this.xemThongTin(this, EventArgs.Empty);
+        }
+        public void SetFontGia()
+        {
+            lbGia.Font = new Font(label1.Font, FontStyle.Bold);
+            lbGia.ForeColor = Color.Red;
         }
     }
 }

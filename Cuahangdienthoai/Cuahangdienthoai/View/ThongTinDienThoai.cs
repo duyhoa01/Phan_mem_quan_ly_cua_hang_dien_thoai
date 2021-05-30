@@ -14,6 +14,8 @@ namespace Cuahangdienthoai.View
     public partial class ThongTinDienThoai : Form
     {
         private int maDT;
+        public delegate void Mydel();
+        public Mydel d;
         public ThongTinDienThoai(int MaDT)
         {
             InitializeComponent();
@@ -34,6 +36,33 @@ namespace Cuahangdienthoai.View
             pictureBox1.Tag = dt.Anh;
             string path = MenuFor.path + dt.Anh;
             pictureBox1.Image = new Bitmap(path);
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            if (!DienThoaiBUS.Instance.XoaDT(maDT))
+            {
+                MessageBox.Show("Điện thoại này không thể xóa vì liên quan hóa đơn nhập bán trước đó");
+            }
+            else
+            {
+                d();
+                this.Close();
+            }
+        }
+        public void LoadListPhone()
+        {
+            d();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ThemSuaDienThoai f = new ThemSuaDienThoai(maDT);
+            this.Hide();
+            f.d += LoadListPhone;
+            f.ShowDialog();
+            SetGUI();
+            this.Show();
         }
     }
 }

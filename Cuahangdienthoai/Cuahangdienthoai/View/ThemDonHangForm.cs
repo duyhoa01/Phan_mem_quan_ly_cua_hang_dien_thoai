@@ -34,14 +34,15 @@ namespace Cuahangdienthoai.View
             int SL = 0;
             flowLayoutPanel1.Controls.Clear();
             string path = MenuFor.path;
-            foreach (DienThoaiViewFormSP item in DienThoaiBUS.Instance.GetListDT(tbTimKiem.Text, null))
+            foreach (DienThoaiViewFormSP item in DienThoaiBUS.Instance.GetListDT(tbTimKiem.Text, null, null))
             {
                 SL++;
                 User_Control.DienThoai dt = new User_Control.DienThoai();
                 dt.MaSP = item.MaDT;
                 dt.TenDT = item.TenDT;
                 dt.SL = item.SoLuong;
-                dt.Gia = String.Format("{0:0,0 đ}", item.GiaGoc);
+                dt.Gia = String.Format("{0:0,0'đ'}", item.GiaGoc);
+                dt.Gia2 = String.Format("{0:0,0'đ'}", item.GiamCon);
                 dt.LinkAnh = path + item.LinkAnh;
                 dt.xemThongTin += DienThoai_DoubleClick;
                 flowLayoutPanel1.Controls.Add(dt);

@@ -32,8 +32,8 @@ namespace Cuahangdienthoai.View
                 TongLoiNhuan += Convert.ToDouble(item.Cells["TongLoiNhuan"].Value);
             }
             lbSoLuong.Text = dataGridViewDonHang.Rows.Count.ToString();
-            lbTongTien.Text = String.Format("{0:0,0 đ}", TongTien);
-            lbTongLoiNhuan.Text = String.Format("{0:0,0 đ}", TongLoiNhuan);
+            lbTongTien.Text = String.Format("{0:0,0 vnd}", TongTien);
+            lbTongLoiNhuan.Text = String.Format("{0:0,0 vnd}", TongLoiNhuan);
         }
         private void SetGUI()
         {
@@ -50,7 +50,7 @@ namespace Cuahangdienthoai.View
             dataGridViewDonHang.Columns[3].HeaderText = "Khách Hàng";
             dataGridViewDonHang.Columns[4].HeaderText = "Thanh Toán";
             dataGridViewDonHang.Columns[5].HeaderText = "Lợi Nhuận";
-            dataGridViewDonHang.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy H:mm";
+            dataGridViewDonHang.Columns["Value"].DefaultCellStyle.Format = "dd/MM/yyyy H:mm";
             dataGridViewDonHang.Columns[4].DefaultCellStyle.Format = "0,0 đ";
             dataGridViewDonHang.Columns[5].DefaultCellStyle.Format = "0,0 đ";
         }
@@ -107,6 +107,13 @@ namespace Cuahangdienthoai.View
                 DonHangBUS.Instance.XoaDonHang(MaHO);
                 ShowListDonHang();
             }
+        }
+
+        private void dataGridViewDonHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+            HoaDonBanChiTietForm f = new HoaDonBanChiTietForm(MaHD);
+            f.Show();
         }
     }
 }

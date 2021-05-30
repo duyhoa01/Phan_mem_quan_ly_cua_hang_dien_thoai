@@ -55,7 +55,12 @@ namespace Cuahangdienthoai.View
             }
             else
             {
-                KhuyenMaiBUS.Instance.SuaKM(Convert.ToInt32(km.Tag), km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax);
+                if(!KhuyenMaiBUS.Instance.SuaKM(Convert.ToInt32(km.Tag), km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax))
+                {
+                    MessageBox.Show("Khuyến mãi này đã áp dụng cho các hóa đơn trước" +
+                                    "\nKhông thể thay đổi các giá trị mốc hóa đơn áp dụng, % giảm giá và giảm giá tối đa");
+                    LoadListKM();
+                }
             }
         }
         private void LoadListKM()

@@ -88,7 +88,7 @@ namespace Cuahangdienthoai.View
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(410, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(509, 527);
+            this.groupBox1.Size = new System.Drawing.Size(543, 527);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Số Kỹ Thuật";
@@ -100,7 +100,7 @@ namespace Cuahangdienthoai.View
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(20, 40);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(473, 470);
+            this.richTextBox1.Size = new System.Drawing.Size(504, 470);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -207,7 +207,7 @@ namespace Cuahangdienthoai.View
             this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
             this.thuDong1.Location = new System.Drawing.Point(0, 0);
             this.thuDong1.Name = "thuDong1";
-            this.thuDong1.Size = new System.Drawing.Size(933, 29);
+            this.thuDong1.Size = new System.Drawing.Size(980, 29);
             this.thuDong1.TabIndex = 26;
             // 
             // btChonAnh
@@ -243,7 +243,7 @@ namespace Cuahangdienthoai.View
             this.panel1.Controls.Add(this.btHuy);
             this.panel1.Location = new System.Drawing.Point(410, 584);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 50);
+            this.panel1.Size = new System.Drawing.Size(543, 50);
             this.panel1.TabIndex = 38;
             // 
             // button1
@@ -256,7 +256,7 @@ namespace Cuahangdienthoai.View
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(410, 10);
+            this.button1.Location = new System.Drawing.Point(444, 10);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 32);
@@ -276,7 +276,7 @@ namespace Cuahangdienthoai.View
             this.btHuy.ForeColor = System.Drawing.Color.White;
             this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
             this.btHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btHuy.Location = new System.Drawing.Point(297, 10);
+            this.btHuy.Location = new System.Drawing.Point(331, 10);
             this.btHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(80, 32);
@@ -504,7 +504,7 @@ namespace Cuahangdienthoai.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 652);
+            this.ClientSize = new System.Drawing.Size(980, 657);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);

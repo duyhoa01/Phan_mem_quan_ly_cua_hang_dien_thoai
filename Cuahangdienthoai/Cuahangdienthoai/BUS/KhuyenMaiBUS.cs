@@ -29,9 +29,9 @@ namespace Cuahangdienthoai.BUS
         {
             KhuyenMaiDAL.Instance.ThemKM(TenKM, NgayBatDau, NgayKetThuc, TienToiThieu, PtGiamGia, GiamGiaMax);
         }
-        public void SuaKM(int MaKM, string TenKM, DateTime NgayBatDau, DateTime NgayKetThuc, float TienToiThieu, Decimal PtGiamGia, float GiamGiaMax)
+        public bool SuaKM(int MaKM, string TenKM, DateTime NgayBatDau, DateTime NgayKetThuc, float TienToiThieu, Decimal PtGiamGia, float GiamGiaMax)
         {
-            KhuyenMaiDAL.Instance.SuaKM(MaKM, TenKM, NgayBatDau, NgayKetThuc, TienToiThieu, PtGiamGia, GiamGiaMax);
+            return KhuyenMaiDAL.Instance.SuaKM(MaKM, TenKM, NgayBatDau, NgayKetThuc, TienToiThieu, PtGiamGia, GiamGiaMax);
         }
         public void AnKM(int MaKM)
         {
@@ -70,6 +70,32 @@ namespace Cuahangdienthoai.BUS
         public void XoaKhuyenMaiApDungHD(int MaHD)
         {
             KhuyenMaiDAL.Instance.XoaKhuyenMaiApDungHD(MaHD);
+        }
+        public List<KMApDung> GetListKMApDungByMaHD(int MaHD, double TongTien)
+        {
+            List<KMApDung> list = new List<KMApDung>();
+            foreach (KhuyenMai item in KhuyenMaiDAL.Instance.GetListKMByMaHD(MaHD))
+            {
+                float apdung;
+                if ((TongTien * (double)item.phantram / 100) >= item.khuyenmaitoida)
+                {
+                    apdung = (float)item.khuyenmaitoida;
+                }
+                else
+                {
+                    apdung = (float)(TongTien * (double)item.phantram / 100);
+                }
+                list.Add(new KMApDung
+                {
+                    MaKM = item.makhuyenmai,
+                    TenKhuyenMai = item.tenkhuyenmai,
+                    TienToiThieu = (float)item.tientoithieu,
+                    PtGiamGia = (float)item.phantram,
+                    GiamToiDa = (float)item.khuyenmaitoida,
+                    ApDung = apdung
+                });
+            }
+            return list;
         }
     }
 }

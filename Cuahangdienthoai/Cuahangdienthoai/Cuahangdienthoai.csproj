@@ -65,14 +65,21 @@
     <Compile Include="BUS\DienThoaiBUS.cs" />
     <Compile Include="BUS\DonHangBUS.cs" />
     <Compile Include="BUS\KhuyenMaiBUS.cs" />
+    <Compile Include="BUS\NhapHangBUS.cs" />
     <Compile Include="DAL\DienThoaiDAL.cs" />
     <Compile Include="DAL\DonHangDAL.cs" />
     <Compile Include="DAL\KhuyenMaiDAL.cs" />
+    <Compile Include="DAL\NhapHangDAL.cs" />
     <Compile Include="DienThoai.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\DienThoaiFormMua.cs" />
     <Compile Include="DTO\DienThoaiViewFormBan.cs" />
+    <Compile Include="DTO\DienThoaiViewFormKhoHang.cs" />
     <Compile Include="DTO\DienThoaiViewFormSP.cs" />
+    <Compile Include="DTO\DienThoaiViewHDBCT.cs" />
+    <Compile Include="DTO\HoaDonBanViewFormHDBCT.cs" />
+    <Compile Include="DTO\HoaDonNhap.cs" />
     <Compile Include="DTO\KMApDung.cs" />
     <Compile Include="GiamGia.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>

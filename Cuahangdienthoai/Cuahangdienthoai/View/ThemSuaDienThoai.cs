@@ -14,6 +14,8 @@ namespace Cuahangdienthoai.View
 {
     public partial class ThemSuaDienThoai : Form
     {
+        public delegate void Mydel();
+        public Mydel d;
         int? maDT;
         public ThemSuaDienThoai(int? MaDT)
         {
@@ -38,8 +40,6 @@ namespace Cuahangdienthoai.View
                 string path = MenuFor.path + dt.Anh;
                 pictureBox1.Image = new Bitmap(path);
                 tbMaDT.Enabled = false;
-                tbGiaNhap.Enabled = false;
-                tbGiaBan.Enabled = false;
             }
             else
             {
@@ -75,15 +75,20 @@ namespace Cuahangdienthoai.View
                 , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(numericUpDown1.Value)
                 , (float)Convert.ToDouble(tbDiemDanhGia.Text), Convert.ToInt32(tbLuotDanhGia.Text)
                 , richTextBox1.Text, pictureBox1.Tag.ToString());
-                this.Close();
             }
             else
             {
-                DienThoaiBUS.Instance.SuaDT(Convert.ToInt32(tbMaDT.Text), tbTenDT.Text
+                if (!DienThoaiBUS.Instance.SuaDT(Convert.ToInt32(tbMaDT.Text), tbTenDT.Text
                     , (float)Convert.ToDouble(numericUpDown1.Value), (float)Convert.ToDouble(tbDiemDanhGia.Text)
-                    , Convert.ToInt32(tbLuotDanhGia.Text), richTextBox1.Text, pictureBox1.Tag.ToString());
-                this.Close();
+                    , Convert.ToInt32(tbLuotDanhGia.Text), richTextBox1.Text, pictureBox1.Tag.ToString()
+                    , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(tbGiaNhap.Text)))
+                {
+                    MessageBox.Show("Điện thoại này liên quan đến hóa đơn nhập bán trước." 
+                                    + "\nKhông thể thay đổi giá nhập, giá bán");
+                }
             }
+            d();
+            this.Close();
         }
     }
 }

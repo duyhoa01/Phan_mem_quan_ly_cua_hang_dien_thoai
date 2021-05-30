@@ -29,6 +29,7 @@ namespace Cuahangdienthoai.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinDienThoai));
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -37,6 +38,12 @@ namespace Cuahangdienthoai.View
             this.tbTenDT = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbPtGiamGia = new System.Windows.Forms.TextBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tbSoLuong = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbDonGia = new System.Windows.Forms.TextBox();
@@ -45,6 +52,7 @@ namespace Cuahangdienthoai.View
             this.panel10 = new System.Windows.Forms.Panel();
             this.tbLuotDanhGia = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -54,23 +62,21 @@ namespace Cuahangdienthoai.View
             this.tbMaDT = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tbPtGiamGia = new System.Windows.Forms.TextBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.tbSoLuong = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.btSua = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // thuDong1
@@ -90,7 +96,7 @@ namespace Cuahangdienthoai.View
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(406, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(550, 608);
+            this.groupBox1.Size = new System.Drawing.Size(550, 549);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Số Kỹ Thuật";
@@ -103,7 +109,7 @@ namespace Cuahangdienthoai.View
             this.richTextBox1.Location = new System.Drawing.Point(24, 31);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(505, 564);
+            this.richTextBox1.Size = new System.Drawing.Size(505, 501);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -166,6 +172,71 @@ namespace Cuahangdienthoai.View
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(394, 185);
             this.panel16.TabIndex = 105;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tbPtGiamGia);
+            this.panel1.Controls.Add(this.panel14);
+            this.panel1.Location = new System.Drawing.Point(115, 91);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(58, 32);
+            this.panel1.TabIndex = 44;
+            // 
+            // tbPtGiamGia
+            // 
+            this.tbPtGiamGia.BackColor = System.Drawing.Color.White;
+            this.tbPtGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPtGiamGia.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbPtGiamGia.Enabled = false;
+            this.tbPtGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPtGiamGia.Location = new System.Drawing.Point(0, 14);
+            this.tbPtGiamGia.Name = "tbPtGiamGia";
+            this.tbPtGiamGia.Size = new System.Drawing.Size(58, 15);
+            this.tbPtGiamGia.TabIndex = 19;
+            this.tbPtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(0, 29);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(58, 3);
+            this.panel14.TabIndex = 18;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.tbSoLuong);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(115, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(267, 32);
+            this.panel4.TabIndex = 40;
+            // 
+            // tbSoLuong
+            // 
+            this.tbSoLuong.BackColor = System.Drawing.Color.White;
+            this.tbSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSoLuong.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbSoLuong.Enabled = false;
+            this.tbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSoLuong.Location = new System.Drawing.Point(0, 14);
+            this.tbSoLuong.Name = "tbSoLuong";
+            this.tbSoLuong.Size = new System.Drawing.Size(267, 15);
+            this.tbSoLuong.TabIndex = 19;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 29);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(267, 3);
+            this.panel5.TabIndex = 18;
             // 
             // label7
             // 
@@ -252,6 +323,17 @@ namespace Cuahangdienthoai.View
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(267, 3);
             this.panel11.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label4.Location = new System.Drawing.Point(9, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Số Lượng:";
             // 
             // label6
             // 
@@ -351,81 +433,67 @@ namespace Cuahangdienthoai.View
             this.label2.TabIndex = 103;
             this.label2.Text = "Mã ĐT:";
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.Controls.Add(this.tbPtGiamGia);
-            this.panel1.Controls.Add(this.panel14);
-            this.panel1.Location = new System.Drawing.Point(115, 91);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(58, 32);
-            this.panel1.TabIndex = 44;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 16);
+            this.label1.TabIndex = 106;
+            this.label1.Text = "Thông Tin Điện Thoại";
             // 
-            // tbPtGiamGia
+            // panel15
             // 
-            this.tbPtGiamGia.BackColor = System.Drawing.Color.White;
-            this.tbPtGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPtGiamGia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbPtGiamGia.Enabled = false;
-            this.tbPtGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPtGiamGia.Location = new System.Drawing.Point(0, 14);
-            this.tbPtGiamGia.Name = "tbPtGiamGia";
-            this.tbPtGiamGia.Size = new System.Drawing.Size(58, 15);
-            this.tbPtGiamGia.TabIndex = 19;
-            this.tbPtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel15.BackColor = System.Drawing.Color.Bisque;
+            this.panel15.Controls.Add(this.btSua);
+            this.panel15.Controls.Add(this.btXoa);
+            this.panel15.Location = new System.Drawing.Point(406, 598);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(550, 50);
+            this.panel15.TabIndex = 107;
             // 
-            // panel14
+            // btSua
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(0, 29);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(58, 3);
-            this.panel14.TabIndex = 18;
+            this.btSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSua.BackColor = System.Drawing.Color.Green;
+            this.btSua.FlatAppearance.BorderSize = 0;
+            this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSua.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSua.ForeColor = System.Drawing.Color.White;
+            this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.Location = new System.Drawing.Point(453, 10);
+            this.btSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(76, 32);
+            this.btSua.TabIndex = 40;
+            this.btSua.Text = "Sửa";
+            this.btSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSua.UseVisualStyleBackColor = false;
+            this.btSua.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label4
+            // btXoa
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(9, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Số Lượng:";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 29);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(267, 3);
-            this.panel5.TabIndex = 18;
-            // 
-            // tbSoLuong
-            // 
-            this.tbSoLuong.BackColor = System.Drawing.Color.White;
-            this.tbSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSoLuong.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbSoLuong.Enabled = false;
-            this.tbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSoLuong.Location = new System.Drawing.Point(0, 14);
-            this.tbSoLuong.Name = "tbSoLuong";
-            this.tbSoLuong.Size = new System.Drawing.Size(267, 15);
-            this.tbSoLuong.TabIndex = 19;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.tbSoLuong);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(115, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(267, 32);
-            this.panel4.TabIndex = 40;
+            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btXoa.BackColor = System.Drawing.Color.Red;
+            this.btXoa.FlatAppearance.BorderSize = 0;
+            this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.ForeColor = System.Drawing.Color.White;
+            this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(338, 10);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(80, 32);
+            this.btXoa.TabIndex = 39;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // ThongTinDienThoai
             // 
@@ -433,6 +501,8 @@ namespace Cuahangdienthoai.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 657);
+            this.Controls.Add(this.panel15);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
@@ -452,6 +522,10 @@ namespace Cuahangdienthoai.View
             this.panel12.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -460,10 +534,7 @@ namespace Cuahangdienthoai.View
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,5 +574,9 @@ namespace Cuahangdienthoai.View
         private System.Windows.Forms.TextBox tbSoLuong;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btXoa;
     }
 }

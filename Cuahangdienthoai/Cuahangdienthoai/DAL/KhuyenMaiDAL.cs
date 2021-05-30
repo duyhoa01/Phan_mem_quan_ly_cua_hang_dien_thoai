@@ -46,11 +46,19 @@ namespace Cuahangdienthoai.DAL
                 db.SaveChanges();
             }
         }
-        public void SuaKM(int MaKM, string TenKM, DateTime NgayBatDau, DateTime NgayKetThuc, float TienToiThieu, Decimal PtGiamGia, float GiamGiaMax)
+        public bool SuaKM(int MaKM, string TenKM, DateTime NgayBatDau, DateTime NgayKetThuc, float TienToiThieu, Decimal PtGiamGia, float GiamGiaMax)
         {
             using (PBL3Entities db = new PBL3Entities())
             {
                 KhuyenMai km = db.KhuyenMais.Find(MaKM);
+                try
+                {
+                    db.GiamGias.Where(p => p.maKhuyenMai == MaKM).First();
+                    if ((km.tientoithieu != TienToiThieu)
+                        || (km.phantram != Convert.ToDecimal(PtGiamGia)) || (km.khuyenmaitoida != GiamGiaMax)) return false;
+                }
+                catch (System.InvalidOperationException)
+                {}
                 km.tenkhuyenmai = TenKM;
                 km.ngaybatdau = NgayBatDau;
                 km.ngayketthuc = NgayKetThuc;
@@ -58,6 +66,7 @@ namespace Cuahangdienthoai.DAL
                 km.phantram = Convert.ToDecimal(PtGiamGia);
                 km.khuyenmaitoida = GiamGiaMax;
                 db.SaveChanges();
+                return true;
             }
         }
         public void AnKM(int MaKM)
@@ -96,6 +105,15 @@ namespace Cuahangdienthoai.DAL
             {
                 db.GiamGias.RemoveRange(db.GiamGias.Where(p => p.maHoaDon == MaHD).Select(p => p).ToList());
                 db.SaveChanges();
+            }
+        }
+        public List<KhuyenMai> GetListKMByMaHD(int MaHD)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                List<KhuyenMai> list = db.GiamGias.Where(p => p.maHoaDon == MaHD)
+                                                      .Select(p => p.KhuyenMai).ToList();
+                return list;
             }
         }
     }

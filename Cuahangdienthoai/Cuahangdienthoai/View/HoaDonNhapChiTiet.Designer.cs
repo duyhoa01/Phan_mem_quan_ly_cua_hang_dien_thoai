@@ -81,7 +81,7 @@
             this.pnHangMua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnHangMua.Location = new System.Drawing.Point(0, 29);
             this.pnHangMua.Name = "pnHangMua";
-            this.pnHangMua.Size = new System.Drawing.Size(970, 514);
+            this.pnHangMua.Size = new System.Drawing.Size(970, 517);
             this.pnHangMua.TabIndex = 51;
             // 
             // panel11
@@ -95,7 +95,7 @@
             this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(2, 32, 2, 2);
-            this.panel11.Size = new System.Drawing.Size(950, 374);
+            this.panel11.Size = new System.Drawing.Size(950, 377);
             this.panel11.TabIndex = 7;
             // 
             // pictureBox1
@@ -134,7 +134,7 @@
             this.dataGridViewDanhmucsanpham.RowHeadersWidth = 51;
             this.dataGridViewDanhmucsanpham.RowTemplate.Height = 24;
             this.dataGridViewDanhmucsanpham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDanhmucsanpham.Size = new System.Drawing.Size(946, 340);
+            this.dataGridViewDanhmucsanpham.Size = new System.Drawing.Size(946, 343);
             this.dataGridViewDanhmucsanpham.TabIndex = 0;
             // 
             // panel2
@@ -142,7 +142,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(960, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 374);
+            this.panel2.Size = new System.Drawing.Size(10, 377);
             this.panel2.TabIndex = 8;
             // 
             // panel5
@@ -150,7 +150,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 140);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 374);
+            this.panel5.Size = new System.Drawing.Size(10, 377);
             this.panel5.TabIndex = 1;
             // 
             // panel3
@@ -286,6 +286,7 @@
             // 
             this.tbTTHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTTHD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbTTHD.Enabled = false;
             this.tbTTHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTTHD.ForeColor = System.Drawing.Color.Red;
             this.tbTTHD.Location = new System.Drawing.Point(0, 0);
@@ -303,52 +304,52 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 543);
+            this.panel1.Location = new System.Drawing.Point(0, 546);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 38);
+            this.panel1.Size = new System.Drawing.Size(970, 35);
             this.panel1.TabIndex = 52;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Green;
             this.label10.Location = new System.Drawing.Point(545, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 20);
+            this.label10.Size = new System.Drawing.Size(43, 16);
             this.label10.TabIndex = 3;
             this.label10.Text = "10000";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label9.Location = new System.Drawing.Point(156, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 20);
+            this.label9.Size = new System.Drawing.Size(43, 16);
             this.label9.TabIndex = 2;
             this.label9.Text = "10000";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Green;
             this.label7.Location = new System.Drawing.Point(375, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 20);
+            this.label7.Size = new System.Drawing.Size(124, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Tổng Số Lượng SP:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(8, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.Size = new System.Drawing.Size(109, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tổng Tiền Nhập:";
             // 

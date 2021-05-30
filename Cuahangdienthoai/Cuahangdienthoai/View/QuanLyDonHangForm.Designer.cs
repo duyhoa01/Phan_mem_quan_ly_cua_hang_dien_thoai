@@ -128,7 +128,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 31);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Tạo mới";
+            this.button2.Text = "Thêm";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -383,6 +383,7 @@
             this.dataGridViewDonHang.Size = new System.Drawing.Size(913, 371);
             this.dataGridViewDonHang.TabIndex = 3;
             this.dataGridViewDonHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
+            this.dataGridViewDonHang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDonHang_CellDoubleClick);
             // 
             // pictureBox1
             // 
@@ -428,7 +429,7 @@
             this.lbTongLoiNhuan.BackColor = System.Drawing.Color.White;
             this.lbTongLoiNhuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongLoiNhuan.ForeColor = System.Drawing.Color.Red;
-            this.lbTongLoiNhuan.Location = new System.Drawing.Point(489, 10);
+            this.lbTongLoiNhuan.Location = new System.Drawing.Point(474, 10);
             this.lbTongLoiNhuan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTongLoiNhuan.Name = "lbTongLoiNhuan";
             this.lbTongLoiNhuan.Size = new System.Drawing.Size(16, 17);
@@ -441,7 +442,7 @@
             this.lbTongTien.BackColor = System.Drawing.Color.White;
             this.lbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lbTongTien.Location = new System.Drawing.Point(256, 10);
+            this.lbTongTien.Location = new System.Drawing.Point(241, 10);
             this.lbTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(16, 17);
@@ -454,7 +455,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label7.Location = new System.Drawing.Point(371, 10);
+            this.label7.Location = new System.Drawing.Point(356, 10);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 17);
@@ -480,7 +481,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label3.Location = new System.Drawing.Point(175, 10);
+            this.label3.Location = new System.Drawing.Point(160, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);

@@ -13,10 +13,12 @@ namespace Cuahangdienthoai.View
 {
     public partial class QuanLySanPhamForm : Form
     {
+        private bool load = false;
         public QuanLySanPhamForm()
         {
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
             ShowListPhone();
             SetGUI();
         }
@@ -38,14 +40,14 @@ namespace Cuahangdienthoai.View
         }
         public void ShowListPhone()
         {
-            dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListDT(tbTimKiem.Text, comboBox1.Text);
+            dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListDT(tbTimKiem.Text, comboBox1.Text, comboBox2.Text);
             lbSoLuong.Text = dataGridViewsanpham.Rows.Count.ToString();
         }
         private void btThem_Click(object sender, EventArgs e)
         {
             ThemSuaDienThoai f = new ThemSuaDienThoai(null);
+            f.d += ShowListPhone;
             f.ShowDialog();
-            ShowListPhone();
         }
 
         private void btTimKiêm_Click(object sender, EventArgs e)
@@ -59,36 +61,39 @@ namespace Cuahangdienthoai.View
             {
                 string MaDT = dataGridViewsanpham.SelectedRows[0].Cells["MaDT"].Value.ToString();
                 ThongTinDienThoai f = new ThongTinDienThoai(Convert.ToInt32(MaDT));
+                f.d += ShowListPhone;
                 f.Show();
             }
         }
 
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridViewsanpham.SelectedRows.Count; i++)
-            {
-                string MaDT = dataGridViewsanpham.SelectedRows[i].Cells["MaDT"].Value.ToString();
-                if (!DienThoaiBUS.Instance.XoaDT(Convert.ToInt32(MaDT)))
-                {
-                    MessageBox.Show("Điện thoại mã " + MaDT + " không thể xóa được vì liên quan đến dữ liệu mua bán");
-                }
-            }
-            ShowListPhone();
-        }
-
-        private void btSua_Click(object sender, EventArgs e)
-        {
-            string MaDT = dataGridViewsanpham.SelectedRows[0].Cells["MaDT"].Value.ToString();
-            ThemSuaDienThoai f = new ThemSuaDienThoai(Convert.ToInt32(MaDT));
-            f.ShowDialog();
-            ShowListPhone();
-        }
-
         private void QuanLySanPhamForm_VisibleChanged(object sender, EventArgs e)
         {
-            if (this.Visible)
+            if (!this.Visible)
             {
-                ShowListPhone();
+                load = true;
+            }
+            else
+            {
+                if (load) ShowListPhone();
+                load = !load;
+            }
+        }
+
+        private void QuanLySanPhamForm_SizeChanged(object sender, EventArgs e)
+        {
+            Form f = (Form)this.TopLevelControl;
+            if (f.WindowState.ToString().Equals("Maximized"))
+            {
+                dataGridViewsanpham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            else if (f.WindowState.ToString().Equals("Normal"))
+            {
+                dataGridViewsanpham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                dataGridViewsanpham.Columns[0].Width = 180;
+                dataGridViewsanpham.Columns[1].Width = 100;
+                dataGridViewsanpham.Columns[3].Width = 90;
+                dataGridViewsanpham.Columns[5].Width = 80;
+                dataGridViewsanpham.Columns[7].Width = 100;
             }
         }
     }

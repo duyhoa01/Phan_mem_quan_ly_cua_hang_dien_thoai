@@ -20,6 +20,7 @@ namespace Cuahangdienthoai.View
         {
             InitializeComponent();
             this.ID = ID;
+            btBanHang_Click(btBanHang, EventArgs.Empty);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
