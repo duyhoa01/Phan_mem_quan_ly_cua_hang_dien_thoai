@@ -306,6 +306,7 @@ namespace Cuahangdienthoai.View
             this.tbGiaNhap.Name = "tbGiaNhap";
             this.tbGiaNhap.Size = new System.Drawing.Size(267, 15);
             this.tbGiaNhap.TabIndex = 19;
+            this.tbGiaNhap.TextChanged += new System.EventHandler(this.tbGiaNhap_TextChanged);
             // 
             // panel5
             // 
@@ -337,6 +338,7 @@ namespace Cuahangdienthoai.View
             this.tbGiaBan.Name = "tbGiaBan";
             this.tbGiaBan.Size = new System.Drawing.Size(267, 15);
             this.tbGiaBan.TabIndex = 19;
+            this.tbGiaBan.TextChanged += new System.EventHandler(this.tbGiaNhap_TextChanged);
             // 
             // panel7
             // 

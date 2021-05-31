@@ -236,6 +236,7 @@ namespace Cuahangdienthoai.View
             foreach (DienThoaiViewFormBan item in listGioHang)
             {
                 DonHangBUS.Instance.ThemHoaDonChiTiet(MaHD, item.MaDT, item.SoLuong);
+                DienThoaiBUS.Instance.XuLyBanDT(item.MaDT, item.SoLuong);
             }
             this.Close();
         }

@@ -13,6 +13,7 @@ namespace Cuahangdienthoai.View
 {
     public partial class QuanLyDonHangForm : Form
     {
+        private bool load = false;
         public QuanLyDonHangForm()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace Cuahangdienthoai.View
             lich2.BackColor = this.TransparencyKey;
             lich1.BringToFront();
             lich2.BringToFront();
+            btThongKe.BringToFront();
         }
         private void SetDatagridview()
         {
@@ -69,9 +71,14 @@ namespace Cuahangdienthoai.View
 
         private void QuanLyDonHangForm_VisibleChanged(object sender, EventArgs e)
         {
-            if (this.Visible)
+            if (!this.Visible)
             {
-                ShowListDonHang();
+                load = true;
+            }
+            else
+            {
+                if (load) ShowListDonHang();
+                load = !load;
             }
         }
         private void AddLinkColumn()
@@ -89,11 +96,6 @@ namespace Cuahangdienthoai.View
             {
                 dataGridViewDonHang.Columns.Add(dgvLink);
             }
-        }
-
-        private void dataGridViewDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dataGridViewDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -123,27 +123,27 @@ namespace Cuahangdienthoai.DAL
                 switch (SapXep)
                 {
                     case "Tên từ A->Z":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                        return db.DienThoais.Where(p => (p.TenDienThoai.Contains(TimKiem) || p.MaDT.ToString().Contains(TimKiem))
                                                     && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
                                             .OrderBy(p => p.TenDienThoai).ToList();
                     case "Tên từ Z->A":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                        return db.DienThoais.Where(p => (p.TenDienThoai.Contains(TimKiem) || p.MaDT.ToString().Contains(TimKiem))
                                                     && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
                                             .OrderByDescending(p => p.TenDienThoai).ToList();
                     case "Giá tăng dần":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                        return db.DienThoais.Where(p => (p.TenDienThoai.Contains(TimKiem) || p.MaDT.ToString().Contains(TimKiem))
                                                     && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
                                             .OrderBy(p => p.GiaBanDT).ToList();
                     case "Giá giảm dần":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                        return db.DienThoais.Where(p => (p.TenDienThoai.Contains(TimKiem) || p.MaDT.ToString().Contains(TimKiem))
                                                     && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
                                             .OrderByDescending(p => p.GiaBanDT).ToList();
                     case "Đánh giá cao":
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                        return db.DienThoais.Where(p => (p.TenDienThoai.Contains(TimKiem) || p.MaDT.ToString().Contains(TimKiem))
                                                     && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p)
                                             .OrderByDescending(p => p.DiemDanhGia).ToList();
                     default:
-                        return db.DienThoais.Where(p => p.TenDienThoai.Contains(TimKiem) 
+                        return db.DienThoais.Where(p => (p.TenDienThoai.Contains(TimKiem) || p.MaDT.ToString().Contains(TimKiem))
                                                     && (p.GiaBanDT >= GiaMin) && (p.GiaBanDT <= GiaMax)).Select(p => p).ToList();
                 }
             }
@@ -156,8 +156,8 @@ namespace Cuahangdienthoai.DAL
                 DienThoai dt = db.DienThoais.Find(MaDT);
                 if((dt.GiaBanDT != GiaBan) || (dt.GiaNhapDT != GiaNhap))
                 {
-                    if (db.HoaDonChiTiets.FirstOrDefault(p => p.MaDT == MaDT) == null) return false;
-                    if (db.HoaDonNhapChiTiets.FirstOrDefault(p => p.MaDT == MaDT) == null) return false;
+                    if (db.HoaDonChiTiets.FirstOrDefault(p => p.MaDT == MaDT) != null) return false;
+                    if (db.HoaDonNhapChiTiets.FirstOrDefault(p => p.MaDT == MaDT) != null) return false;
                 }
                 dt.GiaNhapDT = GiaNhap;
                 dt.GiaBanDT = GiaBan;
@@ -169,6 +169,25 @@ namespace Cuahangdienthoai.DAL
                 dt.Anh = Anh;
                 db.SaveChanges();
                 return true;
+            }
+        }
+        public void XuLyBanDT(int MaDT, int SoLuong)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                DienThoai dt = db.DienThoais.Find(MaDT);
+                dt.SLHienTai -= SoLuong;
+                dt.SLBanRaTrongNam += SoLuong;
+                db.SaveChanges();
+            }
+        }
+        public void XuLyNhapDT(int MaDT, int SoLuong)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                DienThoai dt = db.DienThoais.Find(MaDT);
+                dt.SLHienTai += SoLuong;
+                db.SaveChanges();
             }
         }
     }

@@ -14,6 +14,7 @@ namespace Cuahangdienthoai.View
 {
     public partial class KhoHangForm : Form
     {
+        private bool load = false;
         public KhoHangForm()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Cuahangdienthoai.View
         public void LoadListDT()
         {
             dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListDTFormKhoHang(tbTimKiem.Text, cbSapXep.Text, cbPhanKhuc.Text);
+            lbSoLuong.Text = dataGridViewsanpham.Rows.Count.ToString();
         }
         private void SetGUI()
         {
@@ -50,6 +52,30 @@ namespace Cuahangdienthoai.View
         {
             dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListDTSapHetFormKhoHang
                                                                         (tbTimKiem.Text, cbSapXep.Text, cbPhanKhuc.Text);
+        }
+
+        private void KhoHangForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                load = true;
+            }
+            else
+            {
+                if (load) LoadListDT();
+                load = !load;
+            }
+        }
+
+        private void dataGridViewsanpham_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewsanpham.SelectedRows.Count == 1)
+            {
+                string MaDT = dataGridViewsanpham.SelectedRows[0].Cells["MaDT"].Value.ToString();
+                ThongTinDienThoai f = new ThongTinDienThoai(Convert.ToInt32(MaDT));
+                f.d += LoadListDT;
+                f.Show();
+            }
         }
     }
 }

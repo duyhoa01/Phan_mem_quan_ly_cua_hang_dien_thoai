@@ -43,10 +43,6 @@ namespace Cuahangdienthoai.BUS
         {
             NhapHangDAL.Instance.XoaNhapHang(MaHD);
         }
-        //public HoaDonBanViewFormHDBCT HDBH(int MaHD)
-        //{
-        //    return DonHangDAL.Instance.HDBH(MaHD);
-        //}
         public List<DienThoaiFormMua> GetListHDNCTByMaHD(int MaHD)
         {
             List<DienThoaiFormMua> list = new List<DienThoaiFormMua>();
@@ -60,9 +56,9 @@ namespace Cuahangdienthoai.BUS
                     Anh = new Bitmap(AnhGoc, 80, 80),
                     MaDT = (int)item.MaDT,
                     TenDT = dt.TenDienThoai,
-                    GiaNhap = (float)dt.GiaBanDT,
+                    GiaNhap = (float)dt.GiaNhapDT,
                     SoLuong = (int)item.SoLuong,
-                    ThanhTien = (float)(dt.GiaBanDT * item.SoLuong),
+                    ThanhTien = (float)(dt.GiaNhapDT * item.SoLuong),
                 });
             }
             return list;

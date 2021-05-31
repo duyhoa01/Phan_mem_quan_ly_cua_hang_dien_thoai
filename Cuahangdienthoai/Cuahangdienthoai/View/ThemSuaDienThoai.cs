@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cuahangdienthoai.BUS;
+using System.Globalization;
 
 namespace Cuahangdienthoai.View
 {
@@ -89,6 +90,22 @@ namespace Cuahangdienthoai.View
             }
             d();
             this.Close();
+        }
+
+        private void tbGiaNhap_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = 0;
+            try
+            {
+                value = decimal.Parse(tb.Text, System.Globalization.NumberStyles.AllowThousands);
+            }
+            catch (Exception)
+            {
+            }
+            tb.Text = String.Format(culture, "{0:N0}", value);
+            tb.Select(tb.Text.Length, 0);
         }
     }
 }

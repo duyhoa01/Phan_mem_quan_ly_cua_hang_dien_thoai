@@ -119,7 +119,7 @@
             this.lbMaSP.AutoSize = true;
             this.lbMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lbMaSP.Location = new System.Drawing.Point(47, 0);
+            this.lbMaSP.Location = new System.Drawing.Point(52, 0);
             this.lbMaSP.Name = "lbMaSP";
             this.lbMaSP.Size = new System.Drawing.Size(50, 16);
             this.lbMaSP.TabIndex = 5;

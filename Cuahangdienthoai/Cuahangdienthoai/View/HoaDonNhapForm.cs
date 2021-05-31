@@ -50,6 +50,7 @@ namespace Cuahangdienthoai.View
                 if (item.MaDT == dt.MaSP)
                 {
                     MuaBanDienThoai form = new MuaBanDienThoai(dt.MaSP, item.SoLuong);
+                    form.Ban = false;
                     form.Them += ThemVaoGioHang;
                     form.ShowBtXoa();
                     form.ShowDialog();
@@ -57,15 +58,18 @@ namespace Cuahangdienthoai.View
                 }
             }
             MuaBanDienThoai f = new MuaBanDienThoai(dt.MaSP, 1);
+            f.Ban = false;
             f.Them += ThemVaoGioHang;
             f.ShowDialog();
         }
         private void LoadListPhone()
         {
+            int SL = 0;
             flowLayoutPanel1.Controls.Clear();
             string path = MenuFor.path;
             foreach (DienThoaiViewFormKhoHang item in DienThoaiBUS.Instance.GetListDTFormKhoHang(tbTimKiem.Text, null, null))
             {
+                SL++;
                 User_Control.DienThoai dt = new User_Control.DienThoai();
                 dt.SetFontGia();
                 dt.MaSP = item.MaDT;
@@ -77,6 +81,7 @@ namespace Cuahangdienthoai.View
                 dt.xemThongTin += DienThoai_DoubleClick;
                 flowLayoutPanel1.Controls.Add(dt);
             }
+            lbSoLuong.Text = SL.ToString();
         }
         private void btThemSP_Click(object sender, EventArgs e)
         {
@@ -127,6 +132,7 @@ namespace Cuahangdienthoai.View
                 int MaDT = (int)dataGridViewGioHang.SelectedRows[0].Cells["MaDT"].Value;
                 int SL = (int)dataGridViewGioHang.SelectedRows[0].Cells["SoLuong"].Value;
                 MuaBanDienThoai f = new MuaBanDienThoai(MaDT, SL);
+                f.Ban = false;
                 f.ShowBtXoa();
                 f.Them += ThemVaoGioHang;
                 f.ShowDialog();
@@ -180,6 +186,7 @@ namespace Cuahangdienthoai.View
             foreach (DienThoaiFormMua item in listGioHang)
             {
                 NhapHangBUS.Instance.ThemHoaDonNhapChiTiet(MaHD, item.MaDT, item.SoLuong, item.GiaNhap, item.ThanhTien);
+                DienThoaiBUS.Instance.XuLyNhapDT(item.MaDT, item.SoLuong);
             }
             this.Close();
         }

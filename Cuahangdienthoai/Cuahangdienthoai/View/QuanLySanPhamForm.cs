@@ -24,7 +24,6 @@ namespace Cuahangdienthoai.View
         }
         private void SetGUI()
         {
-            dataGridViewsanpham.Columns[0].Width = 180;
             dataGridViewsanpham.Columns[0].HeaderText = "";
             dataGridViewsanpham.Columns[1].HeaderText = "Mã Điện Thoại";
             dataGridViewsanpham.Columns[2].HeaderText = "Tên Điện Thoại";
@@ -76,24 +75,6 @@ namespace Cuahangdienthoai.View
             {
                 if (load) ShowListPhone();
                 load = !load;
-            }
-        }
-
-        private void QuanLySanPhamForm_SizeChanged(object sender, EventArgs e)
-        {
-            Form f = (Form)this.TopLevelControl;
-            if (f.WindowState.ToString().Equals("Maximized"))
-            {
-                dataGridViewsanpham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            else if (f.WindowState.ToString().Equals("Normal"))
-            {
-                dataGridViewsanpham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                dataGridViewsanpham.Columns[0].Width = 180;
-                dataGridViewsanpham.Columns[1].Width = 100;
-                dataGridViewsanpham.Columns[3].Width = 90;
-                dataGridViewsanpham.Columns[5].Width = 80;
-                dataGridViewsanpham.Columns[7].Width = 100;
             }
         }
     }

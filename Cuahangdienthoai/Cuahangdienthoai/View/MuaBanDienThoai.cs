@@ -15,11 +15,13 @@ namespace Cuahangdienthoai.View
     {
         public int maDT;
         public int SoLuong = 0;
+        public bool Ban { get; set; }
         public delegate void ThemGioHang(int MaDT, int SoLuong);
         public ThemGioHang Them { get; set; }
         public MuaBanDienThoai(int MaDT, int SoLuong)
         {
             InitializeComponent();
+            Ban = true;
             this.maDT = MaDT;
             this.SoLuong = SoLuong;
             SetGUI();
@@ -42,7 +44,7 @@ namespace Cuahangdienthoai.View
 
         private void btOk_Click(object sender, EventArgs e)
         {
-            if(Convert.ToInt32(tbSoLuong.Text) < Convert.ToInt32(nudSL.Value))
+            if(Ban && (Convert.ToInt32(tbSoLuong.Text) < Convert.ToInt32(nudSL.Value)))
             {
                 MessageBox.Show("Số máy hiện tại không đủ đáp ứng!");
             }

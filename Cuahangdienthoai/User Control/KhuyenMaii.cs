@@ -80,5 +80,22 @@ namespace User_Control
         {
             if (KMMoi) SetKMMoi();
         }
+
+        private void Tien_TextChanged(object sender, EventArgs e)
+        {
+            pbSave.Show();
+            TextBox tb = sender as TextBox;
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = 0;
+            try
+            {
+                value = decimal.Parse(tb.Text, System.Globalization.NumberStyles.AllowThousands);
+            }
+            catch (Exception)
+            {
+            }
+            tb.Text = String.Format(culture, "{0:N0}", value);
+            tb.Select(tb.Text.Length, 0);
+        }
     }
 }

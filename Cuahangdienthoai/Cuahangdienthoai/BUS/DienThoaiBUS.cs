@@ -41,7 +41,7 @@ namespace Cuahangdienthoai.BUS
                 Image AnhGoc = new Bitmap(path);
                 listDT.Add(new DienThoaiViewFormSP
                 {
-                    Anh = new Bitmap(AnhGoc, 180, 180),
+                    Anh = new Bitmap(AnhGoc, 120, 120),
                     MaDT = item.MaDT,
                     TenDT = item.TenDienThoai,
                     SoLuong = Convert.ToInt32(item.SLHienTai),
@@ -142,6 +142,14 @@ namespace Cuahangdienthoai.BUS
                 }
             }
             return listDT;
+        }
+        public void XuLyBanDT(int MaDT, int SoLuong)
+        {
+            DienThoaiDAL.Instance.XuLyBanDT(MaDT, SoLuong);
+        }
+        public void XuLyNhapDT(int MaDT, int SoLuong)
+        {
+            DienThoaiDAL.Instance.XuLyNhapDT(MaDT, SoLuong);
         }
     }
 }

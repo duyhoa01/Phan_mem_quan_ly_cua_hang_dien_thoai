@@ -91,21 +91,6 @@ namespace Cuahangdienthoai.DAL
                 db.SaveChanges();
             }
         }
-        //public HoaDonBanViewFormHDBCT HDBH(int MaHD)
-        //{
-        //    using (PBL3Entities db = new PBL3Entities())
-        //    {
-        //        HoaDonBanHang hd = db.HoaDonBanHangs.Find(MaHD);
-        //        return new HoaDonBanViewFormHDBCT
-        //        {
-        //            MaNV = hd.MaNhanVien,
-        //            TenNV = hd.NhanVien.TenNhanVien,
-        //            MaKH = hd.MaKhachHang,
-        //            TenKH = hd.KhachHang.TenKhachHang,
-        //            NgayBan = Convert.ToDateTime(hd.NgayBan)
-        //        };
-        //    }
-        //}
         public List<HoaDonNhapChiTiet> GetListHDNCTByMaHD(int MaHD)
         {
             using (PBL3Entities db = new PBL3Entities())
