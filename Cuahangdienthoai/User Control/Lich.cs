@@ -66,7 +66,8 @@ namespace User_Control
         }
         public void SetDateTime(DateTime date)
         {
-            monthCalendar1.SelectionStart = date;
+            monthCalendar1.SelectionStart =date;
+            XuLy();
         }
     }
 }

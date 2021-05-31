@@ -118,6 +118,57 @@ namespace Cuahangdienthoai.View
             HoaDonNhapChiTiet f = new HoaDonNhapChiTiet(MaHD, MaNV, MaNCC, TenNV, TenNCC, NgayNhap, TongTienNhap);
             f.Show();
         }
+
+        private void btTuan_Click(object sender, EventArgs e)
+        {
+            switch (DateTime.Now.DayOfWeek)
+            {
+                case DayOfWeek.Sunday:
+                    lich1.SetDateTime(DateTime.Now.Date.AddDays(-6));
+                    break;
+                case DayOfWeek.Monday:
+                    lich1.SetDateTime(DateTime.Now.Date);
+                    break;
+                case DayOfWeek.Tuesday:
+                    lich1.SetDateTime(DateTime.Now.Date.AddDays(-1));
+                    break;
+                case DayOfWeek.Wednesday:
+                    lich1.SetDateTime(DateTime.Now.Date.AddDays(-2));
+                    break;
+                case DayOfWeek.Thursday:
+                    lich1.SetDateTime(DateTime.Now.Date.AddDays(-3));
+                    break;
+                case DayOfWeek.Friday:
+                    lich1.SetDateTime(DateTime.Now.Date.AddDays(-4));
+                    break;
+                case DayOfWeek.Saturday:
+                    lich1.SetDateTime(DateTime.Now.Date.AddDays(-5));
+                    break;
+            }
+            lich2.SetDateTime(lich1.GetDateTime().Date.AddDays(6));
+            ShowListDonHang();
+        }
+
+        private void btThang_Click(object sender, EventArgs e)
+        {
+            DateTime dauthang = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            lich1.SetDateTime(dauthang);
+            DateTime cuoithang = dauthang.AddMonths(1).AddDays(-1);
+            lich2.SetDateTime(cuoithang);
+            ShowListDonHang();
+        }
+
+        private void btQuy_Click(object sender, EventArgs e)
+        {
+            int quy = 0;
+            if (DateTime.Now.Month % 3 == 0) quy = DateTime.Now.Month % 3 - 1;
+            else quy = DateTime.Now.Month / 3;
+            DateTime dauquy = new DateTime(DateTime.Now.Year, quy * 3 + 1, 1);
+            DateTime cuoiquy = dauquy.AddMonths(3).AddDays(-1);
+            lich1.SetDateTime(dauquy);
+            lich2.SetDateTime(cuoiquy);
+            ShowListDonHang();
+        }
     }
 }
 

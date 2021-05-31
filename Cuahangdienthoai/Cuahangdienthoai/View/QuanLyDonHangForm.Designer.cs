@@ -41,11 +41,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btThongKe = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btQuy = new System.Windows.Forms.Button();
+            this.btThang = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btTuan = new System.Windows.Forms.Button();
             this.btTimKiêm = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbTimKiem = new System.Windows.Forms.TextBox();
@@ -128,7 +128,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 31);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Thêm";
+            this.button2.Text = "Tạo mới";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -156,11 +156,11 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btThongKe);
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.btQuy);
+            this.panel5.Controls.Add(this.btThang);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.btTuan);
             this.panel5.Controls.Add(this.btTimKiêm);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -189,37 +189,39 @@
             this.btThongKe.UseVisualStyleBackColor = false;
             this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
             // 
-            // button4
+            // btQuy
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button4.Location = new System.Drawing.Point(845, 23);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 32);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "Quý";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btQuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btQuy.BackColor = System.Drawing.Color.White;
+            this.btQuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btQuy.FlatAppearance.BorderSize = 0;
+            this.btQuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btQuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btQuy.Location = new System.Drawing.Point(845, 23);
+            this.btQuy.Margin = new System.Windows.Forms.Padding(2);
+            this.btQuy.Name = "btQuy";
+            this.btQuy.Size = new System.Drawing.Size(62, 32);
+            this.btQuy.TabIndex = 29;
+            this.btQuy.Text = "Quý";
+            this.btQuy.UseVisualStyleBackColor = false;
+            this.btQuy.Click += new System.EventHandler(this.btQuy_Click);
             // 
-            // button3
+            // btThang
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button3.Location = new System.Drawing.Point(764, 23);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(62, 32);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Tháng";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btThang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btThang.BackColor = System.Drawing.Color.White;
+            this.btThang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btThang.FlatAppearance.BorderSize = 0;
+            this.btThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btThang.Location = new System.Drawing.Point(764, 23);
+            this.btThang.Margin = new System.Windows.Forms.Padding(2);
+            this.btThang.Name = "btThang";
+            this.btThang.Size = new System.Drawing.Size(62, 32);
+            this.btThang.TabIndex = 28;
+            this.btThang.Text = "Tháng";
+            this.btThang.UseVisualStyleBackColor = false;
+            this.btThang.Click += new System.EventHandler(this.btThang_Click);
             // 
             // label5
             // 
@@ -245,21 +247,22 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Từ ngày";
             // 
-            // button5
+            // btTuan
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button5.Location = new System.Drawing.Point(682, 23);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(62, 32);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Tuần";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btTuan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTuan.BackColor = System.Drawing.Color.White;
+            this.btTuan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTuan.FlatAppearance.BorderSize = 0;
+            this.btTuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTuan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btTuan.Location = new System.Drawing.Point(682, 23);
+            this.btTuan.Margin = new System.Windows.Forms.Padding(2);
+            this.btTuan.Name = "btTuan";
+            this.btTuan.Size = new System.Drawing.Size(62, 32);
+            this.btTuan.TabIndex = 27;
+            this.btTuan.Text = "Tuần";
+            this.btTuan.UseVisualStyleBackColor = false;
+            this.btTuan.Click += new System.EventHandler(this.btTuan_Click);
             // 
             // btTimKiêm
             // 
@@ -427,7 +430,7 @@
             this.lbTongLoiNhuan.BackColor = System.Drawing.Color.White;
             this.lbTongLoiNhuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongLoiNhuan.ForeColor = System.Drawing.Color.Red;
-            this.lbTongLoiNhuan.Location = new System.Drawing.Point(474, 10);
+            this.lbTongLoiNhuan.Location = new System.Drawing.Point(520, 10);
             this.lbTongLoiNhuan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTongLoiNhuan.Name = "lbTongLoiNhuan";
             this.lbTongLoiNhuan.Size = new System.Drawing.Size(16, 17);
@@ -440,7 +443,7 @@
             this.lbTongTien.BackColor = System.Drawing.Color.White;
             this.lbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lbTongTien.Location = new System.Drawing.Point(241, 10);
+            this.lbTongTien.Location = new System.Drawing.Point(232, 10);
             this.lbTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(16, 17);
@@ -453,7 +456,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label7.Location = new System.Drawing.Point(356, 10);
+            this.label7.Location = new System.Drawing.Point(412, 10);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 17);
@@ -574,9 +577,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btThongKe;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btQuy;
+        private System.Windows.Forms.Button btThang;
+        private System.Windows.Forms.Button btTuan;
         private User_Control.Lich lich2;
         private User_Control.Lich lich1;
         private System.Windows.Forms.DataGridView dataGridViewDonHang;
