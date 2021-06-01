@@ -29,7 +29,7 @@ namespace Cuahangdienthoai.View
             tbMaDT.Text = dt.MaDT.ToString();
             tbSoLuong.Text = dt.SLHienTai.ToString();
             tbPtGiamGia.Text = String.Format("{0:0.## '%'}", dt.C_GiamGia);
-            tbDonGia.Text = String.Format("{0:0,0 đ}", dt.GiaBanDT);
+            tbDonGia.Text = String.Format("{0:#,0 đ}", dt.GiaBanDT);
             tbDiemDanhGia.Text = ((float)Convert.ToDouble(dt.DiemDanhGia)).ToString() + " / 5";
             tbLuotDanhGia.Text = dt.LuotDanhGia.ToString();
             richTextBox1.Text = dt.ThongSoKyThuat;

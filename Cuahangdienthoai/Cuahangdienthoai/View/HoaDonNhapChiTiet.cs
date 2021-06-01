@@ -22,7 +22,7 @@ namespace Cuahangdienthoai.View
             lbTenNV.Text = TenNV;
             lbTenNCC.Text = TenNCC;
             lbNgayNhap.Text = NgayNhap.ToString("dd/MM/yyyy H:mm");
-            lbTongTienNhap.Text = String.Format("{0:0,0 vnd}", TongTienNhap);
+            lbTongTienNhap.Text = String.Format("{0:#,0 vnd}", TongTienNhap);
             dataGridViewGioHang.DataSource = NhapHangBUS.Instance.GetListHDNCTByMaHD(MaHD);
             SetDatagridview();
         }
@@ -34,8 +34,8 @@ namespace Cuahangdienthoai.View
             dataGridViewGioHang.Columns[3].HeaderText = "Đơn Giá";
             dataGridViewGioHang.Columns[4].HeaderText = "Số Lượng";
             dataGridViewGioHang.Columns[5].HeaderText = "Thành Tiền";
-            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "#,0 đ";
         }
     }
 }

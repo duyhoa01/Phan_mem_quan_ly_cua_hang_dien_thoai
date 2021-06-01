@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDonNhapChiTiet));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDonNhapChiTiet));
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
             this.pnHangMua = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.dataGridViewGioHang = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,18 +55,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTongTienNhap = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridViewGioHang = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnHangMua.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGioHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGioHang)).BeginInit();
             this.SuspendLayout();
             // 
             // thuDong1
             // 
-            this.thuDong1.BackColor = System.Drawing.Color.DarkGray;
+            this.thuDong1.BackColor = System.Drawing.Color.Silver;
             this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
             this.thuDong1.Location = new System.Drawing.Point(0, 0);
             this.thuDong1.Name = "thuDong1";
@@ -98,6 +99,42 @@
             this.panel11.Padding = new System.Windows.Forms.Padding(2, 32, 2, 2);
             this.panel11.Size = new System.Drawing.Size(950, 377);
             this.panel11.TabIndex = 7;
+            // 
+            // dataGridViewGioHang
+            // 
+            this.dataGridViewGioHang.AllowUserToAddRows = false;
+            this.dataGridViewGioHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewGioHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewGioHang.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewGioHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewGioHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewGioHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewGioHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewGioHang.EnableHeadersVisualStyles = false;
+            this.dataGridViewGioHang.Location = new System.Drawing.Point(2, 32);
+            this.dataGridViewGioHang.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewGioHang.Name = "dataGridViewGioHang";
+            this.dataGridViewGioHang.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGioHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewGioHang.RowHeadersVisible = false;
+            this.dataGridViewGioHang.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGioHang.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewGioHang.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            this.dataGridViewGioHang.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewGioHang.RowTemplate.Height = 24;
+            this.dataGridViewGioHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewGioHang.Size = new System.Drawing.Size(946, 343);
+            this.dataGridViewGioHang.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -313,47 +350,24 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Tổng Tiền:";
             // 
-            // dataGridViewGioHang
+            // label7
             // 
-            this.dataGridViewGioHang.AllowUserToAddRows = false;
-            this.dataGridViewGioHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewGioHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewGioHang.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewGioHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewGioHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewGioHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewGioHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewGioHang.EnableHeadersVisualStyles = false;
-            this.dataGridViewGioHang.Location = new System.Drawing.Point(2, 32);
-            this.dataGridViewGioHang.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewGioHang.Name = "dataGridViewGioHang";
-            this.dataGridViewGioHang.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGioHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewGioHang.RowHeadersVisible = false;
-            this.dataGridViewGioHang.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGioHang.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewGioHang.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            this.dataGridViewGioHang.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewGioHang.RowTemplate.Height = 24;
-            this.dataGridViewGioHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewGioHang.Size = new System.Drawing.Size(946, 343);
-            this.dataGridViewGioHang.TabIndex = 5;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Silver;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(3, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 16);
+            this.label7.TabIndex = 108;
+            this.label7.Text = "Chi Tiết Hóa Đơn";
             // 
             // HoaDonNhapChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 581);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pnHangMua);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.thuDong1);
@@ -363,13 +377,14 @@
             this.pnHangMua.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGioHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGioHang)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -398,5 +413,6 @@
         private System.Windows.Forms.Label lbTongTienNhap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewGioHang;
+        private System.Windows.Forms.Label label7;
     }
 }

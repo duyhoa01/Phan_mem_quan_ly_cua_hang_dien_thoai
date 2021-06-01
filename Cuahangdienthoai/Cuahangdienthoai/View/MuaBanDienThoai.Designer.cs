@@ -63,6 +63,7 @@ namespace Cuahangdienthoai.View
             this.nudSL = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.btOk = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -241,7 +242,7 @@ namespace Cuahangdienthoai.View
             // 
             // thuDong1
             // 
-            this.thuDong1.BackColor = System.Drawing.Color.Gray;
+            this.thuDong1.BackColor = System.Drawing.Color.DarkGray;
             this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
             this.thuDong1.Location = new System.Drawing.Point(0, 0);
             this.thuDong1.Name = "thuDong1";
@@ -465,12 +466,25 @@ namespace Cuahangdienthoai.View
             this.btOk.UseVisualStyleBackColor = false;
             this.btOk.Click += new System.EventHandler(this.btOk_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.DarkGray;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(3, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 16);
+            this.label8.TabIndex = 114;
+            this.label8.Text = "Chọn Sản Phẩm";
+            // 
             // MuaBanDienThoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 606);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
@@ -543,5 +557,6 @@ namespace Cuahangdienthoai.View
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btXoa;
+        private System.Windows.Forms.Label label8;
     }
 }

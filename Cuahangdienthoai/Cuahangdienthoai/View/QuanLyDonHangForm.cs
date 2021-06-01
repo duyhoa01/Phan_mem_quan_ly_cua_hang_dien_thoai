@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using Cuahangdienthoai.BUS;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 
 namespace Cuahangdienthoai.View
 {
@@ -33,8 +37,8 @@ namespace Cuahangdienthoai.View
                 TongLoiNhuan += Convert.ToDouble(item.Cells["TongLoiNhuan"].Value);
             }
             lbSoLuong.Text = dataGridViewDonHang.Rows.Count.ToString();
-            lbTongTien.Text = String.Format("{0:0,0 vnd}", TongTien);
-            lbTongLoiNhuan.Text = String.Format("{0:0,0 vnd}", TongLoiNhuan);
+            lbTongTien.Text = String.Format("{0:#,0 vnd}", TongTien);
+            lbTongLoiNhuan.Text = String.Format("{0:#,0 vnd}", TongLoiNhuan);
         }
         private void SetGUI()
         {
@@ -53,8 +57,8 @@ namespace Cuahangdienthoai.View
             dataGridViewDonHang.Columns[4].HeaderText = "Thanh Toán";
             dataGridViewDonHang.Columns[5].HeaderText = "Lợi Nhuận";
             dataGridViewDonHang.Columns["Value"].DefaultCellStyle.Format = "dd/MM/yyyy H:mm";
-            dataGridViewDonHang.Columns[4].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewDonHang.Columns[5].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewDonHang.Columns[4].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewDonHang.Columns[5].DefaultCellStyle.Format = "#,0 đ";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -160,13 +164,104 @@ namespace Cuahangdienthoai.View
         private void btQuy_Click(object sender, EventArgs e)
         {
             int quy = 0;
-            if (DateTime.Now.Month % 3 == 0) quy = DateTime.Now.Month % 3 - 1;
+            if (DateTime.Now.Month % 3 == 0) quy = DateTime.Now.Month / 3 - 1;
             else quy = DateTime.Now.Month / 3;
             DateTime dauquy = new DateTime(DateTime.Now.Year, quy*3 + 1, 1);
             DateTime cuoiquy = dauquy.AddMonths(3).AddDays(-1);
             lich1.SetDateTime(dauquy);
             lich2.SetDateTime(cuoiquy);
             ShowListDonHang();
+        }
+        private void btXuatFile_Click(object sender, EventArgs e)
+        {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            string Path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName + @"\Export Excel\Bán Hàng\";
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.InitialDirectory = Path;
+            string filePath = "";
+            dialog.Filter = "Excel | *.xlsx | Excel 2003 | *.xls";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = dialog.FileName;
+            }
+
+            if (string.IsNullOrEmpty(Path))
+            {
+                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+                return;
+            }
+
+            try
+            {
+                using (ExcelPackage p = new ExcelPackage())
+                {
+                    p.Workbook.Properties.Title = "Báo cáo thống kê";
+                    p.Workbook.Worksheets.Add("Sheet 1");
+                    ExcelWorksheet ws = p.Workbook.Worksheets[0];
+                    ws.Name = "Sheet 1";
+                    ws.DefaultColWidth = 30;
+                    ws.Cells.Style.Font.Name = "Calibri";
+                    ws.Cells.Style.Font.Size = 12;
+                    var countColHeader = dataGridViewDonHang.ColumnCount - 1;
+                    ws.Cells[1, 1].Value = "Thống kê đơn hàng từ ngày " + lich1.GetDateTime().ToShortDateString()
+                                            + " đến " + lich2.GetDateTime().ToShortDateString();
+                    ws.Cells[1, 1, 1, countColHeader].Style.Font.Color.SetColor(Color.Red);
+                    ws.Cells[1, 1, 1, countColHeader].Style.Font.Size = 15;
+                    ws.Cells[1, 1, 1, countColHeader].Merge = true;
+                    ws.Cells[1, 1, 1, countColHeader].Style.Font.Bold = true;
+                    ws.Cells[1, 1, 1, countColHeader].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                    int rowIndex = 2;
+                    for (int i = 0; i < dataGridViewDonHang.ColumnCount -1; i++)
+                    {
+                        var cell = ws.Cells[rowIndex, i + 1];
+
+                        //set màu
+                        var fill = cell.Style.Fill;
+                        fill.PatternType = ExcelFillStyle.Solid;
+                        fill.BackgroundColor.SetColor(Color.LightBlue);
+
+                        //căn chỉnh các border
+                        var border = cell.Style.Border;
+                        border.Bottom.Style =
+                            border.Top.Style =
+                            border.Left.Style =
+                            border.Right.Style = ExcelBorderStyle.Medium;
+
+                        cell.Value = dataGridViewDonHang.Columns[i+1].HeaderText;
+                    }
+                    for (int i = 0; i < dataGridViewDonHang.RowCount; i++)
+                    {
+                        for (int j = 1; j < dataGridViewDonHang.ColumnCount; j++)
+                        {
+                            var border = ws.Cells[i + 3, j].Style.Border;
+                            border.Bottom.Style =
+                                border.Top.Style =
+                                border.Left.Style =
+                                border.Right.Style = ExcelBorderStyle.Medium;
+                            if(j == 5 || j == 6)
+                            {
+                                ws.Cells[i + 3, j].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                                ws.Cells[i + 3, j].Value = String.Format("{0:#,0 đ}", dataGridViewDonHang.Rows[i].Cells[j].Value);
+                            }
+                            else ws.Cells[i + 3, j].Value = dataGridViewDonHang.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+                    ws.Cells[dataGridViewDonHang.RowCount + 3, 1].Style.Font.Bold = true;
+                    ws.Cells[dataGridViewDonHang.RowCount + 3, 1].Style.Font.Color.SetColor(Color.DarkOrange);
+                    ws.Cells[dataGridViewDonHang.RowCount + 3, 1].Value = "Tổng Tiền: " + lbTongTien.Text;
+                    ws.Cells[dataGridViewDonHang.RowCount + 4, 1].Style.Font.Bold = true;
+                    ws.Cells[dataGridViewDonHang.RowCount + 4, 1].Style.Font.Color.SetColor(Color.Green);
+                    ws.Cells[dataGridViewDonHang.RowCount + 4, 1].Value = "Tổng Lợi Nhuận: " + lbTongLoiNhuan.Text;
+                    //Lưu file lại
+                    Byte[] bin = p.GetAsByteArray();
+                    File.WriteAllBytes(filePath, bin);
+                }
+                MessageBox.Show("Xuất excel thành công!");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
+            }
         }
     }
 }

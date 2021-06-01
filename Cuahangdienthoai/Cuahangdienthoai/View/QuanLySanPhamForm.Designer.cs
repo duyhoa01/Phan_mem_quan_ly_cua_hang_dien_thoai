@@ -37,7 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btThem = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btXuatFile = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -103,7 +103,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel4.Controls.Add(this.btThem);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btXuatFile);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(30, 24);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
@@ -131,25 +131,26 @@
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
-            // button1
+            // btXuatFile
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(805, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Xuất Exel";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btXuatFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btXuatFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
+            this.btXuatFile.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btXuatFile.FlatAppearance.BorderSize = 0;
+            this.btXuatFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXuatFile.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXuatFile.ForeColor = System.Drawing.Color.White;
+            this.btXuatFile.Image = ((System.Drawing.Image)(resources.GetObject("btXuatFile.Image")));
+            this.btXuatFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXuatFile.Location = new System.Drawing.Point(805, 11);
+            this.btXuatFile.Margin = new System.Windows.Forms.Padding(2);
+            this.btXuatFile.Name = "btXuatFile";
+            this.btXuatFile.Size = new System.Drawing.Size(90, 32);
+            this.btXuatFile.TabIndex = 0;
+            this.btXuatFile.Text = "Xuất Exel";
+            this.btXuatFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btXuatFile.UseVisualStyleBackColor = true;
+            this.btXuatFile.Click += new System.EventHandler(this.btXuatFile_Click);
             // 
             // panel5
             // 
@@ -396,6 +397,7 @@
             this.dataGridViewsanpham.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewsanpham.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewsanpham.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewsanpham.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
@@ -418,7 +420,8 @@
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewsanpham.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewsanpham.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Purple;
+            this.dataGridViewsanpham.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            this.dataGridViewsanpham.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridViewsanpham.RowTemplate.Height = 24;
             this.dataGridViewsanpham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewsanpham.Size = new System.Drawing.Size(913, 371);
@@ -510,7 +513,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewsanpham;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btXuatFile;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.ComboBox comboBox1;

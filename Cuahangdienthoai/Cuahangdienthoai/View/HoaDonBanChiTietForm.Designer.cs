@@ -82,6 +82,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbTenDonHang = new System.Windows.Forms.TextBox();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnHangMua.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -678,18 +679,31 @@
             // 
             // thuDong1
             // 
-            this.thuDong1.BackColor = System.Drawing.Color.DarkGray;
+            this.thuDong1.BackColor = System.Drawing.Color.Silver;
             this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
             this.thuDong1.Location = new System.Drawing.Point(0, 0);
             this.thuDong1.Name = "thuDong1";
             this.thuDong1.Size = new System.Drawing.Size(1029, 29);
             this.thuDong1.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label3.Location = new System.Drawing.Point(3, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 16);
+            this.label3.TabIndex = 109;
+            this.label3.Text = "Chi Tiết Hóa Đơn";
+            // 
             // HoaDonBanChiTietForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 744);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.thuDong1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -715,6 +729,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKhuyenMai)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -766,5 +781,6 @@
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel pnTinhTien;
+        private System.Windows.Forms.Label label3;
     }
 }

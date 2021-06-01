@@ -18,6 +18,8 @@ namespace Cuahangdienthoai.View
         public delegate void Mydel();
         public Mydel d;
         int? maDT;
+        decimal GiaNhap = 0;
+        decimal GiaBan = 0;
         public ThemSuaDienThoai(int? MaDT)
         {
             InitializeComponent();
@@ -31,6 +33,8 @@ namespace Cuahangdienthoai.View
                 DienThoai dt = DienThoaiBUS.Instance.TimDTByMaDT(Convert.ToInt32(maDT));
                 tbTenDT.Text = dt.TenDienThoai;
                 tbMaDT.Text = dt.MaDT.ToString();
+                GiaNhap = (decimal)dt.GiaNhapDT;
+                GiaBan = (decimal)dt.GiaBanDT;
                 tbGiaNhap.Text = dt.GiaNhapDT.ToString();
                 tbGiaBan.Text = dt.GiaBanDT.ToString();
                 tbDiemDanhGia.Text = ((float)Convert.ToDouble(dt.DiemDanhGia)).ToString();
@@ -58,8 +62,17 @@ namespace Cuahangdienthoai.View
             DialogResult r = f.ShowDialog();
             if (r == DialogResult.OK)
             {
-                pictureBox1.Tag = Path.GetFileName(f.FileName);
-                pictureBox1.Image = new Bitmap(f.FileName);
+                try
+                {
+                    pictureBox1.Tag = Path.GetFileName(f.FileName);
+                    pictureBox1.Image = new Bitmap(f.FileName);
+                }
+                catch (Exception)
+                {
+                    pictureBox1.Tag = "Loi.png";
+                    pictureBox1.Image = new Bitmap(MenuFor.path + "Loi.png");
+                }
+
             }
         }
 
@@ -70,42 +83,81 @@ namespace Cuahangdienthoai.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(maDT == null)
+            try
             {
-                DienThoaiBUS.Instance.ThemDT(tbTenDT.Text, (float)Convert.ToDouble(tbGiaNhap.Text)
-                , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(numericUpDown1.Value)
-                , (float)Convert.ToDouble(tbDiemDanhGia.Text), Convert.ToInt32(tbLuotDanhGia.Text)
-                , richTextBox1.Text, pictureBox1.Tag.ToString());
-            }
-            else
-            {
-                if (!DienThoaiBUS.Instance.SuaDT(Convert.ToInt32(tbMaDT.Text), tbTenDT.Text
-                    , (float)Convert.ToDouble(numericUpDown1.Value), (float)Convert.ToDouble(tbDiemDanhGia.Text)
-                    , Convert.ToInt32(tbLuotDanhGia.Text), richTextBox1.Text, pictureBox1.Tag.ToString()
-                    , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(tbGiaNhap.Text)))
+                if (maDT == null)
                 {
-                    MessageBox.Show("Điện thoại này liên quan đến hóa đơn nhập bán trước." 
-                                    + "\nKhông thể thay đổi giá nhập, giá bán");
+                    DienThoaiBUS.Instance.ThemDT(tbTenDT.Text, (float)Convert.ToDouble(tbGiaNhap.Text)
+                    , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(numericUpDown1.Value)
+                    , (float)Convert.ToDouble(tbDiemDanhGia.Text), Convert.ToInt32(tbLuotDanhGia.Text)
+                    , richTextBox1.Text, pictureBox1.Tag.ToString());
                 }
+                else
+                {
+                    if (!DienThoaiBUS.Instance.SuaDT(Convert.ToInt32(tbMaDT.Text), tbTenDT.Text
+                        , (float)Convert.ToDouble(numericUpDown1.Value), (float)Convert.ToDouble(tbDiemDanhGia.Text)
+                        , Convert.ToInt32(tbLuotDanhGia.Text), richTextBox1.Text, pictureBox1.Tag.ToString()
+                        , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(tbGiaNhap.Text)))
+                    {
+                        MessageBox.Show("Điện thoại này liên quan đến hóa đơn nhập bán trước."
+                                        + "\nKhông thể thay đổi giá nhập, giá bán");
+                    }
+                }
+                d();
+                this.Close();
             }
-            d();
-            this.Close();
+            catch (Exception e1)
+            {
+                MessageBox.Show("Dữ liệu không hợp lệ\n" + e1.Message);
+            }
         }
 
         private void tbGiaNhap_TextChanged(object sender, EventArgs e)
         {
-            TextBox tb = sender as TextBox;
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-            decimal value = 0;
-            try
+            if (tbGiaNhap.Text.Equals(""))
             {
-                value = decimal.Parse(tb.Text, System.Globalization.NumberStyles.AllowThousands);
+                GiaNhap = 0;
             }
-            catch (Exception)
+            else
             {
+                CultureInfo culture = new CultureInfo("en-US");
+                decimal value = GiaNhap;
+                try
+                {
+                    value = decimal.Parse(tbGiaNhap.Text, NumberStyles.AllowThousands);
+                    GiaNhap = value;
+                }
+                catch (Exception)
+                {
+                    value = GiaNhap;
+                }
+                tbGiaNhap.Text = String.Format(culture, "{0:N0}", value);
+                tbGiaNhap.Select(tbGiaNhap.Text.Length, 0);
             }
-            tb.Text = String.Format(culture, "{0:N0}", value);
-            tb.Select(tb.Text.Length, 0);
+        }
+
+        private void tbGiaBan_TextChanged(object sender, EventArgs e)
+        {
+            if (tbGiaBan.Text.Equals(""))
+            {
+                GiaBan = 0;
+            }
+            else
+            {
+                CultureInfo culture = new CultureInfo("en-US");
+                decimal value = GiaBan;
+                try
+                {
+                    value = decimal.Parse(tbGiaBan.Text, NumberStyles.AllowThousands);
+                    GiaBan = value;
+                }
+                catch (Exception)
+                {
+                    value = GiaBan;
+                }
+                tbGiaBan.Text = String.Format(culture, "{0:N0}", value);
+                tbGiaBan.Select(tbGiaBan.Text.Length, 0);
+            }
         }
     }
 }

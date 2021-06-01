@@ -41,8 +41,8 @@ namespace Cuahangdienthoai.View
                 dt.MaSP = item.MaDT;
                 dt.TenDT = item.TenDT;
                 dt.SL = item.SoLuong;
-                dt.Gia = String.Format("{0:0,0'đ'}", item.GiaGoc);
-                dt.Gia2 = String.Format("{0:0,0'đ'}", item.GiamCon);
+                dt.Gia = String.Format("{0:#,0'đ'}", item.GiaGoc);
+                dt.Gia2 = String.Format("{0:#,0'đ'}", item.GiamCon);
                 dt.LinkAnh = path + item.LinkAnh;
                 dt.xemThongTin += DienThoai_DoubleClick;
                 flowLayoutPanel1.Controls.Add(dt);
@@ -145,18 +145,18 @@ namespace Cuahangdienthoai.View
         private void dataGridViewGioHang_DataSourceChanged(object sender, EventArgs e)
         {
             this.TongGiamKM = 0;
-            dataGridViewKhuyenMai.DataSource = KhuyenMaiBUS.Instance.GetListKMApDung(this.TongTien);
+            dataGridViewKhuyenMai.DataSource = KhuyenMaiBUS.Instance.GetListKMApDung(TongTien - TongGiamSP);
             foreach (DataGridViewRow item in dataGridViewKhuyenMai.Rows)
             {
                 TongGiamKM += (float)item.Cells[5].Value;
             }
-            tbTongGiamKM.Text = String.Format("{0:0,0}", TongGiamKM);
+            tbTongGiamKM.Text = String.Format("{0:#,0}", TongGiamKM);
             ThanhTien = TongTien - TongGiamKM - TongGiamSP;
             TongLoiNhuan = ThanhTien - TongTienNhap;
-            tbTongTien.Text = String.Format("{0:0,0}", TongTien);
-            tbTongGiamSP.Text = String.Format("{0:0,0}", TongGiamSP);
-            tbThanhToan.Text = String.Format("{0:0,0} đ", ThanhTien);
-            tbThanhTien.Text = String.Format("{0:0,0}", ThanhTien);
+            tbTongTien.Text = String.Format("{0:#,0}", TongTien);
+            tbTongGiamSP.Text = String.Format("{0:#,0}", TongGiamSP);
+            tbThanhToan.Text = String.Format("{0:#,0} đ", ThanhTien);
+            tbThanhTien.Text = String.Format("{0:#,0}", ThanhTien);
         }
 
         private void dataGridViewGioHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -183,22 +183,22 @@ namespace Cuahangdienthoai.View
             dataGridViewGioHang.Columns[7].HeaderText = "Tổng";
             dataGridViewGioHang.Columns[8].HeaderText = "Giảm";
             dataGridViewGioHang.Columns[9].HeaderText = "Thành Tiền";
-            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "#,0 đ";
             dataGridViewGioHang.Columns[4].DefaultCellStyle.Format = "0.## '%'";
-            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[7].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[8].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[9].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[7].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[8].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[9].DefaultCellStyle.Format = "#,0 đ";
             //
             dataGridViewKhuyenMai.Columns[1].HeaderText = "Tên KM";
             dataGridViewKhuyenMai.Columns[2].HeaderText = "Hóa Đơn Từ";
             dataGridViewKhuyenMai.Columns[3].HeaderText = "% Giảm Giá";
             dataGridViewKhuyenMai.Columns[4].HeaderText = "Tối Đa";
             dataGridViewKhuyenMai.Columns[5].HeaderText = "Được Giảm";
-            dataGridViewKhuyenMai.Columns[2].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewKhuyenMai.Columns[2].DefaultCellStyle.Format = "#,0 đ";
             dataGridViewKhuyenMai.Columns[3].DefaultCellStyle.Format = "0.##'%'";
-            dataGridViewKhuyenMai.Columns[4].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewKhuyenMai.Columns[5].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewKhuyenMai.Columns[4].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewKhuyenMai.Columns[5].DefaultCellStyle.Format = "#,0 đ";
             dataGridViewKhuyenMai.Columns[0].Visible = false;
             dataGridViewKhuyenMai.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 9, FontStyle.Bold);
             dataGridViewKhuyenMai.DefaultCellStyle.ForeColor = Color.Black;

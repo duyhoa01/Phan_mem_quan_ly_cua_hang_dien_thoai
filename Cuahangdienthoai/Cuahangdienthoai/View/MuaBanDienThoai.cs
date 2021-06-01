@@ -34,8 +34,8 @@ namespace Cuahangdienthoai.View
             tbMaDT.Text = dt.MaDT.ToString();
             tbSoLuong.Text = dt.SLHienTai.ToString();
             tbPtGiamGia.Text = ((float)Convert.ToDouble(dt.C_GiamGia)).ToString() + "%";
-            tbGiaBan.Text = ((float)Convert.ToDouble(dt.GiaBanDT)).ToString();
-            tbGiaNhap.Text = ((float)Convert.ToDouble(dt.GiaNhapDT)).ToString();
+            tbGiaBan.Text = String.Format("{0:#,0 đ}", dt.GiaBanDT);
+            tbGiaNhap.Text = String.Format("{0:#,0 đ}", dt.GiaNhapDT);
             richTextBox1.Text = dt.ThongSoKyThuat;
             pictureBox1.Tag = dt.Anh;
             string path = MenuFor.path + dt.Anh;

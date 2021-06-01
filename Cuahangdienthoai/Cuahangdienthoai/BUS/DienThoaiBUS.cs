@@ -22,6 +22,14 @@ namespace Cuahangdienthoai.BUS
         public void ThemDT(string TenDT, float GiaNhap, float GiaBan, float PtGiamGia, float DiemDanhGia
             , int LuotDanhGia, string ThongSoKyThuat, string Anh)
         {
+            try
+            {
+                Image test = new Bitmap(MenuFor.path + Anh);
+            }
+            catch (Exception)
+            {
+                Anh = "Loi.png";
+            }
             DienThoaiDAL.Instance.ThemDT(TenDT, GiaNhap, GiaBan, PtGiamGia, DiemDanhGia, LuotDanhGia, ThongSoKyThuat, Anh);
         }
         public DienThoai TimDTByMaDT(int MaDT)
@@ -58,6 +66,14 @@ namespace Cuahangdienthoai.BUS
         public bool SuaDT(int MaDT, string TenDT, float PtGiamGia, float DiemDanhGia
             , int LuotDanhGia, string ThongSoKyThuat, string Anh, float GiaBan, float GiaNhap)
         {
+            try
+            {
+                Image test = new Bitmap(MenuFor.path + Anh);
+            }
+            catch (Exception)
+            {
+                Anh = "Loi.png";
+            }
             return DienThoaiDAL.Instance.SuaDT(MaDT, TenDT, PtGiamGia, DiemDanhGia, LuotDanhGia, ThongSoKyThuat, Anh, GiaBan, GiaNhap);
         }
         public DienThoaiViewFormBan DTGioHang(int MaDT, int SoLuong)
