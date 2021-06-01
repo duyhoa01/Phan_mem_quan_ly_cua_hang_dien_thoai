@@ -87,6 +87,7 @@
             this.pnSanPham = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.lbSoLuong = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -97,7 +98,7 @@
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
-            this.lbSoLuong = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnThongTin.SuspendLayout();
             this.pnHangNhap.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -812,6 +813,20 @@
             this.panel23.Size = new System.Drawing.Size(554, 31);
             this.panel23.TabIndex = 23;
             // 
+            // lbSoLuong
+            // 
+            this.lbSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbSoLuong.AutoSize = true;
+            this.lbSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.lbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.ForeColor = System.Drawing.Color.Red;
+            this.lbSoLuong.Location = new System.Drawing.Point(88, 9);
+            this.lbSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Size = new System.Drawing.Size(16, 17);
+            this.lbSoLuong.TabIndex = 2;
+            this.lbSoLuong.Text = "0";
+            // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -939,19 +954,17 @@
             this.thuDong1.Size = new System.Drawing.Size(1134, 34);
             this.thuDong1.TabIndex = 25;
             // 
-            // lbSoLuong
+            // label8
             // 
-            this.lbSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbSoLuong.AutoSize = true;
-            this.lbSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.lbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLuong.ForeColor = System.Drawing.Color.Red;
-            this.lbSoLuong.Location = new System.Drawing.Point(88, 9);
-            this.lbSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(16, 17);
-            this.lbSoLuong.TabIndex = 2;
-            this.lbSoLuong.Text = "0";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Silver;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(2, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 16);
+            this.label8.TabIndex = 108;
+            this.label8.Text = "Nhập Hàng";
             // 
             // HoaDonNhapForm
             // 
@@ -959,6 +972,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1134, 728);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.pnSanPham);
             this.Controls.Add(this.pnThongTin);
             this.Controls.Add(this.thuDong1);
@@ -1003,6 +1017,7 @@
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1074,5 +1089,6 @@
         private User_Control.Lich lich1;
         private System.Windows.Forms.DataGridView dataGridViewGioHang;
         private System.Windows.Forms.Label lbSoLuong;
+        private System.Windows.Forms.Label label8;
     }
 }

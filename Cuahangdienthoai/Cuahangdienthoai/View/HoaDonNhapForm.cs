@@ -75,7 +75,7 @@ namespace Cuahangdienthoai.View
                 dt.MaSP = item.MaDT;
                 dt.TenDT = item.TenDT;
                 dt.SL = item.SoLuong;
-                dt.Gia = String.Format("{0:          0,0 đ}", item.GiaNhap);
+                dt.Gia = String.Format("{0:          #,0 đ}", item.GiaNhap);
                 dt.Gia2 = "";
                 dt.LinkAnh = path + item.LinkAnh;
                 dt.xemThongTin += DienThoai_DoubleClick;
@@ -142,7 +142,7 @@ namespace Cuahangdienthoai.View
         {
             DienThoai dt = DienThoaiBUS.Instance.TimDTByMaDT(MaDT);
             ThanhToan += (float)(dt.GiaNhapDT) * ChenhLechSL;
-            tbTongTien.Text = String.Format("{0:0,0 đ}", ThanhToan);
+            tbTongTien.Text = String.Format("{0:#,0 đ}", ThanhToan);
         }
         private void SetGUI()
         {
@@ -152,8 +152,8 @@ namespace Cuahangdienthoai.View
             dataGridViewGioHang.Columns[3].HeaderText = "Đơn Giá";
             dataGridViewGioHang.Columns[4].HeaderText = "Số Lượng";
             dataGridViewGioHang.Columns[5].HeaderText = "Thành Tiền";
-            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "#,0 đ";
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)

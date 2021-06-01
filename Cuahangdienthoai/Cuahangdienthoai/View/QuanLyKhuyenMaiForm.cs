@@ -47,20 +47,42 @@ namespace Cuahangdienthoai.View
         private void LuuKhuyenMai(Object sender, EventArgs e)
         {
             User_Control.KhuyenMaii km = sender as User_Control.KhuyenMaii;
-            if(km.Tag == null)
+            //if(km.Tag == null)
+            //{
+            //    lbSoLuong.Text = (Convert.ToInt32(lbSoLuong.Text) + 1).ToString();
+            //    KhuyenMaiBUS.Instance.ThemKM(km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax);
+            //    LoadListKM();
+            //}
+            //else
+            //{
+            //    if(!KhuyenMaiBUS.Instance.SuaKM(Convert.ToInt32(km.Tag), km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax))
+            //    {
+            //        MessageBox.Show("Khuyến mãi này đã áp dụng cho các hóa đơn trước" +
+            //                        "\nKhông thể thay đổi các giá trị mốc hóa đơn áp dụng, % giảm giá và giảm giá tối đa");
+            //        LoadListKM();
+            //    }
+            //}
+            try
             {
-                lbSoLuong.Text = (Convert.ToInt32(lbSoLuong.Text) + 1).ToString();
-                KhuyenMaiBUS.Instance.ThemKM(km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax);
-                LoadListKM();
-            }
-            else
-            {
-                if(!KhuyenMaiBUS.Instance.SuaKM(Convert.ToInt32(km.Tag), km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax))
+                if (km.Tag == null)
                 {
-                    MessageBox.Show("Khuyến mãi này đã áp dụng cho các hóa đơn trước" +
-                                    "\nKhông thể thay đổi các giá trị mốc hóa đơn áp dụng, % giảm giá và giảm giá tối đa");
+                    lbSoLuong.Text = (Convert.ToInt32(lbSoLuong.Text) + 1).ToString();
+                    KhuyenMaiBUS.Instance.ThemKM(km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax);
                     LoadListKM();
                 }
+                else
+                {
+                    if (!KhuyenMaiBUS.Instance.SuaKM(Convert.ToInt32(km.Tag), km.TenKM, km.NgayBatDau, km.NgayKetThuc, km.TienToiThieu, Convert.ToDecimal(km.PtGiamGia), km.GiamGiaMax))
+                    {
+                        MessageBox.Show("Khuyến mãi này đã áp dụng cho các hóa đơn trước" +
+                                        "\nKhông thể thay đổi các giá trị mốc hóa đơn áp dụng, % giảm giá và giảm giá tối đa");
+                        LoadListKM();
+                    }
+                }
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show("Dữ liệu không hợp lệ\n" + e1.Message);
             }
         }
         private void LoadListKM()

@@ -61,7 +61,7 @@ namespace Cuahangdienthoai.DAL
                 return Convert.ToInt32(db.USP_GetMaBillMoi().FirstOrDefault());
             }
         }
-        public void ThemHoaDonChiTiet(int MaHD, int MaDT, int SoLuong, float DonGia, float GiamGia, float LoiNhuan, float ThanhTien)
+        public void ThemHoaDonChiTiet(int MaHD, int MaDT, int SoLuong, float DonGia, float PtGiamGia, float LoiNhuan, float ThanhTien)
         {
             using (PBL3Entities db = new PBL3Entities())
             {
@@ -71,7 +71,7 @@ namespace Cuahangdienthoai.DAL
                     MaDT = MaDT,
                     DonGia = DonGia,
                     SoLuong = SoLuong,
-                    GiamGia = GiamGia,
+                    GiamGia = PtGiamGia,
                     LoiNhuan = LoiNhuan,
                     ThanhTien = ThanhTien,
                 });

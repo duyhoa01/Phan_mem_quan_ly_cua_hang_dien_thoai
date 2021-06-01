@@ -37,10 +37,10 @@ namespace Cuahangdienthoai.BUS
             float DonGia = (float)dt.GiaBanDT;
             float TongTienNhap = (float)dt.GiaNhapDT * SoLuong;
             float TongTien = (float)dt.GiaBanDT * SoLuong;
-            float GiamGia = (float)dt.C_GiamGia;
-            float ThanhTien = TongTien - (GiamGia / 100 * (float)dt.GiaBanDT)*SoLuong;
+            float PtGiamGia = (float)dt.C_GiamGia;
+            float ThanhTien = TongTien - ((float)dt.C_GiamGia / 100 * (float)dt.GiaBanDT)*SoLuong;
             float LoiNhuan = ThanhTien - TongTienNhap;
-            DonHangDAL.Instance.ThemHoaDonChiTiet(MaHD, MaDT, SoLuong, DonGia, GiamGia, LoiNhuan, ThanhTien);
+            DonHangDAL.Instance.ThemHoaDonChiTiet(MaHD, MaDT, SoLuong, DonGia, PtGiamGia, LoiNhuan, ThanhTien);
         }
         public void XoaHoaDonChiTiet(int MaHD)
         {
@@ -68,13 +68,13 @@ namespace Cuahangdienthoai.BUS
                     MaDT = item.MaDT,
                     TenDT = dt.TenDienThoai,
                     GiaBan = (float)dt.GiaBanDT,
-                    PtGiamGia = (float)dt.C_GiamGia,
-                    GiamCon = (float)(dt.GiaBanDT*(100 - dt.C_GiamGia)/100),
+                    PtGiamGia = (float)item.GiamGia,
+                    GiamCon = (float)(dt.GiaBanDT*(100 - item.GiamGia) /100),
                     GiaNhap = (float)dt.GiaNhapDT,
                     SoLuong = (int)item.SoLuong,
                     TongTien = (float)(dt.GiaBanDT*item.SoLuong),
-                    TongGiam = (float)(dt.GiaBanDT*(dt.C_GiamGia)/100 * item.SoLuong),
-                    ThanhTien = (float)(dt.GiaBanDT * (100 - dt.C_GiamGia) / 100 * item.SoLuong),
+                    TongGiam = (float)(dt.GiaBanDT*(item.GiamGia) /100 * item.SoLuong),
+                    ThanhTien = (float)(dt.GiaBanDT * (100 - item.GiamGia) / 100 * item.SoLuong),
                     TongGiaNhap = (float)(dt.GiaNhapDT*item.SoLuong),
                 }); 
             }

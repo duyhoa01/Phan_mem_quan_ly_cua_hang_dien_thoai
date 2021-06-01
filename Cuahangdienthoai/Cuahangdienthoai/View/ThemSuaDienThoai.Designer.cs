@@ -41,7 +41,6 @@ namespace Cuahangdienthoai.View
             this.tbTenDT = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.thuDong1 = new Cuahangdienthoai.ThuDong();
             this.btChonAnh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,6 +66,7 @@ namespace Cuahangdienthoai.View
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.thuDong1 = new Cuahangdienthoai.ThuDong();
             this.groupBox1.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -164,7 +164,7 @@ namespace Cuahangdienthoai.View
             this.panel12.Controls.Add(this.tbTenDT);
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Location = new System.Drawing.Point(115, 377);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(267, 32);
             this.panel12.TabIndex = 1;
@@ -185,7 +185,7 @@ namespace Cuahangdienthoai.View
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel13.Location = new System.Drawing.Point(0, 29);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(267, 3);
             this.panel13.TabIndex = 18;
@@ -200,15 +200,6 @@ namespace Cuahangdienthoai.View
             this.label1.Size = new System.Drawing.Size(103, 16);
             this.label1.TabIndex = 29;
             this.label1.Text = "Tên Điện Thoại:";
-            // 
-            // thuDong1
-            // 
-            this.thuDong1.BackColor = System.Drawing.Color.Silver;
-            this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.thuDong1.Location = new System.Drawing.Point(0, 0);
-            this.thuDong1.Name = "thuDong1";
-            this.thuDong1.Size = new System.Drawing.Size(980, 29);
-            this.thuDong1.TabIndex = 26;
             // 
             // btChonAnh
             // 
@@ -257,7 +248,7 @@ namespace Cuahangdienthoai.View
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(444, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 32);
             this.button1.TabIndex = 40;
@@ -277,7 +268,7 @@ namespace Cuahangdienthoai.View
             this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
             this.btHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btHuy.Location = new System.Drawing.Point(331, 10);
-            this.btHuy.Margin = new System.Windows.Forms.Padding(2);
+            this.btHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(80, 32);
             this.btHuy.TabIndex = 39;
@@ -291,7 +282,7 @@ namespace Cuahangdienthoai.View
             this.panel4.Controls.Add(this.tbGiaNhap);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(115, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(267, 32);
             this.panel4.TabIndex = 40;
@@ -313,7 +304,7 @@ namespace Cuahangdienthoai.View
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 29);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(267, 3);
             this.panel5.TabIndex = 18;
@@ -323,7 +314,7 @@ namespace Cuahangdienthoai.View
             this.panel6.Controls.Add(this.tbGiaBan);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Location = new System.Drawing.Point(115, 47);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(267, 32);
             this.panel6.TabIndex = 41;
@@ -338,14 +329,14 @@ namespace Cuahangdienthoai.View
             this.tbGiaBan.Name = "tbGiaBan";
             this.tbGiaBan.Size = new System.Drawing.Size(267, 15);
             this.tbGiaBan.TabIndex = 19;
-            this.tbGiaBan.TextChanged += new System.EventHandler(this.tbGiaNhap_TextChanged);
+            this.tbGiaBan.TextChanged += new System.EventHandler(this.tbGiaBan_TextChanged);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 29);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(267, 3);
             this.panel7.TabIndex = 18;
@@ -355,7 +346,7 @@ namespace Cuahangdienthoai.View
             this.panel8.Controls.Add(this.tbDiemDanhGia);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Location = new System.Drawing.Point(317, 91);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(65, 32);
             this.panel8.TabIndex = 42;
@@ -376,7 +367,7 @@ namespace Cuahangdienthoai.View
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel9.Location = new System.Drawing.Point(0, 29);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(65, 3);
             this.panel9.TabIndex = 18;
@@ -386,7 +377,7 @@ namespace Cuahangdienthoai.View
             this.panel10.Controls.Add(this.tbLuotDanhGia);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Location = new System.Drawing.Point(115, 140);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(267, 32);
             this.panel10.TabIndex = 43;
@@ -406,7 +397,7 @@ namespace Cuahangdienthoai.View
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(0, 29);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(267, 3);
             this.panel11.TabIndex = 18;
@@ -416,7 +407,7 @@ namespace Cuahangdienthoai.View
             this.panel14.Controls.Add(this.numericUpDown1);
             this.panel14.Controls.Add(this.panel15);
             this.panel14.Location = new System.Drawing.Point(114, 91);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(71, 32);
             this.panel14.TabIndex = 44;
@@ -437,7 +428,7 @@ namespace Cuahangdienthoai.View
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel15.Location = new System.Drawing.Point(0, 29);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(71, 3);
             this.panel15.TabIndex = 18;
@@ -447,7 +438,7 @@ namespace Cuahangdienthoai.View
             this.panel2.Controls.Add(this.tbMaDT);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(115, 423);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 32);
             this.panel2.TabIndex = 42;
@@ -468,7 +459,7 @@ namespace Cuahangdienthoai.View
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 29);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(267, 3);
             this.panel3.TabIndex = 18;
@@ -501,12 +492,22 @@ namespace Cuahangdienthoai.View
             this.panel16.Size = new System.Drawing.Size(394, 185);
             this.panel16.TabIndex = 99;
             // 
+            // thuDong1
+            // 
+            this.thuDong1.BackColor = System.Drawing.Color.DarkGray;
+            this.thuDong1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.thuDong1.Location = new System.Drawing.Point(0, 0);
+            this.thuDong1.Name = "thuDong1";
+            this.thuDong1.Size = new System.Drawing.Size(980, 29);
+            this.thuDong1.TabIndex = 100;
+            // 
             // ThemSuaDienThoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 657);
+            this.Controls.Add(this.thuDong1);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
@@ -516,7 +517,6 @@ namespace Cuahangdienthoai.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btChonAnh);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.thuDong1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(100, 100);
             this.Name = "ThemSuaDienThoai";
@@ -561,7 +561,6 @@ namespace Cuahangdienthoai.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btChonAnh;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ThuDong thuDong1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btHuy;
@@ -585,5 +584,6 @@ namespace Cuahangdienthoai.View
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel16;
+        private ThuDong thuDong1;
     }
 }

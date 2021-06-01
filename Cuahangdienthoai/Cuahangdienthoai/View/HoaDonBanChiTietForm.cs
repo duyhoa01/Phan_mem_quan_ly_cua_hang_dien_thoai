@@ -63,12 +63,12 @@ namespace Cuahangdienthoai.View
         }
         private void HienThiKQ()
         {
-            tbTongTien.Text = String.Format("{0:0,0 đ}", TongTien);
-            tbTongGiamSP.Text = String.Format("{0:0,0 đ}", TongGiamSP);
-            tbTongGiamKM.Text = String.Format("{0:0,0 đ}", TongGiamKM);
-            tbThanhTien.Text = String.Format("{0:0,0 đ}", ThanhTien);
-            tbTongTienNhap.Text = String.Format("{0:0,0 đ}", TongGiaNhap);
-            tbLoiNhuan.Text = String.Format("{0:0,0 đ}", LoiNhuan);
+            tbTongTien.Text = String.Format("{0:#,0 đ}", TongTien);
+            tbTongGiamSP.Text = String.Format("{0:#,0 đ}", TongGiamSP);
+            tbTongGiamKM.Text = String.Format("{0:#,0 đ}", TongGiamKM);
+            tbThanhTien.Text = String.Format("{0:#,0 đ}", ThanhTien);
+            tbTongTienNhap.Text = String.Format("{0:#,0 đ}", TongGiaNhap);
+            tbLoiNhuan.Text = String.Format("{0:#,0 đ}", LoiNhuan);
         }
         private void SetHienThiDataGridView()
         {
@@ -86,24 +86,24 @@ namespace Cuahangdienthoai.View
             dataGridViewGioHang.Columns[10].HeaderText = "Thành Tiền";
             dataGridViewGioHang.Columns[11].HeaderText = "Tổng Nhập";
             dataGridViewGioHang.Columns[0].Width = 80;
-            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "#,0 đ";
             dataGridViewGioHang.Columns[4].DefaultCellStyle.Format = "0.## '%'";
-            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[6].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[8].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[9].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[10].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewGioHang.Columns[11].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[6].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[8].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[9].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[10].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewGioHang.Columns[11].DefaultCellStyle.Format = "#,0 đ";
             //khuyenmai
             dataGridViewKhuyenMai.Columns[1].HeaderText = "Tên KM";
             dataGridViewKhuyenMai.Columns[2].HeaderText = "Hóa Đơn Từ";
             dataGridViewKhuyenMai.Columns[3].HeaderText = "% Giảm Giá";
             dataGridViewKhuyenMai.Columns[4].HeaderText = "Tối Đa";
             dataGridViewKhuyenMai.Columns[5].HeaderText = "Được Giảm";
-            dataGridViewKhuyenMai.Columns[2].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewKhuyenMai.Columns[2].DefaultCellStyle.Format = "#,0 đ";
             dataGridViewKhuyenMai.Columns[3].DefaultCellStyle.Format = "0.##'%'";
-            dataGridViewKhuyenMai.Columns[4].DefaultCellStyle.Format = "0,0 đ";
-            dataGridViewKhuyenMai.Columns[5].DefaultCellStyle.Format = "0,0 đ";
+            dataGridViewKhuyenMai.Columns[4].DefaultCellStyle.Format = "#,0 đ";
+            dataGridViewKhuyenMai.Columns[5].DefaultCellStyle.Format = "#,0 đ";
             dataGridViewKhuyenMai.Columns[0].Visible = false;
             dataGridViewKhuyenMai.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 9, FontStyle.Bold);
             dataGridViewKhuyenMai.DefaultCellStyle.ForeColor = Color.Black;
