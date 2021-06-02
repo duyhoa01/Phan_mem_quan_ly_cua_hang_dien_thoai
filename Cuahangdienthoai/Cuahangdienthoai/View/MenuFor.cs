@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace Cuahangdienthoai.View
 {
     public partial class MenuFor : Form
     {
         private int ID;
+        public static string path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName + @"\AnhDT\";
         public MenuFor(int ID)
         {
             InitializeComponent();
             this.ID = ID;
+            btBanHang_Click(btBanHang, EventArgs.Empty);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

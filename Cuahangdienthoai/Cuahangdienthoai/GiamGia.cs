@@ -18,7 +18,7 @@ namespace Cuahangdienthoai
         public Nullable<int> maHoaDon { get; set; }
         public Nullable<int> maKhuyenMai { get; set; }
     
-        public virtual HoaDonBanHang HoaDonBanHang { get; set; }
         public virtual KhuyenMai KhuyenMai { get; set; }
+        public virtual HoaDonBanHang HoaDonBanHang { get; set; }
     }
 }

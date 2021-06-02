@@ -128,7 +128,7 @@
             this.btKhoHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btKhoHang.Size = new System.Drawing.Size(138, 28);
             this.btKhoHang.TabIndex = 2;
-            this.btKhoHang.Text = "Kho hàng";
+            this.btKhoHang.Text = "Kho Hàng";
             this.btKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btKhoHang.UseVisualStyleBackColor = false;
             this.btKhoHang.Click += new System.EventHandler(this.btKhoHang_Click);

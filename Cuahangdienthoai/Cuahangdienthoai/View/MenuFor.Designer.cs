@@ -62,7 +62,6 @@
             // 
             // panelmenu
             // 
-            this.panelmenu.AutoScroll = true;
             this.panelmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(114)))), ((int)(((byte)(174)))));
             this.panelmenu.Controls.Add(this.flowLayoutPanel1);
             this.panelmenu.Controls.Add(this.button1);
@@ -275,7 +274,7 @@
             this.panel1.Location = new System.Drawing.Point(225, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(942, 41);
+            this.panel1.Size = new System.Drawing.Size(975, 41);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -283,7 +282,7 @@
             // 
             this.picRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picRestore.Image = ((System.Drawing.Image)(resources.GetObject("picRestore.Image")));
-            this.picRestore.Location = new System.Drawing.Point(899, 2);
+            this.picRestore.Location = new System.Drawing.Point(932, 2);
             this.picRestore.Margin = new System.Windows.Forms.Padding(2);
             this.picRestore.Name = "picRestore";
             this.picRestore.Size = new System.Drawing.Size(19, 20);
@@ -297,7 +296,7 @@
             // 
             this.picMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMinimize.Image = ((System.Drawing.Image)(resources.GetObject("picMinimize.Image")));
-            this.picMinimize.Location = new System.Drawing.Point(876, 2);
+            this.picMinimize.Location = new System.Drawing.Point(909, 2);
             this.picMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(19, 20);
@@ -310,7 +309,7 @@
             // 
             this.picMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMaximize.Image = ((System.Drawing.Image)(resources.GetObject("picMaximize.Image")));
-            this.picMaximize.Location = new System.Drawing.Point(899, 2);
+            this.picMaximize.Location = new System.Drawing.Point(932, 2);
             this.picMaximize.Margin = new System.Windows.Forms.Padding(2);
             this.picMaximize.Name = "picMaximize";
             this.picMaximize.Size = new System.Drawing.Size(19, 20);
@@ -323,7 +322,7 @@
             // 
             this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
-            this.picClose.Location = new System.Drawing.Point(923, 2);
+            this.picClose.Location = new System.Drawing.Point(956, 2);
             this.picClose.Margin = new System.Windows.Forms.Padding(2);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(19, 20);
@@ -347,18 +346,19 @@
             // 
             // panelMain
             // 
+            this.panelMain.BackColor = System.Drawing.Color.White;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(225, 41);
             this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(942, 674);
+            this.panelMain.Size = new System.Drawing.Size(975, 674);
             this.panelMain.TabIndex = 2;
             // 
             // MenuFor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 715);
+            this.ClientSize = new System.Drawing.Size(1200, 715);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelmenu);
