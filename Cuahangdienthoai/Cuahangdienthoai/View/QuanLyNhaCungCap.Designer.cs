@@ -31,15 +31,15 @@ namespace Cuahangdienthoai
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhaCungCap));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btTimKiêm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btTimKiêm = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
@@ -59,6 +59,43 @@ namespace Cuahangdienthoai
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1236, 87);
             this.panel3.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(936, 17);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(272, 40);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Thêm Thêm Nhà Cung Cấp";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btTimKiêm
+            // 
+            this.btTimKiêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btTimKiêm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTimKiêm.FlatAppearance.BorderSize = 0;
+            this.btTimKiêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiêm.ForeColor = System.Drawing.Color.White;
+            this.btTimKiêm.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiêm.Image")));
+            this.btTimKiêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTimKiêm.Location = new System.Drawing.Point(33, 17);
+            this.btTimKiêm.Name = "btTimKiêm";
+            this.btTimKiêm.Size = new System.Drawing.Size(133, 40);
+            this.btTimKiêm.TabIndex = 13;
+            this.btTimKiêm.Text = "Tìm kiếm";
+            this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btTimKiêm.UseVisualStyleBackColor = false;
+            this.btTimKiêm.Click += new System.EventHandler(this.btTimKiêm_Click);
             // 
             // button3
             // 
@@ -93,6 +130,42 @@ namespace Cuahangdienthoai
             this.panel8.Size = new System.Drawing.Size(1236, 100);
             this.panel8.TabIndex = 18;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(85)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(6, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 40);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Cập Nhật";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(297, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 40);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Xóa Nha Cung Cap";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -111,75 +184,7 @@ namespace Cuahangdienthoai
             this.button6.TabIndex = 2;
             this.button6.Text = "Sáp Xếp";
             this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(85)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(6, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 40);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Cập Nhật";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(297, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 40);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Xóa Tai Khoản";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(936, 17);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(272, 40);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Thêm Thêm Nhà Cung Cấp";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // btTimKiêm
-            // 
-            this.btTimKiêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btTimKiêm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTimKiêm.FlatAppearance.BorderSize = 0;
-            this.btTimKiêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTimKiêm.ForeColor = System.Drawing.Color.White;
-            this.btTimKiêm.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiêm.Image")));
-            this.btTimKiêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiêm.Location = new System.Drawing.Point(33, 17);
-            this.btTimKiêm.Name = "btTimKiêm";
-            this.btTimKiêm.Size = new System.Drawing.Size(133, 40);
-            this.btTimKiêm.TabIndex = 13;
-            this.btTimKiêm.Text = "Tìm kiếm";
-            this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btTimKiêm.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dataGridView1
             // 

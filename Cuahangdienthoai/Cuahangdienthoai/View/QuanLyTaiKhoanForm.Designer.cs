@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyTaiKhoanForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -66,12 +68,23 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.dataGridView1);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(10, 143);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1280, 687);
             this.panel7.TabIndex = 6;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1274, 578);
+            this.dataGridView1.TabIndex = 18;
             // 
             // panel8
             // 
@@ -194,6 +207,7 @@
             this.button4.Text = "Thêm Tai Khoản";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btTimKiêm
             // 
@@ -211,6 +225,7 @@
             this.btTimKiêm.Text = "Tìm kiếm";
             this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiêm.UseVisualStyleBackColor = false;
+            this.btTimKiêm.Click += new System.EventHandler(this.btTimKiêm_Click);
             // 
             // button3
             // 
@@ -243,6 +258,7 @@
             this.Text = "QuanLyTaiKhoanForm";
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -268,5 +284,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -80,6 +80,9 @@
     <Compile Include="Account.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="BUS\NhaCungCapBUS.cs" />
+    <Compile Include="DAL\NhaCungCapDAL.cs" />
+    <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DienThoai.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
@@ -166,6 +169,12 @@
     </Compile>
     <Compile Include="USP_GetPhone_Result.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\NhaCungCapds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NhaCungCapds.Designer.cs">
+      <DependentUpon>NhaCungCapds.cs</DependentUpon>
     </Compile>
     <Compile Include="View\QuanLyNhaCungCap.cs">
       <SubType>Form</SubType>
@@ -289,6 +298,9 @@
     <Compile Include="View\ThemDonHangForm.Designer.cs">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\NhaCungCapds.resx">
+      <DependentUpon>NhaCungCapds.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\QuanLyNhaCungCap.resx">
       <DependentUpon>QuanLyNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,9 +396,6 @@
     <None Include="ICON\samsung-galaxy-s21.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AnhDT\" />
-    <Folder Include="BUS\" />
-    <Folder Include="DAL\" />
     <Folder Include="User Control\" />
   </ItemGroup>
   <ItemGroup>

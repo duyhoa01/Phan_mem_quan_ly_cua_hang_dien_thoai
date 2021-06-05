@@ -17,6 +17,16 @@ namespace Cuahangdienthoai.View
             InitializeComponent();
         }
 
-       
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PBL3Entities db = new PBL3Entities();
+            dataGridView1.DataSource = db.KhuyenMais.Where(p => p.ngayketthuc >= DateTime.Now).Select(p => p).ToList();
+        }
+
+        private void btTimKiêm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
