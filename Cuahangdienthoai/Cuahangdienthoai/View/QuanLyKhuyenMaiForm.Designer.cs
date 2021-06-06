@@ -40,6 +40,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btReload = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btReload);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel5);
@@ -161,6 +163,26 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(958, 502);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
+            // btReload
+            // 
+            this.btReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btReload.FlatAppearance.BorderSize = 0;
+            this.btReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReload.ForeColor = System.Drawing.Color.White;
+            this.btReload.Image = ((System.Drawing.Image)(resources.GetObject("btReload.Image")));
+            this.btReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btReload.Location = new System.Drawing.Point(838, 12);
+            this.btReload.Margin = new System.Windows.Forms.Padding(2);
+            this.btReload.Name = "btReload";
+            this.btReload.Size = new System.Drawing.Size(87, 32);
+            this.btReload.TabIndex = 15;
+            this.btReload.Text = "Reload";
+            this.btReload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btReload.UseVisualStyleBackColor = false;
+            this.btReload.Click += new System.EventHandler(this.btReload_Click);
+            // 
             // QuanLyKhuyenMaiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,5 +216,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btThemKM;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btReload;
     }
 }

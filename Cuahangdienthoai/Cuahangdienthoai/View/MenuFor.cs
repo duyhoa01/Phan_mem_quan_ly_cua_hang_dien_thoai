@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 using Cuahangdienthoai.DAL;
 using Cuahangdienthoai.BUS;
 
@@ -18,11 +19,16 @@ namespace Cuahangdienthoai.View
         private Account account;
         private List<string> listquyen;
         public MenuFor(Account account)
+        private int ID;
+        public static string path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName + @"\AnhDT\";
+        public MenuFor(int ID)
         {
             InitializeComponent();
             this.account = account;
             this.listquyen = TaiKhoanBUS.Instance.GetPhanQuyenTaiKhoan(account);
             SetGui();
+            this.ID = ID;
+            btBanHang_Click(btBanHang, EventArgs.Empty);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

@@ -42,11 +42,23 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=5.6.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.6.4\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,6 +74,14 @@
     <Compile Include="Account.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="BUS\DienThoaiBUS.cs" />
+    <Compile Include="BUS\DonHangBUS.cs" />
+    <Compile Include="BUS\KhuyenMaiBUS.cs" />
+    <Compile Include="BUS\NhapHangBUS.cs" />
+    <Compile Include="DAL\DienThoaiDAL.cs" />
+    <Compile Include="DAL\DonHangDAL.cs" />
+    <Compile Include="DAL\KhuyenMaiDAL.cs" />
+    <Compile Include="DAL\NhapHangDAL.cs" />
     <Compile Include="BUS\BaoCaoBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="DAL\BaoCaoDAL.cs" />
@@ -69,6 +89,14 @@
     <Compile Include="DienThoai.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\DienThoaiFormMua.cs" />
+    <Compile Include="DTO\DienThoaiViewFormBan.cs" />
+    <Compile Include="DTO\DienThoaiViewFormKhoHang.cs" />
+    <Compile Include="DTO\DienThoaiViewFormSP.cs" />
+    <Compile Include="DTO\DienThoaiViewHDBCT.cs" />
+    <Compile Include="DTO\HoaDonBanViewFormHDBCT.cs" />
+    <Compile Include="DTO\HoaDonNhap.cs" />
+    <Compile Include="DTO\KMApDung.cs" />
     <Compile Include="DTO\DoanhThuLoiNhuan.cs" />
     <Compile Include="GiamGia.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
@@ -148,9 +176,6 @@
     <Compile Include="USP_GetKhachHangList_Result.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
-    <Compile Include="USP_GetPhoneList_Result.cs">
-      <DependentUpon>QLCHDT.tt</DependentUpon>
-    </Compile>
     <Compile Include="USP_GetPhone_Result.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
@@ -197,6 +222,12 @@
     </Compile>
     <Compile Include="View\MenuFor.Designer.cs">
       <DependentUpon>MenuFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MuaBanDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MuaBanDienThoai.Designer.cs">
+      <DependentUpon>MuaBanDienThoai.cs</DependentUpon>
     </Compile>
     <Compile Include="View\NhapKhoForm.cs">
       <SubType>Form</SubType>
@@ -258,6 +289,18 @@
     <Compile Include="View\ThemDonHangForm.Designer.cs">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ThemSuaDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThemSuaDienThoai.Designer.cs">
+      <DependentUpon>ThemSuaDienThoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThongTinDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThongTinDienThoai.Designer.cs">
+      <DependentUpon>ThongTinDienThoai.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\BaoCaoKinhDoanhForm.resx">
       <DependentUpon>BaoCaoKinhDoanhForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +328,9 @@
     </Compile>
     <EmbeddedResource Include="View\MenuFor.resx">
       <DependentUpon>MenuFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MuaBanDienThoai.resx">
+      <DependentUpon>MuaBanDienThoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NhapKhoForm.resx">
       <DependentUpon>NhapKhoForm.cs</DependentUpon>
@@ -315,6 +361,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\KhoHangForm.resx">
       <DependentUpon>KhoHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThemSuaDienThoai.resx">
+      <DependentUpon>ThemSuaDienThoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThongTinDienThoai.resx">
+      <DependentUpon>ThongTinDienThoai.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

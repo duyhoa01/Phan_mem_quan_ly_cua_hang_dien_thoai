@@ -64,10 +64,10 @@ namespace User_Control
                 button16.BackColor = value;
             }
         }
-        public DateTime SetDateTime(string date)
+        public void SetDateTime(DateTime date)
         {
-            String[] time = date.Split('/');
-            return new DateTime(Convert.ToInt32(time[2]), Convert.ToInt32(time[1]), Convert.ToInt32(time[0]));
+            monthCalendar1.SelectionStart =date;
+            XuLy();
         }
     }
 }
