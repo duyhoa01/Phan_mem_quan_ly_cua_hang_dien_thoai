@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using Cuahangdienthoai.View;
+using Cuahangdienthoai.BUS;
 
 namespace Cuahangdienthoai
 {
@@ -61,25 +62,25 @@ namespace Cuahangdienthoai
         {
             string userName = tbUser.Text;
             string password = tbPassword.Text;
-            /*if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("nhập đầy thông tin");
             }
-            else if (BLL_Usres.Instance.LoginBLL(userName, password) < 0)
+            else if (TaiKhoanBUS.Instance.GetAccountLogin(userName,password)==null)
             {
                 MessageBox.Show("username hoặc password không đúng");
                 tbPassword.Clear();
                 tbPassword.Focus();
             }
             else
-            {*/
-                MenuFor menuform = new MenuFor(1);
+            {
+                MenuFor menuform = new MenuFor(TaiKhoanBUS.Instance.GetAccountLogin(userName, password));
                 menuform.Show();
                 //menuform.FormClosed += this.Logout;
                 menuform.d += new MenuFor.MyDel(this.Logout);
                 this.Hide();
 
-            //}
+            }
         }
         private void Logout()
         {
