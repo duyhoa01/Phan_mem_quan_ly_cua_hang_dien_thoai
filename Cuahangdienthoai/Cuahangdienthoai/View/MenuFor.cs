@@ -18,16 +18,16 @@ namespace Cuahangdienthoai.View
     {
         private Account account;
         private List<string> listquyen;
-        public MenuFor(Account account)
-        private int ID;
+        //public MenuFor(Account account);
+        //private int ID;
         public static string path = Directory.GetParent((Directory.GetParent(Application.StartupPath)).FullName).FullName + @"\AnhDT\";
-        public MenuFor(int ID)
+        public MenuFor(Account account)
         {
             InitializeComponent();
             this.account = account;
             this.listquyen = TaiKhoanBUS.Instance.GetPhanQuyenTaiKhoan(account);
             SetGui();
-            this.ID = ID;
+            //this.ID = ID;
             btBanHang_Click(btBanHang, EventArgs.Empty);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
