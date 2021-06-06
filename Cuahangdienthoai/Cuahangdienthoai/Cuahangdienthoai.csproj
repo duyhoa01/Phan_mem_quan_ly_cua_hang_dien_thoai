@@ -62,9 +62,14 @@
     <Compile Include="Account.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="BUS\BaoCaoBUS.cs" />
+    <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="DAL\BaoCaoDAL.cs" />
+    <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DienThoai.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\DoanhThuLoiNhuan.cs" />
     <Compile Include="GiamGia.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
@@ -340,8 +345,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AnhDT\" />
-    <Folder Include="BUS\" />
-    <Folder Include="DAL\" />
     <Folder Include="User Control\" />
   </ItemGroup>
   <ItemGroup>

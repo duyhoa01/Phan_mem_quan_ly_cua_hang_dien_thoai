@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Cuahangdienthoai.DAL;
+using Cuahangdienthoai.BUS;
 
 namespace Cuahangdienthoai.View
 {
     public partial class MenuFor : Form
     {
-        private int ID;
-        public MenuFor(int ID)
+        private Account account;
+        private List<string> listquyen;
+        public MenuFor(Account account)
         {
             InitializeComponent();
-            this.ID = ID;
+            this.account = account;
+            this.listquyen = TaiKhoanBUS.Instance.GetPhanQuyenTaiKhoan(account);
+            SetGui();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -126,6 +131,37 @@ namespace Cuahangdienthoai.View
         private void button1_Click(object sender, EventArgs e)
         {
             this.AddForm(new QuanLyTaiKhoanForm());
+        }
+        public void SetGui()
+        {
+            if (!this.listquyen.Contains("BANHANG"))
+            {
+                btBanHang.Visible = false;
+            } 
+            if (!this.listquyen.Contains("KHOHANG"))
+            {
+                btKhoHang.Visible = false;
+            } 
+            //if (!this.listquyen.Contains("THUCHI"))
+            //{
+                btThuChi.Visible = false;
+            //} 
+            if (!this.listquyen.Contains("BAOCAO"))
+            {
+                btKinhDoanh.Visible = false;
+            } 
+            if (!this.listquyen.Contains("NHANVIEN"))
+            {
+                btNhanVien.Visible = false;
+            } 
+            if (!this.listquyen.Contains("TAIKHOAN"))
+            {
+                button1.Visible = false;
+            }
+            NhanVien nhanVien = TaiKhoanBUS.Instance.GetNhanVien(account);
+            pictureBoxAnh.Load("../../ICON/"+account.AnhAcc);
+            labelName.Text = nhanVien.TenNhanVien;
+            labelPosition.Text = nhanVien.ChucVu;
         }
     }
 }

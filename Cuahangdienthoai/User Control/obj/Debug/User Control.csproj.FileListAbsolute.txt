@@ -27,3 +27,21 @@ C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cua
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csprojAssemblyReference.cache
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CopyComplete
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\bin\Debug\User Control.dll.config
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\bin\Debug\User Control.dll
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\bin\Debug\User Control.pdb
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.dll
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.xml
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User Control.csprojAssemblyReference.cache
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User_Control.DienThoai.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User_Control.KhuyenMaii.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User_Control.Lich.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User_Control.Properties.Resources.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\Cuahangdienthoai.ThuDong.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.GenerateResource.cache
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User Control.csproj.CopyComplete
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User Control.dll
+C:\Users\DELL\OneDrive\Máy tính\PBL3\Cuahangdienthoai\User Control\obj\Debug\User Control.pdb
