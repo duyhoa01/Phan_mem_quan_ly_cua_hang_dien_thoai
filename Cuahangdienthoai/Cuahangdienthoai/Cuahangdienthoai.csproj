@@ -82,6 +82,10 @@
     <Compile Include="DAL\DonHangDAL.cs" />
     <Compile Include="DAL\KhuyenMaiDAL.cs" />
     <Compile Include="DAL\NhapHangDAL.cs" />
+    <Compile Include="BUS\BaoCaoBUS.cs" />
+    <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="DAL\BaoCaoDAL.cs" />
+    <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DienThoai.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
@@ -93,6 +97,7 @@
     <Compile Include="DTO\HoaDonBanViewFormHDBCT.cs" />
     <Compile Include="DTO\HoaDonNhap.cs" />
     <Compile Include="DTO\KMApDung.cs" />
+    <Compile Include="DTO\DoanhThuLoiNhuan.cs" />
     <Compile Include="GiamGia.cs">
       <DependentUpon>QLCHDT.tt</DependentUpon>
     </Compile>
@@ -392,6 +397,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AnhDT\" />
+    <Folder Include="User Control\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\User Control\User Control.csproj">
