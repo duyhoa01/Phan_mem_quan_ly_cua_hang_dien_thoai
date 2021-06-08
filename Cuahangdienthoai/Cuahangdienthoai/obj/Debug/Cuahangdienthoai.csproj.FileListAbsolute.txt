@@ -91,3 +91,9 @@ C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_
 C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.exe
 C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.pdb
 C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThongtinNV.resources
+C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanLyKhachHangForm.resources
+C:\Users\LENOVO\OneDrive\Desktop\PBL3\New folder\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThongTinKH.resources

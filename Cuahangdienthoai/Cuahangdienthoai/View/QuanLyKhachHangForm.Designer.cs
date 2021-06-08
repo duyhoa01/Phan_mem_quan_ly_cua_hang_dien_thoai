@@ -1,6 +1,6 @@
 ﻿namespace Cuahangdienthoai.View
 {
-    partial class QuanLyNhanVienForm
+    partial class QuanLyKhachHangForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhanVienForm));
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
+            this.dataGridViewKhachHang = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cbbSort = new System.Windows.Forms.ComboBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnSort = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnExel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnExel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKhachHang)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -93,9 +92,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(9, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -111,30 +109,30 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(51, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 20);
+            this.label1.Size = new System.Drawing.Size(177, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Thông tin nhân viên : ";
+            this.label1.Text = "Thông tin khách hàng : ";
             // 
-            // dataGridViewNhanVien
+            // dataGridViewKhachHang
             // 
-            this.dataGridViewNhanVien.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewNhanVien.Location = new System.Drawing.Point(1, 60);
-            this.dataGridViewNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
-            this.dataGridViewNhanVien.RowHeadersWidth = 51;
-            this.dataGridViewNhanVien.RowTemplate.Height = 24;
-            this.dataGridViewNhanVien.Size = new System.Drawing.Size(1178, 460);
-            this.dataGridViewNhanVien.TabIndex = 0;
+            this.dataGridViewKhachHang.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewKhachHang.Location = new System.Drawing.Point(1, 60);
+            this.dataGridViewKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewKhachHang.Name = "dataGridViewKhachHang";
+            this.dataGridViewKhachHang.RowHeadersWidth = 51;
+            this.dataGridViewKhachHang.RowTemplate.Height = 24;
+            this.dataGridViewKhachHang.Size = new System.Drawing.Size(1178, 460);
+            this.dataGridViewKhachHang.TabIndex = 0;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel10.Controls.Add(this.pictureBox1);
             this.panel10.Controls.Add(this.label1);
-            this.panel10.Controls.Add(this.dataGridViewNhanVien);
+            this.panel10.Controls.Add(this.dataGridViewKhachHang);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(20, 0);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -178,25 +176,6 @@
             this.button6.Size = new System.Drawing.Size(200, 2);
             this.button6.TabIndex = 1;
             this.button6.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(800, 20);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(119, 39);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel6
             // 
@@ -245,7 +224,6 @@
             this.btnSort.TabIndex = 18;
             this.btnSort.Text = "Sắp xếp";
             this.btnSort.UseVisualStyleBackColor = false;
-            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // panel12
             // 
@@ -270,26 +248,6 @@
             this.panel5.Size = new System.Drawing.Size(1220, 100);
             this.panel5.TabIndex = 12;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAdd.FlatAppearance.BorderSize = 2;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(891, 14);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(172, 38);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Thêm nhân viên";
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -301,27 +259,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1220, 60);
             this.panel4.TabIndex = 11;
-            // 
-            // btnExel
-            // 
-            this.btnExel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
-            this.btnExel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExel.FlatAppearance.BorderSize = 0;
-            this.btnExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExel.ForeColor = System.Drawing.Color.White;
-            this.btnExel.Image = ((System.Drawing.Image)(resources.GetObject("btnExel.Image")));
-            this.btnExel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExel.Location = new System.Drawing.Point(1069, 13);
-            this.btnExel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExel.Name = "btnExel";
-            this.btnExel.Size = new System.Drawing.Size(130, 39);
-            this.btnExel.TabIndex = 0;
-            this.btnExel.Text = "Xuất Exel";
-            this.btnExel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExel.UseVisualStyleBackColor = false;
-            this.btnExel.Click += new System.EventHandler(this.btnExel_Click);
             // 
             // panel1
             // 
@@ -350,27 +287,6 @@
             this.panel2.Size = new System.Drawing.Size(40, 830);
             this.panel2.TabIndex = 8;
             // 
-            // btnDel
-            // 
-            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDel.BackColor = System.Drawing.Color.Red;
-            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
-            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDel.Location = new System.Drawing.Point(1152, 735);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(87, 39);
-            this.btnDel.TabIndex = 16;
-            this.btnDel.Text = "Xóa";
-            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDel.UseVisualStyleBackColor = false;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -380,7 +296,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Image = global::Cuahangdienthoai.Properties.Resources.iconfinder_multimedia_06_2849830;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(1044, 735);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -390,9 +306,86 @@
             this.btnEdit.Text = "Sửa";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // QuanLyNhanVienForm
+            // btnDel
+            // 
+            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDel.BackColor = System.Drawing.Color.Red;
+            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Image = global::Cuahangdienthoai.Properties.Resources.huyicon2;
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.Location = new System.Drawing.Point(1152, 735);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(87, 39);
+            this.btnDel.TabIndex = 16;
+            this.btnDel.Text = "Xóa";
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDel.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::Cuahangdienthoai.Properties.Resources.iconfinder_search_4092559;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(800, 20);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(119, 39);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAdd.FlatAppearance.BorderSize = 2;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::Cuahangdienthoai.Properties.Resources.iconfinder_notes_add_103662;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(891, 14);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(172, 38);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Thêm khách hàng";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnExel
+            // 
+            this.btnExel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
+            this.btnExel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExel.FlatAppearance.BorderSize = 0;
+            this.btnExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExel.ForeColor = System.Drawing.Color.White;
+            this.btnExel.Image = global::Cuahangdienthoai.Properties.Resources.iconXuatFile;
+            this.btnExel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExel.Location = new System.Drawing.Point(1069, 13);
+            this.btnExel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExel.Name = "btnExel";
+            this.btnExel.Size = new System.Drawing.Size(130, 39);
+            this.btnExel.TabIndex = 0;
+            this.btnExel.Text = "Xuất Exel";
+            this.btnExel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExel.UseVisualStyleBackColor = false;
+            // 
+            // QuanLyKhachHangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -407,10 +400,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "QuanLyNhanVienForm";
+            this.Name = "QuanLyKhachHangForm";
             this.Text = "QuanLyNhanVienForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKhachHang)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -429,7 +422,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
+        private System.Windows.Forms.DataGridView dataGridViewKhachHang;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox tbSearch;

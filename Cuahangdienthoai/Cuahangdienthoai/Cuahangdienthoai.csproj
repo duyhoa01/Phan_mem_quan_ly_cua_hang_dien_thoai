@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,7 +56,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BLL_CHDT.cs" />
     <Compile Include="CBBItem.cs" />
+    <Compile Include="CHDT.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHDT.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHDT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHDT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHDT.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_CHDT.cs" />
+    <Compile Include="DienThoai.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GiamGia.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonBanHang.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonChiTiet.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonNhap.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonNhapChiTiet.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhuyenMai.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhaCungCap.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhomQuyen.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhomQuyenChiTiet.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhanQuyenLienKet.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CHDT.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\BaoCaoKinhDoanhForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +169,12 @@
     <Compile Include="View\QuanLyDonHangForm.Designer.cs">
       <DependentUpon>QuanLyDonHangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\QuanLyKhachHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QuanLyKhachHangForm.Designer.cs">
+      <DependentUpon>QuanLyKhachHangForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\QuanlykhoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +217,12 @@
     <Compile Include="View\ThemDonHangForm.Designer.cs">
       <DependentUpon>ThemDonHangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ThongTinKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThongTinKH.Designer.cs">
+      <DependentUpon>ThongTinKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ThongtinNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +260,9 @@
     <EmbeddedResource Include="View\QuanLyDonHangForm.resx">
       <DependentUpon>QuanLyDonHangForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyKhachHangForm.resx">
+      <DependentUpon>QuanLyKhachHangForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\QuanlykhoForm.resx">
       <DependentUpon>QuanlykhoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,9 +284,20 @@
     <EmbeddedResource Include="View\KhoHangForm.resx">
       <DependentUpon>KhoHangForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ThongTinKH.resx">
+      <DependentUpon>ThongTinKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ThongtinNV.resx">
       <DependentUpon>ThongtinNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="CHDT.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CHDT.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CHDT.edmx.diagram">
+      <DependentUpon>CHDT.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -229,6 +326,28 @@
       <Project>{9AB287A2-3974-418F-9A9A-F5D33D095FD9}</Project>
       <Name>User Control</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CHDT.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CHDT.Context.cs</LastGenOutput>
+      <DependentUpon>CHDT.edmx</DependentUpon>
+    </Content>
+    <Content Include="CHDT.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CHDT.edmx</DependentUpon>
+      <LastGenOutput>CHDT.cs</LastGenOutput>
+    </Content>
+    <None Include="ICON\huyicon2.png" />
+    <None Include="ICON\huyIcon3.png" />
+    <None Include="ICON\iconfinder_multimedia-06_2849830.png" />
+    <None Include="ICON\setting.png" />
+    <None Include="ICON\iconfinder_search_4092559.png" />
+    <None Include="ICON\iconXuatFile.png" />
+    <None Include="ICON\iconfinder_notes_add_103662.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
