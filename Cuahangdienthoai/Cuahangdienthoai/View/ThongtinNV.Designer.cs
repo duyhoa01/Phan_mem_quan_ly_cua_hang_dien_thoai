@@ -118,7 +118,7 @@ namespace Cuahangdienthoai.View
             this.tbMaNV.Location = new System.Drawing.Point(123, 26);
             this.tbMaNV.Name = "tbMaNV";
             this.tbMaNV.Size = new System.Drawing.Size(183, 22);
-            this.tbMaNV.TabIndex = 0;
+            this.tbMaNV.TabIndex = 100;
             // 
             // btCancel
             // 

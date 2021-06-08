@@ -34,28 +34,28 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewsanpham = new System.Windows.Forms.DataGridView();
+            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tbTimKiem = new System.Windows.Forms.TextBox();
+            this.tbSearch = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.btTimKiêm = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbSort = new System.Windows.Forms.ComboBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSort = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewsanpham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -115,26 +115,26 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Thông tin nhân viên : ";
             // 
-            // dataGridViewsanpham
+            // dataGridViewNhanVien
             // 
-            this.dataGridViewsanpham.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewsanpham.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewsanpham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewsanpham.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewsanpham.Location = new System.Drawing.Point(1, 60);
-            this.dataGridViewsanpham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewsanpham.Name = "dataGridViewsanpham";
-            this.dataGridViewsanpham.RowHeadersWidth = 51;
-            this.dataGridViewsanpham.RowTemplate.Height = 24;
-            this.dataGridViewsanpham.Size = new System.Drawing.Size(1178, 460);
-            this.dataGridViewsanpham.TabIndex = 0;
+            this.dataGridViewNhanVien.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewNhanVien.Location = new System.Drawing.Point(1, 60);
+            this.dataGridViewNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
+            this.dataGridViewNhanVien.RowHeadersWidth = 51;
+            this.dataGridViewNhanVien.RowTemplate.Height = 24;
+            this.dataGridViewNhanVien.Size = new System.Drawing.Size(1178, 460);
+            this.dataGridViewNhanVien.TabIndex = 0;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel10.Controls.Add(this.pictureBox1);
             this.panel10.Controls.Add(this.label1);
-            this.panel10.Controls.Add(this.dataGridViewsanpham);
+            this.panel10.Controls.Add(this.dataGridViewNhanVien);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(20, 0);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -155,16 +155,16 @@
             this.panel7.Size = new System.Drawing.Size(1220, 530);
             this.panel7.TabIndex = 13;
             // 
-            // tbTimKiem
+            // tbSearch
             // 
-            this.tbTimKiem.BackColor = System.Drawing.SystemColors.Control;
-            this.tbTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTimKiem.Location = new System.Drawing.Point(2, 16);
-            this.tbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbTimKiem.Name = "tbTimKiem";
-            this.tbTimKiem.Size = new System.Drawing.Size(195, 20);
-            this.tbTimKiem.TabIndex = 2;
+            this.tbSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.Location = new System.Drawing.Point(2, 16);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(195, 20);
+            this.tbSearch.TabIndex = 2;
             // 
             // button6
             // 
@@ -179,29 +179,29 @@
             this.button6.TabIndex = 1;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // btTimKiêm
+            // btnSearch
             // 
-            this.btTimKiêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btTimKiêm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTimKiêm.FlatAppearance.BorderSize = 0;
-            this.btTimKiêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTimKiêm.ForeColor = System.Drawing.Color.White;
-            this.btTimKiêm.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiêm.Image")));
-            this.btTimKiêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiêm.Location = new System.Drawing.Point(800, 20);
-            this.btTimKiêm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btTimKiêm.Name = "btTimKiêm";
-            this.btTimKiêm.Size = new System.Drawing.Size(119, 39);
-            this.btTimKiêm.TabIndex = 12;
-            this.btTimKiêm.Text = "Tìm kiếm";
-            this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btTimKiêm.UseVisualStyleBackColor = false;
-            this.btTimKiêm.Click += new System.EventHandler(this.btTimKiêm_Click);
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(800, 20);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(119, 39);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.Controls.Add(this.tbTimKiem);
+            this.panel6.Controls.Add(this.tbSearch);
             this.panel6.Controls.Add(this.button6);
             this.panel6.Location = new System.Drawing.Point(594, 21);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -209,16 +209,16 @@
             this.panel6.Size = new System.Drawing.Size(200, 38);
             this.panel6.TabIndex = 11;
             // 
-            // comboBox1
+            // cbbSort
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 9);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 24);
-            this.comboBox1.TabIndex = 16;
+            this.cbbSort.BackColor = System.Drawing.SystemColors.Control;
+            this.cbbSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbSort.FormattingEnabled = true;
+            this.cbbSort.Location = new System.Drawing.Point(5, 9);
+            this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbSort.Name = "cbbSort";
+            this.cbbSort.Size = new System.Drawing.Size(140, 24);
+            this.cbbSort.TabIndex = 16;
             // 
             // panel13
             // 
@@ -230,26 +230,26 @@
             this.panel13.Size = new System.Drawing.Size(148, 4);
             this.panel13.TabIndex = 18;
             // 
-            // button5
+            // btnSort
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(1079, 20);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 39);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Sắp xếp";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnSort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSort.FlatAppearance.BorderSize = 0;
+            this.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSort.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSort.ForeColor = System.Drawing.Color.White;
+            this.btnSort.Location = new System.Drawing.Point(1079, 20);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(100, 39);
+            this.btnSort.TabIndex = 18;
+            this.btnSort.Text = "Sắp xếp";
+            this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.comboBox1);
+            this.panel12.Controls.Add(this.cbbSort);
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Location = new System.Drawing.Point(925, 21);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -259,9 +259,9 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.btnSort);
             this.panel5.Controls.Add(this.panel12);
-            this.panel5.Controls.Add(this.btTimKiêm);
+            this.panel5.Controls.Add(this.btnSearch);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(40, 90);
@@ -270,31 +270,31 @@
             this.panel5.Size = new System.Drawing.Size(1220, 100);
             this.panel5.TabIndex = 12;
             // 
-            // button2
+            // btnAdd
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(891, 14);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thêm nhân viên";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAdd.FlatAppearance.BorderSize = 2;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(891, 14);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(172, 38);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Thêm nhân viên";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnAdd);
+            this.panel4.Controls.Add(this.btnExel);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(40, 30);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -302,26 +302,26 @@
             this.panel4.Size = new System.Drawing.Size(1220, 60);
             this.panel4.TabIndex = 11;
             // 
-            // button1
+            // btnExel
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1069, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Xuất Exel";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
+            this.btnExel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExel.FlatAppearance.BorderSize = 0;
+            this.btnExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExel.ForeColor = System.Drawing.Color.White;
+            this.btnExel.Image = ((System.Drawing.Image)(resources.GetObject("btnExel.Image")));
+            this.btnExel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExel.Location = new System.Drawing.Point(1069, 13);
+            this.btnExel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExel.Name = "btnExel";
+            this.btnExel.Size = new System.Drawing.Size(130, 39);
+            this.btnExel.TabIndex = 0;
+            this.btnExel.Text = "Xuất Exel";
+            this.btnExel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExel.UseVisualStyleBackColor = false;
+            this.btnExel.Click += new System.EventHandler(this.btnExel_Click);
             // 
             // panel1
             // 
@@ -350,55 +350,55 @@
             this.panel2.Size = new System.Drawing.Size(40, 830);
             this.panel2.TabIndex = 8;
             // 
-            // button4
+            // btnDel
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1152, 735);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 39);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Xóa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDel.BackColor = System.Drawing.Color.Red;
+            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.Location = new System.Drawing.Point(1152, 735);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(87, 39);
+            this.btnDel.TabIndex = 16;
+            this.btnDel.Text = "Xóa";
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // button3
+            // btnEdit
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1044, 735);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 39);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Sửa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(127)))), ((int)(((byte)(40)))));
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(1044, 735);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(102, 39);
+            this.btnEdit.TabIndex = 17;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // QuanLyNhanVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 830);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
@@ -410,7 +410,7 @@
             this.Name = "QuanLyNhanVienForm";
             this.Text = "QuanLyNhanVienForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewsanpham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -429,25 +429,25 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewsanpham;
+        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox tbTimKiem;
+        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btTimKiêm;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbSort;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnExel;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
