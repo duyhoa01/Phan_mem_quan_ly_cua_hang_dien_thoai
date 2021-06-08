@@ -20,7 +20,12 @@ namespace Cuahangdienthoai.View
         }
         public void LoadListAcc()
         {
-            dataGridViewAcc.DataSource = TaiKhoanBUS.Instance.GetListAcc();
+            dataGridViewAcc.DataSource = TaiKhoanBUS.Instance.GetListAcc(tbTimKiem.Text);
+        }
+
+        private void btTimKiêm_Click(object sender, EventArgs e)
+        {
+            LoadListAcc();
         }
     }
 }

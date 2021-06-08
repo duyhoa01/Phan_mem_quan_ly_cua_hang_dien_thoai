@@ -30,7 +30,7 @@ namespace Cuahangdienthoai.View
         private void ShowListDonHang()
         { 
             dataGridViewDonHang.DataSource = DonHangBUS.Instance.GetListDonHang(tbTimKiem.Text, lich1.GetDateTime(), lich2.GetDateTime());
-            AddLinkColumn();
+            if (accLogin.LoaiTK == "Admin") AddLinkColumn();
             double TongTien = 0;
             double TongLoiNhuan = 0;
             foreach (DataGridViewRow item in dataGridViewDonHang.Rows)
@@ -212,8 +212,9 @@ namespace Cuahangdienthoai.View
                     ws.Cells.Style.Font.Name = "Calibri";
                     ws.Cells.Style.Font.Size = 12;
                     var countColHeader = dataGridViewDonHang.ColumnCount - 1;
+                    DateTime NgayKT = (lich2.GetDateTime() > DateTime.Now) ? DateTime.Now : lich2.GetDateTime();
                     ws.Cells[1, 1].Value = "Thống kê đơn hàng từ ngày " + lich1.GetDateTime().ToShortDateString()
-                                            + " đến " + lich2.GetDateTime().ToShortDateString();
+                                            + " đến " + NgayKT.ToShortDateString();
                     ws.Cells[1, 1, 1, countColHeader].Style.Font.Color.SetColor(Color.Red);
                     ws.Cells[1, 1, 1, countColHeader].Style.Font.Size = 15;
                     ws.Cells[1, 1, 1, countColHeader].Merge = true;

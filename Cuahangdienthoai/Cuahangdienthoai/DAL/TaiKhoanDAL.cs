@@ -70,11 +70,14 @@ namespace Cuahangdienthoai.DAL
                 return l.FirstOrDefault();
             }
         }
-        public object GetListAcc()
+        public object GetListAcc(string TimKiem)
         {
             using (PBL3Entities db = new PBL3Entities())
             {
-                return db.Accounts.Select(p => new
+                return db.Accounts.Where(p => p.MaNhanVien.ToString().Contains(TimKiem)
+                                                || p.TenDangNhap.Contains(TimKiem)
+                                                || p.NhanVien.TenNhanVien.Contains(TimKiem))
+                    .Select(p => new
                 {
                     p.MaNhanVien,
                     p.TenDangNhap,

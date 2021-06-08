@@ -27,6 +27,7 @@ namespace Cuahangdienthoai.View
             InitializeComponent();
             this.accLogin = acc;
             tbMaNV.Text = accLogin.MaNhanVien.ToString();
+            tbNVBan.Text = TaiKhoanBUS.Instance.GetNhanVien(acc).TenNhanVien;
             tbCMND_Check.AppendText("CMND");
             dataGridViewGioHang.DataSource = listGioHang;
             SetGUI();
@@ -213,7 +214,7 @@ namespace Cuahangdienthoai.View
         }
         private void TaoHoaDon()
         {
-            DonHangBUS.Instance.ThemDonHang(1, 17, DateTime.Now, ThanhTien, TongLoiNhuan);
+            DonHangBUS.Instance.ThemDonHang(Convert.ToInt32(tbMaNV.Text), 17, DateTime.Now, ThanhTien, TongLoiNhuan);
         }
         private void ThemKHMoi()
         {

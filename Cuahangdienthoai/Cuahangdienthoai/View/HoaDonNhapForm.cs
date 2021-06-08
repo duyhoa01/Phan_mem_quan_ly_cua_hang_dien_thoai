@@ -22,6 +22,7 @@ namespace Cuahangdienthoai.View
             InitializeComponent();
             this.accLogin = acc;
             tbMaNhanVien.Text = acc.MaNhanVien.ToString();
+            TbTenNV.Text = TaiKhoanBUS.Instance.GetNhanVien(acc).TenNhanVien;
             lich1.BackColor = this.TransparencyKey;
             pnNhaCungCap.Location = new Point(0, 210);
             dataGridViewGioHang.DataSource = listGioHang;
@@ -172,7 +173,7 @@ namespace Cuahangdienthoai.View
         {
             DateTime NgayNhap = new DateTime(lich1.GetDateTime().Year, lich1.GetDateTime().Month, lich1.GetDateTime().Day
                                                 , DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-            NhapHangBUS.Instance.ThemNhapHang(1, 1, NgayNhap, ThanhToan);
+            NhapHangBUS.Instance.ThemNhapHang(Convert.ToInt32(tbMaNhanVien.Text), 1, NgayNhap, ThanhToan);
         }
         private void ThemNCCMoi()
         {
