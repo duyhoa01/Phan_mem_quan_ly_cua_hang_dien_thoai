@@ -165,5 +165,11 @@ namespace Cuahangdienthoai.View
                 MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
             }
         }
+
+        private void btShow_Click(object sender, EventArgs e)
+        {
+            tbTimKiem.Text = "";
+            ShowListPhone();
+        }
     }
 }

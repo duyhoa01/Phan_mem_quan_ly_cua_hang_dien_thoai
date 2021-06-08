@@ -282,7 +282,7 @@
             this.btTimKiêm.Text = "Tìm kiếm";
             this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiêm.UseVisualStyleBackColor = false;
-            this.btTimKiêm.Click += new System.EventHandler(this.btThongKe_Click);
+            this.btTimKiêm.Click += new System.EventHandler(this.btTimKiêm_Click);
             // 
             // panel6
             // 

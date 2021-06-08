@@ -70,6 +70,20 @@ namespace Cuahangdienthoai.DAL
                 return l.FirstOrDefault();
             }
         }
+        public object GetListAcc()
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                return db.Accounts.Select(p => new
+                {
+                    p.MaNhanVien,
+                    p.TenDangNhap,
+                    p.LoaiTK,
+                    p.NhanVien.TenNhanVien,
+                    p.EmailKhoiPhuc,
+                }).ToList();
+            }
+        }
 
     }
 }

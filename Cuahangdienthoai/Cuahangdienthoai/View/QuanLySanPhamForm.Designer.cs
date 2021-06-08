@@ -248,7 +248,7 @@
             this.btShow.TabIndex = 18;
             this.btShow.Text = "Show";
             this.btShow.UseVisualStyleBackColor = false;
-            this.btShow.Click += new System.EventHandler(this.btTimKiêm_Click);
+            this.btShow.Click += new System.EventHandler(this.btShow_Click);
             // 
             // panel12
             // 

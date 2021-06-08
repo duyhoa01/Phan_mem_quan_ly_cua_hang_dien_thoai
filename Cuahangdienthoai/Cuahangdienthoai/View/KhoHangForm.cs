@@ -48,6 +48,7 @@ namespace Cuahangdienthoai.View
 
         private void btShow_Click(object sender, EventArgs e)
         {
+            tbTimKiem.Text = "";
             LoadListDT();
         }
 
@@ -163,6 +164,19 @@ namespace Cuahangdienthoai.View
             {
                 MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
             }
+        }
+
+        private void btTop10_Click(object sender, EventArgs e)
+        {
+            tbTimKiem.Text = "";
+            cbPhanKhuc.SelectedIndex = 0;
+            cbSapXep.SelectedIndex = 0;
+            dataGridViewsanpham.DataSource = DienThoaiBUS.Instance.GetListTop10DTFormKhoHang();
+        }
+
+        private void btTimKiêm_Click(object sender, EventArgs e)
+        {
+            LoadListDT();
         }
     }
 }

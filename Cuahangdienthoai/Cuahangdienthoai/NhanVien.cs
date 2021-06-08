@@ -17,9 +17,9 @@ namespace Cuahangdienthoai
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanVien()
         {
-            this.Accounts = new HashSet<Account>();
             this.HoaDonNhaps = new HashSet<HoaDonNhap>();
             this.HoaDonBanHangs = new HashSet<HoaDonBanHang>();
+            this.Accounts = new HashSet<Account>();
         }
     
         public int MaNhanVien { get; set; }
@@ -32,10 +32,10 @@ namespace Cuahangdienthoai
         public string ChucVu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDonNhap> HoaDonNhaps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDonBanHang> HoaDonBanHangs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Account> Accounts { get; set; }
     }
 }

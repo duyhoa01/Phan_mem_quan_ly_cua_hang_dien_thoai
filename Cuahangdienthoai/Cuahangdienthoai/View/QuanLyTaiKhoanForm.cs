@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cuahangdienthoai.BUS;
 
 namespace Cuahangdienthoai.View
 {
@@ -15,6 +16,11 @@ namespace Cuahangdienthoai.View
         public QuanLyTaiKhoanForm()
         {
             InitializeComponent();
+            LoadListAcc();
+        }
+        public void LoadListAcc()
+        {
+            dataGridViewAcc.DataSource = TaiKhoanBUS.Instance.GetListAcc();
         }
     }
 }

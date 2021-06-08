@@ -68,6 +68,7 @@ namespace Cuahangdienthoai.View
         }
         private void btThongKe_Click(object sender, EventArgs e)
         {
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -154,6 +155,7 @@ namespace Cuahangdienthoai.View
                     break;
             }
             lich2.SetDateTime(lich1.GetDateTime().Date.AddDays(6));
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -163,6 +165,7 @@ namespace Cuahangdienthoai.View
             lich1.SetDateTime(dauthang);
             DateTime cuoithang = dauthang.AddMonths(1).AddDays(-1);
             lich2.SetDateTime(cuoithang);
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -175,6 +178,7 @@ namespace Cuahangdienthoai.View
             DateTime cuoiquy = dauquy.AddMonths(3).AddDays(-1);
             lich1.SetDateTime(dauquy);
             lich2.SetDateTime(cuoiquy);
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -265,6 +269,11 @@ namespace Cuahangdienthoai.View
             {
                 MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
             }
+        }
+
+        private void btTimKiêm_Click(object sender, EventArgs e)
+        {
+            ShowListDonHang();
         }
     }
 }

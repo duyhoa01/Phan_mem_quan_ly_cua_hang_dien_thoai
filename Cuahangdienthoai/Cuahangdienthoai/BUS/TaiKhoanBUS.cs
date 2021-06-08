@@ -34,5 +34,9 @@ namespace Cuahangdienthoai.BUS
         {
             return TaiKhoanDAL.Instance.GetNhanVien(account);
         }
+        public object GetListAcc()
+        {
+            return TaiKhoanDAL.Instance.GetListAcc();
+        }
     }
 }
