@@ -14,11 +14,14 @@ namespace Cuahangdienthoai.View
 {
     public partial class HoaDonNhapForm : Form
     {
+        private Account accLogin;
         private double ThanhToan = 0;
         private List<DienThoaiFormMua> listGioHang = new List<DienThoaiFormMua>();
-        public HoaDonNhapForm()
+        public HoaDonNhapForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
+            tbMaNhanVien.Text = acc.MaNhanVien.ToString();
             lich1.BackColor = this.TransparencyKey;
             pnNhaCungCap.Location = new Point(0, 210);
             dataGridViewGioHang.DataSource = listGioHang;

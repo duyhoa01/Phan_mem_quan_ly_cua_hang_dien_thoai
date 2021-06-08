@@ -14,6 +14,7 @@ namespace Cuahangdienthoai.View
 {
     public partial class ThemDonHangForm : Form
     {
+        private Account accLogin;
         private List<DienThoaiViewFormBan> listGioHang = new List<DienThoaiViewFormBan>();
         private double TongTien = 0;
         private double TongGiamSP = 0;
@@ -21,9 +22,11 @@ namespace Cuahangdienthoai.View
         private double ThanhTien = 0;
         private double TongLoiNhuan;
         private double TongTienNhap;
-        public ThemDonHangForm()
+        public ThemDonHangForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
+            tbMaNV.Text = accLogin.MaNhanVien.ToString();
             tbCMND_Check.AppendText("CMND");
             dataGridViewGioHang.DataSource = listGioHang;
             SetGUI();

@@ -116,12 +116,12 @@ namespace Cuahangdienthoai.View
 
         private void btBanHang_Click(object sender, EventArgs e)
         {
-            this.AddForm(new QuanlybanhangFrom());
+            this.AddForm(new QuanlybanhangFrom(this.account));
         }
 
         private void btKhoHang_Click(object sender, EventArgs e)
         {
-            this.AddForm(new QuanlykhoForm());
+            this.AddForm(new QuanlykhoForm(this.account));
         }
 
         private void btKinhDoanh_Click(object sender, EventArgs e)

@@ -18,9 +18,11 @@ namespace Cuahangdienthoai.View
     public partial class NhapKhoForm : Form
     {
         private bool load = false;
-        public NhapKhoForm()
+        private Account accLogin;
+        public NhapKhoForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
             SetGUI();
             ShowListDonHang();
             SetDatagridview();
@@ -36,7 +38,7 @@ namespace Cuahangdienthoai.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form f = new HoaDonNhapForm();
+            Form f = new HoaDonNhapForm(this.accLogin);
             f.ShowDialog();
             ShowListDonHang();
         }
@@ -111,15 +113,18 @@ namespace Cuahangdienthoai.View
 
         private void dataGridViewDonHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-            DateTime NgayNhap = Convert.ToDateTime(dataGridViewDonHang.SelectedRows[0].Cells["Value"].Value);
-            string TenNV = dataGridViewDonHang.SelectedRows[0].Cells["TenNhanVien"].Value.ToString();
-            string TenNCC = dataGridViewDonHang.SelectedRows[0].Cells["TenNhaCungCap"].Value.ToString();
-            double TongTienNhap = Convert.ToDouble(dataGridViewDonHang.SelectedRows[0].Cells["TongTienNhap"].Value);
-            int MaNV = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhanVien"].Value);
-            int MaNCC = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhaCungCap"].Value);
-            HoaDonNhapChiTiet f = new HoaDonNhapChiTiet(MaHD, MaNV, MaNCC, TenNV, TenNCC, NgayNhap, TongTienNhap);
-            f.Show();
+            if(dataGridViewDonHang.SelectedRows.Count == 1)
+            {
+                int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                DateTime NgayNhap = Convert.ToDateTime(dataGridViewDonHang.SelectedRows[0].Cells["Value"].Value);
+                string TenNV = dataGridViewDonHang.SelectedRows[0].Cells["TenNhanVien"].Value.ToString();
+                string TenNCC = dataGridViewDonHang.SelectedRows[0].Cells["TenNhaCungCap"].Value.ToString();
+                double TongTienNhap = Convert.ToDouble(dataGridViewDonHang.SelectedRows[0].Cells["TongTienNhap"].Value);
+                int MaNV = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhanVien"].Value);
+                int MaNCC = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhaCungCap"].Value);
+                HoaDonNhapChiTiet f = new HoaDonNhapChiTiet(MaHD, MaNV, MaNCC, TenNV, TenNCC, NgayNhap, TongTienNhap);
+                f.Show();
+            }
         }
 
         private void btTuan_Click(object sender, EventArgs e)

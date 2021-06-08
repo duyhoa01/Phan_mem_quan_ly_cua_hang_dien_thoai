@@ -15,9 +15,11 @@ namespace Cuahangdienthoai.View
         QuanLySanPhamForm fsanpham;
         QuanLyDonHangForm fdonhang;
         QuanLyKhuyenMaiForm fkhuyenmai;
-        public QuanlybanhangFrom()
+        private Account accLogin;
+        public QuanlybanhangFrom(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
             button1_Click(fsanpham, EventArgs.Empty);
         }
 
@@ -59,7 +61,7 @@ namespace Cuahangdienthoai.View
         {
             if (fdonhang == null)
             {
-                fdonhang = new QuanLyDonHangForm();
+                fdonhang = new QuanLyDonHangForm(this.accLogin);
                 fdonhang.TopLevel = false;
                 fdonhang.Dock = DockStyle.Fill;
                 panelMain.Controls.Add(fdonhang);

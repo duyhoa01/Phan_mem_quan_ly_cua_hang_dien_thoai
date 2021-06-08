@@ -18,9 +18,11 @@ namespace Cuahangdienthoai.View
     public partial class QuanLyDonHangForm : Form
     {
         private bool load = false;
-        public QuanLyDonHangForm()
+        private Account accLogin;
+        public QuanLyDonHangForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
             SetGUI();
             ShowListDonHang();
             SetDatagridview();
@@ -63,7 +65,7 @@ namespace Cuahangdienthoai.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ThemDonHangForm themDonHangForm = new ThemDonHangForm();
+            ThemDonHangForm themDonHangForm = new ThemDonHangForm(this.accLogin);
             themDonHangForm.ShowDialog();
             ShowListDonHang();
         }
@@ -117,9 +119,12 @@ namespace Cuahangdienthoai.View
 
         private void dataGridViewDonHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-            HoaDonBanChiTietForm f = new HoaDonBanChiTietForm(MaHD);
-            f.Show();
+            if(dataGridViewDonHang.SelectedRows.Count ==1)
+            {
+                int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                HoaDonBanChiTietForm f = new HoaDonBanChiTietForm(MaHD);
+                f.Show();
+            }
         }
 
         private void btTuan_Click(object sender, EventArgs e)
