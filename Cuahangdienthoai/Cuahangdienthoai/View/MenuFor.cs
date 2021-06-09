@@ -165,7 +165,14 @@ namespace Cuahangdienthoai.View
                 button1.Visible = false;
             }
             NhanVien nhanVien = TaiKhoanBUS.Instance.GetNhanVien(account);
-            pictureBoxAnh.Load("../../ICON/"+account.AnhAcc);
+            try
+            {
+                pictureBoxAnh.Load("../../ICON/" + account.AnhAcc);
+            }
+            catch (Exception)
+            {
+
+            }
             labelName.Text = nhanVien.TenNhanVien;
             labelPosition.Text = nhanVien.ChucVu;
         }

@@ -384,7 +384,6 @@
             this.dataGridViewDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDonHang.Size = new System.Drawing.Size(913, 371);
             this.dataGridViewDonHang.TabIndex = 3;
-            this.dataGridViewDonHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
             this.dataGridViewDonHang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDonHang_CellDoubleClick);
             // 
             // pictureBox1
@@ -538,6 +537,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyDonHangForm";
             this.Text = "SanPham";
+            this.Load += new System.EventHandler(this.QuanLyDonHangForm_Load);
             this.VisibleChanged += new System.EventHandler(this.QuanLyDonHangForm_VisibleChanged);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

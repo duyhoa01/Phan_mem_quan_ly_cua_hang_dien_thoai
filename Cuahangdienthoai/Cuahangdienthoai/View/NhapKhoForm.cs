@@ -103,7 +103,7 @@ namespace Cuahangdienthoai.View
         private void dataGridViewDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewCell cell = sender as DataGridViewCell;
-            if (e.ColumnIndex == 0)
+            if (e.ColumnIndex == 0 && dataGridViewDonHang.SelectedRows.Count > 0)
             {
                 int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
                 NhapHangBUS.Instance.XoaHoaDonNhapChiTiet(MaHO);
@@ -275,6 +275,11 @@ namespace Cuahangdienthoai.View
         private void btTimKiêm_Click(object sender, EventArgs e)
         {
             ShowListDonHang();
+        }
+
+        private void NhapKhoForm_Load(object sender, EventArgs e)
+        {
+            if (accLogin.LoaiTK == "Admin") dataGridViewDonHang.CellContentClick += new DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
         }
     }
 }

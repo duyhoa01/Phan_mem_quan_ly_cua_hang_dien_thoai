@@ -30,7 +30,10 @@ namespace Cuahangdienthoai.View
         private void ShowListDonHang()
         { 
             dataGridViewDonHang.DataSource = DonHangBUS.Instance.GetListDonHang(tbTimKiem.Text, lich1.GetDateTime(), lich2.GetDateTime());
-            if (accLogin.LoaiTK == "Admin") AddLinkColumn();
+            if (accLogin.LoaiTK == "Admin")
+            {
+                AddLinkColumn();
+            }
             double TongTien = 0;
             double TongLoiNhuan = 0;
             foreach (DataGridViewRow item in dataGridViewDonHang.Rows)
@@ -107,8 +110,7 @@ namespace Cuahangdienthoai.View
 
         private void dataGridViewDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewCell cell = sender as DataGridViewCell;
-            if (e.ColumnIndex == 0)
+            if (e.ColumnIndex == 0 && dataGridViewDonHang.SelectedRows.Count > 0)
             {
                 int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
                 KhuyenMaiBUS.Instance.XoaKhuyenMaiApDungHD(MaHO);
@@ -120,7 +122,7 @@ namespace Cuahangdienthoai.View
 
         private void dataGridViewDonHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridViewDonHang.SelectedRows.Count ==1)
+            if(dataGridViewDonHang.SelectedRows.Count == 1)
             {
                 int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
                 HoaDonBanChiTietForm f = new HoaDonBanChiTietForm(MaHD);
@@ -277,6 +279,11 @@ namespace Cuahangdienthoai.View
         private void btTimKiêm_Click(object sender, EventArgs e)
         {
             ShowListDonHang();
+        }
+
+        private void QuanLyDonHangForm_Load(object sender, EventArgs e)
+        {
+            if(accLogin.LoaiTK == "Admin") dataGridViewDonHang.CellContentClick += new DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
         }
     }
 }
