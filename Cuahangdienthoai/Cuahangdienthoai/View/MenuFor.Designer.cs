@@ -253,14 +253,16 @@
             // 
             // pictureBoxAnh
             // 
+            this.pictureBoxAnh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxAnh.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAnh.Image")));
-            this.pictureBoxAnh.Location = new System.Drawing.Point(16, 10);
+            this.pictureBoxAnh.Location = new System.Drawing.Point(10, 8);
             this.pictureBoxAnh.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxAnh.Name = "pictureBoxAnh";
-            this.pictureBoxAnh.Size = new System.Drawing.Size(62, 59);
+            this.pictureBoxAnh.Size = new System.Drawing.Size(70, 70);
             this.pictureBoxAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAnh.TabIndex = 0;
             this.pictureBoxAnh.TabStop = false;
+            this.pictureBoxAnh.Click += new System.EventHandler(this.pictureBoxAnh_Click);
             // 
             // panel1
             // 

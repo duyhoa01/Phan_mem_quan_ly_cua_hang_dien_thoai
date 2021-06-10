@@ -39,8 +39,6 @@ namespace Cuahangdienthoai.View
             this.panel4 = new System.Windows.Forms.Panel();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.btOK = new System.Windows.Forms.Button();
-            this.btHuy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.cbbTenNV = new System.Windows.Forms.ComboBox();
@@ -54,11 +52,15 @@ namespace Cuahangdienthoai.View
             this.tbTenDangNhap = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
+            this.btOK = new System.Windows.Forms.Button();
+            this.btHuy = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel25.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTenForm
@@ -170,46 +172,6 @@ namespace Cuahangdienthoai.View
             this.button5.Size = new System.Drawing.Size(235, 2);
             this.button5.TabIndex = 1;
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // btOK
-            // 
-            this.btOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btOK.BackColor = System.Drawing.Color.Green;
-            this.btOK.FlatAppearance.BorderSize = 0;
-            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btOK.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOK.ForeColor = System.Drawing.Color.White;
-            this.btOK.Image = ((System.Drawing.Image)(resources.GetObject("btOK.Image")));
-            this.btOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btOK.Location = new System.Drawing.Point(286, 297);
-            this.btOK.Margin = new System.Windows.Forms.Padding(2);
-            this.btOK.Name = "btOK";
-            this.btOK.Size = new System.Drawing.Size(73, 32);
-            this.btOK.TabIndex = 40;
-            this.btOK.Text = "OK";
-            this.btOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btOK.UseVisualStyleBackColor = false;
-            this.btOK.Click += new System.EventHandler(this.btOK_Click);
-            // 
-            // btHuy
-            // 
-            this.btHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btHuy.BackColor = System.Drawing.Color.Red;
-            this.btHuy.FlatAppearance.BorderSize = 0;
-            this.btHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHuy.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHuy.ForeColor = System.Drawing.Color.White;
-            this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
-            this.btHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btHuy.Location = new System.Drawing.Point(186, 297);
-            this.btHuy.Margin = new System.Windows.Forms.Padding(2);
-            this.btHuy.Name = "btHuy";
-            this.btHuy.Size = new System.Drawing.Size(73, 32);
-            this.btHuy.TabIndex = 39;
-            this.btHuy.Text = "Hủy";
-            this.btHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btHuy.UseVisualStyleBackColor = false;
-            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
             // label3
             // 
@@ -362,16 +324,65 @@ namespace Cuahangdienthoai.View
             this.thuDong1.Size = new System.Drawing.Size(379, 29);
             this.thuDong1.TabIndex = 0;
             // 
+            // btOK
+            // 
+            this.btOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btOK.BackColor = System.Drawing.Color.Green;
+            this.btOK.FlatAppearance.BorderSize = 0;
+            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOK.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOK.ForeColor = System.Drawing.Color.White;
+            this.btOK.Image = ((System.Drawing.Image)(resources.GetObject("btOK.Image")));
+            this.btOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btOK.Location = new System.Drawing.Point(248, 10);
+            this.btOK.Margin = new System.Windows.Forms.Padding(2);
+            this.btOK.Name = "btOK";
+            this.btOK.Size = new System.Drawing.Size(73, 32);
+            this.btOK.TabIndex = 40;
+            this.btOK.Text = "OK";
+            this.btOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btOK.UseVisualStyleBackColor = false;
+            this.btOK.Click += new System.EventHandler(this.btOK_Click);
+            // 
+            // btHuy
+            // 
+            this.btHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btHuy.BackColor = System.Drawing.Color.Red;
+            this.btHuy.FlatAppearance.BorderSize = 0;
+            this.btHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHuy.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHuy.ForeColor = System.Drawing.Color.White;
+            this.btHuy.Image = ((System.Drawing.Image)(resources.GetObject("btHuy.Image")));
+            this.btHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btHuy.Location = new System.Drawing.Point(147, 10);
+            this.btHuy.Margin = new System.Windows.Forms.Padding(2);
+            this.btHuy.Name = "btHuy";
+            this.btHuy.Size = new System.Drawing.Size(73, 32);
+            this.btHuy.TabIndex = 39;
+            this.btHuy.Text = "Hủy";
+            this.btHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btHuy.UseVisualStyleBackColor = false;
+            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Bisque;
+            this.panel5.Controls.Add(this.btHuy);
+            this.panel5.Controls.Add(this.btOK);
+            this.panel5.Location = new System.Drawing.Point(19, 281);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(341, 50);
+            this.panel5.TabIndex = 64;
+            // 
             // ThemSuaTaiKhoanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(379, 343);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel25);
-            this.Controls.Add(this.btOK);
-            this.Controls.Add(this.btHuy);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label4);
@@ -395,6 +406,7 @@ namespace Cuahangdienthoai.View
             this.panel3.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,5 +438,6 @@ namespace Cuahangdienthoai.View
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.TextBox tbTenDangNhap;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel5;
     }
 }

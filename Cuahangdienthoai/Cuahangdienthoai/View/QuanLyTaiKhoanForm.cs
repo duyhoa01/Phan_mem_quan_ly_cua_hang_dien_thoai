@@ -57,7 +57,8 @@ namespace Cuahangdienthoai.View
             dataGridViewAcc.Columns["MaNhanVien"].HeaderText = "Mã Nhân Viên";
             dataGridViewAcc.Columns["TenDangNhap"].HeaderText = "Tên Đăng Nhập";
             dataGridViewAcc.Columns["LoaiTK"].HeaderText = "Loại Tài Khoản";
-            dataGridViewAcc.Columns["EmailKhoiPhuc"].HeaderText = "Email khôi phục";
+            dataGridViewAcc.Columns["EmailKhoiPhuc"].HeaderText = "Email Khôi Phục";
+            dataGridViewAcc.Columns["TenNhanVien"].HeaderText = "Tên Nhân Viên";
         }
 
         private void btXoa_Click(object sender, EventArgs e)

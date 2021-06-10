@@ -230,19 +230,23 @@ namespace Cuahangdienthoai.View
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            if(rdbKHMoi.Checked == true)
+            DialogResult dr = MessageBox.Show("Xác nhận Thanh toán!", "Thông báo", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
             {
-                ThemKHMoi();
+                if (rdbKHMoi.Checked == true)
+                {
+                    ThemKHMoi();
+                }
+                TaoHoaDon();
+                int MaHD = DonHangBUS.Instance.GetLastHD();
+                ThemKhuyenMaiApDungHD(MaHD);
+                foreach (DienThoaiViewFormBan item in listGioHang)
+                {
+                    DonHangBUS.Instance.ThemHoaDonChiTiet(MaHD, item.MaDT, item.SoLuong);
+                    DienThoaiBUS.Instance.XuLyBanDT(item.MaDT, item.SoLuong);
+                }
+                this.Close();
             }
-            TaoHoaDon();
-            int MaHD = DonHangBUS.Instance.GetLastHD();
-            ThemKhuyenMaiApDungHD(MaHD);
-            foreach (DienThoaiViewFormBan item in listGioHang)
-            {
-                DonHangBUS.Instance.ThemHoaDonChiTiet(MaHD, item.MaDT, item.SoLuong);
-                DienThoaiBUS.Instance.XuLyBanDT(item.MaDT, item.SoLuong);
-            }
-            this.Close();
         }
     }
 }

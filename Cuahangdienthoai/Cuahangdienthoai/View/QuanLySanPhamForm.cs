@@ -96,7 +96,7 @@ namespace Cuahangdienthoai.View
 
             if (string.IsNullOrEmpty(Path))
             {
-                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+                MessageBox.Show("Đường dẫn báo cáo không hợp lệ", "Lỗi");
                 return;
             }
 
@@ -158,11 +158,11 @@ namespace Cuahangdienthoai.View
                     Byte[] bin = p.GetAsByteArray();
                     File.WriteAllBytes(filePath, bin);
                 }
-                MessageBox.Show("Xuất excel thành công!");
+                MessageBox.Show("Xuất excel thành công!","Thành công");
             }
             catch (Exception ef)
             {
-                MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
+                MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message, "Lỗi");
             }
         }
 

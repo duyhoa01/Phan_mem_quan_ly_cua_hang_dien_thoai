@@ -188,10 +188,10 @@ namespace Cuahangdienthoai.View
             this.tbPtGiamGia.BackColor = System.Drawing.Color.White;
             this.tbPtGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPtGiamGia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbPtGiamGia.Enabled = false;
             this.tbPtGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPtGiamGia.Location = new System.Drawing.Point(0, 14);
             this.tbPtGiamGia.Name = "tbPtGiamGia";
+            this.tbPtGiamGia.ReadOnly = true;
             this.tbPtGiamGia.Size = new System.Drawing.Size(58, 15);
             this.tbPtGiamGia.TabIndex = 19;
             this.tbPtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -221,10 +221,10 @@ namespace Cuahangdienthoai.View
             this.tbSoLuong.BackColor = System.Drawing.Color.White;
             this.tbSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbSoLuong.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbSoLuong.Enabled = false;
             this.tbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSoLuong.Location = new System.Drawing.Point(0, 14);
             this.tbSoLuong.Name = "tbSoLuong";
+            this.tbSoLuong.ReadOnly = true;
             this.tbSoLuong.Size = new System.Drawing.Size(267, 15);
             this.tbSoLuong.TabIndex = 19;
             // 
@@ -264,10 +264,10 @@ namespace Cuahangdienthoai.View
             this.tbDonGia.BackColor = System.Drawing.Color.White;
             this.tbDonGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDonGia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbDonGia.Enabled = false;
             this.tbDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDonGia.Location = new System.Drawing.Point(0, 14);
             this.tbDonGia.Name = "tbDonGia";
+            this.tbDonGia.ReadOnly = true;
             this.tbDonGia.Size = new System.Drawing.Size(267, 15);
             this.tbDonGia.TabIndex = 19;
             // 
@@ -307,10 +307,10 @@ namespace Cuahangdienthoai.View
             this.tbLuotDanhGia.BackColor = System.Drawing.Color.White;
             this.tbLuotDanhGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLuotDanhGia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbLuotDanhGia.Enabled = false;
             this.tbLuotDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLuotDanhGia.Location = new System.Drawing.Point(0, 14);
             this.tbLuotDanhGia.Name = "tbLuotDanhGia";
+            this.tbLuotDanhGia.ReadOnly = true;
             this.tbLuotDanhGia.Size = new System.Drawing.Size(267, 15);
             this.tbLuotDanhGia.TabIndex = 19;
             // 
@@ -372,10 +372,10 @@ namespace Cuahangdienthoai.View
             this.tbDiemDanhGia.BackColor = System.Drawing.Color.White;
             this.tbDiemDanhGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDiemDanhGia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbDiemDanhGia.Enabled = false;
             this.tbDiemDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDiemDanhGia.Location = new System.Drawing.Point(0, 14);
             this.tbDiemDanhGia.Name = "tbDiemDanhGia";
+            this.tbDiemDanhGia.ReadOnly = true;
             this.tbDiemDanhGia.Size = new System.Drawing.Size(65, 15);
             this.tbDiemDanhGia.TabIndex = 19;
             this.tbDiemDanhGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -405,10 +405,10 @@ namespace Cuahangdienthoai.View
             this.tbMaDT.BackColor = System.Drawing.Color.White;
             this.tbMaDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMaDT.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbMaDT.Enabled = false;
             this.tbMaDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMaDT.Location = new System.Drawing.Point(0, 14);
             this.tbMaDT.Name = "tbMaDT";
+            this.tbMaDT.ReadOnly = true;
             this.tbMaDT.Size = new System.Drawing.Size(267, 15);
             this.tbMaDT.TabIndex = 19;
             // 
