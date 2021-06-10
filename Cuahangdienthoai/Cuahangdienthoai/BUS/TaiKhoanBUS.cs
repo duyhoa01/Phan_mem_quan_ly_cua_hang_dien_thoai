@@ -62,5 +62,9 @@ namespace Cuahangdienthoai.BUS
         {
             TaiKhoanDAL.Instance.ThemPhanQuyenLienKet(acc);
         }
+        public void SuaAccByUser(Account newAcc)
+        {
+            TaiKhoanDAL.Instance.SuaAccByUser(newAcc);
+        }
     }
 }

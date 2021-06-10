@@ -112,11 +112,15 @@ namespace Cuahangdienthoai.View
         {
             if (e.ColumnIndex == 0 && dataGridViewDonHang.SelectedRows.Count > 0)
             {
-                int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-                KhuyenMaiBUS.Instance.XoaKhuyenMaiApDungHD(MaHO);
-                DonHangBUS.Instance.XoaHoaDonChiTiet(MaHO);
-                DonHangBUS.Instance.XoaDonHang(MaHO);
-                ShowListDonHang();
+                DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa đơn hàng này?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                    KhuyenMaiBUS.Instance.XoaKhuyenMaiApDungHD(MaHO);
+                    DonHangBUS.Instance.XoaHoaDonChiTiet(MaHO);
+                    DonHangBUS.Instance.XoaDonHang(MaHO);
+                    ShowListDonHang();
+                }
             }
         }
 
@@ -198,7 +202,7 @@ namespace Cuahangdienthoai.View
 
             if (string.IsNullOrEmpty(Path))
             {
-                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+                MessageBox.Show("Đường dẫn báo cáo không hợp lệ", "Lỗi");
                 return;
             }
 
@@ -268,11 +272,11 @@ namespace Cuahangdienthoai.View
                     Byte[] bin = p.GetAsByteArray();
                     File.WriteAllBytes(filePath, bin);
                 }
-                MessageBox.Show("Xuất excel thành công!");
+                MessageBox.Show("Xuất excel thành công!", "Thành công");
             }
             catch (Exception ef)
             {
-                MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
+                MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message, "Lỗi");
             }
         }
 

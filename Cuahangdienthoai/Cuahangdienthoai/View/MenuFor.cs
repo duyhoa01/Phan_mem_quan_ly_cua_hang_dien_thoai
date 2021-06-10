@@ -27,6 +27,7 @@ namespace Cuahangdienthoai.View
             this.account = account;
             this.listquyen = TaiKhoanBUS.Instance.GetPhanQuyenTaiKhoan(account);
             SetGui();
+            SetGuiAcc();
             //this.ID = ID;
             btBanHang_Click(btBanHang, EventArgs.Empty);
         }
@@ -164,17 +165,27 @@ namespace Cuahangdienthoai.View
             {
                 button1.Visible = false;
             }
+        }
+        private void SetGuiAcc()
+        {
             NhanVien nhanVien = TaiKhoanBUS.Instance.GetNhanVien(account);
             try
             {
-                pictureBoxAnh.Load("../../ICON/" + account.AnhAcc);
+                pictureBoxAnh.Load("../../AnhAcc/" + account.AnhAcc);
             }
             catch (Exception)
             {
 
             }
-            labelName.Text = nhanVien.TenNhanVien;
+            labelName.Text = account.TenHienThi;
             labelPosition.Text = nhanVien.ChucVu;
+        }
+
+        private void pictureBoxAnh_Click(object sender, EventArgs e)
+        {
+            ThongTinAcc f = new ThongTinAcc(account);
+            f.d = SetGuiAcc;
+            f.Show();
         }
     }
 }

@@ -181,18 +181,22 @@ namespace Cuahangdienthoai.View
         }
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            DialogResult dr = MessageBox.Show("Xác nhận thanh toán!", "Thông báo", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
             {
-                ThemNCCMoi();
+                if (checkBox1.Checked == true)
+                {
+                    ThemNCCMoi();
+                }
+                TaoHoaDon();
+                int MaHD = NhapHangBUS.Instance.GetLastHD();
+                foreach (DienThoaiFormMua item in listGioHang)
+                {
+                    NhapHangBUS.Instance.ThemHoaDonNhapChiTiet(MaHD, item.MaDT, item.SoLuong, item.GiaNhap, item.ThanhTien);
+                    DienThoaiBUS.Instance.XuLyNhapDT(item.MaDT, item.SoLuong);
+                }
+                this.Close();
             }
-            TaoHoaDon();
-            int MaHD = NhapHangBUS.Instance.GetLastHD();
-            foreach (DienThoaiFormMua item in listGioHang)
-            {
-                NhapHangBUS.Instance.ThemHoaDonNhapChiTiet(MaHD, item.MaDT, item.SoLuong, item.GiaNhap, item.ThanhTien);
-                DienThoaiBUS.Instance.XuLyNhapDT(item.MaDT, item.SoLuong);
-            }
-            this.Close();
         }
     }
 }

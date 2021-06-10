@@ -44,7 +44,6 @@ namespace Cuahangdienthoai.View
                 richTextBox1.Text = dt.ThongSoKyThuat;
                 string path = MenuFor.path + dt.Anh;
                 pictureBox1.Image = new Bitmap(path);
-                tbMaDT.Enabled = false;
             }
             else
             {

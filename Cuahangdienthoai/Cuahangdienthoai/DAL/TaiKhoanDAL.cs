@@ -146,5 +146,17 @@ namespace Cuahangdienthoai.DAL
                 db.SaveChanges();
             }
         }
+        public void SuaAccByUser(Account newAcc)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                Account Acc = db.Accounts.Find(newAcc.ID);
+                Acc.EmailKhoiPhuc = newAcc.EmailKhoiPhuc;
+                Acc.AnhAcc = newAcc.AnhAcc;
+                Acc.TenHienThi = newAcc.TenHienThi;
+                Acc.MatKhau = newAcc.MatKhau;
+                db.SaveChanges();
+            }
+        }
     }
 }

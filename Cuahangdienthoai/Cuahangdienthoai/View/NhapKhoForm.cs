@@ -105,10 +105,14 @@ namespace Cuahangdienthoai.View
             DataGridViewCell cell = sender as DataGridViewCell;
             if (e.ColumnIndex == 0 && dataGridViewDonHang.SelectedRows.Count > 0)
             {
-                int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-                NhapHangBUS.Instance.XoaHoaDonNhapChiTiet(MaHO);
-                NhapHangBUS.Instance.XoaNhapHang(MaHO);
-                ShowListDonHang();
+                DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa đơn hàng này?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                    NhapHangBUS.Instance.XoaHoaDonNhapChiTiet(MaHO);
+                    NhapHangBUS.Instance.XoaNhapHang(MaHO);
+                    ShowListDonHang();
+                }
             }
         }
 

@@ -300,6 +300,12 @@
     <Compile Include="View\ThemSuaTaiKhoanForm.Designer.cs">
       <DependentUpon>ThemSuaTaiKhoanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ThongTinAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThongTinAcc.Designer.cs">
+      <DependentUpon>ThongTinAcc.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ThongTinDienThoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ThemSuaTaiKhoanForm.resx">
       <DependentUpon>ThemSuaTaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThongTinAcc.resx">
+      <DependentUpon>ThongTinAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ThongTinDienThoai.resx">
       <DependentUpon>ThongTinDienThoai.cs</DependentUpon>

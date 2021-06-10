@@ -52,7 +52,7 @@ namespace Cuahangdienthoai.View
         {
             if(!KtraDuLieu())
             {
-                MessageBox.Show("Mời Nhập Đầy Đủ Thông Tin!");
+                MessageBox.Show("Mời Nhập Đầy Đủ Thông Tin!", "Lỗi");
             }
             else
             {
@@ -64,6 +64,7 @@ namespace Cuahangdienthoai.View
                     TaiKhoanBUS.Instance.ThemAcc(newAcc);
                     newAcc.ID = TaiKhoanBUS.Instance.GetMaIDMoi();
                     TaiKhoanBUS.Instance.ThemPhanQuyenLienKet(newAcc);
+                    MessageBox.Show("Tạo tài khoản mới thành công!\nMật khẩu mặc định là ''123''", "Thành công");
                 }
                 else
                 {
