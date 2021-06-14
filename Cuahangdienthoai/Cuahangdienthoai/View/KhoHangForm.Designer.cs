@@ -44,6 +44,7 @@
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btTop10 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -229,6 +230,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.btTop10);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.panel8);
@@ -243,6 +245,23 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(915, 81);
             this.panel5.TabIndex = 12;
+            // 
+            // btTop10
+            // 
+            this.btTop10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTop10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btTop10.FlatAppearance.BorderSize = 0;
+            this.btTop10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTop10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTop10.ForeColor = System.Drawing.Color.White;
+            this.btTop10.Location = new System.Drawing.Point(702, 31);
+            this.btTop10.Margin = new System.Windows.Forms.Padding(2);
+            this.btTop10.Name = "btTop10";
+            this.btTop10.Size = new System.Drawing.Size(125, 32);
+            this.btTop10.TabIndex = 29;
+            this.btTop10.Text = "Top 10 bán chạy";
+            this.btTop10.UseVisualStyleBackColor = false;
+            this.btTop10.Click += new System.EventHandler(this.btTop10_Click);
             // 
             // label3
             // 
@@ -375,10 +394,10 @@
             this.btSapHet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSapHet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSapHet.ForeColor = System.Drawing.Color.White;
-            this.btSapHet.Location = new System.Drawing.Point(805, 30);
+            this.btSapHet.Location = new System.Drawing.Point(841, 30);
             this.btSapHet.Margin = new System.Windows.Forms.Padding(2);
             this.btSapHet.Name = "btSapHet";
-            this.btSapHet.Size = new System.Drawing.Size(90, 32);
+            this.btSapHet.Size = new System.Drawing.Size(70, 32);
             this.btSapHet.TabIndex = 19;
             this.btSapHet.Text = "Sắp hết";
             this.btSapHet.UseVisualStyleBackColor = false;
@@ -400,7 +419,7 @@
             this.btTimKiêm.Text = "Tìm kiếm";
             this.btTimKiêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btTimKiêm.UseVisualStyleBackColor = false;
-            this.btTimKiêm.Click += new System.EventHandler(this.btShow_Click);
+            this.btTimKiêm.Click += new System.EventHandler(this.btTimKiêm_Click);
             // 
             // panel4
             // 
@@ -524,5 +543,6 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btTop10;
     }
 }

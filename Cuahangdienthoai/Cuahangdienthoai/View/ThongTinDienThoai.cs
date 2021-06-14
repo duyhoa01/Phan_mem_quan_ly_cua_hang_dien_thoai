@@ -40,14 +40,18 @@ namespace Cuahangdienthoai.View
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (!DienThoaiBUS.Instance.XoaDT(maDT))
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm này?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
             {
-                MessageBox.Show("Điện thoại này không thể xóa vì liên quan hóa đơn nhập bán trước đó");
-            }
-            else
-            {
-                d();
-                this.Close();
+                if (!DienThoaiBUS.Instance.XoaDT(maDT))
+                {
+                    MessageBox.Show("Điện thoại này không thể xóa vì liên quan hóa đơn nhập bán trước đó", "Lỗi");
+                }
+                else
+                {
+                    d();
+                    this.Close();
+                }
             }
         }
         public void LoadListPhone()

@@ -27,7 +27,6 @@ namespace Cuahangdienthoai
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<DienThoai> DienThoais { get; set; }
         public virtual DbSet<GiamGia> GiamGias { get; set; }
         public virtual DbSet<HoaDonChiTiet> HoaDonChiTiets { get; set; }
@@ -42,6 +41,7 @@ namespace Cuahangdienthoai
         public virtual DbSet<PhanQuyenLienKet> PhanQuyenLienKets { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<HoaDonBanHang> HoaDonBanHangs { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

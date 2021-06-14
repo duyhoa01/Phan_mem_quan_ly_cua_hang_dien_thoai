@@ -27,6 +27,7 @@ namespace Cuahangdienthoai
         public Nullable<int> MaNhanVien { get; set; }
         public string EmailKhoiPhuc { get; set; }
         public string AnhAcc { get; set; }
+        public string LoaiTK { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

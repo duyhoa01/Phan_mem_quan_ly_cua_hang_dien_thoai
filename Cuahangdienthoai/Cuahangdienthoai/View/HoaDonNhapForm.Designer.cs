@@ -72,7 +72,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.cbbNVKiemKe = new System.Windows.Forms.ComboBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -99,6 +98,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
             this.label8 = new System.Windows.Forms.Label();
+            this.TbTenNV = new System.Windows.Forms.TextBox();
             this.pnThongTin.SuspendLayout();
             this.pnHangNhap.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -642,32 +642,19 @@
             // 
             // panel22
             // 
-            this.panel22.Controls.Add(this.cbbNVKiemKe);
+            this.panel22.Controls.Add(this.TbTenNV);
             this.panel22.Controls.Add(this.panel24);
-            this.panel22.Location = new System.Drawing.Point(123, 12);
+            this.panel22.Location = new System.Drawing.Point(123, 14);
             this.panel22.Margin = new System.Windows.Forms.Padding(2);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(376, 32);
+            this.panel22.Size = new System.Drawing.Size(376, 30);
             this.panel22.TabIndex = 19;
-            // 
-            // cbbNVKiemKe
-            // 
-            this.cbbNVKiemKe.BackColor = System.Drawing.Color.White;
-            this.cbbNVKiemKe.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cbbNVKiemKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbNVKiemKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbNVKiemKe.FormattingEnabled = true;
-            this.cbbNVKiemKe.Location = new System.Drawing.Point(0, 6);
-            this.cbbNVKiemKe.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbNVKiemKe.Name = "cbbNVKiemKe";
-            this.cbbNVKiemKe.Size = new System.Drawing.Size(376, 24);
-            this.cbbNVKiemKe.TabIndex = 16;
             // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel24.Location = new System.Drawing.Point(0, 30);
+            this.panel24.Location = new System.Drawing.Point(0, 28);
             this.panel24.Margin = new System.Windows.Forms.Padding(2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(376, 2);
@@ -966,6 +953,19 @@
             this.label8.TabIndex = 108;
             this.label8.Text = "Nhập Hàng";
             // 
+            // TbTenNV
+            // 
+            this.TbTenNV.BackColor = System.Drawing.Color.White;
+            this.TbTenNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbTenNV.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TbTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbTenNV.Location = new System.Drawing.Point(0, 9);
+            this.TbTenNV.Margin = new System.Windows.Forms.Padding(2);
+            this.TbTenNV.Name = "TbTenNV";
+            this.TbTenNV.ReadOnly = true;
+            this.TbTenNV.Size = new System.Drawing.Size(376, 19);
+            this.TbTenNV.TabIndex = 19;
+            // 
             // HoaDonNhapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1007,6 +1007,7 @@
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1078,7 +1079,6 @@
         private System.Windows.Forms.ComboBox cbbNCC;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.ComboBox cbbNVKiemKe;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.TextBox tbMaNhanVien;
@@ -1090,5 +1090,6 @@
         private System.Windows.Forms.DataGridView dataGridViewGioHang;
         private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TbTenNV;
     }
 }

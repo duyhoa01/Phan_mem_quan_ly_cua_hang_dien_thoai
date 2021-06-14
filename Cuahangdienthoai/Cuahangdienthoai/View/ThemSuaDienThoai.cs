@@ -44,7 +44,6 @@ namespace Cuahangdienthoai.View
                 richTextBox1.Text = dt.ThongSoKyThuat;
                 string path = MenuFor.path + dt.Anh;
                 pictureBox1.Image = new Bitmap(path);
-                tbMaDT.Enabled = false;
             }
             else
             {
@@ -83,32 +82,39 @@ namespace Cuahangdienthoai.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (!KtraDuLieu())
             {
-                if (maDT == null)
-                {
-                    DienThoaiBUS.Instance.ThemDT(tbTenDT.Text, (float)Convert.ToDouble(tbGiaNhap.Text)
-                    , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(numericUpDown1.Value)
-                    , (float)Convert.ToDouble(tbDiemDanhGia.Text), Convert.ToInt32(tbLuotDanhGia.Text)
-                    , richTextBox1.Text, pictureBox1.Tag.ToString());
-                }
-                else
-                {
-                    if (!DienThoaiBUS.Instance.SuaDT(Convert.ToInt32(tbMaDT.Text), tbTenDT.Text
-                        , (float)Convert.ToDouble(numericUpDown1.Value), (float)Convert.ToDouble(tbDiemDanhGia.Text)
-                        , Convert.ToInt32(tbLuotDanhGia.Text), richTextBox1.Text, pictureBox1.Tag.ToString()
-                        , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(tbGiaNhap.Text)))
-                    {
-                        MessageBox.Show("Điện thoại này liên quan đến hóa đơn nhập bán trước."
-                                        + "\nKhông thể thay đổi giá nhập, giá bán");
-                    }
-                }
-                d();
-                this.Close();
+                MessageBox.Show("Mời nhập thông tin đầy đủ!");
             }
-            catch (Exception e1)
+            else
             {
-                MessageBox.Show("Dữ liệu không hợp lệ\n" + e1.Message);
+                try
+                {
+                    if (maDT == null)
+                    {
+                        DienThoaiBUS.Instance.ThemDT(tbTenDT.Text, (float)Convert.ToDouble(tbGiaNhap.Text)
+                        , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(numericUpDown1.Value)
+                        , (float)Convert.ToDouble(tbDiemDanhGia.Text), Convert.ToInt32(tbLuotDanhGia.Text)
+                        , richTextBox1.Text, pictureBox1.Tag.ToString());
+                    }
+                    else
+                    {
+                        if (!DienThoaiBUS.Instance.SuaDT(Convert.ToInt32(tbMaDT.Text), tbTenDT.Text
+                            , (float)Convert.ToDouble(numericUpDown1.Value), (float)Convert.ToDouble(tbDiemDanhGia.Text)
+                            , Convert.ToInt32(tbLuotDanhGia.Text), richTextBox1.Text, pictureBox1.Tag.ToString()
+                            , (float)Convert.ToDouble(tbGiaBan.Text), (float)Convert.ToDouble(tbGiaNhap.Text)))
+                        {
+                            MessageBox.Show("Điện thoại này liên quan đến hóa đơn nhập bán trước."
+                                            + "\nKhông thể thay đổi giá nhập, giá bán");
+                        }
+                    }
+                    d();
+                    this.Close();
+                }
+                catch (Exception e1)
+                {
+                    MessageBox.Show("Dữ liệu không hợp lệ\n" + e1.Message);
+                }
             }
         }
 
@@ -158,6 +164,12 @@ namespace Cuahangdienthoai.View
                 tbGiaBan.Text = String.Format(culture, "{0:N0}", value);
                 tbGiaBan.Select(tbGiaBan.Text.Length, 0);
             }
+        }
+        private bool KtraDuLieu()
+        {
+            if (tbTenDT.Text == "" || tbGiaNhap.Text == "" || tbGiaBan.Text == "" || pictureBox1.Tag == null 
+                || tbDiemDanhGia.Text == "" || tbLuotDanhGia.Text == "") return false;
+            return true;
         }
     }
 }

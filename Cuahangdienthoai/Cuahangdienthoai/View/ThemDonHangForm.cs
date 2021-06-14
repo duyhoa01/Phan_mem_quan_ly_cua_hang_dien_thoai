@@ -14,6 +14,7 @@ namespace Cuahangdienthoai.View
 {
     public partial class ThemDonHangForm : Form
     {
+        private Account accLogin;
         private List<DienThoaiViewFormBan> listGioHang = new List<DienThoaiViewFormBan>();
         private double TongTien = 0;
         private double TongGiamSP = 0;
@@ -21,9 +22,12 @@ namespace Cuahangdienthoai.View
         private double ThanhTien = 0;
         private double TongLoiNhuan;
         private double TongTienNhap;
-        public ThemDonHangForm()
+        public ThemDonHangForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
+            tbMaNV.Text = accLogin.MaNhanVien.ToString();
+            tbNVBan.Text = TaiKhoanBUS.Instance.GetNhanVien(acc).TenNhanVien;
             tbCMND_Check.AppendText("CMND");
             dataGridViewGioHang.DataSource = listGioHang;
             SetGUI();
@@ -210,7 +214,7 @@ namespace Cuahangdienthoai.View
         }
         private void TaoHoaDon()
         {
-            DonHangBUS.Instance.ThemDonHang(1, 17, DateTime.Now, ThanhTien, TongLoiNhuan);
+            DonHangBUS.Instance.ThemDonHang(Convert.ToInt32(tbMaNV.Text), 17, DateTime.Now, ThanhTien, TongLoiNhuan);
         }
         private void ThemKHMoi()
         {
@@ -226,19 +230,23 @@ namespace Cuahangdienthoai.View
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            if(rdbKHMoi.Checked == true)
+            DialogResult dr = MessageBox.Show("Xác nhận Thanh toán!", "Thông báo", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
             {
-                ThemKHMoi();
+                if (rdbKHMoi.Checked == true)
+                {
+                    ThemKHMoi();
+                }
+                TaoHoaDon();
+                int MaHD = DonHangBUS.Instance.GetLastHD();
+                ThemKhuyenMaiApDungHD(MaHD);
+                foreach (DienThoaiViewFormBan item in listGioHang)
+                {
+                    DonHangBUS.Instance.ThemHoaDonChiTiet(MaHD, item.MaDT, item.SoLuong);
+                    DienThoaiBUS.Instance.XuLyBanDT(item.MaDT, item.SoLuong);
+                }
+                this.Close();
             }
-            TaoHoaDon();
-            int MaHD = DonHangBUS.Instance.GetLastHD();
-            ThemKhuyenMaiApDungHD(MaHD);
-            foreach (DienThoaiViewFormBan item in listGioHang)
-            {
-                DonHangBUS.Instance.ThemHoaDonChiTiet(MaHD, item.MaDT, item.SoLuong);
-                DienThoaiBUS.Instance.XuLyBanDT(item.MaDT, item.SoLuong);
-            }
-            this.Close();
         }
     }
 }

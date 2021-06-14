@@ -16,6 +16,7 @@
           <Property Name="MaNhanVien" Type="int" />
           <Property Name="EmailKhoiPhuc" Type="nvarchar" MaxLength="100" />
           <Property Name="AnhAcc" Type="nchar" MaxLength="50" />
+          <Property Name="LoaiTK" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="DienThoai">
           <Key>
@@ -503,20 +504,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PBL3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Account">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TenHienThi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaNhanVien" Type="Int32" />
-          <Property Name="EmailKhoiPhuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="AnhAcc" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_Account_NhanVien" FromRole="Account" ToRole="NhanVien" />
-          <NavigationProperty Name="PhanQuyenLienKets" Relationship="Self.FK_PhanQuyenLienKet_Account" FromRole="Account" ToRole="PhanQuyenLienKet" />
-        </EntityType>
         <EntityType Name="DienThoai">
           <Key>
             <PropertyRef Name="MaDT" />
@@ -633,9 +620,9 @@
           <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="3" />
           <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK_Account_NhanVien" FromRole="NhanVien" ToRole="Account" />
           <NavigationProperty Name="HoaDonNhaps" Relationship="Self.FK_HoaDonNhap_NhanVien" FromRole="NhanVien" ToRole="HoaDonNhap" />
           <NavigationProperty Name="HoaDonBanHangs" Relationship="PBL3Model.FK_HoaDonBanHang_MaNhanVien_NhanVien_MaNhanVien" FromRole="NhanVien" ToRole="HoaDonBanHang" />
+          <NavigationProperty Name="Accounts" Relationship="PBL3Model.FK_Account_NhanVien" FromRole="NhanVien" ToRole="Account" />
         </EntityType>
         <EntityType Name="NhomQuyen">
           <Key>
@@ -665,8 +652,8 @@
           <Property Name="MaAcc" Type="Int32" Nullable="false" />
           <Property Name="MaNhomQuyen" Type="Int32" Nullable="false" />
           <Property Name="suspended" Type="Boolean" />
-          <NavigationProperty Name="Account" Relationship="Self.FK_PhanQuyenLienKet_Account" FromRole="PhanQuyenLienKet" ToRole="Account" />
           <NavigationProperty Name="NhomQuyen" Relationship="Self.FK_PhanQuyenLienKet_NhomQuyen" FromRole="PhanQuyenLienKet" ToRole="NhomQuyen" />
+          <NavigationProperty Name="Account" Relationship="PBL3Model.FK_PhanQuyenLienKet_Account" FromRole="PhanQuyenLienKet" ToRole="Account" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -678,30 +665,6 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <Association Name="FK_Account_NhanVien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="Account" Type="Self.Account" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="Account">
-              <PropertyRef Name="MaNhanVien" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PhanQuyenLienKet_Account">
-          <End Role="Account" Type="Self.Account" Multiplicity="1" />
-          <End Role="PhanQuyenLienKet" Type="Self.PhanQuyenLienKet" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Account">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PhanQuyenLienKet">
-              <PropertyRef Name="MaAcc" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_HoaDonChiTiet_DienThoai">
           <End Role="DienThoai" Type="Self.DienThoai" Multiplicity="1" />
           <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
@@ -799,7 +762,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="PBL3Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="DienThoais" EntityType="Self.DienThoai" />
           <EntitySet Name="GiamGias" EntityType="Self.GiamGia" />
           <EntitySet Name="HoaDonChiTiets" EntityType="Self.HoaDonChiTiet" />
@@ -813,14 +775,6 @@
           <EntitySet Name="NhomQuyenChiTiets" EntityType="Self.NhomQuyenChiTiet" />
           <EntitySet Name="PhanQuyenLienKets" EntityType="Self.PhanQuyenLienKet" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <AssociationSet Name="FK_Account_NhanVien" Association="Self.FK_Account_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="Account" EntitySet="Accounts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PhanQuyenLienKet_Account" Association="Self.FK_PhanQuyenLienKet_Account">
-            <End Role="Account" EntitySet="Accounts" />
-            <End Role="PhanQuyenLienKet" EntitySet="PhanQuyenLienKets" />
-          </AssociationSet>
           <AssociationSet Name="FK_HoaDonChiTiet_DienThoai" Association="Self.FK_HoaDonChiTiet_DienThoai">
             <End Role="DienThoai" EntitySet="DienThoais" />
             <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
@@ -959,6 +913,15 @@
           <AssociationSet Name="FK_HoaDonChiTiet_HoaDonBanHang" Association="PBL3Model.FK_HoaDonChiTiet_HoaDonBanHang">
             <End Role="HoaDonBanHang" EntitySet="HoaDonBanHangs" />
             <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
+          </AssociationSet>
+          <EntitySet Name="Accounts" EntityType="PBL3Model.Account" />
+          <AssociationSet Name="FK_Account_NhanVien" Association="PBL3Model.FK_Account_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhanQuyenLienKet_Account" Association="PBL3Model.FK_PhanQuyenLienKet_Account">
+            <End Role="Account" EntitySet="Accounts" />
+            <End Role="PhanQuyenLienKet" EntitySet="PhanQuyenLienKets" />
           </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -1103,25 +1066,51 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TenHienThi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaNhanVien" Type="Int32" />
+          <Property Name="EmailKhoiPhuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AnhAcc" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="LoaiTK" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhanVien" Relationship="PBL3Model.FK_Account_NhanVien" FromRole="Account" ToRole="NhanVien" />
+          <NavigationProperty Name="PhanQuyenLienKets" Relationship="PBL3Model.FK_PhanQuyenLienKet_Account" FromRole="Account" ToRole="PhanQuyenLienKet" />
+        </EntityType>
+        <Association Name="FK_Account_NhanVien">
+          <End Type="PBL3Model.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="PBL3Model.Account" Role="Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhanQuyenLienKet_Account">
+          <End Type="PBL3Model.Account" Role="Account" Multiplicity="1" />
+          <End Type="PBL3Model.PhanQuyenLienKet" Role="PhanQuyenLienKet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PhanQuyenLienKet">
+              <PropertyRef Name="MaAcc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PBL3ModelStoreContainer" CdmEntityContainer="PBL3Entities">
-          <EntitySetMapping Name="Accounts">
-            <EntityTypeMapping TypeName="PBL3Model.Account">
-              <MappingFragment StoreEntitySet="Account">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="TenHienThi" ColumnName="TenHienThi" />
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="EmailKhoiPhuc" ColumnName="EmailKhoiPhuc" />
-                <ScalarProperty Name="AnhAcc" ColumnName="AnhAcc" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="DienThoais">
             <EntityTypeMapping TypeName="PBL3Model.DienThoai">
               <MappingFragment StoreEntitySet="DienThoai">
@@ -1415,6 +1404,20 @@
                 <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
                 <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="PBL3Model.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="LoaiTK" ColumnName="LoaiTK" />
+                <ScalarProperty Name="AnhAcc" ColumnName="AnhAcc" />
+                <ScalarProperty Name="EmailKhoiPhuc" ColumnName="EmailKhoiPhuc" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="TenHienThi" ColumnName="TenHienThi" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -27,6 +27,7 @@ namespace Cuahangdienthoai.View
             this.account = account;
             this.listquyen = TaiKhoanBUS.Instance.GetPhanQuyenTaiKhoan(account);
             SetGui();
+            SetGuiAcc();
             //this.ID = ID;
             btBanHang_Click(btBanHang, EventArgs.Empty);
         }
@@ -116,12 +117,12 @@ namespace Cuahangdienthoai.View
 
         private void btBanHang_Click(object sender, EventArgs e)
         {
-            this.AddForm(new QuanlybanhangFrom());
+            this.AddForm(new QuanlybanhangFrom(this.account));
         }
 
         private void btKhoHang_Click(object sender, EventArgs e)
         {
-            this.AddForm(new QuanlykhoForm());
+            this.AddForm(new QuanlykhoForm(this.account));
         }
 
         private void btKinhDoanh_Click(object sender, EventArgs e)
@@ -164,10 +165,32 @@ namespace Cuahangdienthoai.View
             {
                 button1.Visible = false;
             }
+        }
+        private void SetGuiAcc()
+        {
             NhanVien nhanVien = TaiKhoanBUS.Instance.GetNhanVien(account);
-            pictureBoxAnh.Load("../../ICON/"+account.AnhAcc);
-            labelName.Text = nhanVien.TenNhanVien;
+            try
+            {
+                pictureBoxAnh.LoadAsync("../../AnhAcc/" + account.AnhAcc);
+                System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+
+                gp.AddEllipse(0, 0, pictureBoxAnh.Width - 3, pictureBoxAnh.Height - 3);
+                Region rg = new Region(gp);
+                pictureBoxAnh.Region = rg;
+            }
+            catch (Exception)
+            {
+
+            }
+            labelName.Text = account.TenHienThi;
             labelPosition.Text = nhanVien.ChucVu;
+        }
+
+        private void pictureBoxAnh_Click(object sender, EventArgs e)
+        {
+            ThongTinAcc f = new ThongTinAcc(account);
+            f.d = SetGuiAcc;
+            f.Show();
         }
     }
 }
