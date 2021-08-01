@@ -95,5 +95,15 @@ namespace Cuahangdienthoai
             ForgotUser forgot = new ForgotUser();
             forgot.Show();
         }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            tbPassword.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbPassword.UseSystemPasswordChar = true;
+        }
     }
 }

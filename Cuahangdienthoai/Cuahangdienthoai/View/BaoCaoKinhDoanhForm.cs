@@ -11,6 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Threading;
 using Cuahangdienthoai.BUS;
 using Cuahangdienthoai.DTO;
+using System.Globalization;
 
 namespace Cuahangdienthoai.View
 {
@@ -196,10 +197,10 @@ namespace Cuahangdienthoai.View
         }
         public void Button1()
         {
-            lbDoanhThu.Text = BaoCaoBUS.Instance.GetTongTien(fistTime, lastTime) + "VND";
+            lbDoanhThu.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", BaoCaoBUS.Instance.GetTongTien(fistTime, lastTime));
             lbHoaDon.Text = BaoCaoBUS.Instance.CountHoaDon(fistTime, lastTime) + "";
             lbKhachHang.Text = BaoCaoBUS.Instance.CountKhachHang(fistTime, lastTime) + "";
-            lbLoiNhuan.Text = BaoCaoBUS.Instance.GetLoiNhuan(fistTime, lastTime) + "VND";
+            lbLoiNhuan.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}",BaoCaoBUS.Instance.GetLoiNhuan(fistTime, lastTime));
             SetGuiTiLe();
             panel2.Visible = false;
         }
@@ -307,11 +308,11 @@ namespace Cuahangdienthoai.View
             for(int i = list.Count-1; i >=0 ; i--)
             {
                 chartLoiNhuanCot.Series[0].Points.Add((double)list[i].DoanhThu);
-                chartLoiNhuanCot.Series[0].Points[t-i].Label = list[i].DoanhThu.ToString();
+                //chartLoiNhuanCot.Series[0].Points[t-i].Label = list[i].DoanhThu.ToString();
                 chartLoiNhuanCot.Series[0].Points[t-i].AxisLabel = list[i].ThoiGian;
 
                 chartLoiNhuanCot.Series[1].Points.Add((double)list[i].LoiNhuan);
-                chartLoiNhuanCot.Series[1].Points[t-i].Label = list[i].LoiNhuan.ToString();
+                //chartLoiNhuanCot.Series[1].Points[t-i].Label = list[i].LoiNhuan.ToString();
             }
             chartLoiNhuanCot.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             List<DoanhThuLoiNhuan> list2 = list;
@@ -326,11 +327,11 @@ namespace Cuahangdienthoai.View
                 {
                     l.LoiNhuan = l.LoiNhuan / TongLoiNhuan * 1.0;
                 }          
-            }   
+            }
             chartBieuDoTron.DataSource = list2;
             chartBieuDoTron.Series[0].XValueMember = "ThoiGian";
             chartBieuDoTron.Series[0].YValueMembers = "LoiNhuan";
-            chartBieuDoTron.Series[0].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            chartBieuDoTron.Series[0].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartBieuDoTron.Series[0].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
         }
 
