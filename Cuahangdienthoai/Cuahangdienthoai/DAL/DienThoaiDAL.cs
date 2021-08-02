@@ -190,5 +190,25 @@ namespace Cuahangdienthoai.DAL
                 db.SaveChanges();
             }
         }
+        public List<DienThoai> GetTop10DT()
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                List<DienThoai> list = db.DienThoais.OrderByDescending(p => p.SLBanRaTrongNam).ToList();
+                List<DienThoai> listTop = new List<DienThoai>();
+                try
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        listTop.Add(list[i]);
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+                return listTop;
+            }
+        }
     }
 }

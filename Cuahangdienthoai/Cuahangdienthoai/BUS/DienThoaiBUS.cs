@@ -159,6 +159,29 @@ namespace Cuahangdienthoai.BUS
             }
             return listDT;
         }
+        public List<DienThoaiViewFormKhoHang> GetListTop10DTFormKhoHang()
+        {
+            List<DienThoaiViewFormKhoHang> listDT = new List<DienThoaiViewFormKhoHang>();
+            foreach (DienThoai item in DienThoaiDAL.Instance.GetTop10DT())
+            {
+                string path = MenuFor.path + item.Anh;
+                Image AnhGoc = new Bitmap(path);
+                listDT.Add(new DienThoaiViewFormKhoHang
+                {
+                    Anh = new Bitmap(AnhGoc, 100, 100),
+                    MaDT = item.MaDT,
+                    TenDT = item.TenDienThoai,
+                    SoLuong = Convert.ToInt32(item.SLHienTai),
+                    GiaNhap = (float)item.GiaBanDT,
+                    GiaBan = (float)(item.GiaBanDT * (100 - item.C_GiamGia) / 100),
+                    SLBanTrongNam = (int)(item.SLBanRaTrongNam),
+                    DiemDanhGia = ((float)Convert.ToDouble(item.DiemDanhGia)).ToString() + " / 5\n\n"
+                                    + item.LuotDanhGia.ToString() + " đánh giá",
+                    LinkAnh = item.Anh
+                });
+            }
+            return listDT;
+        }
         public void XuLyBanDT(int MaDT, int SoLuong)
         {
             DienThoaiDAL.Instance.XuLyBanDT(MaDT, SoLuong);

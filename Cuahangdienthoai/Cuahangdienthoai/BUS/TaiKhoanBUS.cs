@@ -34,5 +34,37 @@ namespace Cuahangdienthoai.BUS
         {
             return TaiKhoanDAL.Instance.GetNhanVien(account);
         }
+        public object GetListAcc(string TimKiem)
+        {
+            return TaiKhoanDAL.Instance.GetListAcc(TimKiem);
+        }
+        public List<NhanVien> GetListNVKhongAcc()
+        {
+            return TaiKhoanDAL.Instance.GetListNVKhongAcc();
+        }
+        public void ThemAcc(Account acc)
+        {
+            TaiKhoanDAL.Instance.ThemAcc(acc);
+        }
+        public void XoaAcc(int ID)
+        {
+            TaiKhoanDAL.Instance.XoaAcc(ID);
+        }
+        public void SuaAcc(Account acc)
+        {
+            TaiKhoanDAL.Instance.SuaAcc(acc);
+        }
+        public int GetMaIDMoi()
+        {
+            return TaiKhoanDAL.Instance.GetMaIDMoi();
+        }
+        public void ThemPhanQuyenLienKet(Account acc)
+        {
+            TaiKhoanDAL.Instance.ThemPhanQuyenLienKet(acc);
+        }
+        public void SuaAccByUser(Account newAcc)
+        {
+            TaiKhoanDAL.Instance.SuaAccByUser(newAcc);
+        }
     }
 }

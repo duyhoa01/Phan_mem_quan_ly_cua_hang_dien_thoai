@@ -19,7 +19,7 @@ namespace Cuahangdienthoai
         public int MaNhomQuyen { get; set; }
         public Nullable<bool> suspended { get; set; }
     
-        public virtual Account Account { get; set; }
         public virtual NhomQuyen NhomQuyen { get; set; }
+        public virtual Account Account { get; set; }
     }
 }

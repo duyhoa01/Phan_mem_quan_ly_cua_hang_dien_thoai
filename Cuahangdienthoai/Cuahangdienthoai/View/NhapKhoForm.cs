@@ -18,9 +18,11 @@ namespace Cuahangdienthoai.View
     public partial class NhapKhoForm : Form
     {
         private bool load = false;
-        public NhapKhoForm()
+        private Account accLogin;
+        public NhapKhoForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
             SetGUI();
             ShowListDonHang();
             SetDatagridview();
@@ -36,14 +38,14 @@ namespace Cuahangdienthoai.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form f = new HoaDonNhapForm();
+            Form f = new HoaDonNhapForm(this.accLogin);
             f.ShowDialog();
             ShowListDonHang();
         }
         private void ShowListDonHang()
         {
             dataGridViewDonHang.DataSource = NhapHangBUS.Instance.GetListNhapKho(tbTimKiem.Text, lich1.GetDateTime(), lich2.GetDateTime());
-            AddLinkColumn();
+            if(accLogin.LoaiTK == "Admin") AddLinkColumn();
             double TongTien = 0;
             foreach (DataGridViewRow item in dataGridViewDonHang.Rows)
             {
@@ -66,6 +68,7 @@ namespace Cuahangdienthoai.View
         }
         private void btThongKe_Click(object sender, EventArgs e)
         {
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -100,26 +103,33 @@ namespace Cuahangdienthoai.View
         private void dataGridViewDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewCell cell = sender as DataGridViewCell;
-            if (e.ColumnIndex == 0)
+            if (e.ColumnIndex == 0 && dataGridViewDonHang.SelectedRows.Count > 0)
             {
-                int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-                NhapHangBUS.Instance.XoaHoaDonNhapChiTiet(MaHO);
-                NhapHangBUS.Instance.XoaNhapHang(MaHO);
-                ShowListDonHang();
+                DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa đơn hàng này?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                    NhapHangBUS.Instance.XoaHoaDonNhapChiTiet(MaHO);
+                    NhapHangBUS.Instance.XoaNhapHang(MaHO);
+                    ShowListDonHang();
+                }
             }
         }
 
         private void dataGridViewDonHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-            DateTime NgayNhap = Convert.ToDateTime(dataGridViewDonHang.SelectedRows[0].Cells["Value"].Value);
-            string TenNV = dataGridViewDonHang.SelectedRows[0].Cells["TenNhanVien"].Value.ToString();
-            string TenNCC = dataGridViewDonHang.SelectedRows[0].Cells["TenNhaCungCap"].Value.ToString();
-            double TongTienNhap = Convert.ToDouble(dataGridViewDonHang.SelectedRows[0].Cells["TongTienNhap"].Value);
-            int MaNV = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhanVien"].Value);
-            int MaNCC = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhaCungCap"].Value);
-            HoaDonNhapChiTiet f = new HoaDonNhapChiTiet(MaHD, MaNV, MaNCC, TenNV, TenNCC, NgayNhap, TongTienNhap);
-            f.Show();
+            if(dataGridViewDonHang.SelectedRows.Count == 1)
+            {
+                int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                DateTime NgayNhap = Convert.ToDateTime(dataGridViewDonHang.SelectedRows[0].Cells["Value"].Value);
+                string TenNV = dataGridViewDonHang.SelectedRows[0].Cells["TenNhanVien"].Value.ToString();
+                string TenNCC = dataGridViewDonHang.SelectedRows[0].Cells["TenNhaCungCap"].Value.ToString();
+                double TongTienNhap = Convert.ToDouble(dataGridViewDonHang.SelectedRows[0].Cells["TongTienNhap"].Value);
+                int MaNV = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhanVien"].Value);
+                int MaNCC = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaNhaCungCap"].Value);
+                HoaDonNhapChiTiet f = new HoaDonNhapChiTiet(MaHD, MaNV, MaNCC, TenNV, TenNCC, NgayNhap, TongTienNhap);
+                f.Show();
+            }
         }
 
         private void btTuan_Click(object sender, EventArgs e)
@@ -149,6 +159,7 @@ namespace Cuahangdienthoai.View
                     break;
             }
             lich2.SetDateTime(lich1.GetDateTime().Date.AddDays(6));
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -158,6 +169,7 @@ namespace Cuahangdienthoai.View
             lich1.SetDateTime(dauthang);
             DateTime cuoithang = dauthang.AddMonths(1).AddDays(-1);
             lich2.SetDateTime(cuoithang);
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -170,6 +182,7 @@ namespace Cuahangdienthoai.View
             DateTime cuoiquy = dauquy.AddMonths(3).AddDays(-1);
             lich1.SetDateTime(dauquy);
             lich2.SetDateTime(cuoiquy);
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -204,8 +217,9 @@ namespace Cuahangdienthoai.View
                     ws.Cells.Style.Font.Name = "Calibri";
                     ws.Cells.Style.Font.Size = 12;
                     var countColHeader = dataGridViewDonHang.ColumnCount - 3;
-                    ws.Cells[1, 1].Value = "Thống kê nhập kho từ ngày " + lich1.GetDateTime().ToShortDateString()
-                                            + " đến " + lich2.GetDateTime().ToShortDateString();
+                    DateTime NgayKT = (lich2.GetDateTime() > DateTime.Now) ? DateTime.Now : lich2.GetDateTime();
+                    ws.Cells[1, 1].Value = "Thống kê đơn hàng từ ngày " + lich1.GetDateTime().ToShortDateString()
+                                            + " đến " + NgayKT.ToShortDateString();
                     ws.Cells[1, 1, 1, countColHeader].Style.Font.Color.SetColor(Color.Red);
                     ws.Cells[1, 1, 1, countColHeader].Style.Font.Size = 15;
                     ws.Cells[1, 1, 1, countColHeader].Merge = true;
@@ -260,6 +274,16 @@ namespace Cuahangdienthoai.View
             {
                 MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
             }
+        }
+
+        private void btTimKiêm_Click(object sender, EventArgs e)
+        {
+            ShowListDonHang();
+        }
+
+        private void NhapKhoForm_Load(object sender, EventArgs e)
+        {
+            if (accLogin.LoaiTK == "Admin") dataGridViewDonHang.CellContentClick += new DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
         }
     }
 }

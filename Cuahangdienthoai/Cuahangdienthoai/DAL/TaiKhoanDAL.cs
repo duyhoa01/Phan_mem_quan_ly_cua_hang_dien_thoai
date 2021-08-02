@@ -70,6 +70,93 @@ namespace Cuahangdienthoai.DAL
                 return l.FirstOrDefault();
             }
         }
-
+        public object GetListAcc(string TimKiem)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                return db.Accounts.Where(p => p.MaNhanVien.ToString().Contains(TimKiem)
+                                                || p.TenDangNhap.Contains(TimKiem)
+                                                || p.NhanVien.TenNhanVien.Contains(TimKiem))
+                    .Select(p => new
+                {
+                    p.ID,
+                    p.MaNhanVien,
+                    p.TenDangNhap,
+                    p.LoaiTK,
+                    p.NhanVien.TenNhanVien,
+                    p.EmailKhoiPhuc,
+                }).ToList();
+            }
+        }
+        public List<NhanVien> GetListNVKhongAcc()
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                return db.NhanViens.Where(p => p.Accounts.FirstOrDefault() == null).Select(p => p).ToList();
+            }
+        }
+        public void ThemAcc(Account acc)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.Accounts.Add(acc);
+                db.SaveChanges();
+            }
+        }
+        public void XoaAcc(int ID)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                db.Accounts.Remove(db.Accounts.Find(ID));
+                db.PhanQuyenLienKets.RemoveRange(db.PhanQuyenLienKets.Where(p => p.MaAcc == ID).ToList());
+                db.SaveChanges();
+            }
+        }
+        public void SuaAcc(Account acc)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                Account accOld = db.Accounts.Find(acc.ID);
+                accOld.TenDangNhap = acc.TenDangNhap;
+                accOld.EmailKhoiPhuc = acc.EmailKhoiPhuc;
+                if (!accOld.LoaiTK.Equals(acc.LoaiTK))
+                {
+                    accOld.LoaiTK = acc.LoaiTK;
+                    db.PhanQuyenLienKets.RemoveRange(db.PhanQuyenLienKets.Where(p => p.MaAcc == acc.ID).ToList());
+                }
+                db.SaveChanges();
+            }
+        }
+        public int GetMaIDMoi()
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                return db.Accounts.ToList().LastOrDefault().ID;
+            }
+        }
+        public void ThemPhanQuyenLienKet(Account acc)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                if (acc.LoaiTK == "Admin")
+                {
+                    db.PhanQuyenLienKets.Add(new PhanQuyenLienKet { MaAcc = acc.ID, MaNhomQuyen = 1 });
+                }
+                db.PhanQuyenLienKets.Add(new PhanQuyenLienKet { MaAcc = acc.ID, MaNhomQuyen = 2 });
+                db.SaveChanges();
+            }
+        }
+        public void SuaAccByUser(Account newAcc)
+        {
+            using (PBL3Entities db = new PBL3Entities())
+            {
+                Account Acc = db.Accounts.Find(newAcc.ID);
+                Acc.EmailKhoiPhuc = newAcc.EmailKhoiPhuc;
+                Acc.AnhAcc = newAcc.AnhAcc;
+                Acc.TenHienThi = newAcc.TenHienThi;
+                Acc.MatKhau = newAcc.MatKhau;
+                db.SaveChanges();
+            }
+        }
     }
 }

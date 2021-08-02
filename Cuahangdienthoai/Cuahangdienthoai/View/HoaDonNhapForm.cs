@@ -14,11 +14,15 @@ namespace Cuahangdienthoai.View
 {
     public partial class HoaDonNhapForm : Form
     {
+        private Account accLogin;
         private double ThanhToan = 0;
         private List<DienThoaiFormMua> listGioHang = new List<DienThoaiFormMua>();
-        public HoaDonNhapForm()
+        public HoaDonNhapForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
+            tbMaNhanVien.Text = acc.MaNhanVien.ToString();
+            TbTenNV.Text = TaiKhoanBUS.Instance.GetNhanVien(acc).TenNhanVien;
             lich1.BackColor = this.TransparencyKey;
             pnNhaCungCap.Location = new Point(0, 210);
             dataGridViewGioHang.DataSource = listGioHang;
@@ -169,7 +173,7 @@ namespace Cuahangdienthoai.View
         {
             DateTime NgayNhap = new DateTime(lich1.GetDateTime().Year, lich1.GetDateTime().Month, lich1.GetDateTime().Day
                                                 , DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-            NhapHangBUS.Instance.ThemNhapHang(1, 1, NgayNhap, ThanhToan);
+            NhapHangBUS.Instance.ThemNhapHang(Convert.ToInt32(tbMaNhanVien.Text), 1, NgayNhap, ThanhToan);
         }
         private void ThemNCCMoi()
         {
@@ -177,18 +181,22 @@ namespace Cuahangdienthoai.View
         }
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            DialogResult dr = MessageBox.Show("Xác nhận thanh toán!", "Thông báo", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
             {
-                ThemNCCMoi();
+                if (checkBox1.Checked == true)
+                {
+                    ThemNCCMoi();
+                }
+                TaoHoaDon();
+                int MaHD = NhapHangBUS.Instance.GetLastHD();
+                foreach (DienThoaiFormMua item in listGioHang)
+                {
+                    NhapHangBUS.Instance.ThemHoaDonNhapChiTiet(MaHD, item.MaDT, item.SoLuong, item.GiaNhap, item.ThanhTien);
+                    DienThoaiBUS.Instance.XuLyNhapDT(item.MaDT, item.SoLuong);
+                }
+                this.Close();
             }
-            TaoHoaDon();
-            int MaHD = NhapHangBUS.Instance.GetLastHD();
-            foreach (DienThoaiFormMua item in listGioHang)
-            {
-                NhapHangBUS.Instance.ThemHoaDonNhapChiTiet(MaHD, item.MaDT, item.SoLuong, item.GiaNhap, item.ThanhTien);
-                DienThoaiBUS.Instance.XuLyNhapDT(item.MaDT, item.SoLuong);
-            }
-            this.Close();
         }
     }
 }

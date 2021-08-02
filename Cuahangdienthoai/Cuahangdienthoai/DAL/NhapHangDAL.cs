@@ -57,7 +57,7 @@ namespace Cuahangdienthoai.DAL
         {
             using (PBL3Entities db = new PBL3Entities())
             {
-                return db.HoaDonNhaps.OrderByDescending(p => p.MaHoaDon).Select(p => p.MaHoaDon).ToList()[0];
+                return db.HoaDonNhaps.ToList().LastOrDefault().MaHoaDon;
             }
         }
         public void ThemHoaNhapChiTiet(int MaHD, int MaDT, int SoLuong, float DonGia, double ThanhTien)

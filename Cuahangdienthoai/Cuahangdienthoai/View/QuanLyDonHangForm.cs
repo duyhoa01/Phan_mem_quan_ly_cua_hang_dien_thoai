@@ -18,9 +18,11 @@ namespace Cuahangdienthoai.View
     public partial class QuanLyDonHangForm : Form
     {
         private bool load = false;
-        public QuanLyDonHangForm()
+        private Account accLogin;
+        public QuanLyDonHangForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
             SetGUI();
             ShowListDonHang();
             SetDatagridview();
@@ -28,7 +30,10 @@ namespace Cuahangdienthoai.View
         private void ShowListDonHang()
         { 
             dataGridViewDonHang.DataSource = DonHangBUS.Instance.GetListDonHang(tbTimKiem.Text, lich1.GetDateTime(), lich2.GetDateTime());
-            AddLinkColumn();
+            if (accLogin.LoaiTK == "Admin")
+            {
+                AddLinkColumn();
+            }
             double TongTien = 0;
             double TongLoiNhuan = 0;
             foreach (DataGridViewRow item in dataGridViewDonHang.Rows)
@@ -63,13 +68,14 @@ namespace Cuahangdienthoai.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ThemDonHangForm themDonHangForm = new ThemDonHangForm();
+            ThemDonHangForm themDonHangForm = new ThemDonHangForm(this.accLogin);
             themDonHangForm.ShowDialog();
             ShowListDonHang();
         }
 
         private void btThongKe_Click(object sender, EventArgs e)
         {
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -104,22 +110,28 @@ namespace Cuahangdienthoai.View
 
         private void dataGridViewDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewCell cell = sender as DataGridViewCell;
-            if (e.ColumnIndex == 0)
+            if (e.ColumnIndex == 0 && dataGridViewDonHang.SelectedRows.Count > 0)
             {
-                int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-                KhuyenMaiBUS.Instance.XoaKhuyenMaiApDungHD(MaHO);
-                DonHangBUS.Instance.XoaHoaDonChiTiet(MaHO);
-                DonHangBUS.Instance.XoaDonHang(MaHO);
-                ShowListDonHang();
+                DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa đơn hàng này?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    int MaHO = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                    KhuyenMaiBUS.Instance.XoaKhuyenMaiApDungHD(MaHO);
+                    DonHangBUS.Instance.XoaHoaDonChiTiet(MaHO);
+                    DonHangBUS.Instance.XoaDonHang(MaHO);
+                    ShowListDonHang();
+                }
             }
         }
 
         private void dataGridViewDonHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
-            HoaDonBanChiTietForm f = new HoaDonBanChiTietForm(MaHD);
-            f.Show();
+            if(dataGridViewDonHang.SelectedRows.Count == 1)
+            {
+                int MaHD = Convert.ToInt32(dataGridViewDonHang.SelectedRows[0].Cells["MaHoaDon"].Value);
+                HoaDonBanChiTietForm f = new HoaDonBanChiTietForm(MaHD);
+                f.Show();
+            }
         }
 
         private void btTuan_Click(object sender, EventArgs e)
@@ -149,6 +161,7 @@ namespace Cuahangdienthoai.View
                     break;
             }
             lich2.SetDateTime(lich1.GetDateTime().Date.AddDays(6));
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -158,6 +171,7 @@ namespace Cuahangdienthoai.View
             lich1.SetDateTime(dauthang);
             DateTime cuoithang = dauthang.AddMonths(1).AddDays(-1);
             lich2.SetDateTime(cuoithang);
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
 
@@ -170,6 +184,7 @@ namespace Cuahangdienthoai.View
             DateTime cuoiquy = dauquy.AddMonths(3).AddDays(-1);
             lich1.SetDateTime(dauquy);
             lich2.SetDateTime(cuoiquy);
+            tbTimKiem.Text = "";
             ShowListDonHang();
         }
         private void btXuatFile_Click(object sender, EventArgs e)
@@ -187,7 +202,7 @@ namespace Cuahangdienthoai.View
 
             if (string.IsNullOrEmpty(Path))
             {
-                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+                MessageBox.Show("Đường dẫn báo cáo không hợp lệ", "Lỗi");
                 return;
             }
 
@@ -203,8 +218,9 @@ namespace Cuahangdienthoai.View
                     ws.Cells.Style.Font.Name = "Calibri";
                     ws.Cells.Style.Font.Size = 12;
                     var countColHeader = dataGridViewDonHang.ColumnCount - 1;
+                    DateTime NgayKT = (lich2.GetDateTime() > DateTime.Now) ? DateTime.Now : lich2.GetDateTime();
                     ws.Cells[1, 1].Value = "Thống kê đơn hàng từ ngày " + lich1.GetDateTime().ToShortDateString()
-                                            + " đến " + lich2.GetDateTime().ToShortDateString();
+                                            + " đến " + NgayKT.ToShortDateString();
                     ws.Cells[1, 1, 1, countColHeader].Style.Font.Color.SetColor(Color.Red);
                     ws.Cells[1, 1, 1, countColHeader].Style.Font.Size = 15;
                     ws.Cells[1, 1, 1, countColHeader].Merge = true;
@@ -256,12 +272,22 @@ namespace Cuahangdienthoai.View
                     Byte[] bin = p.GetAsByteArray();
                     File.WriteAllBytes(filePath, bin);
                 }
-                MessageBox.Show("Xuất excel thành công!");
+                MessageBox.Show("Xuất excel thành công!", "Thành công");
             }
             catch (Exception ef)
             {
-                MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message);
+                MessageBox.Show("Có lỗi khi lưu file!\n" + ef.Message, "Lỗi");
             }
+        }
+
+        private void btTimKiêm_Click(object sender, EventArgs e)
+        {
+            ShowListDonHang();
+        }
+
+        private void QuanLyDonHangForm_Load(object sender, EventArgs e)
+        {
+            if(accLogin.LoaiTK == "Admin") dataGridViewDonHang.CellContentClick += new DataGridViewCellEventHandler(this.dataGridViewDonHang_CellContentClick);
         }
     }
 }

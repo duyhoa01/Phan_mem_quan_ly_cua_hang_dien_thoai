@@ -12,11 +12,13 @@ namespace Cuahangdienthoai.View
 {
     public partial class QuanlykhoForm : Form
     {
+        private Account accLogin;
         NhapKhoForm NhapKho;
         KhoHangForm KhoHang;
-        public QuanlykhoForm()
+        public QuanlykhoForm(Account acc)
         {
             InitializeComponent();
+            this.accLogin = acc;
             btNhapKho_Click(btNhapKho, EventArgs.Empty);
         }
 
@@ -24,7 +26,7 @@ namespace Cuahangdienthoai.View
         {
             if (NhapKho == null)
             {
-                NhapKho = new NhapKhoForm();
+                NhapKho = new NhapKhoForm(this.accLogin);
                 NhapKho.TopLevel = false;
                 NhapKho.Dock = DockStyle.Fill;
                 panelMain.Controls.Add(NhapKho);
