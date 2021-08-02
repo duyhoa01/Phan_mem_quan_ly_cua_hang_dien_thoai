@@ -29,7 +29,7 @@ namespace Cuahangdienthoai.DAL
             {
                 var l = db.HoaDonBanHangs.Where(p => p.NgayBan >= fistTime && p.NgayBan < lastTime).Sum(p => p.TongTien);
                 return Convert.ToDouble(l);
-            }      
+            }
         }
         public int CountHoaDon(DateTime firstTime,DateTime lastTime)
         {

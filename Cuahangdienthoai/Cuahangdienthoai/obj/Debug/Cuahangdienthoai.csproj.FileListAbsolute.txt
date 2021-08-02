@@ -159,3 +159,5 @@ C:\Users\DELL\OneDrive\Máy tính\newpbl\PBL3\Cuahangdienthoai\Cuahangdienthoai\
 C:\Users\DELL\OneDrive\Máy tính\newpbl\PBL3\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.csproj.CopyComplete
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThemSuaTaiKhoanForm.resources
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThongTinAcc.resources
+C:\Users\DELL\OneDrive\Máy tính\newpbl\PBL3\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThemSuaTaiKhoanForm.resources
+C:\Users\DELL\OneDrive\Máy tính\newpbl\PBL3\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThongTinAcc.resources
