@@ -158,6 +158,11 @@ namespace Cuahangdienthoai.View
             dataGridViewGioHang.Columns[5].HeaderText = "Thành Tiền";
             dataGridViewGioHang.Columns[3].DefaultCellStyle.Format = "#,0 đ";
             dataGridViewGioHang.Columns[5].DefaultCellStyle.Format = "#,0 đ";
+            foreach (NhaCungCap item in NhaCungCapBUS.Intance.getlisnccbus())
+            {
+                cbbNCC.Items.Add(item);
+            }
+            cbbNCC.DisplayMember = "TenNhaCungCap";
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)
@@ -171,9 +176,25 @@ namespace Cuahangdienthoai.View
         }
         private void TaoHoaDon()
         {
+            int MaNCC = 0;
+            if(checkBox1.Checked == false)
+            {
+                MaNCC = ((NhaCungCap)cbbNCC.SelectedItem).MaNhanCungCap;
+            }
+            else
+            {
+
+                NhaCungCap ncc = new NhaCungCap();
+                ncc.DiaChi = tbDiaChiNCCMoi.Text;
+                ncc.Email = tbEmailNCCMoi.Text;
+                ncc.SoDienThoai = tbSDTNCCMoi.Text;
+                ncc.TenNhaCungCap = tbNCCMoi.Text;
+                NhaCungCapBUS.Intance.addbus(ncc);
+                MaNCC = NhaCungCapBUS.Intance.GetIDNhaCCNew();
+            }
             DateTime NgayNhap = new DateTime(lich1.GetDateTime().Year, lich1.GetDateTime().Month, lich1.GetDateTime().Day
                                                 , DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-            NhapHangBUS.Instance.ThemNhapHang(Convert.ToInt32(tbMaNhanVien.Text), 1, NgayNhap, ThanhToan);
+            NhapHangBUS.Instance.ThemNhapHang(Convert.ToInt32(tbMaNhanVien.Text), MaNCC, NgayNhap, ThanhToan);
         }
         private void ThemNCCMoi()
         {

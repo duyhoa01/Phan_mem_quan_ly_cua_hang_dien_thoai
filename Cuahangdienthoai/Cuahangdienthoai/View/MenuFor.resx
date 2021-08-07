@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btLogOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAQRJREFUWEfN1FEKwkAMhOGKKH3y/hfxCl5L1/RnWGpxkxhqPxDtmMn2wTod2rMI
+        60JOdMuw14dOOdaPMV+O9WPMC3EYdSEeY16Iw6gL8RjzQhxG3RD50BHijJn+Y7l0slM7xFlze12Wj06c
+        K8Qpqb6d2iEOo27a5W1JHegIcRh1aZHvJpgX4hRWSIvGN8GsEG9iJIz6NmaEeO3K12ns+cT3Qrz29xsw
+        jIRR38aMEKewQlpU+yP8hrq0aN/HkLppl/v/Eb2l+nZqh3g/nCvEGfaotvf7culkp3aIw6gbIh86QhxG
+        XYjHmBfiMOpCPMZ8OdaPMV+O9S5nOmXYG0P3Z6w7oml6AafqnKaBK84FAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBoxAnh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
