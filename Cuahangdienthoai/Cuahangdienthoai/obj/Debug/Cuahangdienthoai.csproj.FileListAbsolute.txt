@@ -161,3 +161,6 @@ C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cua
 C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThongTinAcc.resources
 C:\Users\DELL\OneDrive\Máy tính\newpbl\PBL3\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThemSuaTaiKhoanForm.resources
 C:\Users\DELL\OneDrive\Máy tính\newpbl\PBL3\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.ThongTinAcc.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.QuanLyKhachHang.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.QuanLyNhaCungCap.resources
+C:\Users\anhn3\OneDrive\Máy tính\PBL3\Phan_mem_quan_ly_cua_hang_dien_thoai\Cuahangdienthoai\Cuahangdienthoai\obj\Debug\Cuahangdienthoai.View.NhaCungCapds.resources

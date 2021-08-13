@@ -72,6 +72,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.TbTenNV = new System.Windows.Forms.TextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -98,7 +99,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.thuDong1 = new Cuahangdienthoai.ThuDong();
             this.label8 = new System.Windows.Forms.Label();
-            this.TbTenNV = new System.Windows.Forms.TextBox();
             this.pnThongTin.SuspendLayout();
             this.pnHangNhap.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -650,6 +650,19 @@
             this.panel22.Size = new System.Drawing.Size(376, 30);
             this.panel22.TabIndex = 19;
             // 
+            // TbTenNV
+            // 
+            this.TbTenNV.BackColor = System.Drawing.Color.White;
+            this.TbTenNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbTenNV.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TbTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbTenNV.Location = new System.Drawing.Point(0, 9);
+            this.TbTenNV.Margin = new System.Windows.Forms.Padding(2);
+            this.TbTenNV.Name = "TbTenNV";
+            this.TbTenNV.ReadOnly = true;
+            this.TbTenNV.Size = new System.Drawing.Size(376, 19);
+            this.TbTenNV.TabIndex = 19;
+            // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -700,6 +713,7 @@
             // 
             this.cbbNCC.BackColor = System.Drawing.Color.White;
             this.cbbNCC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cbbNCC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNCC.FormattingEnabled = true;
@@ -876,6 +890,7 @@
             this.btThemSP.Text = "Thêm Mới";
             this.btThemSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btThemSP.UseVisualStyleBackColor = false;
+            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
             // 
             // btTimKiem
             // 
@@ -952,19 +967,6 @@
             this.label8.Size = new System.Drawing.Size(77, 16);
             this.label8.TabIndex = 108;
             this.label8.Text = "Nhập Hàng";
-            // 
-            // TbTenNV
-            // 
-            this.TbTenNV.BackColor = System.Drawing.Color.White;
-            this.TbTenNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TbTenNV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TbTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbTenNV.Location = new System.Drawing.Point(0, 9);
-            this.TbTenNV.Margin = new System.Windows.Forms.Padding(2);
-            this.TbTenNV.Name = "TbTenNV";
-            this.TbTenNV.ReadOnly = true;
-            this.TbTenNV.Size = new System.Drawing.Size(376, 19);
-            this.TbTenNV.TabIndex = 19;
             // 
             // HoaDonNhapForm
             // 

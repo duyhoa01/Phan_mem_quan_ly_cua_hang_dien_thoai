@@ -1,5 +1,4 @@
 ﻿using Cuahangdienthoai.BLL;
-using Cuahangdienthoai.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,13 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Cuahangdienthoai.BUS;
 
 namespace Cuahangdienthoai.View
 {
-    public partial class QuanLyNhanVienForm : Form
+    public partial class QuanLyKhachHang : Form
     {
-        public QuanLyNhanVienForm()
+        public QuanLyKhachHang()
         {
             InitializeComponent();
             SetCBB();
@@ -51,29 +49,28 @@ namespace Cuahangdienthoai.View
         public void SetCBB()
         {
             cbbSort.Items.Add(new CBBItem { Value = 1, Text = "Tên" });
-            cbbSort.Items.Add(new CBBItem { Value = 2, Text = "Ngày sinh" });
             cbbSort.SelectedIndex = 0;
         }
         public void SetGUI()
         {
             BLL_CHDT bll = new BLL_CHDT();
-            dataGridViewNhanVien.DataSource = bll.GetAllNV_BLL();
+            dataGridViewKhachHang.DataSource = bll.GetAllKH_BLL();
         }
-        public List<NhanVien> Sort(string change)
+        public List<KhachHang> Sort(string change)
         {
             BLL_CHDT bll = new BLL_CHDT();
-            List<NhanVien> data = new List<NhanVien>();
-            data = bll.GetAllNV_BLL();
+            List<KhachHang> data = new List<KhachHang>();
+            data = bll.GetAllKH_BLL();
             if (change == "Tên")
             {
                 for (int i = 0; i < data.Count - 1; i++)
                     for (int j = i + 1; j < data.Count; j++)
                     {
                         bool check;
-                        check = (string.Compare(LocDau(data[i].TenNhanVien), LocDau(data[j].TenNhanVien)) == 1) ? true : false;
+                        check = (string.Compare(LocDau(data[i].TenKhachHang), LocDau(data[j].TenKhachHang)) == 1) ? true : false;
                         if (check)
                         {
-                            NhanVien tmp = new NhanVien();
+                            KhachHang tmp = new KhachHang();
                             tmp = data[i];
                             data[i] = data[j];
                             data[j] = tmp;
@@ -81,14 +78,14 @@ namespace Cuahangdienthoai.View
 
                     }
             }
-            else
+            /*else
             if (change == "Ngày sinh")
             {
                 for (int i = 0; i < data.Count - 1; i++)
                     for (int j = i + 1; j < data.Count; j++)
                     {
                         bool check;
-                        check = (data[i].NgaySinh > data[j].NgaySinh) ? true : false;
+                        check = (data[i].N > data[j].NgaySinh) ? true : false;
                         if (check)
                         {
                             NhanVien tmp = new NhanVien();
@@ -98,83 +95,73 @@ namespace Cuahangdienthoai.View
                         }
 
                     }
-            }
+            }*/
             return data;
         }
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string search = tbSearch.Text;
-            BLL_CHDT bll = new BLL_CHDT();
-            List<NhanVien> data = new List<NhanVien>();
-            foreach (NhanVien i in bll.GetAllNV_BLL())
-            {
-                if (LocDau(i.TenNhanVien.ToLower()).Contains(LocDau(search.ToLower())))
-                {
-                    data.Add(i);
-                }
-            }
-            dataGridViewNhanVien.DataSource = data;
-        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ThongtinNV f = new ThongtinNV(0, "add");
+            ThongTinKH f = new ThongTinKH(0, "add");
             f.Show();
             f.d += SetGUI;
         }
 
-        private void btnSort_Click(object sender, EventArgs e)
-        {
-            dataGridViewNhanVien.DataSource = Sort(((CBBItem)cbbSort.SelectedItem).Text);
-            //SetGUI();
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridViewNhanVien.SelectedRows.Count == 0)
+            if (dataGridViewKhachHang.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên cần sửa!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn khách hàng cần sửa!", "Thông báo", MessageBoxButtons.OK);
             }
             else
             {
-                ThongtinNV f = new ThongtinNV(Convert.ToInt32(dataGridViewNhanVien.SelectedRows[0].Cells["MaNhanVien"].Value), "edit");
+                ThongTinKH f = new ThongTinKH(Convert.ToInt32(dataGridViewKhachHang.SelectedRows[0].Cells["MaKhachHang"].Value), "edit");
                 f.Show();
                 f.d += SetGUI;
             }
+
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
             BLL_CHDT bll = new BLL_CHDT();
-            if (dataGridViewNhanVien.SelectedRows.Count == 0)
+            if (dataGridViewKhachHang.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên cần xóa!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn khách hàng cần xóa!", "Thông báo", MessageBoxButtons.OK);
             }
             else
             {
-                for (int i = 0; i < dataGridViewNhanVien.SelectedRows.Count; i++)
+                for (int i = 0; i < dataGridViewKhachHang.SelectedRows.Count; i++)
                 {
-                    int MaNV = int.Parse(dataGridViewNhanVien.SelectedRows[i].Cells["MaNhanVien"].Value.ToString());
-                    try
-                    {
-                        NhanVien nv = bll.GetNVByMaNV_BLL(MaNV);
-                        TaiKhoanBUS.Instance.XoaAcc(nv.Accounts.ToList().FirstOrDefault().ID);
-                        bll.DelNV_BLL(MaNV);
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Không thể xóa nhân viên mã " + MaNV.ToString() +
-                            "vì liên quan đến hóa đơn nhập bán trước đó!", "Lỗi!");
-                    }
+                    int MaKH = int.Parse(dataGridViewKhachHang.SelectedRows[i].Cells["MaKhachHang"].Value.ToString());
+                    bll.DelKH_BLL(MaKH);
                 }
             }
             SetGUI();
         }
 
-        private void dataGridViewNhanVien_DataSourceChanged(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            dataGridViewNhanVien.Columns[8].Visible = false;
-            dataGridViewNhanVien.Columns[9].Visible = false;
-            dataGridViewNhanVien.Columns[10].Visible = false;
+            string search = tbSearch.Text;
+            BLL_CHDT bll = new BLL_CHDT();
+            List<KhachHang> data = new List<KhachHang>();
+            foreach (KhachHang i in bll.GetAllKH_BLL())
+            {
+                if (LocDau(i.TenKhachHang.ToLower()).Contains(LocDau(search.ToLower())))
+                {
+                    data.Add(i);
+                }
+            }
+            dataGridViewKhachHang.DataSource = data;
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            dataGridViewKhachHang.DataSource = Sort(((CBBItem)cbbSort.SelectedItem).Text);
+        }
+
+        private void dataGridViewKhachHang_DataSourceChanged(object sender, EventArgs e)
+        {
+            dataGridViewKhachHang.Columns[5].Visible = false;
         }
     }
 }

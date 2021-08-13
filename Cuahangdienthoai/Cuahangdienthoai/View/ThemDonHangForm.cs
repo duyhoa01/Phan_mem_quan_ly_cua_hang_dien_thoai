@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cuahangdienthoai.DTO;
 using Cuahangdienthoai.BUS;
+using Cuahangdienthoai.BLL;
 
 namespace Cuahangdienthoai.View
 {
@@ -22,6 +23,7 @@ namespace Cuahangdienthoai.View
         private double ThanhTien = 0;
         private double TongLoiNhuan;
         private double TongTienNhap;
+        private int MaKH;
         public ThemDonHangForm(Account acc)
         {
             InitializeComponent();
@@ -74,7 +76,24 @@ namespace Cuahangdienthoai.View
         }
         private void btKtraKH_Click(object sender, EventArgs e)
         {
-            
+            BLL_CHDT bll = new BLL_CHDT();
+            KhachHang kh = bll.GetKHByCMND(tbCMND_Check.Text);
+            if (kh != null)
+            {
+                tbTenKH.Text = kh.TenKhachHang;
+                tbDiaChi.Text = kh.DiaChi;
+                tbSDT.Text = kh.DienThoai;
+                textBox1.Text = kh.CMND;
+                MaKH = kh.MaKhachHang;
+            }
+            else
+            {
+                tbDiaChi.Text = "";
+                tbSDT.Text = "";
+                textBox1.Text = "";
+                tbTenKH.Text = "";
+                MessageBox.Show("Không tồn tại dữ liệu khách hàng này trong Database!", "Thông báo!");
+            }
         }
 
         private void rdbKHMoi_CheckedChanged(object sender, EventArgs e)
@@ -83,12 +102,20 @@ namespace Cuahangdienthoai.View
             {
                 pnKHCu.Location = new Point(rdbKHCu.Location.X + 65, rdbKHCu.Location.Y - 20);
                 pnKHCu.Show();
+                tbDiaChi.Text = "";
+                tbSDT.Text = "";
+                textBox1.Text = "";
+                tbTenKH.Text = "";
                 pnThongTinKH.Enabled = false;
             }
             else
             {
                 pnKHCu.Hide();
                 pnThongTinKH.Enabled = true;
+                tbDiaChi.Text = "";
+                tbSDT.Text = "";
+                textBox1.Text = "";
+                tbTenKH.Text = "";
             }
         }
 
@@ -214,11 +241,18 @@ namespace Cuahangdienthoai.View
         }
         private void TaoHoaDon()
         {
-            DonHangBUS.Instance.ThemDonHang(Convert.ToInt32(tbMaNV.Text), 17, DateTime.Now, ThanhTien, TongLoiNhuan);
+            DonHangBUS.Instance.ThemDonHang(Convert.ToInt32(tbMaNV.Text), MaKH, DateTime.Now, ThanhTien, TongLoiNhuan);
         }
         private void ThemKHMoi()
         {
-
+            KhachHang kh = new KhachHang();
+            kh.TenKhachHang = tbTenKH.Text;
+            kh.CMND = textBox1.Text;
+            kh.DiaChi = tbDiaChi.Text;
+            kh.DienThoai = tbDiaChi.Text;
+            BLL_CHDT bll = new BLL_CHDT();
+            bll.AddKH_BLL(kh);
+            MaKH = bll.GetIDNewKH();
         }
         private void ThemKhuyenMaiApDungHD(int MaHD)
         {

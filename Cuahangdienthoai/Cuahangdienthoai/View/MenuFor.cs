@@ -117,27 +117,43 @@ namespace Cuahangdienthoai.View
 
         private void btBanHang_Click(object sender, EventArgs e)
         {
+            SetColorButton(sender);
             this.AddForm(new QuanlybanhangFrom(this.account));
         }
 
         private void btKhoHang_Click(object sender, EventArgs e)
         {
+            SetColorButton(sender);
             this.AddForm(new QuanlykhoForm(this.account));
         }
 
         private void btKinhDoanh_Click(object sender, EventArgs e)
         {
+            SetColorButton(sender);
             this.AddForm(new BaoCaoKinhDoanhForm());
         }
 
         private void btNhanVien_Click(object sender, EventArgs e)
         {
+            SetColorButton(sender);
             this.AddForm(new QuanLyNhanVienForm());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SetColorButton(sender);
             this.AddForm(new QuanLyTaiKhoanForm());
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SetColorButton(sender);
+            this.AddForm(new QuanLyKhachHang());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SetColorButton(sender);
+            this.AddForm(new QuanLyNhaCungCap());
         }
         public void SetGui()
         {
@@ -149,10 +165,6 @@ namespace Cuahangdienthoai.View
             {
                 btKhoHang.Visible = false;
             } 
-            //if (!this.listquyen.Contains("THUCHI"))
-            //{
-                btThuChi.Visible = false;
-            //} 
             if (!this.listquyen.Contains("BAOCAO"))
             {
                 btKinhDoanh.Visible = false;
@@ -191,6 +203,16 @@ namespace Cuahangdienthoai.View
             ThongTinAcc f = new ThongTinAcc(account);
             f.d = SetGuiAcc;
             f.Show();
+        }
+
+        void SetColorButton(object sender)
+        {
+            Button bt = sender as Button;
+            foreach (Button item in pnChucNang.Controls)
+            {
+                item.BackColor = Color.FromArgb(30, 114, 174);
+            }
+            bt.BackColor = Color.Purple;
         }
     }
 }
