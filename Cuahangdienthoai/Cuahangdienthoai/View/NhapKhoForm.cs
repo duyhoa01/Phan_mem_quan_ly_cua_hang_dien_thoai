@@ -57,7 +57,7 @@ namespace Cuahangdienthoai.View
         private void SetDatagridview()
         {
             dataGridViewDonHang.Columns[0].HeaderText = "Mã Hóa Đơn";
-            dataGridViewDonHang.Columns[1].HeaderText = "Ngày Bán";
+            dataGridViewDonHang.Columns[1].HeaderText = "Ngày Nhập";
             dataGridViewDonHang.Columns[2].HeaderText = "NV Kiểm Kê";
             dataGridViewDonHang.Columns[3].HeaderText = "Nhà Cung Cấp";
             dataGridViewDonHang.Columns[4].HeaderText = "Tổng Tiền";
