@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuFor));
             this.panelmenu = new System.Windows.Forms.Panel();
-            this.btBanHang = new System.Windows.Forms.Button();
-            this.btKhoHang = new System.Windows.Forms.Button();
-            this.btQuanLyKhachHang = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btNhanVien = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnChucNang = new System.Windows.Forms.Panel();
             this.btKinhDoanh = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btNhanVien = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btQuanLyKhachHang = new System.Windows.Forms.Button();
+            this.btKhoHang = new System.Windows.Forms.Button();
+            this.btBanHang = new System.Windows.Forms.Button();
             this.btLogOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
@@ -49,8 +50,8 @@
             this.picClose = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.pnChucNang = new System.Windows.Forms.Panel();
             this.panelmenu.SuspendLayout();
+            this.pnChucNang.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnh)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnChucNang.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelmenu
@@ -75,105 +75,48 @@
             this.panelmenu.Size = new System.Drawing.Size(225, 715);
             this.panelmenu.TabIndex = 0;
             // 
-            // btBanHang
+            // pnChucNang
             // 
-            this.btBanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(114)))), ((int)(((byte)(174)))));
-            this.btBanHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btBanHang.FlatAppearance.BorderSize = 0;
-            this.btBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBanHang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBanHang.ForeColor = System.Drawing.Color.White;
-            this.btBanHang.Location = new System.Drawing.Point(0, 0);
-            this.btBanHang.Margin = new System.Windows.Forms.Padding(0);
-            this.btBanHang.Name = "btBanHang";
-            this.btBanHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btBanHang.Size = new System.Drawing.Size(225, 41);
-            this.btBanHang.TabIndex = 5;
-            this.btBanHang.Text = "Quản lý bán hàng";
-            this.btBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBanHang.UseVisualStyleBackColor = false;
-            this.btBanHang.Click += new System.EventHandler(this.btBanHang_Click);
+            this.pnChucNang.Controls.Add(this.btKinhDoanh);
+            this.pnChucNang.Controls.Add(this.button1);
+            this.pnChucNang.Controls.Add(this.btNhanVien);
+            this.pnChucNang.Controls.Add(this.button3);
+            this.pnChucNang.Controls.Add(this.btQuanLyKhachHang);
+            this.pnChucNang.Controls.Add(this.btKhoHang);
+            this.pnChucNang.Controls.Add(this.btBanHang);
+            this.pnChucNang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnChucNang.Location = new System.Drawing.Point(0, 87);
+            this.pnChucNang.Name = "pnChucNang";
+            this.pnChucNang.Size = new System.Drawing.Size(225, 306);
+            this.pnChucNang.TabIndex = 4;
             // 
-            // btKhoHang
+            // btKinhDoanh
             // 
-            this.btKhoHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btKhoHang.FlatAppearance.BorderSize = 0;
-            this.btKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btKhoHang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btKhoHang.ForeColor = System.Drawing.Color.White;
-            this.btKhoHang.Location = new System.Drawing.Point(0, 41);
-            this.btKhoHang.Margin = new System.Windows.Forms.Padding(2);
-            this.btKhoHang.Name = "btKhoHang";
-            this.btKhoHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btKhoHang.Size = new System.Drawing.Size(225, 41);
-            this.btKhoHang.TabIndex = 7;
-            this.btKhoHang.Text = "Quản lý kho hàng";
-            this.btKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btKhoHang.UseVisualStyleBackColor = true;
-            this.btKhoHang.Click += new System.EventHandler(this.btKhoHang_Click);
-            // 
-            // btQuanLyKhachHang
-            // 
-            this.btQuanLyKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btQuanLyKhachHang.FlatAppearance.BorderSize = 0;
-            this.btQuanLyKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btQuanLyKhachHang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btQuanLyKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btQuanLyKhachHang.Location = new System.Drawing.Point(0, 82);
-            this.btQuanLyKhachHang.Margin = new System.Windows.Forms.Padding(2);
-            this.btQuanLyKhachHang.Name = "btQuanLyKhachHang";
-            this.btQuanLyKhachHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btQuanLyKhachHang.Size = new System.Drawing.Size(225, 41);
-            this.btQuanLyKhachHang.TabIndex = 15;
-            this.btQuanLyKhachHang.Text = "Quản lý khách hàng";
-            this.btQuanLyKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQuanLyKhachHang.UseVisualStyleBackColor = true;
-            this.btQuanLyKhachHang.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 123);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(225, 41);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Quản lý nhà cung cấp";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btNhanVien
-            // 
-            this.btNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btNhanVien.FlatAppearance.BorderSize = 0;
-            this.btNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btNhanVien.Location = new System.Drawing.Point(0, 164);
-            this.btNhanVien.Margin = new System.Windows.Forms.Padding(2);
-            this.btNhanVien.Name = "btNhanVien";
-            this.btNhanVien.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btNhanVien.Size = new System.Drawing.Size(225, 41);
-            this.btNhanVien.TabIndex = 13;
-            this.btNhanVien.Text = "Quản lý nhân viên";
-            this.btNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNhanVien.UseVisualStyleBackColor = true;
-            this.btNhanVien.Click += new System.EventHandler(this.btNhanVien_Click);
+            this.btKinhDoanh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btKinhDoanh.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btKinhDoanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btKinhDoanh.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btKinhDoanh.ForeColor = System.Drawing.Color.White;
+            this.btKinhDoanh.Image = ((System.Drawing.Image)(resources.GetObject("btKinhDoanh.Image")));
+            this.btKinhDoanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btKinhDoanh.Location = new System.Drawing.Point(0, 246);
+            this.btKinhDoanh.Margin = new System.Windows.Forms.Padding(2);
+            this.btKinhDoanh.Name = "btKinhDoanh";
+            this.btKinhDoanh.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btKinhDoanh.Size = new System.Drawing.Size(225, 41);
+            this.btKinhDoanh.TabIndex = 11;
+            this.btKinhDoanh.Text = "     Báo cáo kinh doanh";
+            this.btKinhDoanh.UseVisualStyleBackColor = true;
+            this.btKinhDoanh.Click += new System.EventHandler(this.btKinhDoanh_Click);
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 205);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -182,28 +125,104 @@
             this.button1.Size = new System.Drawing.Size(225, 41);
             this.button1.TabIndex = 14;
             this.button1.Text = "Quản lý tài khoản";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btKinhDoanh
+            // btNhanVien
             // 
-            this.btKinhDoanh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btKinhDoanh.FlatAppearance.BorderSize = 0;
-            this.btKinhDoanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btKinhDoanh.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btKinhDoanh.ForeColor = System.Drawing.Color.White;
-            this.btKinhDoanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btKinhDoanh.Location = new System.Drawing.Point(0, 246);
-            this.btKinhDoanh.Margin = new System.Windows.Forms.Padding(2);
-            this.btKinhDoanh.Name = "btKinhDoanh";
-            this.btKinhDoanh.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btKinhDoanh.Size = new System.Drawing.Size(225, 41);
-            this.btKinhDoanh.TabIndex = 11;
-            this.btKinhDoanh.Text = "Báo cáo kinh doanh";
-            this.btKinhDoanh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btKinhDoanh.UseVisualStyleBackColor = true;
-            this.btKinhDoanh.Click += new System.EventHandler(this.btKinhDoanh_Click);
+            this.btNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btNhanVien.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNhanVien.ForeColor = System.Drawing.Color.White;
+            this.btNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btNhanVien.Image")));
+            this.btNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNhanVien.Location = new System.Drawing.Point(0, 164);
+            this.btNhanVien.Margin = new System.Windows.Forms.Padding(2);
+            this.btNhanVien.Name = "btNhanVien";
+            this.btNhanVien.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btNhanVien.Size = new System.Drawing.Size(225, 41);
+            this.btNhanVien.TabIndex = 13;
+            this.btNhanVien.Text = " Quản lý nhân viên";
+            this.btNhanVien.UseVisualStyleBackColor = true;
+            this.btNhanVien.Click += new System.EventHandler(this.btNhanVien_Click);
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 123);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(225, 41);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "         Quản lý nhà cung cấp";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btQuanLyKhachHang
+            // 
+            this.btQuanLyKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btQuanLyKhachHang.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btQuanLyKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQuanLyKhachHang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btQuanLyKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btQuanLyKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btQuanLyKhachHang.Image")));
+            this.btQuanLyKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btQuanLyKhachHang.Location = new System.Drawing.Point(0, 82);
+            this.btQuanLyKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.btQuanLyKhachHang.Name = "btQuanLyKhachHang";
+            this.btQuanLyKhachHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btQuanLyKhachHang.Size = new System.Drawing.Size(225, 41);
+            this.btQuanLyKhachHang.TabIndex = 15;
+            this.btQuanLyKhachHang.Text = "     Quản lý khách hàng";
+            this.btQuanLyKhachHang.UseVisualStyleBackColor = true;
+            this.btQuanLyKhachHang.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btKhoHang
+            // 
+            this.btKhoHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btKhoHang.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btKhoHang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btKhoHang.ForeColor = System.Drawing.Color.White;
+            this.btKhoHang.Image = ((System.Drawing.Image)(resources.GetObject("btKhoHang.Image")));
+            this.btKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btKhoHang.Location = new System.Drawing.Point(0, 41);
+            this.btKhoHang.Margin = new System.Windows.Forms.Padding(2);
+            this.btKhoHang.Name = "btKhoHang";
+            this.btKhoHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btKhoHang.Size = new System.Drawing.Size(225, 41);
+            this.btKhoHang.TabIndex = 7;
+            this.btKhoHang.Text = "Quản lý kho hàng";
+            this.btKhoHang.UseVisualStyleBackColor = true;
+            this.btKhoHang.Click += new System.EventHandler(this.btKhoHang_Click);
+            // 
+            // btBanHang
+            // 
+            this.btBanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(114)))), ((int)(((byte)(174)))));
+            this.btBanHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btBanHang.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBanHang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBanHang.ForeColor = System.Drawing.Color.White;
+            this.btBanHang.Image = ((System.Drawing.Image)(resources.GetObject("btBanHang.Image")));
+            this.btBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBanHang.Location = new System.Drawing.Point(0, 0);
+            this.btBanHang.Margin = new System.Windows.Forms.Padding(0);
+            this.btBanHang.Name = "btBanHang";
+            this.btBanHang.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btBanHang.Size = new System.Drawing.Size(225, 41);
+            this.btBanHang.TabIndex = 5;
+            this.btBanHang.Text = "Quản lý bán hàng";
+            this.btBanHang.UseVisualStyleBackColor = false;
+            this.btBanHang.Click += new System.EventHandler(this.btBanHang_Click);
             // 
             // btLogOut
             // 
@@ -366,21 +385,6 @@
             this.panelMain.Size = new System.Drawing.Size(975, 674);
             this.panelMain.TabIndex = 2;
             // 
-            // pnChucNang
-            // 
-            this.pnChucNang.Controls.Add(this.btKinhDoanh);
-            this.pnChucNang.Controls.Add(this.button1);
-            this.pnChucNang.Controls.Add(this.btNhanVien);
-            this.pnChucNang.Controls.Add(this.button3);
-            this.pnChucNang.Controls.Add(this.btQuanLyKhachHang);
-            this.pnChucNang.Controls.Add(this.btKhoHang);
-            this.pnChucNang.Controls.Add(this.btBanHang);
-            this.pnChucNang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnChucNang.Location = new System.Drawing.Point(0, 87);
-            this.pnChucNang.Name = "pnChucNang";
-            this.pnChucNang.Size = new System.Drawing.Size(225, 306);
-            this.pnChucNang.TabIndex = 4;
-            // 
             // MenuFor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +399,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panelmenu.ResumeLayout(false);
+            this.pnChucNang.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnh)).EndInit();
@@ -404,7 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnChucNang.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
